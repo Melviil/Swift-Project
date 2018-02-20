@@ -15,7 +15,6 @@
 		BC0C9D13203830230067EBB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC0C9D11203830230067EBB8 /* Main.storyboard */; };
 		BC0C9D16203830240067EBB8 /* Swift_Project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC0C9D14203830230067EBB8 /* Swift_Project.xcdatamodeld */; };
 		BC0C9D18203830240067EBB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC0C9D17203830240067EBB8 /* Assets.xcassets */; };
-		BC0C9D1B203830250067EBB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC0C9D19203830250067EBB8 /* LaunchScreen.storyboard */; };
 		BC0C9D26203830300067EBB8 /* Swift_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0C9D25203830300067EBB8 /* Swift_ProjectTests.swift */; };
 		BC0C9D31203830310067EBB8 /* Swift_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0C9D30203830310067EBB8 /* Swift_ProjectUITests.swift */; };
 /* End PBXBuildFile section */
@@ -45,7 +44,6 @@
 		BC0C9D12203830230067EBB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BC0C9D15203830230067EBB8 /* Swift_Project.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Swift_Project.xcdatamodel; sourceTree = "<group>"; };
 		BC0C9D17203830240067EBB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BC0C9D1A203830250067EBB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC0C9D1C203830250067EBB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC0C9D21203830300067EBB8 /* Swift ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift ProjectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC0C9D25203830300067EBB8 /* Swift_ProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_ProjectTests.swift; sourceTree = "<group>"; };
@@ -108,7 +106,6 @@
 				BC0C9D11203830230067EBB8 /* Main.storyboard */,
 				BC04ED97203AE235008F6AC3 /* Contact Page.swift */,
 				BC0C9D17203830240067EBB8 /* Assets.xcassets */,
-				BC0C9D19203830250067EBB8 /* LaunchScreen.storyboard */,
 				BC0C9D1C203830250067EBB8 /* Info.plist */,
 				BC0C9D14203830230067EBB8 /* Swift_Project.xcdatamodeld */,
 			);
@@ -240,7 +237,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC0C9D1B203830250067EBB8 /* LaunchScreen.storyboard in Resources */,
 				BC0C9D18203830240067EBB8 /* Assets.xcassets in Resources */,
 				BC0C9D13203830230067EBB8 /* Main.storyboard in Resources */,
 			);
@@ -314,14 +310,6 @@
 				BC0C9D12203830230067EBB8 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		BC0C9D19203830250067EBB8 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BC0C9D1A203830250067EBB8 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -439,6 +427,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Swift Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Polytech.Swift-Project";
@@ -453,6 +442,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Swift Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Polytech.Swift-Project";
