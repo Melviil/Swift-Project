@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC04ED98203AE235008F6AC3 /* Contact Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC04ED97203AE235008F6AC3 /* Contact Page.swift */; };
+		BC04ED99203AE235008F6AC3 /* Contact Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC04ED97203AE235008F6AC3 /* Contact Page.swift */; };
+		BC04ED9A203AE235008F6AC3 /* Contact Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC04ED97203AE235008F6AC3 /* Contact Page.swift */; };
 		BC0C9D0E203830230067EBB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0C9D0D203830220067EBB8 /* AppDelegate.swift */; };
 		BC0C9D10203830230067EBB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0C9D0F203830230067EBB8 /* ViewController.swift */; };
 		BC0C9D13203830230067EBB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC0C9D11203830230067EBB8 /* Main.storyboard */; };
@@ -35,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BC04ED97203AE235008F6AC3 /* Contact Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact Page.swift"; sourceTree = "<group>"; };
 		BC0C9D0A203830220067EBB8 /* Swift Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC0C9D0D203830220067EBB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC0C9D0F203830230067EBB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +106,7 @@
 				BC0C9D0D203830220067EBB8 /* AppDelegate.swift */,
 				BC0C9D0F203830230067EBB8 /* ViewController.swift */,
 				BC0C9D11203830230067EBB8 /* Main.storyboard */,
+				BC04ED97203AE235008F6AC3 /* Contact Page.swift */,
 				BC0C9D17203830240067EBB8 /* Assets.xcassets */,
 				BC0C9D19203830250067EBB8 /* LaunchScreen.storyboard */,
 				BC0C9D1C203830250067EBB8 /* Info.plist */,
@@ -264,6 +269,7 @@
 			files = (
 				BC0C9D16203830240067EBB8 /* Swift_Project.xcdatamodeld in Sources */,
 				BC0C9D10203830230067EBB8 /* ViewController.swift in Sources */,
+				BC04ED98203AE235008F6AC3 /* Contact Page.swift in Sources */,
 				BC0C9D0E203830230067EBB8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC04ED99203AE235008F6AC3 /* Contact Page.swift in Sources */,
 				BC0C9D26203830300067EBB8 /* Swift_ProjectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC04ED9A203AE235008F6AC3 /* Contact Page.swift in Sources */,
 				BC0C9D31203830310067EBB8 /* Swift_ProjectUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
