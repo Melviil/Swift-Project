@@ -1,4 +1,41 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Activite" representedClassName="Activite" syncable="YES" codeGenerationType="class">
+        <attribute name="heure" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idActivite" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="estDeType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TypeActivite" inverseName="correspondA" inverseEntity="TypeActivite" syncable="YES"/>
+        <relationship name="sePasse" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Jour" inverseName="contient" inverseEntity="Jour" syncable="YES"/>
+    </entity>
+    <entity name="Evenement" representedClassName="Evenement" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="heure" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Jour" representedClassName="Jour" syncable="YES" codeGenerationType="class">
+        <attribute name="idJour" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="libelleJour" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="contient" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activite" inverseName="sePasse" inverseEntity="Activite" syncable="YES"/>
+    </entity>
+    <entity name="Medicament" representedClassName="Medicament" syncable="YES" codeGenerationType="class">
+        <attribute name="dateDebutMedicament" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="dateFinMedicament" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="doseMedicament" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="frequenceMedicament" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="heureMedicament" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nomMedicament" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="presentationBreveMedicament" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="presentationMedicament" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="TypeActivite" representedClassName="TypeActivite" syncable="YES" codeGenerationType="class">
+        <attribute name="libelleTypeActivite" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="correspondA" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activite" inverseName="estDeType" inverseEntity="Activite" syncable="YES"/>
+    </entity>
+    <entity name="TypeEvenement" representedClassName="TypeEvenement" syncable="YES" codeGenerationType="class"/>
+    <elements>
+        <element name="TypeActivite" positionX="-216" positionY="27" width="128" height="73"/>
+        <element name="Activite" positionX="115" positionY="27" width="128" height="103"/>
+        <element name="Jour" positionX="-45" positionY="189" width="128" height="88"/>
+        <element name="Medicament" positionX="-324" positionY="252" width="128" height="165"/>
+        <element name="Evenement" positionX="-72" positionY="216" width="128" height="73"/>
+        <element name="TypeEvenement" positionX="-63" positionY="225" width="128" height="45"/>
+    </elements>
 </model>
