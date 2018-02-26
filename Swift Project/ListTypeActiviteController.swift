@@ -13,10 +13,14 @@ class ListTypeActiviteController: UIViewController, UIPickerViewDelegate, UIPick
   
     
     @IBOutlet weak var picker: UIPickerView!
+    
+    
+    
     var typesactivite : [TypeActivite] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        picker.dataSource = self
+        picker.delegate = self
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
             return
         }
@@ -43,15 +47,17 @@ class ListTypeActiviteController: UIViewController, UIPickerViewDelegate, UIPick
     
     // The number of rows of data
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return self.typesactivite.count
+        return typesactivite.count
     }
     
     // The data to return for the row and component (column) that's being passed in
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return self.typesactivite[row].libelleTypeActivite
+        print ("coucou")
+        print ( typesactivite[row].libelleTypeActivite)
+        return typesactivite[row].libelleTypeActivite
     }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return self.typesactivite.count
+        return 1
     }
     
 }
