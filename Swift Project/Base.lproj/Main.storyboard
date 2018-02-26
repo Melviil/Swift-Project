@@ -324,7 +324,6 @@
                             <constraint firstItem="Yv2-C5-8C9" firstAttribute="width" secondItem="Ag0-Rk-pdQ" secondAttribute="width" id="Fu9-M2-Rbn"/>
                             <constraint firstItem="Yv2-C5-8C9" firstAttribute="height" secondItem="Ag0-Rk-pdQ" secondAttribute="height" id="KCh-4z-VUx"/>
                             <constraint firstItem="3zF-qQ-qfy" firstAttribute="leading" secondItem="u66-sH-BT8" secondAttribute="trailing" constant="20" id="MNH-3f-8AL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TIS-41-HKX" secondAttribute="trailing" constant="42" id="NiV-1v-lOQ"/>
                             <constraint firstItem="djW-es-iGZ" firstAttribute="leading" secondItem="qRR-tb-v2q" secondAttribute="trailing" constant="20" id="QhF-zC-vI3"/>
                             <constraint firstItem="tyh-rz-khV" firstAttribute="leading" secondItem="Ag0-Rk-pdQ" secondAttribute="trailing" constant="20" id="V7v-sI-8eL"/>
                             <constraint firstItem="Yv2-C5-8C9" firstAttribute="top" secondItem="djW-es-iGZ" secondAttribute="bottom" constant="40" id="VYx-qg-Cxm"/>
@@ -370,10 +369,10 @@
             </objects>
             <point key="canvasLocation" x="440.625" y="32.74647887323944"/>
         </scene>
-        <!--View Controller-->
+        <!--Medecin Controller-->
         <scene sceneID="cCv-m8-OnS">
             <objects>
-                <viewController id="P94-Ko-fRh" sceneMemberID="viewController">
+                <viewController id="P94-Ko-fRh" customClass="MedecinController" customModule="Swift_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i0p-PT-8Ax">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -391,7 +390,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="ButtonAjouterTypeActivite:" destination="bZm-cI-zdX" eventType="touchUpInside" id="anE-fD-5iZ"/>
+                                    <action selector="addTypeAct:" destination="P94-Ko-fRh" eventType="touchUpInside" id="oXX-Nh-14i"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -404,7 +403,6 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h3c-un-lrJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="bZm-cI-zdX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="440.625" y="767.95774647887322"/>
         </scene>

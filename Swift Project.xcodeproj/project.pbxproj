@@ -17,6 +17,7 @@
 		BC0C9D18203830240067EBB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC0C9D17203830240067EBB8 /* Assets.xcassets */; };
 		BC0C9D26203830300067EBB8 /* Swift_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0C9D25203830300067EBB8 /* Swift_ProjectTests.swift */; };
 		BC0C9D31203830310067EBB8 /* Swift_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0C9D30203830310067EBB8 /* Swift_ProjectUITests.swift */; };
+		BC6FE5A62044434600D862B6 /* MedecinController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6FE5A52044434500D862B6 /* MedecinController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		BC0C9D2C203830310067EBB8 /* Swift ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift ProjectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC0C9D30203830310067EBB8 /* Swift_ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_ProjectUITests.swift; sourceTree = "<group>"; };
 		BC0C9D32203830310067EBB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC6FE5A52044434500D862B6 /* MedecinController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedecinController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				BC0C9D0F203830230067EBB8 /* ViewController.swift */,
 				BC0C9D11203830230067EBB8 /* Main.storyboard */,
 				BC04ED97203AE235008F6AC3 /* Contact Page.swift */,
+				BC6FE5A52044434500D862B6 /* MedecinController.swift */,
 				BC0C9D17203830240067EBB8 /* Assets.xcassets */,
 				BC0C9D1C203830250067EBB8 /* Info.plist */,
 				BC0C9D14203830230067EBB8 /* Swift_Project.xcdatamodeld */,
@@ -266,6 +269,7 @@
 				BC0C9D16203830240067EBB8 /* Swift_Project.xcdatamodeld in Sources */,
 				BC0C9D10203830230067EBB8 /* ViewController.swift in Sources */,
 				BC04ED98203AE235008F6AC3 /* Contact Page.swift in Sources */,
+				BC6FE5A62044434600D862B6 /* MedecinController.swift in Sources */,
 				BC0C9D0E203830230067EBB8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

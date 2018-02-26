@@ -14,8 +14,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var ContactButton: UIButton!
     
+    @IBAction func ahah(_ sender: Any) {
     
-    @IBAction func ButtonAjouterTypeActivite(_ sender: Any) {
         let alert = UIAlertController( title : " Nouveau type d'activité", message : "Ajouter un type d'activité", preferredStyle : .alert)
         
         let saveAction = UIAlertAction ( title :"Ajouter", style : .default )
@@ -27,6 +27,12 @@ class ViewController: UIViewController {
             }
             self.saveNewTypeActivity(withName : typeActivityToSave)
         }
+        
+        let cancelAction = UIAlertAction ( title  : "Annuler", style : .default)
+        alert.addTextField()
+        alert.addAction(saveAction)
+        alert.addAction(cancelAction)
+        present(alert , animated : true)
     }
     
     func saveNewTypeActivity( withName typeActivityToSave : String){
@@ -40,9 +46,9 @@ class ViewController: UIViewController {
         do{
             try context.save()
         }
-        catch let error as NSError{
+        catch  {
             //  self.alertError(errorMsg: " Could not save type ", userInfo : "Unknown reason" )
-            return
+            return 
         }
     }
 
