@@ -73,10 +73,10 @@
             </objects>
             <point key="canvasLocation" x="412.5" y="-774.29577464788736"/>
         </scene>
-        <!--View Controller-->
+        <!--List Type Activite Controller-->
         <scene sceneID="Gfc-TP-qg2">
             <objects>
-                <viewController id="Obb-Z7-3T0" sceneMemberID="viewController">
+                <viewController id="Obb-Z7-3T0" customClass="ListTypeActiviteController" customModule="Swift_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="baG-ZC-0qb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -120,6 +120,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8T5-zx-nf0"/>
                     </view>
+                    <connections>
+                        <outlet property="picker" destination="8gB-nd-FUR" id="3Ne-RC-Ke6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oYC-MY-cYJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
