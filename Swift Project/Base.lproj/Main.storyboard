@@ -94,6 +94,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="ButtonTypeActivite:" destination="Obb-Z7-3T0" eventType="touchUpInside" id="wvM-dA-5nu"/>
                                     <segue destination="W1y-3t-Mpi" kind="show" id="brT-yx-o5j"/>
                                 </connections>
                             </button>
@@ -128,10 +129,10 @@
             </objects>
             <point key="canvasLocation" x="1141.875" y="-774.29577464788736"/>
         </scene>
-        <!--View Controller-->
+        <!--Alarm Activite-->
         <scene sceneID="xs9-ks-Oll">
             <objects>
-                <viewController id="W1y-3t-Mpi" sceneMemberID="viewController">
+                <viewController id="W1y-3t-Mpi" customClass="AlarmActivite" customModule="Swift_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="reu-z6-HCM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -172,6 +173,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ENx-Rn-jjb"/>
                     </view>
+                    <connections>
+                        <outlet property="Secondbutton" destination="98T-hJ-uJM" id="ah0-p0-8k8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BtY-iA-gOQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

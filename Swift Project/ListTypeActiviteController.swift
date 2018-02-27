@@ -10,14 +10,21 @@ import UIKit
 import CoreData
 
 class ListTypeActiviteController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-  
+  var myLabel = "football"
     
+    @IBAction func ButtonTypeActivite(_ sender: Any) {
+    
+        let myVC = storyboard?.instantiateViewController(withIdentifier: "AlarmActivite") as! AlarmActivite
+        myVC.stringPassed = myLabel
+     navigationController?.pushViewController(myVC, animated: true)
+    }
     @IBOutlet weak var picker: UIPickerView!
     
     
     
     var typesactivite : [TypeActivite] = []
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         picker.dataSource = self
         picker.delegate = self
