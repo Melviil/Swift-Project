@@ -10,8 +10,6 @@ import UIKit
 
 class AlarmActivite: UIViewController {
     @IBOutlet weak var Secondbutton: UILabel!
-    var stringPassed = ""
     override func viewDidLoad() {
-        Secondbutton.text = stringPassed
     }
 }

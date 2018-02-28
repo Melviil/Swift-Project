@@ -12,12 +12,7 @@ import CoreData
 class ListTypeActiviteController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
   var myLabel = "football"
     
-    @IBAction func ButtonTypeActivite(_ sender: Any) {
-    
-        let myVC = storyboard?.instantiateViewController(withIdentifier: "AlarmActivite") as! AlarmActivite
-        myVC.stringPassed = myLabel
-     navigationController?.pushViewController(myVC, animated: true)
-    }
+   
     @IBOutlet weak var picker: UIPickerView!
     
     
@@ -59,8 +54,6 @@ class ListTypeActiviteController: UIViewController, UIPickerViewDelegate, UIPick
     
     // The data to return for the row and component (column) that's being passed in
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        print ("coucou")
-        print ( typesactivite[row].libelleTypeActivite)
         return typesactivite[row].libelleTypeActivite
     }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
