@@ -20,6 +20,7 @@
 		BC6FE5A62044434600D862B6 /* MedecinController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6FE5A52044434500D862B6 /* MedecinController.swift */; };
 		BC6FE5A8204465F900D862B6 /* ListTypeActiviteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6FE5A7204465F900D862B6 /* ListTypeActiviteController.swift */; };
 		BC6FE5AA204487F100D862B6 /* AlarmActivite.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6FE5A9204487F100D862B6 /* AlarmActivite.swift */; };
+		BC99F0132046B83E00D2FBA0 /* HeureAlarmActiviteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99F0122046B83E00D2FBA0 /* HeureAlarmActiviteController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		BC6FE5A52044434500D862B6 /* MedecinController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedecinController.swift; sourceTree = "<group>"; };
 		BC6FE5A7204465F900D862B6 /* ListTypeActiviteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTypeActiviteController.swift; sourceTree = "<group>"; };
 		BC6FE5A9204487F100D862B6 /* AlarmActivite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmActivite.swift; sourceTree = "<group>"; };
+		BC99F0122046B83E00D2FBA0 /* HeureAlarmActiviteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeureAlarmActiviteController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				BC0C9D0D203830220067EBB8 /* AppDelegate.swift */,
 				BC0C9D0F203830230067EBB8 /* ViewController.swift */,
 				BC0C9D11203830230067EBB8 /* Main.storyboard */,
+				BC99F0122046B83E00D2FBA0 /* HeureAlarmActiviteController.swift */,
 				BC6FE5A9204487F100D862B6 /* AlarmActivite.swift */,
 				BC6FE5A7204465F900D862B6 /* ListTypeActiviteController.swift */,
 				BC04ED97203AE235008F6AC3 /* Contact Page.swift */,
@@ -272,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC99F0132046B83E00D2FBA0 /* HeureAlarmActiviteController.swift in Sources */,
 				BC0C9D16203830240067EBB8 /* Swift_Project.xcdatamodeld in Sources */,
 				BC0C9D10203830230067EBB8 /* ViewController.swift in Sources */,
 				BC6FE5AA204487F100D862B6 /* AlarmActivite.swift in Sources */,
