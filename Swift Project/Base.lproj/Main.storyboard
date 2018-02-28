@@ -94,12 +94,15 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="ButtonTypeActivite:" destination="Obb-Z7-3T0" eventType="touchUpInside" id="wvM-dA-5nu"/>
-                                    <segue destination="W1y-3t-Mpi" kind="show" id="brT-yx-o5j"/>
+                                    <segue destination="AlarmActivite" kind="show" identifier="showNomActiviteSegue" id="DES-Ct-i53"/>
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8gB-nd-FUR">
                                 <rect key="frame" x="0.0" y="173" width="320" height="223"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Obb-Z7-3T0" id="XgG-7J-60e"/>
+                                    <outlet property="delegate" destination="Obb-Z7-3T0" id="Kra-rK-aXN"/>
+                                </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pour quel type d'activité ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Fmj-Xe-whA">
                                 <rect key="frame" x="33.5" y="84" width="254" height="27.5"/>
@@ -132,7 +135,7 @@
         <!--Alarm Activite-->
         <scene sceneID="xs9-ks-Oll">
             <objects>
-                <viewController id="W1y-3t-Mpi" customClass="AlarmActivite" customModule="Swift_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="AlarmActivite" customClass="AlarmActivite" customModule="Swift_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="reu-z6-HCM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -174,7 +177,7 @@
                         <viewLayoutGuide key="safeArea" id="ENx-Rn-jjb"/>
                     </view>
                     <connections>
-                        <outlet property="Secondbutton" destination="98T-hJ-uJM" id="ah0-p0-8k8"/>
+                        <outlet property="labelActivite" destination="mYA-U2-Dru" id="z9i-aT-5y3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BtY-iA-gOQ" userLabel="First Responder" sceneMemberID="firstResponder"/>

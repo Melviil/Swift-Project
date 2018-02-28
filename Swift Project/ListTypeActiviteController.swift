@@ -10,19 +10,25 @@ import UIKit
 import CoreData
 
 class ListTypeActiviteController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-  var myLabel = "football"
-    
-    @IBAction func ButtonTypeActivite(_ sender: Any) {
-    
-        let myVC = storyboard?.instantiateViewController(withIdentifier: "AlarmActivite") as! AlarmActivite
-        myVC.stringPassed = myLabel
-     navigationController?.pushViewController(myVC, animated: true)
-    }
+ 
     @IBOutlet weak var picker: UIPickerView!
     
+    let segueShowNomActivite = "showNomActiviteSegue"
     
+    var activitePasse = "null"
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == segueShowNomActivite {
+            let alarmActivite = segue.destination as! AlarmActivite
+            alarmActivite.nomActivite = activitePasse
+        }
+    
+    }
     
     var typesactivite : [TypeActivite] = []
+   
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -59,12 +65,14 @@ class ListTypeActiviteController: UIViewController, UIPickerViewDelegate, UIPick
     
     // The data to return for the row and component (column) that's being passed in
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        print ("coucou")
-        print ( typesactivite[row].libelleTypeActivite)
         return typesactivite[row].libelleTypeActivite
     }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
+    }
+    
+    func pickerView( _ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)  {
+        activitePasse = typesactivite[row].libelleTypeActivite!
     }
     
 }
