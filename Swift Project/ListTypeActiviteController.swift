@@ -20,6 +20,7 @@ class ListTypeActiviteController: UIViewController, UIPickerViewDelegate, UIPick
         
     }
     
+    
     var typesactivite : [TypeActivite] = []
     
     
