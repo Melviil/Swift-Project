@@ -95,7 +95,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="W1y-3t-Mpi" kind="show" id="brT-yx-o5j"/>
+                                    <segue destination="W1y-3t-Mpi" kind="show" identifier="showNomActiviteSegue" id="brT-yx-o5j"/>
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8gB-nd-FUR">
@@ -122,7 +122,7 @@
                         <viewLayoutGuide key="safeArea" id="8T5-zx-nf0"/>
                     </view>
                     <connections>
-                        <outlet property="picker" destination="8gB-nd-FUR" id="3Ne-RC-Ke6"/>
+                        <outlet property="picker" destination="8gB-nd-FUR" id="jOw-5P-fSC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oYC-MY-cYJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -282,6 +282,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ENx-Rn-jjb"/>
                     </view>
+                    <connections>
+                        <outlet property="labelActivite" destination="mYA-U2-Dru" id="yPB-sh-M9u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BtY-iA-gOQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

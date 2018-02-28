@@ -9,7 +9,11 @@
 import UIKit
 
 class AlarmActivite: UIViewController {
-    @IBOutlet weak var Secondbutton: UILabel!
+    
+    @IBOutlet weak var labelActivite: UILabel!
+    var nomActivite = String()
     override func viewDidLoad() {
+        super.viewDidLoad()
+        labelActivite.text = nomActivite
     }
 }

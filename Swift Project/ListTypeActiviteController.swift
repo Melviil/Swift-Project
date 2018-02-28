@@ -1,23 +1,28 @@
-//
-//  ListTypeActiviteController.swift
-//  Swift Project
-//
-//  Created by Melvil on 26/02/2018.
-//  Copyright © 2018 Melvil. All rights reserved.
-//
 
 import UIKit
 import CoreData
 
 class ListTypeActiviteController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-  var myLabel = "football"
     
-   
+    
     @IBOutlet weak var picker: UIPickerView!
     
+    let segueShowNomActivite = "showNomActiviteSegue"
     
+    var activitePasse = "null"
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == segueShowNomActivite {
+            let alarmActivite = segue.destination as! AlarmActivite
+            alarmActivite.nomActivite = activitePasse
+        }
+        
+    }
     
     var typesactivite : [TypeActivite] = []
+    
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -60,4 +65,9 @@ class ListTypeActiviteController: UIViewController, UIPickerViewDelegate, UIPick
         return 1
     }
     
+    func pickerView( _ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)  {
+        activitePasse = typesactivite[row].libelleTypeActivite!
+    }
+    
 }
+
