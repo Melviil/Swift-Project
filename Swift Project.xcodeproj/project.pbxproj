@@ -10,6 +10,7 @@
 		BC04ED98203AE235008F6AC3 /* Contact Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC04ED97203AE235008F6AC3 /* Contact Page.swift */; };
 		BC04ED99203AE235008F6AC3 /* Contact Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC04ED97203AE235008F6AC3 /* Contact Page.swift */; };
 		BC04ED9A203AE235008F6AC3 /* Contact Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC04ED97203AE235008F6AC3 /* Contact Page.swift */; };
+		BC086C682048564B006D2310 /* AjoutHeureModallyControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC086C672048564B006D2310 /* AjoutHeureModallyControllerViewController.swift */; };
 		BC0C9D0E203830230067EBB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0C9D0D203830220067EBB8 /* AppDelegate.swift */; };
 		BC0C9D10203830230067EBB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0C9D0F203830230067EBB8 /* ViewController.swift */; };
 		BC0C9D13203830230067EBB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC0C9D11203830230067EBB8 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		BC04ED97203AE235008F6AC3 /* Contact Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact Page.swift"; sourceTree = "<group>"; };
+		BC086C672048564B006D2310 /* AjoutHeureModallyControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjoutHeureModallyControllerViewController.swift; sourceTree = "<group>"; };
 		BC0C9D0A203830220067EBB8 /* Swift Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC0C9D0D203830220067EBB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC0C9D0F203830230067EBB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				BC0C9D0D203830220067EBB8 /* AppDelegate.swift */,
 				BC0C9D0F203830230067EBB8 /* ViewController.swift */,
 				BC0C9D11203830230067EBB8 /* Main.storyboard */,
+				BC086C672048564B006D2310 /* AjoutHeureModallyControllerViewController.swift */,
 				BC99F0122046B83E00D2FBA0 /* HeureAlarmActiviteController.swift */,
 				BC6FE5A9204487F100D862B6 /* AlarmActivite.swift */,
 				BC6FE5A7204465F900D862B6 /* ListTypeActiviteController.swift */,
@@ -280,6 +283,7 @@
 				BC0C9D10203830230067EBB8 /* ViewController.swift in Sources */,
 				BC6FE5AA204487F100D862B6 /* AlarmActivite.swift in Sources */,
 				BC6FE5A8204465F900D862B6 /* ListTypeActiviteController.swift in Sources */,
+				BC086C682048564B006D2310 /* AjoutHeureModallyControllerViewController.swift in Sources */,
 				BC04ED98203AE235008F6AC3 /* Contact Page.swift in Sources */,
 				BC6FE5A62044434600D862B6 /* MedecinController.swift in Sources */,
 				BC0C9D0E203830230067EBB8 /* AppDelegate.swift in Sources */,
