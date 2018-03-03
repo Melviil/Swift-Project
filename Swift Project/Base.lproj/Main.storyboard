@@ -349,26 +349,32 @@
                                     <segue destination="FXX-Yd-TvR" kind="presentation" id="sRF-MA-fF6"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wRb-1L-cNY">
-                                <rect key="frame" x="113" y="239" width="110" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FbA-Pp-3xr">
+                                <rect key="frame" x="40" y="212" width="240" height="284"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ZIq-iV-g8w" firstAttribute="bottom" secondItem="ehy-VQ-6Ck" secondAttribute="bottom" constant="8" id="2WU-vA-oEG"/>
                             <constraint firstItem="VpB-Yz-K7e" firstAttribute="leading" secondItem="ZIq-iV-g8w" secondAttribute="leading" constant="13.5" id="Aoz-dK-mek"/>
+                            <constraint firstItem="FbA-Pp-3xr" firstAttribute="centerX" secondItem="JPE-aj-go7" secondAttribute="centerX" id="CTS-vx-mId"/>
                             <constraint firstItem="ehy-VQ-6Ck" firstAttribute="centerX" secondItem="JPE-aj-go7" secondAttribute="centerX" id="LQS-yD-xdF"/>
                             <constraint firstItem="giE-We-36J" firstAttribute="top" secondItem="VpB-Yz-K7e" secondAttribute="bottom" constant="22" id="QaB-4s-ZpE"/>
+                            <constraint firstItem="FbA-Pp-3xr" firstAttribute="top" secondItem="giE-We-36J" secondAttribute="bottom" constant="8" id="S11-Bd-PTs"/>
                             <constraint firstItem="yWv-pA-2ub" firstAttribute="top" secondItem="ZIq-iV-g8w" secondAttribute="top" constant="13" id="fxD-1O-M8G"/>
                             <constraint firstItem="VpB-Yz-K7e" firstAttribute="centerX" secondItem="JPE-aj-go7" secondAttribute="centerX" id="nKx-jZ-8ie"/>
                             <constraint firstItem="VpB-Yz-K7e" firstAttribute="top" secondItem="ZIq-iV-g8w" secondAttribute="top" constant="53" id="nQ0-5j-ohf"/>
+                            <constraint firstItem="ehy-VQ-6Ck" firstAttribute="top" secondItem="FbA-Pp-3xr" secondAttribute="bottom" constant="20" id="pBx-Nn-azc"/>
                             <constraint firstItem="yWv-pA-2ub" firstAttribute="centerX" secondItem="JPE-aj-go7" secondAttribute="centerX" id="skK-Ae-U8j"/>
                             <constraint firstItem="VpB-Yz-K7e" firstAttribute="top" secondItem="yWv-pA-2ub" secondAttribute="bottom" constant="10" id="xcZ-4q-JfA"/>
                             <constraint firstItem="giE-We-36J" firstAttribute="centerX" secondItem="JPE-aj-go7" secondAttribute="centerX" id="zKB-Rq-1WP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZIq-iV-g8w"/>
                     </view>
+                    <connections>
+                        <outlet property="TableViewHours" destination="FbA-Pp-3xr" id="K0E-S2-5Bs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M6v-e6-hJg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -513,6 +519,9 @@
                                     <!--2018-02-28 10:08:48 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
+                                <connections>
+                                    <action selector="changerValueDateQuandDateChange:" destination="FXX-Yd-TvR" eventType="valueChanged" id="4qK-VV-MPe"/>
+                                </connections>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ajouter une heure pour l'activité" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Gm-ot-EnF">
                                 <rect key="frame" x="38" y="13" width="244" height="21"/>
@@ -531,7 +540,11 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="zN0-mF-ebF"/>
-                                    <barButtonItem title="Item" systemItem="save" id="RFJ-aj-vNu"/>
+                                    <barButtonItem title="Item" systemItem="save" id="RFJ-aj-vNu">
+                                        <connections>
+                                            <segue destination="Qtt-M5-6ZX" kind="unwind" unwindAction="unwindToHourListAfterSavingHourWithSegue:" id="UHu-GC-m8q"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="ZOe-mX-SBs"/>
                                 </items>
                                 <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -546,8 +559,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5dj-7z-VyO"/>
                     </view>
+                    <connections>
+                        <outlet property="myDatePicker" destination="J7k-ny-ghm" id="pwh-yt-SES"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MOH-c1-gOp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Qtt-M5-6ZX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3437" y="-1516"/>
         </scene>

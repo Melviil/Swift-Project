@@ -10,5 +10,13 @@ import UIKit
 
 class HeureAlarmActiviteController: UIViewController {
     
+    @IBOutlet weak var TableViewHours: UITableView!
+    @IBAction func unwindToHourListAfterSavingHour(segue: UIStoryboardSegue){
+        print("I'm back")
+        let newHeure = segue.source as! AjoutHeureModallyControllerViewController
+        print(newHeure.heureChoisie)
+        
+    }
+    
 
 }

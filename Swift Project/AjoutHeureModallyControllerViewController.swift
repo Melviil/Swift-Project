@@ -10,13 +10,32 @@ import UIKit
 
 class AjoutHeureModallyControllerViewController: UIViewController {
 
+    var heureChoisie = ""
+    
+    @IBOutlet weak var myDatePicker: UIDatePicker!
+    
+    
+    @IBOutlet weak var pressButton: UIButton!
+   
+    
+    @IBAction func changerValueDateQuandDateChange(_ sender: Any) {
+   
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "hh mm a"
+        let selectedDate = dateFormatter.string(from: myDatePicker.date)
+        heureChoisie = selectedDate
+        
+       
+    }
+   
+    
     @IBAction func CancelButton(_ sender: Any) {
         self.dismiss(animated:true, completion: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+      
     }
 
     override func didReceiveMemoryWarning() {
