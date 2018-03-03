@@ -31,11 +31,11 @@
     </entity>
     <entity name="TypeEvenement" representedClassName="TypeEvenement" syncable="YES" codeGenerationType="class"/>
     <elements>
-        <element name="TypeActivite" positionX="-216" positionY="27" width="128" height="73"/>
         <element name="Activite" positionX="115" positionY="27" width="128" height="103"/>
+        <element name="Evenement" positionX="-72" positionY="216" width="128" height="73"/>
         <element name="Jour" positionX="-45" positionY="189" width="128" height="88"/>
         <element name="Medicament" positionX="-324" positionY="252" width="128" height="165"/>
-        <element name="Evenement" positionX="-72" positionY="216" width="128" height="73"/>
+        <element name="TypeActivite" positionX="-216" positionY="27" width="128" height="73"/>
         <element name="TypeEvenement" positionX="-63" positionY="225" width="128" height="45"/>
     </elements>
 </model>
