@@ -10,14 +10,14 @@ import UIKit
 
 class AjoutHeureModallyControllerViewController: UIViewController {
 
-    var heureChoisie = ""
+   
     
     @IBOutlet weak var myDatePicker: UIDatePicker!
     
     
     @IBOutlet weak var pressButton: UIButton!
    
-    
+    var heureChoisie = ""
     @IBAction func changerValueDateQuandDateChange(_ sender: Any) {
    
         let dateFormatter = DateFormatter()

@@ -19,6 +19,9 @@
 		BC0C9D26203830300067EBB8 /* Swift_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0C9D25203830300067EBB8 /* Swift_ProjectTests.swift */; };
 		BC0C9D31203830310067EBB8 /* Swift_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0C9D30203830310067EBB8 /* Swift_ProjectUITests.swift */; };
 		BC567C82204B103E00764B79 /* ChoixTypeSuiviController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC567C81204B103E00764B79 /* ChoixTypeSuiviController.swift */; };
+		BC567C84204BD80100764B79 /* ChoixHeureSuiviViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC567C83204BD80100764B79 /* ChoixHeureSuiviViewController.swift */; };
+		BC567C86204BD81400764B79 /* ChoixDateSuiviViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC567C85204BD81400764B79 /* ChoixDateSuiviViewController.swift */; };
+		BC567C88204BFBED00764B79 /* AjoutSuiviDatabaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC567C87204BFBED00764B79 /* AjoutSuiviDatabaseViewController.swift */; };
 		BC6FE5A62044434600D862B6 /* MedecinController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6FE5A52044434500D862B6 /* MedecinController.swift */; };
 		BC6FE5A8204465F900D862B6 /* ListTypeActiviteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6FE5A7204465F900D862B6 /* ListTypeActiviteController.swift */; };
 		BC6FE5AA204487F100D862B6 /* AlarmActivite.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6FE5A9204487F100D862B6 /* AlarmActivite.swift */; };
@@ -59,6 +62,9 @@
 		BC0C9D30203830310067EBB8 /* Swift_ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_ProjectUITests.swift; sourceTree = "<group>"; };
 		BC0C9D32203830310067EBB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC567C81204B103E00764B79 /* ChoixTypeSuiviController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoixTypeSuiviController.swift; sourceTree = "<group>"; };
+		BC567C83204BD80100764B79 /* ChoixHeureSuiviViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoixHeureSuiviViewController.swift; sourceTree = "<group>"; };
+		BC567C85204BD81400764B79 /* ChoixDateSuiviViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoixDateSuiviViewController.swift; sourceTree = "<group>"; };
+		BC567C87204BFBED00764B79 /* AjoutSuiviDatabaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjoutSuiviDatabaseViewController.swift; sourceTree = "<group>"; };
 		BC6FE5A52044434500D862B6 /* MedecinController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedecinController.swift; sourceTree = "<group>"; };
 		BC6FE5A7204465F900D862B6 /* ListTypeActiviteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTypeActiviteController.swift; sourceTree = "<group>"; };
 		BC6FE5A9204487F100D862B6 /* AlarmActivite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmActivite.swift; sourceTree = "<group>"; };
@@ -116,6 +122,9 @@
 				BC0C9D0D203830220067EBB8 /* AppDelegate.swift */,
 				BC0C9D0F203830230067EBB8 /* ViewController.swift */,
 				BC0C9D11203830230067EBB8 /* Main.storyboard */,
+				BC567C85204BD81400764B79 /* ChoixDateSuiviViewController.swift */,
+				BC567C87204BFBED00764B79 /* AjoutSuiviDatabaseViewController.swift */,
+				BC567C83204BD80100764B79 /* ChoixHeureSuiviViewController.swift */,
 				BC567C81204B103E00764B79 /* ChoixTypeSuiviController.swift */,
 				BC086C672048564B006D2310 /* AjoutHeureModallyControllerViewController.swift */,
 				BC99F0122046B83E00D2FBA0 /* HeureAlarmActiviteController.swift */,
@@ -282,14 +291,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC99F0132046B83E00D2FBA0 /* HeureAlarmActiviteController.swift in Sources */,
+				BC567C88204BFBED00764B79 /* AjoutSuiviDatabaseViewController.swift in Sources */,
 				BC0C9D16203830240067EBB8 /* Swift_Project.xcdatamodeld in Sources */,
 				BC567C82204B103E00764B79 /* ChoixTypeSuiviController.swift in Sources */,
 				BC0C9D10203830230067EBB8 /* ViewController.swift in Sources */,
 				BC6FE5AA204487F100D862B6 /* AlarmActivite.swift in Sources */,
 				BC6FE5A8204465F900D862B6 /* ListTypeActiviteController.swift in Sources */,
 				BC086C682048564B006D2310 /* AjoutHeureModallyControllerViewController.swift in Sources */,
+				BC567C84204BD80100764B79 /* ChoixHeureSuiviViewController.swift in Sources */,
 				BC04ED98203AE235008F6AC3 /* Contact Page.swift in Sources */,
 				BC6FE5A62044434600D862B6 /* MedecinController.swift in Sources */,
+				BC567C86204BD81400764B79 /* ChoixDateSuiviViewController.swift in Sources */,
 				BC0C9D0E203830230067EBB8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

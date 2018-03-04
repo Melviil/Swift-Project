@@ -6,10 +6,6 @@
         <relationship name="estDeType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TypeActivite" inverseName="correspondA" inverseEntity="TypeActivite" syncable="YES"/>
         <relationship name="sePasse" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Jour" inverseName="contient" inverseEntity="Jour" syncable="YES"/>
     </entity>
-    <entity name="Evenement" representedClassName="Evenement" syncable="YES" codeGenerationType="class">
-        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="heure" optional="YES" attributeType="String" syncable="YES"/>
-    </entity>
     <entity name="Jour" representedClassName="Jour" syncable="YES" codeGenerationType="class">
         <attribute name="idJour" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="libelleJour" optional="YES" attributeType="String" syncable="YES"/>
@@ -25,17 +21,20 @@
         <attribute name="presentationBreveMedicament" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="presentationMedicament" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="Symptome" representedClassName="Symptome" syncable="YES" codeGenerationType="class">
+        <attribute name="dateSymptome" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="heureSymptome" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="typeSymptome" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="TypeActivite" representedClassName="TypeActivite" syncable="YES" codeGenerationType="class">
         <attribute name="libelleTypeActivite" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="correspondA" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activite" inverseName="estDeType" inverseEntity="Activite" syncable="YES"/>
     </entity>
-    <entity name="TypeEvenement" representedClassName="TypeEvenement" syncable="YES" codeGenerationType="class"/>
     <elements>
         <element name="Activite" positionX="115" positionY="27" width="128" height="103"/>
-        <element name="Evenement" positionX="-72" positionY="216" width="128" height="73"/>
-        <element name="Jour" positionX="-45" positionY="189" width="128" height="88"/>
+        <element name="Symptome" positionX="-47" positionY="224" width="128" height="88"/>
+        <element name="Jour" positionX="-216" positionY="135" width="128" height="88"/>
         <element name="Medicament" positionX="-324" positionY="252" width="128" height="165"/>
         <element name="TypeActivite" positionX="-216" positionY="27" width="128" height="73"/>
-        <element name="TypeEvenement" positionX="-63" positionY="225" width="128" height="45"/>
     </elements>
 </model>

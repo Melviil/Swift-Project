@@ -15,11 +15,27 @@ class ChoixTypeSuiviController: UIViewController, UIPickerViewDataSource, UIPick
     
     @IBOutlet weak var picker: UIPickerView!
     var pickerData: [String] = [String]()
+    
+    let segueShowNomSuivi = "showNomSuiviSegue"
+
+    var nomSuivi = "null"
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == segueShowNomSuivi {
+            let ChoixHeureSuivi = segue.destination as! ChoixHeureSuiviViewController
+            ChoixHeureSuivi.nomSuiviSend = self.nomSuivi
+            print(nomSuivi)
+        }
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         picker.dataSource = self
         picker.delegate = self
-        pickerData = ["ON", "OFF", "DISKYNESIE", "OUBLIE"]
+        pickerData = ["ON", "OFF", "DYSKYNESIE", "OUBLIE"]
         // Do any additional setup after loading the view.
     }
 
@@ -39,6 +55,9 @@ class ChoixTypeSuiviController: UIViewController, UIPickerViewDataSource, UIPick
     // The data to return for the row and component (column) that's being passed in
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerData[row]
+    }
+    func pickerView( _ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)  {
+        nomSuivi = pickerData[row]
     }
     
 

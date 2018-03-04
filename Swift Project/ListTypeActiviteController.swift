@@ -28,6 +28,7 @@ class ListTypeActiviteController: UIViewController, UIPickerViewDelegate, UIPick
         picker.dataSource = self
         picker.delegate = self
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
+            //Ajouter une error a display
             return
         }
         let context = appDelegate.persistentContainer.viewContext
