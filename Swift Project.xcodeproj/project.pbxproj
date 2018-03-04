@@ -119,19 +119,10 @@
 		BC0C9D0C203830220067EBB8 /* Swift Project */ = {
 			isa = PBXGroup;
 			children = (
+				BCAFD280204C4D9C0037ADBD /* Controller */,
 				BC0C9D0D203830220067EBB8 /* AppDelegate.swift */,
 				BC0C9D0F203830230067EBB8 /* ViewController.swift */,
 				BC0C9D11203830230067EBB8 /* Main.storyboard */,
-				BC567C85204BD81400764B79 /* ChoixDateSuiviViewController.swift */,
-				BC567C87204BFBED00764B79 /* AjoutSuiviDatabaseViewController.swift */,
-				BC567C83204BD80100764B79 /* ChoixHeureSuiviViewController.swift */,
-				BC567C81204B103E00764B79 /* ChoixTypeSuiviController.swift */,
-				BC086C672048564B006D2310 /* AjoutHeureModallyControllerViewController.swift */,
-				BC99F0122046B83E00D2FBA0 /* HeureAlarmActiviteController.swift */,
-				BC6FE5A9204487F100D862B6 /* AlarmActivite.swift */,
-				BC6FE5A7204465F900D862B6 /* ListTypeActiviteController.swift */,
-				BC04ED97203AE235008F6AC3 /* Contact Page.swift */,
-				BC6FE5A52044434500D862B6 /* MedecinController.swift */,
 				BC0C9D17203830240067EBB8 /* Assets.xcassets */,
 				BC0C9D1C203830250067EBB8 /* Info.plist */,
 				BC0C9D14203830230067EBB8 /* Swift_Project.xcdatamodeld */,
@@ -155,6 +146,23 @@
 				BC0C9D32203830310067EBB8 /* Info.plist */,
 			);
 			path = "Swift ProjectUITests";
+			sourceTree = "<group>";
+		};
+		BCAFD280204C4D9C0037ADBD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BC567C85204BD81400764B79 /* ChoixDateSuiviViewController.swift */,
+				BC567C87204BFBED00764B79 /* AjoutSuiviDatabaseViewController.swift */,
+				BC567C81204B103E00764B79 /* ChoixTypeSuiviController.swift */,
+				BC086C672048564B006D2310 /* AjoutHeureModallyControllerViewController.swift */,
+				BC04ED97203AE235008F6AC3 /* Contact Page.swift */,
+				BC6FE5A52044434500D862B6 /* MedecinController.swift */,
+				BC567C83204BD80100764B79 /* ChoixHeureSuiviViewController.swift */,
+				BC99F0122046B83E00D2FBA0 /* HeureAlarmActiviteController.swift */,
+				BC6FE5A9204487F100D862B6 /* AlarmActivite.swift */,
+				BC6FE5A7204465F900D862B6 /* ListTypeActiviteController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
