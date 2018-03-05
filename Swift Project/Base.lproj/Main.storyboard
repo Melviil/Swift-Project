@@ -658,8 +658,8 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u66-sH-BT8">
                                 <rect key="frame" x="8" y="232.5" width="142" height="78.5"/>
                                 <color key="backgroundColor" red="0.23529411759999999" green="0.57254901960000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="Symtômes">
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Symptômes">
                                     <color key="titleColor" red="0.90249603990000005" green="0.90249603990000005" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.23529411759999999" green="0.57254901960000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -1088,22 +1088,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SL8-1h-cpI">
-                                <rect key="frame" x="137" y="491" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SL8-1h-cpI">
+                                <rect key="frame" x="137" y="526" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="8sd-C3-BzQ" kind="show" id="cAx-bS-kPM"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yzv-Jy-zDc">
+                                <rect key="frame" x="40" y="60" width="240" height="436"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lot-me-0QH" firstAttribute="bottom" secondItem="SL8-1h-cpI" secondAttribute="bottom" constant="12" id="6D1-DH-s64"/>
+                            <constraint firstItem="yzv-Jy-zDc" firstAttribute="leading" secondItem="lot-me-0QH" secondAttribute="leading" constant="40" id="Fz5-kA-yMu"/>
+                            <constraint firstItem="yzv-Jy-zDc" firstAttribute="top" secondItem="lot-me-0QH" secondAttribute="top" constant="40" id="Luf-JU-Tgh"/>
+                            <constraint firstItem="SL8-1h-cpI" firstAttribute="centerX" secondItem="3wD-Vb-2Le" secondAttribute="centerX" id="dxx-ea-fbI"/>
+                            <constraint firstItem="lot-me-0QH" firstAttribute="trailing" secondItem="yzv-Jy-zDc" secondAttribute="trailing" constant="40" id="eTR-bs-F8r"/>
+                            <constraint firstItem="SL8-1h-cpI" firstAttribute="top" secondItem="yzv-Jy-zDc" secondAttribute="bottom" constant="30" id="umm-6O-gG4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lot-me-0QH"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o4e-IV-a23" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1097" y="819"/>
+            <point key="canvasLocation" x="1096.875" y="818.66197183098598"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="uGR-ch-db6">
@@ -1404,6 +1415,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="VbN-so-GSG"/>
         <segue reference="JgW-rQ-GoZ"/>
     </inferredMetricsTieBreakers>
 </document>
