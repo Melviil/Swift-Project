@@ -36,10 +36,16 @@ class ListTypeActiviteController: UIViewController, UIPickerViewDelegate, UIPick
         
         do{
             try self.typesactivite = context.fetch(request)
+            print(self.typesactivite[0].libelleTypeActivite!)
+            if self.typesactivite.isEmpty == false {
+                print("Il y a des activités!")
+                self.activitePasse = self.typesactivite[0].libelleTypeActivite!
+            }
         }
         catch{
             return
         }
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

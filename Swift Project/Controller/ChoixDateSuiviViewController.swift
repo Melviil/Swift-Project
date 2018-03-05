@@ -21,6 +21,7 @@ class ChoixDateSuiviViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        changerValueDateQuandDateChange(self) //au cas où l'utilisateur garde la date préséléctionnée
         // Do any additional setup after loading the view.
     }
 

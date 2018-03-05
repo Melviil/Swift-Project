@@ -17,6 +17,8 @@ class ChoixHeureSuiviViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        changerValueDateQuandDateChange(self) //au cas où l'utilisateur garde l'heure préséléctionnée
+
         // Do any additional setup after loading the view.
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

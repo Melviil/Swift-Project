@@ -36,6 +36,7 @@ class ChoixTypeSuiviController: UIViewController, UIPickerViewDataSource, UIPick
         picker.dataSource = self
         picker.delegate = self
         pickerData = ["ON", "OFF", "DYSKYNESIE", "OUBLIE"]
+        self.nomSuivi=pickerData[0]
         // Do any additional setup after loading the view.
     }
 
