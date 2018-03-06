@@ -7,8 +7,9 @@ class ListTypeActiviteController: UIViewController, UIPickerViewDelegate, UIPick
     @IBOutlet weak var picker: UIPickerView!
     
     let segueShowNomActivite = "showNomActiviteSegue"
+     var typesactivite : [TypeActivite] = []
+    var activitePasse = TypeActivite() ;
     
-    var activitePasse = "null"
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -19,7 +20,7 @@ class ListTypeActiviteController: UIViewController, UIPickerViewDelegate, UIPick
     
     }
     
-    var typesactivite : [TypeActivite] = []
+   
    
     
     override func viewDidLoad() {
@@ -36,10 +37,10 @@ class ListTypeActiviteController: UIViewController, UIPickerViewDelegate, UIPick
         
         do{
             try self.typesactivite = context.fetch(request)
-            print(self.typesactivite[0].libelleTypeActivite!)
+            print(self.typesactivite[0])
             if self.typesactivite.isEmpty == false {
-                print("Il y a des activités!")
-                self.activitePasse = self.typesactivite[0].libelleTypeActivite!
+                print("Il y a des activitéshh!")
+                self.activitePasse = self.typesactivite[0]
             }
         }
         catch{
@@ -72,7 +73,7 @@ class ListTypeActiviteController: UIViewController, UIPickerViewDelegate, UIPick
     }
     
     func pickerView( _ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)  {
-        activitePasse = typesactivite[row].libelleTypeActivite!
+        activitePasse = typesactivite[row]
     }
     
 }

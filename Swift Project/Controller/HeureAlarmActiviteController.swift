@@ -10,13 +10,22 @@ import UIKit
 
 class HeureAlarmActiviteController: UIViewController, UITableViewDataSource {
     
-   
-    
+    var nomActivite = TypeActivite() ;
+    var listeJoursActivite : [String] = [];
+ 
+    @IBOutlet weak var labelActivite: UILabel!
     @IBOutlet weak var TableViewHours: UITableView!
     var hours: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(listeJoursActivite)
+        labelActivite.text = nomActivite.libelleTypeActivite
+        print(nomActivite)
+        print(listeJoursActivite)
+       
+
+
         }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -38,6 +47,7 @@ class HeureAlarmActiviteController: UIViewController, UITableViewDataSource {
    
     @IBAction func unwindToHourListAfterSavingHour(segue: UIStoryboardSegue){
         print("I'm back")
+
         let newHeure = segue.source as! AjoutHeureModallyControllerViewController
         print(newHeure.heureChoisie)
         hours.append(newHeure.heureChoisie)

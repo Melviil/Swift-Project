@@ -165,7 +165,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="SNh-IE-6nh" kind="show" id="FtX-1P-1C9"/>
+                                    <segue destination="SNh-IE-6nh" kind="show" identifier="showJourActiviteSegue" id="FtX-1P-1C9"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lundi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98T-hJ-uJM">
@@ -295,7 +295,14 @@
                         <viewLayoutGuide key="safeArea" id="ENx-Rn-jjb"/>
                     </view>
                     <connections>
+                        <outlet property="dimSwitch" destination="7Pd-u0-8er" id="uPj-ya-Zfe"/>
+                        <outlet property="jeuSwitch" destination="uVl-W0-P7Y" id="RWA-Xl-6IX"/>
                         <outlet property="labelActivite" destination="mYA-U2-Dru" id="z9i-aT-5y3"/>
+                        <outlet property="lunSwitch" destination="LBY-SZ-diQ" id="ieR-e3-uTQ"/>
+                        <outlet property="marSwitch" destination="5rr-ki-LXq" id="ILl-2j-oUu"/>
+                        <outlet property="merSwitch" destination="TZg-T2-f9p" id="XiX-fC-XO5"/>
+                        <outlet property="samSwitch" destination="mBe-pH-Ay1" id="oHr-DO-z37"/>
+                        <outlet property="venSwitch" destination="Y0G-Jh-x6a" id="jyd-eb-CoH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BtY-iA-gOQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -385,6 +392,7 @@
                     </view>
                     <connections>
                         <outlet property="TableViewHours" destination="FbA-Pp-3xr" id="K0E-S2-5Bs"/>
+                        <outlet property="labelActivite" destination="yWv-pA-2ub" id="vQQ-f0-XeG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M6v-e6-hJg" userLabel="First Responder" sceneMemberID="firstResponder"/>

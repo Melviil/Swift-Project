@@ -9,7 +9,7 @@
 import UIKit
 
 class MedecinController: UIViewController {
-    
+   
     @IBAction func addTypeAct(_ sender: UIButton) {
    
     let alert = UIAlertController( title : " Nouveau type d'activité", message : "Ajouter un type d'activité", preferredStyle : .alert)
