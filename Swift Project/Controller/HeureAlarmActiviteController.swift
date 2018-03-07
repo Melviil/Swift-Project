@@ -12,10 +12,11 @@ class HeureAlarmActiviteController: UIViewController, UITableViewDataSource {
     
     var nomActivite = TypeActivite() ;
     var listeJoursActivite : [String] = [];
+    var hours: [String] = []
+
  
     @IBOutlet weak var labelActivite: UILabel!
     @IBOutlet weak var TableViewHours: UITableView!
-    var hours: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +45,7 @@ class HeureAlarmActiviteController: UIViewController, UITableViewDataSource {
 
 
     
-   
+   // executé au retour du modally
     @IBAction func unwindToHourListAfterSavingHour(segue: UIStoryboardSegue){
         print("I'm back")
 
@@ -52,6 +53,18 @@ class HeureAlarmActiviteController: UIViewController, UITableViewDataSource {
         print(newHeure.heureChoisie)
         hours.append(newHeure.heureChoisie)
         TableViewHours.reloadData()
+        
+    }
+    let showJourActiviteSegue = "DateDebutActiviteSegue"
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == showJourActiviteSegue {
+            let dateDebutAlarmActivite = segue.destination as! DateDebutActiviteViewController
+            dateDebutAlarmActivite.nomActivite = nomActivite
+            dateDebutAlarmActivite.listeJoursActivite = listeJoursActivite
+            dateDebutAlarmActivite.listeHeuresActivite = hours
+            
+        }
         
     }
     
