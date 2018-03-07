@@ -1,5 +1,5 @@
 //
-//  DateFinActiviteViewController.swift
+//  ActiviteAjoutViewController.swift
 //  Swift Project
 //
 //  Created by Melvil on 07/03/2018.
@@ -8,20 +8,20 @@
 
 import UIKit
 
-class DateFinActiviteViewController: UIViewController {
+class ActiviteAjoutViewController: UIViewController {
     var nomActivite = TypeActivite()
     var listeJoursActivite : [String] = []
     var listeHeuresActivite: [String] = []
     var dateDebutActivite = String()
-    var dateChoisi = String()
-
+    var dateFinActivite = String()
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Activité date fin ")
+        print("INFORMATIONS AJOUT")
         print(nomActivite)
         print(listeJoursActivite)
         print(listeHeuresActivite)
-       // print(dateDebutActivite)
+        print(dateDebutActivite)
+        print(dateFinActivite)
         // Do any additional setup after loading the view.
     }
 
@@ -29,26 +29,9 @@ class DateFinActiviteViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func changerValueDateQuandDateChange(_ sender: Any) {
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MM-yyyy"
-        let selectedDate = dateFormatter.string(from: myDatePicker.date)
-        dateChoisi = selectedDate
-        print(dateChoisi)
-        
-    }
     
-    let showJourActiviteSegue = "AjoutActiviteSegue"
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == showJourActiviteSegue {
-            let ajoutActivite = segue.destination as! DateDebutActiviteViewController
-            ajoutActivite.nomActivite = nomActivite
-            ajoutActivite.listeJoursActivite = listeJoursActivite
-            ajoutActivite.listeHeuresActivite = listeHeuresActivite
-            ajoutActivite
-        }
+    //TODO
+    func saveNewActivite( withNom nom: String, withHeure heure: String,withDate date: String){
     }
 
     /*

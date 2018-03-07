@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AjoutHeureModallyControllerViewController: UIViewController {
+class ActiviteHeureModallyViewController: UIViewController {
 
    
     
@@ -34,8 +34,6 @@ class AjoutHeureModallyControllerViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-      
     }
 
     override func didReceiveMemoryWarning() {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AlarmActivite: UIViewController {
+class ActiviteJoursViewController: UIViewController {
 
     @IBOutlet weak var labelActivite: UILabel!
     
@@ -41,7 +41,7 @@ class AlarmActivite: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == showJourActiviteSegue {
-            let heureAlarmActivite = segue.destination as! HeureAlarmActiviteController
+            let heureAlarmActivite = segue.destination as! ActiviteHeuresViewController
             heureAlarmActivite.nomActivite = nomActivite
             heureAlarmActivite.listeJoursActivite = joursActivite
             valideHeureActivite(self)

@@ -8,22 +8,20 @@
 
 import UIKit
 
-class DateDebutActiviteViewController: UIViewController {
+class ActiviteDateDebutViewController: UIViewController {
+    @IBOutlet weak var myDatePicker: UIDatePicker!
+    @IBOutlet weak var labelActivite: UILabel!
     var nomActivite = TypeActivite()
     var listeJoursActivite : [String] = []
     var listeHeuresActivite: [String] = []
     var dateChoisi = String()
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Activité date debut ")
-        print(nomActivite)
-        print(listeJoursActivite)
-        print(listeHeuresActivite)
-        
+        labelActivite.text = nomActivite.libelleTypeActivite
+
         // Do any additional setup after loading the view.
     }
-    @IBOutlet weak var myDatePicker: UIDatePicker!
-    
+   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
        
@@ -33,7 +31,7 @@ class DateDebutActiviteViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == showJourActiviteSegue {
-            let dateFinAlarmActivite = segue.destination as! DateDebutActiviteViewController
+            let dateFinAlarmActivite = segue.destination as! ActiviteDateFinViewController
             dateFinAlarmActivite.nomActivite = nomActivite
             dateFinAlarmActivite.listeJoursActivite = listeJoursActivite
             dateFinAlarmActivite.listeHeuresActivite = listeHeuresActivite

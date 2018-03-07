@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HeureAlarmActiviteController: UIViewController, UITableViewDataSource {
+class ActiviteHeuresViewController: UIViewController, UITableViewDataSource {
     
     var nomActivite = TypeActivite() ;
     var listeJoursActivite : [String] = [];
@@ -20,11 +20,7 @@ class HeureAlarmActiviteController: UIViewController, UITableViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(listeJoursActivite)
-        labelActivite.text = nomActivite.libelleTypeActivite
-        print(nomActivite)
-        print(listeJoursActivite)
-       
+        labelActivite.text = nomActivite.libelleTypeActivite       
 
 
         }
@@ -47,9 +43,7 @@ class HeureAlarmActiviteController: UIViewController, UITableViewDataSource {
     
    // executé au retour du modally
     @IBAction func unwindToHourListAfterSavingHour(segue: UIStoryboardSegue){
-        print("I'm back")
-
-        let newHeure = segue.source as! AjoutHeureModallyControllerViewController
+        let newHeure = segue.source as! ActiviteHeureModallyViewController
         print(newHeure.heureChoisie)
         hours.append(newHeure.heureChoisie)
         TableViewHours.reloadData()
@@ -59,7 +53,7 @@ class HeureAlarmActiviteController: UIViewController, UITableViewDataSource {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == showJourActiviteSegue {
-            let dateDebutAlarmActivite = segue.destination as! DateDebutActiviteViewController
+            let dateDebutAlarmActivite = segue.destination as! ActiviteDateDebutViewController
             dateDebutAlarmActivite.nomActivite = nomActivite
             dateDebutAlarmActivite.listeJoursActivite = listeJoursActivite
             dateDebutAlarmActivite.listeHeuresActivite = hours

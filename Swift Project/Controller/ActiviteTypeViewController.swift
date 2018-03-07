@@ -2,7 +2,7 @@
 import UIKit
 import CoreData
 
-class ListTypeActiviteController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class ActiviteTypeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
  
     @IBOutlet weak var picker: UIPickerView!
     
@@ -14,13 +14,12 @@ class ListTypeActiviteController: UIViewController, UIPickerViewDelegate, UIPick
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == segueShowNomActivite {
-            let alarmActivite = segue.destination as! AlarmActivite
+            let alarmActivite = segue.destination as! ActiviteJoursViewController
             alarmActivite.nomActivite = activitePasse
         }
     
     }
     
-   
    
     
     override func viewDidLoad() {
@@ -39,7 +38,6 @@ class ListTypeActiviteController: UIViewController, UIPickerViewDelegate, UIPick
             try self.typesactivite = context.fetch(request)
             print(self.typesactivite[0])
             if self.typesactivite.isEmpty == false {
-                print("Il y a des activitéshh!")
                 self.activitePasse = self.typesactivite[0]
             }
         }
