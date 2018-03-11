@@ -8,9 +8,20 @@
 
 import UIKit
 
-class MedicamentHeureViewController: UIViewController {
+class MedicamentHeureViewController: UIViewController, UITableViewDataSource {
+    
+    var hours: [String] = []
 
-    var medicamentPasse = Medicament()
+    @IBOutlet weak var tableViewHours: UITableView!
+    var medicamentPasse = Medicament() 
+    
+    var libelleMedicamentPasse = String()
+    var presentationBreveMedicamentPasse = String()
+    var DoseMedicamentPasse = String()
+    var presentationDetailleMedicamentPasse = String()
+    var nbPriseMedicamentPasse = String()
+    var frequencePriseMedicamentPasse = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,15 +33,30 @@ class MedicamentHeureViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // executé au retour du modally
+    @IBAction func unwindToHourListAfterSavingHour(segue: UIStoryboardSegue){
+        let newHeure = segue.source as! MedicamentAjoutHeureViewController
+        print(newHeure.heureChoisie)
+        hours.append(newHeure.heureChoisie)
+        
     }
-    */
-
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return hours.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = self.hours[indexPath.row]
+        return cell
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        
+        }
+        
+    }
 }

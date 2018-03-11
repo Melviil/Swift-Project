@@ -1,5 +1,5 @@
 //
-//  MedicamentAjoutHeureViewController.swift
+//  MedicamentAjoutViewController.swift
 //  Swift Project
 //
 //  Created by Assil EL YAHYAOUI on 11/03/2018.
@@ -8,10 +8,8 @@
 
 import UIKit
 
-class MedicamentAjoutHeureViewController: UIViewController {
-    
-    
-    
+class MedicamentAjoutViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,25 +20,8 @@ class MedicamentAjoutHeureViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-      @IBOutlet weak var myDatePicker: UIDatePicker!
     
-    @IBOutlet weak var pressButton: UIButton!
-    
-    var heureChoisie = ""
-    @IBAction func changerValueDateQuandDateChange(_ sender: Any) {
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "hh mm a"
-        let selectedDate = dateFormatter.string(from: myDatePicker.date)
-        heureChoisie = selectedDate
-        
-        
-    }
-    
-    
-    @IBAction func CancelButton(_ sender: Any) {
-        self.dismiss(animated:true, completion: nil)
-    }
+
     /*
     // MARK: - Navigation
 

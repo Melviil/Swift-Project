@@ -420,10 +420,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mb9-ip-Zyw">
-                                <rect key="frame" x="46" y="516" width="229" height="44"/>
+                                <rect key="frame" x="27" y="516" width="266" height="44"/>
                                 <color key="backgroundColor" red="0.23529411759999999" green="0.57254901960000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="Ajouter la date de fin">
+                                <state key="normal" title="Ajouter la date de debut">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -2013,6 +2013,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iNx-4m-2Qg"/>
                     </view>
+                    <connections>
+                        <outlet property="DoseMedicament" destination="0Rn-kA-uS1" id="sQO-bz-sOa"/>
+                        <outlet property="frequencePriseMedicament" destination="p1p-wV-gvw" id="mYY-B7-ka4"/>
+                        <outlet property="libelleMedicament" destination="dHd-nl-K6y" id="zYb-hr-NqR"/>
+                        <outlet property="nbPriseMedicament" destination="nWZ-H6-Dtv" id="YsC-uf-hbd"/>
+                        <outlet property="presentationBreveMedicament" destination="Rbr-oX-rgg" id="4He-Ww-BY5"/>
+                        <outlet property="presentationDetailleMedicament" destination="Hm8-I8-lPg" id="uW4-h3-X4K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ebr-Cm-vZI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2124,6 +2132,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Xoe-zp-g4b" kind="show" id="B8u-CK-MiI"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HHx-rE-rpg">
                                 <rect key="frame" x="40" y="180" width="240" height="316"/>
@@ -2151,10 +2162,209 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9gF-13-wl5"/>
                     </view>
+                    <connections>
+                        <outlet property="tableViewHours" destination="HHx-rE-rpg" id="tsa-hM-tgd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c65-Ef-dCm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2934" y="945"/>
+        </scene>
+        <!--Medicament Date Debut View Controller-->
+        <scene sceneID="Wkw-uS-1eD">
+            <objects>
+                <viewController id="Xoe-zp-g4b" customClass="MedicamentDateDebutViewController" customModule="Swift_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bnP-yL-LrA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom Medicament" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjC-av-0GZ">
+                                <rect key="frame" x="63.5" y="10" width="193" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Veuillez saisir la date de début" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rw-kO-g6R">
+                                <rect key="frame" x="17.5" y="53" width="285" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P42-zx-QBL">
+                                <rect key="frame" x="27.5" y="516" width="266" height="44"/>
+                                <color key="backgroundColor" red="0.23529411759999999" green="0.57254901960000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Ajouter la date de debut">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="ZTk-40-iNC" kind="show" id="Fqw-tq-aKx"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="oIL-h6-TaH">
+                                <rect key="frame" x="0.0" y="176" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="541612540.84617805">
+                                    <!--2018-03-01 3:55:40 PM +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="fr"/>
+                                <connections>
+                                    <action selector="changerValueDateQuandDateChange:" destination="w5m-EX-QYJ" eventType="valueChanged" id="dL4-xZ-A4l"/>
+                                </connections>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gjC-av-0GZ" firstAttribute="centerX" secondItem="bnP-yL-LrA" secondAttribute="centerX" id="3bS-bW-c4j"/>
+                            <constraint firstItem="oIL-h6-TaH" firstAttribute="centerX" secondItem="bnP-yL-LrA" secondAttribute="centerX" id="4Q0-tt-3ia"/>
+                            <constraint firstItem="gjC-av-0GZ" firstAttribute="top" secondItem="bnP-yL-LrA" secondAttribute="top" constant="10" id="Min-l9-eXB"/>
+                            <constraint firstItem="6rw-kO-g6R" firstAttribute="centerX" secondItem="bnP-yL-LrA" secondAttribute="centerX" id="ZnY-ct-iiG"/>
+                            <constraint firstItem="6rw-kO-g6R" firstAttribute="top" secondItem="gjC-av-0GZ" secondAttribute="bottom" constant="13" id="cy4-tp-TlJ"/>
+                            <constraint firstItem="oIL-h6-TaH" firstAttribute="top" secondItem="6rw-kO-g6R" secondAttribute="bottom" constant="96.5" id="p4B-Ml-mqE"/>
+                            <constraint firstItem="oIL-h6-TaH" firstAttribute="centerY" secondItem="bnP-yL-LrA" secondAttribute="centerY" id="rlj-Xj-rVE"/>
+                            <constraint firstItem="TeV-dP-idS" firstAttribute="bottom" secondItem="P42-zx-QBL" secondAttribute="bottom" constant="8" id="ry0-7Z-uzp"/>
+                            <constraint firstItem="P42-zx-QBL" firstAttribute="top" secondItem="oIL-h6-TaH" secondAttribute="bottom" constant="124" id="tsS-e3-BZI"/>
+                            <constraint firstItem="P42-zx-QBL" firstAttribute="centerX" secondItem="bnP-yL-LrA" secondAttribute="centerX" id="x3W-8i-skv"/>
+                            <constraint firstItem="oIL-h6-TaH" firstAttribute="centerX" secondItem="bnP-yL-LrA" secondAttribute="centerX" id="ycf-1F-EdN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TeV-dP-idS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sRO-oy-P9X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3769" y="945"/>
+        </scene>
+        <!--Medicament Date Fin View Controller-->
+        <scene sceneID="KsA-gv-aSP">
+            <objects>
+                <viewController id="ZTk-40-iNC" customClass="MedicamentDateFinViewController" customModule="Swift_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y3q-Zg-9Bo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom Activité" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wy4-Dp-Crq">
+                                <rect key="frame" x="91" y="10" width="138.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Veuillez saisir la date de fin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3I-Ka-8cO">
+                                <rect key="frame" x="33.5" y="53" width="253" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HEh-a7-p8s">
+                                <rect key="frame" x="45.5" y="516" width="229" height="44"/>
+                                <color key="backgroundColor" red="0.23529411759999999" green="0.57254901960000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Ajouter la date de fin">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="PY9-b0-I7R" kind="presentation" id="qZA-ny-VeU"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="xAY-Zh-CQb">
+                                <rect key="frame" x="0.0" y="176" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="541612540.84617805">
+                                    <!--2018-03-01 3:55:40 PM +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="fr"/>
+                                <connections>
+                                    <action selector="changerValueDateQuandDateChange:" destination="w5m-EX-QYJ" eventType="valueChanged" id="SW2-UU-O4P"/>
+                                </connections>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xAY-Zh-CQb" firstAttribute="centerY" secondItem="y3q-Zg-9Bo" secondAttribute="centerY" id="8Od-dN-w6v"/>
+                            <constraint firstItem="OeI-JU-Mac" firstAttribute="bottom" secondItem="HEh-a7-p8s" secondAttribute="bottom" constant="8" id="9JD-IP-mEf"/>
+                            <constraint firstItem="HEh-a7-p8s" firstAttribute="top" secondItem="xAY-Zh-CQb" secondAttribute="bottom" constant="124" id="Rrw-IK-gqZ"/>
+                            <constraint firstItem="xAY-Zh-CQb" firstAttribute="top" secondItem="T3I-Ka-8cO" secondAttribute="bottom" constant="96.5" id="Z5x-hI-5nc"/>
+                            <constraint firstItem="HEh-a7-p8s" firstAttribute="top" secondItem="xAY-Zh-CQb" secondAttribute="bottom" constant="124" id="cro-mi-vjS"/>
+                            <constraint firstItem="HEh-a7-p8s" firstAttribute="centerX" secondItem="y3q-Zg-9Bo" secondAttribute="centerX" id="hCV-v1-xQt"/>
+                            <constraint firstItem="T3I-Ka-8cO" firstAttribute="top" secondItem="Wy4-Dp-Crq" secondAttribute="bottom" constant="13" id="hcg-Na-5ai"/>
+                            <constraint firstItem="Wy4-Dp-Crq" firstAttribute="centerX" secondItem="y3q-Zg-9Bo" secondAttribute="centerX" id="qTU-ZV-Frz"/>
+                            <constraint firstItem="Wy4-Dp-Crq" firstAttribute="top" secondItem="y3q-Zg-9Bo" secondAttribute="top" constant="10" id="x0Z-xm-jWq"/>
+                            <constraint firstItem="T3I-Ka-8cO" firstAttribute="centerX" secondItem="y3q-Zg-9Bo" secondAttribute="centerX" id="yfP-cN-TCX"/>
+                            <constraint firstItem="xAY-Zh-CQb" firstAttribute="centerX" secondItem="y3q-Zg-9Bo" secondAttribute="centerX" id="zhD-gl-1fi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OeI-JU-Mac"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eHf-fk-rZF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4590" y="944"/>
+        </scene>
+        <!--Medicament Ajout View Controller-->
+        <scene sceneID="VQh-Jo-S5j">
+            <objects>
+                <viewController id="PY9-b0-I7R" customClass="MedicamentAjoutViewController" customModule="Swift_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I1Z-GW-sNy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Informations bien ajoutés" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUH-ro-Kg1">
+                                <rect key="frame" x="20" y="274" width="280.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="t6A-q0-Bhu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBs-ZI-jhy">
+                                <rect key="frame" x="70.5" y="518" width="179" height="42"/>
+                                <color key="backgroundColor" red="0.23529411759999999" green="0.57254901960000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="tintColor" red="0.23529411759999999" green="0.57254901960000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Revenir au menu">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addTypeAct:" destination="P94-Ko-fRh" eventType="touchUpInside" id="RqB-vh-xad"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="GzT-13-6fG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom medicament" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAk-4j-sEA">
+                                <rect key="frame" x="64" y="30" width="192" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mAk-4j-sEA" firstAttribute="centerX" secondItem="I1Z-GW-sNy" secondAttribute="centerX" id="8OJ-UJ-LEh"/>
+                            <constraint firstItem="qUH-ro-Kg1" firstAttribute="centerX" secondItem="I1Z-GW-sNy" secondAttribute="centerX" id="B7e-rG-tyN"/>
+                            <constraint firstItem="qUH-ro-Kg1" firstAttribute="centerX" secondItem="I1Z-GW-sNy" secondAttribute="centerX" id="IKM-8d-ncZ"/>
+                            <constraint firstItem="qUH-ro-Kg1" firstAttribute="top" secondItem="mAk-4j-sEA" secondAttribute="bottom" constant="224" id="SRS-2d-2EC"/>
+                            <constraint firstItem="MBs-ZI-jhy" firstAttribute="centerX" secondItem="I1Z-GW-sNy" secondAttribute="centerX" id="Yp0-wn-iOw"/>
+                            <constraint firstItem="mAk-4j-sEA" firstAttribute="top" secondItem="I55-VQ-gXd" secondAttribute="top" constant="10" id="isP-bJ-jGh"/>
+                            <constraint firstItem="I55-VQ-gXd" firstAttribute="bottom" secondItem="MBs-ZI-jhy" secondAttribute="bottom" constant="8" id="kvE-PR-IZ0"/>
+                            <constraint firstItem="qUH-ro-Kg1" firstAttribute="centerY" secondItem="I1Z-GW-sNy" secondAttribute="centerY" id="lmW-6c-LpV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="I55-VQ-gXd"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EYC-J3-9do" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5321" y="945"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="xB2-N0-SsL">
@@ -2287,6 +2497,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gr5-qa-Q1k"/>
+        <segue reference="Fqw-tq-aKx"/>
+        <segue reference="GzT-13-6fG"/>
     </inferredMetricsTieBreakers>
 </document>

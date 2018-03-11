@@ -11,15 +11,28 @@ import CoreData
 
 class MedicamentAjouterDescriptionViewController: UIViewController {
     
-    let segueDescriptionMedoc= "ShowDescriptionMedicamentSegue"
-    var medicamentPasse = Medicament() ;
+    var medicament = Medicament() ;
+    let segueDescriptionMedoc = "ShowDescriptionMedicamentSegue"
+
+    @IBOutlet weak var libelleMedicament: UITextField!
+    @IBOutlet weak var presentationBreveMedicament: UITextField!
+    @IBOutlet weak var DoseMedicament: UITextField!
+    @IBOutlet weak var presentationDetailleMedicament: UITextField!
+    @IBOutlet weak var nbPriseMedicament: UITextField!
+    @IBOutlet weak var frequencePriseMedicament: UITextField!
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == segueDescriptionMedoc {
             let medicamentHeure = segue.destination as! MedicamentHeureViewController
-            medicamentHeure.medicamentPasse = medicamentPasse
+            medicamentHeure.medicamentPasse = self.medicament
+            medicamentHeure.libelleMedicamentPasse = self.libelleMedicament.text!
+            medicamentHeure.presentationBreveMedicamentPasse = self.presentationBreveMedicament.text!
+            medicamentHeure.DoseMedicamentPasse = self.DoseMedicament.text!
+            medicamentHeure.presentationDetailleMedicamentPasse = self.presentationDetailleMedicament.text!
+            medicamentHeure.nbPriseMedicamentPasse = self.nbPriseMedicament.text!
+            medicamentHeure.frequencePriseMedicamentPasse = self.frequencePriseMedicament.text!
         }
         
     }
