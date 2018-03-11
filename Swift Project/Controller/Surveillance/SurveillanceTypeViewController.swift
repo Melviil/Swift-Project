@@ -17,7 +17,7 @@ class SurveillanceTypeViewController: UIViewController, UIPickerViewDataSource, 
         
         if segue.identifier == segueShowNomSuivi {
             let SurveillanceHeureViewController = segue.destination as! SurveillanceHeureViewController
-            ChoixHeuSurveillanceHeureViewControllerreSuivi.nomSurveillanceSend = self.nomSurveillance
+            SurveillanceHeureViewController.nomSurveillanceSend = self.nomSurveillance
             print(nomSurveillance)
         }
         

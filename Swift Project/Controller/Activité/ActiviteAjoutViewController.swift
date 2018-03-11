@@ -23,7 +23,7 @@ class ActiviteAjoutViewController: UIViewController {
         print(dateDebutActivite)
         print(dateFinActivite)
         for heure in listeHeuresActivite{
-            saveNewActivite(withNom : self.nomActivite, withHours : heure, withDays : self.listeJoursActivite, withDateDebut: self.dateDebutActivite, withDateFin : self.dateFinActivite )
+           /* saveNewActivite(withNom : self.nomActivite, withHours : heure, withDays : self.listeJoursActivite, withDateDebut: self.dateDebutActivite, withDateFin : self.dateFinActivite )*/
         }
        
         // Do any additional setup after loading the view.
@@ -35,7 +35,7 @@ class ActiviteAjoutViewController: UIViewController {
     }
     
     //TODO
-    func saveNewActivite( withNom nom: TypeActivite, withHours heure : String, withDays days : [String],withDateDebut dateDebut: String, withDateFin dateFin: String){
+    /*func saveNewActivite( withNom nom: TypeActivite, withHours heure : String, withDays days : [String],withDateDebut dateDebut: String, withDateFin dateFin: String){
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
             //  self.alertError(errorMsg: " Could not save symptome ", userInfo : "Unknown reason" )
@@ -70,7 +70,10 @@ class ActiviteAjoutViewController: UIViewController {
         activite.dateDebut = dateDebutGood
         activite.sePasse = 
         
-    }
+      
+        return true
+        
+    }*/
 
     /*
     // MARK: - Navigation
