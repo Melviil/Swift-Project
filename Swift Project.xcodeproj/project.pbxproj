@@ -29,6 +29,7 @@
 		BC6FE5AA204487F100D862B6 /* ActiviteJoursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6FE5A9204487F100D862B6 /* ActiviteJoursViewController.swift */; };
 		BC99F0132046B83E00D2FBA0 /* ActiviteHeuresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC99F0122046B83E00D2FBA0 /* ActiviteHeuresViewController.swift */; };
 		BCD7C4F3205032190010A584 /* ActiviteAjoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD7C4F2205032190010A584 /* ActiviteAjoutViewController.swift */; };
+		BECF995920545A81009420DE /* PatientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECF995820545A81009420DE /* PatientModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		BC6FE5A9204487F100D862B6 /* ActiviteJoursViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiviteJoursViewController.swift; sourceTree = "<group>"; };
 		BC99F0122046B83E00D2FBA0 /* ActiviteHeuresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiviteHeuresViewController.swift; sourceTree = "<group>"; };
 		BCD7C4F2205032190010A584 /* ActiviteAjoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiviteAjoutViewController.swift; sourceTree = "<group>"; };
+		BECF995820545A81009420DE /* PatientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 		BC0C9D0C203830220067EBB8 /* Swift Project */ = {
 			isa = PBXGroup;
 			children = (
+				BECF9955205457D0009420DE /* Model */,
 				BCAFD280204C4D9C0037ADBD /* Controller */,
 				BC0C9D0D203830220067EBB8 /* AppDelegate.swift */,
 				BC0C9D0F203830230067EBB8 /* ViewController.swift */,
@@ -172,6 +175,14 @@
 				BC567C83204BD80100764B79 /* ChoixHeureSuiviViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		BECF9955205457D0009420DE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BECF995820545A81009420DE /* PatientModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,6 +326,7 @@
 				BCD7C4F3205032190010A584 /* ActiviteAjoutViewController.swift in Sources */,
 				BC646C5B20501F7E004F3A2B /* ActiviteDateFinViewController.swift in Sources */,
 				BC0C9D10203830230067EBB8 /* ViewController.swift in Sources */,
+				BECF995920545A81009420DE /* PatientModel.swift in Sources */,
 				BC6FE5AA204487F100D862B6 /* ActiviteJoursViewController.swift in Sources */,
 				BC6FE5A8204465F900D862B6 /* ActiviteTypeViewController.swift in Sources */,
 				BC086C682048564B006D2310 /* ActiviteHeureModallyViewController.swift in Sources */,

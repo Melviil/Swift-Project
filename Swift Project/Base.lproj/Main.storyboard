@@ -438,7 +438,7 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="a1U-J8-H14">
                                 <rect key="frame" x="0.0" y="176" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="541612540.84617805">
-                                    <!--2018-03-01 15:55:40 +0000-->
+                                    <!--2018-03-01 3:55:40 PM +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
                                 <connections>
@@ -507,7 +507,7 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="gCQ-Fy-f6M">
                                 <rect key="frame" x="0.0" y="176" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="541612540.84617805">
-                                    <!--2018-03-01 15:55:40 +0000-->
+                                    <!--2018-03-01 3:55:40 PM +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
                                 <connections>
@@ -608,7 +608,7 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="J7k-ny-ghm">
                                 <rect key="frame" x="0.0" y="176" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="541505328.75500202">
-                                    <!--2018-02-28 10:08:48 +0000-->
+                                    <!--2018-02-28 10:08:48 AM +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
                                 <connections>
@@ -1019,7 +1019,7 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="sh2-Gi-rEX">
                                 <rect key="frame" x="0.0" y="176" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="541612540.84617805">
-                                    <!--2018-03-01 15:55:40 +0000-->
+                                    <!--2018-03-01 3:55:40 PM +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
                                 <connections>
@@ -1062,7 +1062,7 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="KYg-1d-Ozm">
                                 <rect key="frame" x="0.0" y="176" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="541505328.75500202">
-                                    <!--2018-02-28 10:08:48 +0000-->
+                                    <!--2018-02-28 10:08:48 AM +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
                                 <connections>
@@ -1130,7 +1130,7 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="nkM-j9-stz">
                                 <rect key="frame" x="0.0" y="176" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="541505328.75500202">
-                                    <!--2018-02-28 10:08:48 +0000-->
+                                    <!--2018-02-28 10:08:48 AM +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
                                 <connections>
@@ -1330,7 +1330,7 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="10" translatesAutoresizingMaskIntoConstraints="NO" id="AKU-D9-oHN">
                                 <rect key="frame" x="0.0" y="176" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="541615249.10474002">
-                                    <!--2018-03-01 16:40:49 +0000-->
+                                    <!--2018-03-01 4:40:49 PM +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
                                 <connections>
@@ -1398,7 +1398,7 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="jkj-Qs-GV5">
                                 <rect key="frame" x="0.0" y="176" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="541615249.10474002">
-                                    <!--2018-03-01 16:40:49 +0000-->
+                                    <!--2018-03-01 4:40:49 PM +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
                                 <connections>
@@ -1608,7 +1608,7 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="10" translatesAutoresizingMaskIntoConstraints="NO" id="2rW-NH-9q7">
                                 <rect key="frame" x="0.0" y="176" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="541615249.10474002">
-                                    <!--2018-03-01 16:40:49 +0000-->
+                                    <!--2018-03-01 4:40:49 PM +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
                                 <connections>
@@ -1669,7 +1669,7 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="CaA-0v-wg6">
                                 <rect key="frame" x="0.0" y="176" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="541615249.10474002">
-                                    <!--2018-03-01 16:40:49 +0000-->
+                                    <!--2018-03-01 4:40:49 PM +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
                                 <connections>
@@ -1945,6 +1945,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="EHa-EO-HqI" kind="presentation" id="w4y-R8-StJ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fois par jour." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9cb-8C-Nn6">
                                 <rect key="frame" x="171" y="375" width="111" height="26"/>
@@ -2013,7 +2016,52 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ebr-Cm-vZI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1918.125" y="776.4084507042254"/>
+            <point key="canvasLocation" x="1980" y="946"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ehh-JI-Yd2">
+            <objects>
+                <viewController id="EHa-EO-HqI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FS6-uU-8wl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom Médicament" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01h-kW-oVp">
+                                <rect key="frame" x="63.5" y="33" width="193" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="Vf6-3d-Jl4">
+                                <rect key="frame" x="0.0" y="176" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="542451569.88140905">
+                                    <!--2018-03-11 8:59:29 AM +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="fr"/>
+                            </datePicker>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gRO-Hj-rGq">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Item" id="JVG-kd-QCf"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gRO-Hj-rGq" firstAttribute="bottom" secondItem="PiW-lV-d5D" secondAttribute="bottom" id="9xK-Ik-hPB"/>
+                            <constraint firstItem="Vf6-3d-Jl4" firstAttribute="centerX" secondItem="FS6-uU-8wl" secondAttribute="centerX" id="D8x-6v-ooA"/>
+                            <constraint firstItem="gRO-Hj-rGq" firstAttribute="centerX" secondItem="FS6-uU-8wl" secondAttribute="centerX" id="G7S-Mc-Ns0"/>
+                            <constraint firstItem="01h-kW-oVp" firstAttribute="top" secondItem="PiW-lV-d5D" secondAttribute="top" constant="13" id="Hku-5K-jW6"/>
+                            <constraint firstItem="Vf6-3d-Jl4" firstAttribute="centerY" secondItem="FS6-uU-8wl" secondAttribute="centerY" id="cp0-Tf-ESX"/>
+                            <constraint firstItem="01h-kW-oVp" firstAttribute="centerX" secondItem="FS6-uU-8wl" secondAttribute="centerX" id="dtw-TJ-Ai8"/>
+                            <constraint firstItem="01h-kW-oVp" firstAttribute="top" secondItem="PiW-lV-d5D" secondAttribute="top" constant="13" id="r6c-B6-VWJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PiW-lV-d5D"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SNx-Bs-OFL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3013" y="955"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="xB2-N0-SsL">
@@ -2146,6 +2194,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="22e-ci-dcA"/>
         <segue reference="gr5-qa-Q1k"/>
     </inferredMetricsTieBreakers>
 </document>
