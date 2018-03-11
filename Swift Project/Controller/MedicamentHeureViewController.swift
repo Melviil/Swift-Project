@@ -10,6 +10,7 @@ import UIKit
 
 class MedicamentHeureViewController: UIViewController {
 
+    var medicamentPasse = Medicament()
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -1,39 +1,33 @@
 //
-//  AjoutHeureModallyControllerViewController.swift
+//  MedicamentAjouterDescriptionViewController.swift
 //  Swift Project
 //
-//  Created by Melvil on 01/03/2018.
+//  Created by Assil EL YAHYAOUI on 11/03/2018.
 //  Copyright © 2018 Melvil. All rights reserved.
 //
 
 import UIKit
+import CoreData
 
-class ActiviteHeureModallyViewController: UIViewController {
-
-   
+class MedicamentAjouterDescriptionViewController: UIViewController {
     
-    @IBOutlet weak var myDatePicker: UIDatePicker!
+    let segueDescriptionMedoc= "ShowDescriptionMedicamentSegue"
+    var medicamentPasse = Medicament() ;
     
     
-    @IBOutlet weak var pressButton: UIButton!
-   
-    var heureChoisie = ""
-    @IBAction func changerValueDateQuandDateChange(_ sender: Any) {
-   
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "hh mm a"
-        let selectedDate = dateFormatter.string(from: myDatePicker.date)
-        heureChoisie = selectedDate
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-       
+        if segue.identifier == segueDescriptionMedoc {
+            let medicamentHeure = segue.destination as! MedicamentHeureViewController
+            medicamentHeure.medicamentPasse = medicamentPasse
+        }
+        
     }
-   
-    
-    @IBAction func CancelButton(_ sender: Any) {
-        self.dismiss(animated:true, completion: nil)
-    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,6 +45,5 @@ class ActiviteHeureModallyViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
 
 }

@@ -1844,10 +1844,10 @@
             </objects>
             <point key="canvasLocation" x="1096.875" y="818.66197183098598"/>
         </scene>
-        <!--View Controller-->
+        <!--Medicament Ajouter Description View Controller-->
         <scene sceneID="uGR-ch-db6">
             <objects>
-                <viewController id="8sd-C3-BzQ" sceneMemberID="viewController">
+                <viewController id="8sd-C3-BzQ" customClass="MedicamentAjouterDescriptionViewController" customModule="Swift_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="14u-4h-S8S">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1946,7 +1946,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="EHa-EO-HqI" kind="presentation" id="w4y-R8-StJ"/>
+                                    <segue destination="e6s-PT-JpW" kind="show" identifier="ShowDescriptionMedicamentSegue" id="guf-Bc-nST"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fois par jour." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9cb-8C-Nn6">
@@ -2018,10 +2018,10 @@
             </objects>
             <point key="canvasLocation" x="1980" y="946"/>
         </scene>
-        <!--View Controller-->
+        <!--Medicament Ajout Heure View Controller-->
         <scene sceneID="ehh-JI-Yd2">
             <objects>
-                <viewController id="EHa-EO-HqI" sceneMemberID="viewController">
+                <viewController id="EHa-EO-HqI" customClass="MedicamentAjoutHeureViewController" customModule="Swift_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FS6-uU-8wl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2038,19 +2038,29 @@
                                     <!--2018-03-11 8:59:29 AM +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
+                                <connections>
+                                    <action selector="changerValueDateQuandDateChange:" destination="EHa-EO-HqI" eventType="valueChanged" id="1ym-lz-1uF"/>
+                                </connections>
                             </datePicker>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gRO-Hj-rGq">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gRO-Hj-rGq">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Item" id="JVG-kd-QCf"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="VVp-46-YZ9"/>
+                                    <barButtonItem title="Item" systemItem="cancel" id="JVG-kd-QCf">
+                                        <connections>
+                                            <action selector="CancelButton:" destination="EHa-EO-HqI" id="6g7-kf-b9s"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Euz-gM-yJT"/>
+                                    <barButtonItem title="Item" systemItem="save" id="5Tf-pE-IOj"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="cdV-1v-d5G"/>
                                 </items>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="gRO-Hj-rGq" firstAttribute="bottom" secondItem="PiW-lV-d5D" secondAttribute="bottom" id="9xK-Ik-hPB"/>
                             <constraint firstItem="Vf6-3d-Jl4" firstAttribute="centerX" secondItem="FS6-uU-8wl" secondAttribute="centerX" id="D8x-6v-ooA"/>
-                            <constraint firstItem="gRO-Hj-rGq" firstAttribute="centerX" secondItem="FS6-uU-8wl" secondAttribute="centerX" id="G7S-Mc-Ns0"/>
                             <constraint firstItem="01h-kW-oVp" firstAttribute="top" secondItem="PiW-lV-d5D" secondAttribute="top" constant="13" id="Hku-5K-jW6"/>
                             <constraint firstItem="Vf6-3d-Jl4" firstAttribute="centerY" secondItem="FS6-uU-8wl" secondAttribute="centerY" id="cp0-Tf-ESX"/>
                             <constraint firstItem="01h-kW-oVp" firstAttribute="centerX" secondItem="FS6-uU-8wl" secondAttribute="centerX" id="dtw-TJ-Ai8"/>
@@ -2058,10 +2068,93 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PiW-lV-d5D"/>
                     </view>
+                    <connections>
+                        <outlet property="myDatePicker" destination="Vf6-3d-Jl4" id="iO5-7u-cEU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SNx-Bs-OFL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3013" y="955"/>
+            <point key="canvasLocation" x="3204" y="1746"/>
+        </scene>
+        <!--Medicament Heure View Controller-->
+        <scene sceneID="qua-jI-l1i">
+            <objects>
+                <viewController id="e6s-PT-JpW" customClass="MedicamentHeureViewController" customModule="Swift_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7lS-ny-242">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom Médicament" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eU5-td-bcZ">
+                                <rect key="frame" x="63.5" y="33" width="193" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Veuillez saisir les heures de prise " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EvT-kH-lWz">
+                                <rect key="frame" x="32" y="73" width="256" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9p-9k-IDF">
+                                <rect key="frame" x="11.5" y="116" width="297" height="44"/>
+                                <color key="backgroundColor" red="0.23529411759999999" green="0.57254901960000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Ajouter une nouvelle heure">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="EHa-EO-HqI" kind="presentation" id="C4o-8T-AKf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grq-Jc-lls">
+                                <rect key="frame" x="44" y="516" width="232" height="44"/>
+                                <color key="backgroundColor" red="0.23529411759999999" green="0.57254901960000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Ajouter la date début">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HHx-rE-rpg">
+                                <rect key="frame" x="40" y="180" width="240" height="316"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="SNh-IE-6nh" id="Ti5-Lh-BUp"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eU5-td-bcZ" firstAttribute="centerX" secondItem="7lS-ny-242" secondAttribute="centerX" id="44h-4H-Uox"/>
+                            <constraint firstItem="EvT-kH-lWz" firstAttribute="top" secondItem="eU5-td-bcZ" secondAttribute="bottom" constant="10" id="6gi-Fe-aqf"/>
+                            <constraint firstItem="e9p-9k-IDF" firstAttribute="top" secondItem="EvT-kH-lWz" secondAttribute="bottom" constant="22" id="BFi-WL-2p3"/>
+                            <constraint firstItem="HHx-rE-rpg" firstAttribute="centerX" secondItem="7lS-ny-242" secondAttribute="centerX" id="CNY-FR-2rM"/>
+                            <constraint firstItem="HHx-rE-rpg" firstAttribute="top" secondItem="e9p-9k-IDF" secondAttribute="bottom" constant="20" id="PZJ-FI-OLG"/>
+                            <constraint firstItem="9gF-13-wl5" firstAttribute="trailing" secondItem="HHx-rE-rpg" secondAttribute="trailing" constant="40" id="RfV-vb-NSa"/>
+                            <constraint firstItem="9gF-13-wl5" firstAttribute="bottom" secondItem="grq-Jc-lls" secondAttribute="bottom" constant="8" id="Xol-tV-qZ4"/>
+                            <constraint firstItem="eU5-td-bcZ" firstAttribute="top" secondItem="9gF-13-wl5" secondAttribute="top" constant="13" id="bV9-3X-4oR"/>
+                            <constraint firstItem="grq-Jc-lls" firstAttribute="top" secondItem="HHx-rE-rpg" secondAttribute="bottom" constant="20" id="gQ5-ac-Ccq"/>
+                            <constraint firstItem="grq-Jc-lls" firstAttribute="centerX" secondItem="7lS-ny-242" secondAttribute="centerX" id="l3j-pu-vL2"/>
+                            <constraint firstItem="HHx-rE-rpg" firstAttribute="leading" secondItem="9gF-13-wl5" secondAttribute="leading" constant="40" id="nzL-dU-jsh"/>
+                            <constraint firstItem="EvT-kH-lWz" firstAttribute="centerX" secondItem="7lS-ny-242" secondAttribute="centerX" id="ssn-tv-CSc"/>
+                            <constraint firstItem="e9p-9k-IDF" firstAttribute="centerX" secondItem="7lS-ny-242" secondAttribute="centerX" id="u1X-nS-qGy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9gF-13-wl5"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c65-Ef-dCm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2934" y="945"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="xB2-N0-SsL">
@@ -2194,7 +2287,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="22e-ci-dcA"/>
         <segue reference="gr5-qa-Q1k"/>
     </inferredMetricsTieBreakers>
 </document>
