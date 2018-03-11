@@ -14,7 +14,6 @@ class MedicamentHeureViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet weak var tableViewHours: UITableView!
     var medicamentPasse = Medicament() 
-    
     var libelleMedicamentPasse = String()
     var presentationBreveMedicamentPasse = String()
     var DoseMedicamentPasse = String()
@@ -53,10 +52,21 @@ class MedicamentHeureViewController: UIViewController, UITableViewDataSource {
         cell.textLabel?.text = self.hours[indexPath.row]
         return cell
     }
+   
+    let showJourActiviteSegue = "AjoutDateDebutSegue"
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        
+        if segue.identifier == showJourActiviteSegue {
+            let MedicamentDateDebutViewController = segue.destination as! MedicamentDateDebutViewController
+            MedicamentDateDebutViewController.medicamentPasse = self.medicamentPasse
+            MedicamentDateDebutViewController.libelleMedicamentPasse = self.libelleMedicamentPasse
+            MedicamentDateDebutViewController.presentationBreveMedicamentPasse = self.presentationBreveMedicamentPasse
+            MedicamentDateDebutViewController.DoseMedicamentPasse = self.DoseMedicamentPasse
+            MedicamentDateDebutViewController.presentationDetailleMedicamentPasse = self.presentationDetailleMedicamentPasse
+            MedicamentDateDebutViewController.nbPriseMedicamentPasse = self.nbPriseMedicamentPasse
+            MedicamentDateDebutViewController.frequencePriseMedicamentPasse = self.frequencePriseMedicamentPasse
+            MedicamentDateDebutViewController.heuresPasse = self.hours
+            
         }
-        
     }
 }

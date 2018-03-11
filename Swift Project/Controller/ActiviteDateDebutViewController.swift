@@ -18,6 +18,7 @@ class ActiviteDateDebutViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         labelActivite.text = nomActivite.libelleTypeActivite
+        changerValueDateQuandDateChange(self)
 
         // Do any additional setup after loading the view.
     }

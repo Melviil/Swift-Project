@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class MedicamentAjouterDescriptionViewController: UIViewController {
+class MedicamentDescriptionViewController: UIViewController {
     
     var medicament = Medicament() ;
     let segueDescriptionMedoc = "ShowDescriptionMedicamentSegue"

@@ -9,7 +9,16 @@
 import UIKit
 
 class MedicamentAjoutViewController: UIViewController {
-
+    var medicamentPasse = Medicament()
+    var libelleMedicamentPasse = String()
+    var presentationBreveMedicamentPasse = String()
+    var DoseMedicamentPasse = String()
+    var presentationDetailleMedicamentPasse = String()
+    var nbPriseMedicamentPasse = String()
+    var frequencePriseMedicamentPasse = String()
+    var heuresPasse: [String] = []
+    var dateDebutPasse = String()
+    var dateFinPasse = String()
     override func viewDidLoad() {
         super.viewDidLoad()
 

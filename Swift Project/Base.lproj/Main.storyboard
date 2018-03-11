@@ -2133,7 +2133,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="Xoe-zp-g4b" kind="show" id="B8u-CK-MiI"/>
+                                    <segue destination="Xoe-zp-g4b" kind="show" identifier="AjoutDateDebutSegue" id="B8u-CK-MiI"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HHx-rE-rpg">
@@ -2203,7 +2203,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="ZTk-40-iNC" kind="show" id="Fqw-tq-aKx"/>
+                                    <segue destination="ZTk-40-iNC" kind="show" identifier="AjoutDateFinSegue" id="Fqw-tq-aKx"/>
                                 </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="oIL-h6-TaH">
@@ -2213,6 +2213,7 @@
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
                                 <connections>
+                                    <action selector="changerValueDateQuandDateChange:" destination="Xoe-zp-g4b" eventType="valueChanged" id="MaM-4s-ic3"/>
                                     <action selector="changerValueDateQuandDateChange:" destination="w5m-EX-QYJ" eventType="valueChanged" id="dL4-xZ-A4l"/>
                                 </connections>
                             </datePicker>
@@ -2233,6 +2234,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TeV-dP-idS"/>
                     </view>
+                    <connections>
+                        <outlet property="myDatePicker" destination="oIL-h6-TaH" id="vn4-qD-zxP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sRO-oy-P9X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2271,7 +2275,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="PY9-b0-I7R" kind="presentation" id="qZA-ny-VeU"/>
+                                    <segue destination="PY9-b0-I7R" kind="presentation" identifier="AjoutMedicamentSegue" id="qZA-ny-VeU"/>
                                 </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="xAY-Zh-CQb">
@@ -2282,6 +2286,7 @@
                                 <locale key="locale" localeIdentifier="fr"/>
                                 <connections>
                                     <action selector="changerValueDateQuandDateChange:" destination="w5m-EX-QYJ" eventType="valueChanged" id="SW2-UU-O4P"/>
+                                    <action selector="changerValueDateQuandDateChange:" destination="ZTk-40-iNC" eventType="valueChanged" id="Xzm-87-HeQ"/>
                                 </connections>
                             </datePicker>
                         </subviews>
@@ -2301,6 +2306,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OeI-JU-Mac"/>
                     </view>
+                    <connections>
+                        <outlet property="myDatePicker" destination="xAY-Zh-CQb" id="4g5-Kw-OSy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eHf-fk-rZF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2497,7 +2505,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Fqw-tq-aKx"/>
+        <segue reference="qZA-ny-VeU"/>
         <segue reference="GzT-13-6fG"/>
     </inferredMetricsTieBreakers>
 </document>

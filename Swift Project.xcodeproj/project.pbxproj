@@ -35,7 +35,7 @@
 		BECF995920545A81009420DE /* PatientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECF995820545A81009420DE /* PatientModel.swift */; };
 		BECF995B20552A60009420DE /* MedicamentHeureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECF995A20552A60009420DE /* MedicamentHeureViewController.swift */; };
 		BECF995D20552FF0009420DE /* MedicamentAjoutHeureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECF995C20552FF0009420DE /* MedicamentAjoutHeureViewController.swift */; };
-		BECF995F20553523009420DE /* MedicamentAjouterDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECF995E20553523009420DE /* MedicamentAjouterDescriptionViewController.swift */; };
+		BECF995F20553523009420DE /* MedicamentDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECF995E20553523009420DE /* MedicamentDescriptionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,7 +88,7 @@
 		BECF995820545A81009420DE /* PatientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientModel.swift; sourceTree = "<group>"; };
 		BECF995A20552A60009420DE /* MedicamentHeureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentHeureViewController.swift; sourceTree = "<group>"; };
 		BECF995C20552FF0009420DE /* MedicamentAjoutHeureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentAjoutHeureViewController.swift; sourceTree = "<group>"; };
-		BECF995E20553523009420DE /* MedicamentAjouterDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentAjouterDescriptionViewController.swift; sourceTree = "<group>"; };
+		BECF995E20553523009420DE /* MedicamentDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentDescriptionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,12 +185,12 @@
 				BC04ED97203AE235008F6AC3 /* Contact Page.swift */,
 				BC6FE5A52044434500D862B6 /* MedecinController.swift */,
 				BC567C83204BD80100764B79 /* ChoixHeureSuiviViewController.swift */,
-				BECF995A20552A60009420DE /* MedicamentHeureViewController.swift */,
+				BECF995E20553523009420DE /* MedicamentDescriptionViewController.swift */,
 				BECF995C20552FF0009420DE /* MedicamentAjoutHeureViewController.swift */,
+				BECF995A20552A60009420DE /* MedicamentHeureViewController.swift */,
 				BE4F329F20557AAA00C6121A /* MedicamentDateDebutViewController.swift */,
-				BE4F32A320557BB600C6121A /* MedicamentAjoutViewController.swift */,
 				BE4F32A120557AB900C6121A /* MedicamentDateFinViewController.swift */,
-				BECF995E20553523009420DE /* MedicamentAjouterDescriptionViewController.swift */,
+				BE4F32A320557BB600C6121A /* MedicamentAjoutViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -358,7 +358,7 @@
 				BE4F32A020557AAA00C6121A /* MedicamentDateDebutViewController.swift in Sources */,
 				BC567C86204BD81400764B79 /* ChoixDateSuiviViewController.swift in Sources */,
 				BC0C9D0E203830230067EBB8 /* AppDelegate.swift in Sources */,
-				BECF995F20553523009420DE /* MedicamentAjouterDescriptionViewController.swift in Sources */,
+				BECF995F20553523009420DE /* MedicamentDescriptionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
