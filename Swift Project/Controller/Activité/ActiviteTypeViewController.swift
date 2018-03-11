@@ -8,7 +8,7 @@ class ActiviteTypeViewController: UIViewController, UIPickerViewDelegate, UIPick
     
     let segueShowNomActivite = "showNomActiviteSegue"
      var typesactivite : [TypeActivite] = []
-    var activitePasse = TypeActivite() ;
+     var activitePasse = TypeActivite() ;
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -19,9 +19,6 @@ class ActiviteTypeViewController: UIViewController, UIPickerViewDelegate, UIPick
         }
     
     }
-    
-   
-    
     override func viewDidLoad() {
         
         super.viewDidLoad()

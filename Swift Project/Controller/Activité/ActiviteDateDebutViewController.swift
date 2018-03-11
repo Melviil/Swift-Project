@@ -35,7 +35,7 @@ class ActiviteDateDebutViewController: UIViewController {
             dateFinAlarmActivite.nomActivite = nomActivite
             dateFinAlarmActivite.listeJoursActivite = listeJoursActivite
             dateFinAlarmActivite.listeHeuresActivite = listeHeuresActivite
-           // dateFinAlarmActivite.dateDebutActivite = dateChoisi
+            dateFinAlarmActivite.dateDebutActivite = dateChoisi
         }
     }
     @IBAction func changerValueDateQuandDateChange(_ sender: Any) {
@@ -43,9 +43,9 @@ class ActiviteDateDebutViewController: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy"
         let selectedDate = dateFormatter.string(from: myDatePicker.date)
+       
         dateChoisi = selectedDate
-        print(dateChoisi
-        )
+
         
     }
 

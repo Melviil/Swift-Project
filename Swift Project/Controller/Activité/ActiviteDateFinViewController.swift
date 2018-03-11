@@ -10,7 +10,8 @@ import UIKit
 
 class ActiviteDateFinViewController: UIViewController {
     @IBOutlet weak var labelActivite: UILabel!
-    @IBOutlet weak var myDatePicker: NSLayoutConstraint!
+    @IBOutlet weak var myDatePicker: UIDatePicker!
+
     var nomActivite = TypeActivite()
     var listeJoursActivite : [String] = []
     var listeHeuresActivite: [String] = []
@@ -32,11 +33,10 @@ class ActiviteDateFinViewController: UIViewController {
     }
     @IBAction func changerValueDateQuandDateChange(_ sender: Any) {
         
-       /* let dateFormatter = DateFormatter()
+       let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy"
         let selectedDate = dateFormatter.string(from: myDatePicker.date)
         dateChoisi = selectedDate
-        print(dateChoisi) */
         
     }
     

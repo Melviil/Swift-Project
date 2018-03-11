@@ -438,7 +438,7 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="a1U-J8-H14">
                                 <rect key="frame" x="0.0" y="176" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="541612540.84617805">
-                                    <!--2018-03-01 3:55:40 PM +0000-->
+                                    <!--2018-03-01 15:55:40 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
                                 <connections>
@@ -507,7 +507,7 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="gCQ-Fy-f6M">
                                 <rect key="frame" x="0.0" y="176" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="541612540.84617805">
-                                    <!--2018-03-01 3:55:40 PM +0000-->
+                                    <!--2018-03-01 15:55:40 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
                                 <connections>
@@ -531,7 +531,7 @@
                     </view>
                     <connections>
                         <outlet property="labelActivite" destination="zEz-AC-Xl6" id="7ZK-6c-QQy"/>
-                        <outlet property="myDatePicker" destination="wK2-f1-F5J" id="J7i-8E-e5D"/>
+                        <outlet property="myDatePicker" destination="gCQ-Fy-f6M" id="TwP-VT-jQK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c6W-UP-689" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -608,7 +608,7 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="J7k-ny-ghm">
                                 <rect key="frame" x="0.0" y="176" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="541505328.75500202">
-                                    <!--2018-02-28 10:08:48 AM +0000-->
+                                    <!--2018-02-28 10:08:48 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
                                 <connections>
@@ -871,10 +871,10 @@
             </objects>
             <point key="canvasLocation" x="440.625" y="32.74647887323944"/>
         </scene>
-        <!--Ajout Suivi Database View Controller-->
+        <!--Symptome Ajout View Controller-->
         <scene sceneID="1EV-n9-mH9">
             <objects>
-                <viewController id="NeD-pE-su0" customClass="AjoutSuiviDatabaseViewController" customModule="Swift_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NeD-pE-su0" customClass="SymptomeAjoutViewController" customModule="Swift_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BBZ-8f-VE8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1019,7 +1019,7 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="sh2-Gi-rEX">
                                 <rect key="frame" x="0.0" y="176" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="541612540.84617805">
-                                    <!--2018-03-01 3:55:40 PM +0000-->
+                                    <!--2018-03-01 15:55:40 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
                                 <connections>
@@ -1062,7 +1062,7 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="KYg-1d-Ozm">
                                 <rect key="frame" x="0.0" y="176" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="541505328.75500202">
-                                    <!--2018-02-28 10:08:48 AM +0000-->
+                                    <!--2018-02-28 10:08:48 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
                                 <connections>
@@ -1130,7 +1130,7 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="nkM-j9-stz">
                                 <rect key="frame" x="0.0" y="176" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="541505328.75500202">
-                                    <!--2018-02-28 10:08:48 AM +0000-->
+                                    <!--2018-02-28 10:08:48 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
                                 <connections>
@@ -1319,10 +1319,10 @@
             </objects>
             <point key="canvasLocation" x="-4007" y="-102"/>
         </scene>
-        <!--Choix Date Suivi View Controller-->
+        <!--Symptome Date View Controller-->
         <scene sceneID="fh7-yE-9pb">
             <objects>
-                <viewController id="ZnF-Q2-ZBr" customClass="ChoixDateSuiviViewController" customModule="Swift_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ZnF-Q2-ZBr" customClass="SymptomeDateViewController" customModule="Swift_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j2g-0c-YCB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1330,7 +1330,7 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="10" translatesAutoresizingMaskIntoConstraints="NO" id="AKU-D9-oHN">
                                 <rect key="frame" x="0.0" y="176" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="541615249.10474002">
-                                    <!--2018-03-01 4:40:49 PM +0000-->
+                                    <!--2018-03-01 16:40:49 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
                                 <connections>
@@ -1381,10 +1381,10 @@
             </objects>
             <point key="canvasLocation" x="-2408" y="801"/>
         </scene>
-        <!--Choix Heure Suivi View Controller-->
+        <!--Symptome Heure View Controller-->
         <scene sceneID="E5e-Md-CbX">
             <objects>
-                <viewController id="tc3-zK-jsM" customClass="ChoixHeureSuiviViewController" customModule="Swift_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tc3-zK-jsM" customClass="SymptomeHeureViewController" customModule="Swift_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GSu-jz-tRc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1398,7 +1398,7 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="jkj-Qs-GV5">
                                 <rect key="frame" x="0.0" y="176" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="541615249.10474002">
-                                    <!--2018-03-01 4:40:49 PM +0000-->
+                                    <!--2018-03-01 16:40:49 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
                                 <connections>
@@ -1450,10 +1450,10 @@
             </objects>
             <point key="canvasLocation" x="-1598" y="796"/>
         </scene>
-        <!--Choix Type Suivi Controller-->
+        <!--Symptome Type View Controller-->
         <scene sceneID="Z6L-7n-RRC">
             <objects>
-                <viewController id="Zba-XI-xVt" customClass="ChoixTypeSuiviController" customModule="Swift_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Zba-XI-xVt" customClass="SymptomeTypeViewController" customModule="Swift_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dG0-a1-8gr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1509,10 +1509,10 @@
             </objects>
             <point key="canvasLocation" x="-803" y="801"/>
         </scene>
-        <!--View Controller-->
+        <!--Surveillance Ajout View Controller-->
         <scene sceneID="IXm-rD-E7S">
             <objects>
-                <viewController id="y4G-oo-hLf" sceneMemberID="viewController">
+                <viewController id="y4G-oo-hLf" customClass="SurveillanceAjoutViewController" customModule="Swift_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k5K-tf-Vzv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1567,10 +1567,10 @@
             </objects>
             <point key="canvasLocation" x="-3145" y="1552"/>
         </scene>
-        <!--View Controller-->
+        <!--Surveillance Date View Controller-->
         <scene sceneID="9OS-aj-82z">
             <objects>
-                <viewController id="mQE-GA-9ez" sceneMemberID="viewController">
+                <viewController id="mQE-GA-9ez" customClass="SurveillanceDateViewController" customModule="Swift_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e78-Ii-h2g">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1590,7 +1590,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="addTypeAct:" destination="P94-Ko-fRh" eventType="touchUpInside" id="wjf-nc-ziU"/>
-                                    <segue destination="y4G-oo-hLf" kind="show" id="T3w-sW-ecJ"/>
+                                    <segue destination="y4G-oo-hLf" kind="show" identifier="saveNewSurveillance" id="T3w-sW-ecJ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Surveillance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXD-jh-iSP">
@@ -1608,10 +1608,11 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="10" translatesAutoresizingMaskIntoConstraints="NO" id="2rW-NH-9q7">
                                 <rect key="frame" x="0.0" y="176" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="541615249.10474002">
-                                    <!--2018-03-01 4:40:49 PM +0000-->
+                                    <!--2018-03-01 16:40:49 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
                                 <connections>
+                                    <action selector="changerValueDateQuandDateChange:" destination="mQE-GA-9ez" eventType="valueChanged" id="Bv6-MT-siI"/>
                                     <action selector="changerValueDateQuandDateChange:" destination="ZnF-Q2-ZBr" eventType="valueChanged" id="vmg-KP-gc9"/>
                                 </connections>
                             </datePicker>
@@ -1629,15 +1630,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fDc-qj-G3b"/>
                     </view>
+                    <connections>
+                        <outlet property="myDatePicker" destination="2rW-NH-9q7" id="Ysz-wC-pQb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4S7-Fc-c7n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2399" y="1554"/>
         </scene>
-        <!--View Controller-->
+        <!--Surveillance Heure View Controller-->
         <scene sceneID="EtK-ag-lyF">
             <objects>
-                <viewController id="74U-4q-frq" sceneMemberID="viewController">
+                <viewController id="74U-4q-frq" customClass="SurveillanceHeureViewController" customModule="Swift_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H1f-m0-dZL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1669,10 +1673,11 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="CaA-0v-wg6">
                                 <rect key="frame" x="0.0" y="176" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="541615249.10474002">
-                                    <!--2018-03-01 4:40:49 PM +0000-->
+                                    <!--2018-03-01 16:40:49 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
                                 <connections>
+                                    <action selector="changerValueDateQuandDateChange:" destination="74U-4q-frq" eventType="valueChanged" id="3Cc-1w-uLE"/>
                                     <action selector="changerValueDateQuandDateChange:" destination="tc3-zK-jsM" eventType="valueChanged" id="48t-sD-8Ej"/>
                                 </connections>
                             </datePicker>
@@ -1696,15 +1701,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="o2D-NB-CGY"/>
                     </view>
+                    <connections>
+                        <outlet property="myDatePicker" destination="CaA-0v-wg6" id="EuZ-Ch-2j1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ved-Kb-fSt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1599" y="1548"/>
         </scene>
-        <!--View Controller-->
+        <!--Surveillance Type View Controller-->
         <scene sceneID="BM6-9g-71L">
             <objects>
-                <viewController id="8VY-ur-Vxf" sceneMemberID="viewController">
+                <viewController id="8VY-ur-Vxf" customClass="SurveillanceTypeViewController" customModule="Swift_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dzY-cr-Sde">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1733,7 +1741,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="addTypeAct:" destination="P94-Ko-fRh" eventType="touchUpInside" id="3zI-9p-Tmx"/>
-                                    <segue destination="74U-4q-frq" kind="show" id="RIQ-fc-Hky"/>
+                                    <segue destination="74U-4q-frq" kind="show" identifier="showNomSurveillanceSegue" id="RIQ-fc-Hky"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1748,6 +1756,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZLc-r9-a3E"/>
                     </view>
+                    <connections>
+                        <outlet property="picker" destination="LYE-hA-92V" id="xKM-JU-u3V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uU3-Gq-YbH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2035,7 +2046,7 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="Vf6-3d-Jl4">
                                 <rect key="frame" x="0.0" y="176" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="542451569.88140905">
-                                    <!--2018-03-11 8:59:29 AM +0000-->
+                                    <!--2018-03-11 08:59:29 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
                             </datePicker>
@@ -2194,7 +2205,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="22e-ci-dcA"/>
         <segue reference="gr5-qa-Q1k"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class AjoutSuiviDatabaseViewController: UIViewController {
+class SymptomeAjoutViewController: UIViewController {
     
     
     var nomSuiviSend = String() // nom sent by segue

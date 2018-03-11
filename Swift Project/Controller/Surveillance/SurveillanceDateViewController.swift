@@ -1,24 +1,20 @@
 //
-//  ChoixDateSymptomeViewController.swift
+//  SurveillanceDateViewController.swift
 //  Swift Project
 //
-//  Created by Melvil on 04/03/2018.
+//  Created by Melvil on 11/03/2018.
 //  Copyright © 2018 Melvil. All rights reserved.
 //
 
 import UIKit
 
-class ChoixDateSuiviViewController: UIViewController {
-    
-  
+class SurveillanceDateViewController: UIViewController {
     @IBOutlet weak var myDatePicker: UIDatePicker!
-    
-    var nomSuiviSend = String() // nom sent by segue
-    var heureSuiviSend = String() // heure sent by segue
+    var nomSurveillanceSend = String() // nom sent by segue
+    var heureSurveillanceSend = String() // heure sent by segue
     var dateChoisi = "" // date getted now
     
-    let segueShowNomSuivi = "showAllInfosSuiviSegue"
-    
+    let segueShowNomSuivi = "showAllInfosSurveillanceSegue"
     override func viewDidLoad() {
         super.viewDidLoad()
         changerValueDateQuandDateChange(self) //au cas où l'utilisateur garde la date préséléctionnée
@@ -29,14 +25,16 @@ class ChoixDateSuiviViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == segueShowNomSuivi {
-            let AjoutSuiviDatabase = segue.destination as! AjoutSuiviDatabaseViewController
-            AjoutSuiviDatabase.nomSuiviSend = self.nomSuiviSend
-            AjoutSuiviDatabase.heureSuiviSend = self.heureSuiviSend
-            AjoutSuiviDatabase.dateSuiviSend = self.dateChoisi
-
+            let SurveillanceAjoutViewController = segue.destination as! SurveillanceAjoutViewController
+            SurveillanceAjoutViewController.nomSurveillanceSend = self.nomSurveillanceSend
+            SurveillanceAjoutViewController.heureSurveillanceSend = self.heureSurveillanceSend
+            SurveillanceAjoutViewController.dateSurveillanceSend = self.dateChoisi
+            
         }
         
     }
@@ -49,7 +47,6 @@ class ChoixDateSuiviViewController: UIViewController {
         dateChoisi = selectedDate
         
     }
-    
     /*
     // MARK: - Navigation
 

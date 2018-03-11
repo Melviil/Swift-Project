@@ -1,27 +1,20 @@
 //
-//  ActiviteAjoutViewController.swift
+//  SurveillanceAjoutViewController.swift
 //  Swift Project
 //
-//  Created by Melvil on 07/03/2018.
+//  Created by Melvil on 11/03/2018.
 //  Copyright © 2018 Melvil. All rights reserved.
 //
 
 import UIKit
 
-class ActiviteAjoutViewController: UIViewController {
-    var nomActivite = TypeActivite()
-    var listeJoursActivite : [String] = []
-    var listeHeuresActivite: [String] = []
-    var dateDebutActivite = String()
-    var dateFinActivite = String()
+class SurveillanceAjoutViewController: UIViewController {
+    var nomSurveillanceSend = String() // nom sent by segue
+    var heureSurveillanceSend = String() // heure sent by segue
+    var dateSurveillanceSend = "" // date sent by segue
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("INFORMATIONS AJOUT")
-        print(nomActivite)
-        print(listeJoursActivite)
-        print(listeHeuresActivite)
-        print(dateDebutActivite)
-        print(dateFinActivite)
+        saveNewSurveillance()
         // Do any additional setup after loading the view.
     }
 
@@ -29,10 +22,9 @@ class ActiviteAjoutViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    //TODO
-    func saveNewActivite( withNom nom: String, withHeure heure: String,withDate date: String){
-    }
+    func saveNewSurveillance(){ // TODO
+        
+        }
 
     /*
     // MARK: - Navigation
