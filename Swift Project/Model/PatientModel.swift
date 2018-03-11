@@ -11,9 +11,8 @@ import CoreData
 
 extension Patient {
     
-//    func nomComplet() -> String {
-//        return  self.nom  + " " +
-//
-//    }
+    func nomComplet() -> String {
+        return "\(String(describing: self.prenomPatient))" + " " + "\(String(describing: self.nomPatient))" ;
+    }
     
 }

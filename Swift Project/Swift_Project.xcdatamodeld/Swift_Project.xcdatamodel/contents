@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17D47" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Activite" representedClassName="Activite" syncable="YES" codeGenerationType="class">
-        <attribute name="heure" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dateDebut" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="dateFin" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="idActivite" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="estDeType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TypeActivite" inverseName="correspondA" inverseEntity="TypeActivite" syncable="YES"/>
-        <relationship name="sePasse" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Jour" inverseName="contient" inverseEntity="Jour" syncable="YES"/>
+        <relationship name="estDeType" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TypeActivite" inverseName="correspondA" inverseEntity="TypeActivite" syncable="YES"/>
+        <relationship name="sePasseA" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Heure" inverseName="contient" inverseEntity="Heure" syncable="YES"/>
+        <relationship name="sePasseLe" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Jour" inverseName="contient" inverseEntity="Jour" syncable="YES"/>
     </entity>
     <entity name="CentreHospitalier" representedClassName="CentreHospitalier" syncable="YES" codeGenerationType="class">
         <attribute name="adresseCentreHospitalier" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nomCentreHospitalier" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="EvenementND" representedClassName="EvenementND" syncable="YES" codeGenerationType="class"/>
+    <entity name="Evenement" representedClassName="Evenement" syncable="YES" codeGenerationType="class"/>
+    <entity name="Heure" representedClassName="Heure" syncable="YES" codeGenerationType="class">
+        <attribute name="heure" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="contient" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Activite" inverseName="sePasseA" inverseEntity="Activite" syncable="YES"/>
+    </entity>
     <entity name="Jour" representedClassName="Jour" syncable="YES" codeGenerationType="class">
         <attribute name="idJour" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="libelleJour" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="contient" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activite" inverseName="sePasse" inverseEntity="Activite" syncable="YES"/>
+        <relationship name="contient" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Activite" inverseName="sePasseLe" inverseEntity="Activite" syncable="YES"/>
     </entity>
     <entity name="Medecin" representedClassName="Medecin" syncable="YES" codeGenerationType="class">
         <attribute name="nomMedecin" optional="YES" attributeType="String" syncable="YES"/>
@@ -50,7 +56,7 @@
     </entity>
     <entity name="TypeActivite" representedClassName="TypeActivite" syncable="YES" codeGenerationType="class">
         <attribute name="libelleTypeActivite" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="correspondA" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activite" inverseName="estDeType" inverseEntity="Activite" syncable="YES"/>
+        <relationship name="correspondA" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Activite" inverseName="estDeType" inverseEntity="Activite" syncable="YES"/>
     </entity>
     <entity name="TypeEvenement" representedClassName="TypeEvenement" syncable="YES" codeGenerationType="class">
         <attribute name="libelleTypeEvenement" optional="YES" attributeType="String" syncable="YES"/>
@@ -59,18 +65,19 @@
         <attribute name="libelleTypeSymptome" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Activite" positionX="115" positionY="27" width="128" height="103"/>
-        <element name="Patient" positionX="-65" positionY="468" width="128" height="90"/>
-        <element name="Jour" positionX="-216" positionY="135" width="128" height="90"/>
+        <element name="Activite" positionX="115" positionY="27" width="128" height="133"/>
+        <element name="CentreHospitalier" positionX="-171" positionY="375" width="128" height="75"/>
+        <element name="Evenement" positionX="160" positionY="207" width="128" height="28"/>
+        <element name="Jour" positionX="-216" positionY="117" width="128" height="88"/>
         <element name="Medecin" positionX="-270" positionY="486" width="128" height="88"/>
         <element name="Medicament" positionX="-324" positionY="252" width="128" height="165"/>
+        <element name="Patient" positionX="-65" positionY="468" width="128" height="90"/>
+        <element name="RendezVous" positionX="-108" positionY="252" width="128" height="73"/>
         <element name="Specialite" positionX="97" positionY="270" width="128" height="60"/>
         <element name="Symptome" positionX="115" positionY="360" width="128" height="88"/>
-        <element name="TypeActivite" positionX="-216" positionY="27" width="128" height="73"/>
+        <element name="TypeActivite" positionX="-209" positionY="-117" width="128" height="73"/>
         <element name="TypeEvenement" positionX="-29" positionY="363" width="128" height="60"/>
         <element name="TypeSymptome" positionX="142" positionY="480" width="128" height="60"/>
-        <element name="EvenementND" positionX="160" positionY="207" width="128" height="43"/>
-        <element name="CentreHospitalier" positionX="-171" positionY="375" width="128" height="75"/>
-        <element name="RendezVous" positionX="-108" positionY="252" width="128" height="73"/>
+        <element name="Heure" positionX="-216" positionY="18" width="128" height="73"/>
     </elements>
 </model>

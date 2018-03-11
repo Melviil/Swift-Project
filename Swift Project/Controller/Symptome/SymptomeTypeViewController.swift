@@ -9,7 +9,7 @@
 
 import UIKit
 
-class ChoixTypeSuiviController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class SymptomeTypeViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
    
     
@@ -23,7 +23,7 @@ class ChoixTypeSuiviController: UIViewController, UIPickerViewDataSource, UIPick
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == segueShowNomSuivi {
-            let ChoixHeureSuivi = segue.destination as! ChoixHeureSuiviViewController
+            let ChoixHeureSuivi = segue.destination as! SymptomeHeureViewController
             ChoixHeureSuivi.nomSuiviSend = self.nomSuivi
             print(nomSuivi)
         }

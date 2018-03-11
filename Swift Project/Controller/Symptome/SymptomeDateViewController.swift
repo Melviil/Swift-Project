@@ -1,5 +1,5 @@
 //
-//  ChoixHeureSymptomeViewController.swift
+//  ChoixDateSymptomeViewController.swift
 //  Swift Project
 //
 //  Created by Melvil on 04/03/2018.
@@ -8,45 +8,48 @@
 
 import UIKit
 
-class ChoixHeureSuiviViewController: UIViewController {
-
+class SymptomeDateViewController: UIViewController {
+    
+  
     @IBOutlet weak var myDatePicker: UIDatePicker!
-    var heureChoisie = ""
-    let segueShowNomSuivi = "showNomHeureSuiviSegue"
-    var nomSuiviSend = String()
-
+    
+    var nomSuiviSend = String() // nom sent by segue
+    var heureSuiviSend = String() // heure sent by segue
+    var dateChoisi = "" // date getted now
+    
+    let segueShowNomSuivi = "showAllInfosSuiviSegue"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        changerValueDateQuandDateChange(self) //au cas où l'utilisateur garde l'heure préséléctionnée
-
+        changerValueDateQuandDateChange(self) //au cas où l'utilisateur garde la date préséléctionnée
         // Do any additional setup after loading the view.
-    }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == segueShowNomSuivi {
-            let ChoixDateSuivi = segue.destination as! ChoixDateSuiviViewController
-            ChoixDateSuivi.nomSuiviSend = self.nomSuiviSend
-            ChoixDateSuivi.heureSuiviSend = self.heureChoisie
-           
-
-        }
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == segueShowNomSuivi {
+            let AjoutSuiviDatabase = segue.destination as! SymptomeAjoutViewController
+            AjoutSuiviDatabase.nomSuiviSend = self.nomSuiviSend
+            AjoutSuiviDatabase.heureSuiviSend = self.heureSuiviSend
+            AjoutSuiviDatabase.dateSuiviSend = self.dateChoisi
+
+        }
+        
+    }
     
     @IBAction func changerValueDateQuandDateChange(_ sender: Any) {
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "hh mm a"
+        dateFormatter.dateFormat = "dd-MM-yyyy"
         let selectedDate = dateFormatter.string(from: myDatePicker.date)
-        heureChoisie = selectedDate
-        print(heureChoisie)
+        dateChoisi = selectedDate
         
     }
+    
     /*
     // MARK: - Navigation
 

@@ -35,7 +35,7 @@ class ActiviteHeuresViewController: UIViewController, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = self.hours[indexPath.row]
+        cell.textLabel?.text = String(describing: self.hours[indexPath.row])
         return cell
     }
 

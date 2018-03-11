@@ -17,14 +17,13 @@ class ActiviteHeureModallyViewController: UIViewController {
     
     @IBOutlet weak var pressButton: UIButton!
    
-    var heureChoisie = ""
+    var heureChoisie = String()
     @IBAction func changerValueDateQuandDateChange(_ sender: Any) {
    
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "hh mm a"
         let selectedDate = dateFormatter.string(from: myDatePicker.date)
         heureChoisie = selectedDate
-        
        
     }
    
