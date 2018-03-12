@@ -4,7 +4,7 @@
         <attribute name="dateDebut" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="dateFin" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="idActivite" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="estDeType" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TypeActivite" inverseName="correspondA" inverseEntity="TypeActivite" syncable="YES"/>
+        <relationship name="estDeType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TypeActivite" inverseName="correspondA" inverseEntity="TypeActivite" syncable="YES"/>
         <relationship name="sePasseA" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Heure" inverseName="contient" inverseEntity="Heure" syncable="YES"/>
         <relationship name="sePasseLe" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Jour" inverseName="contient" inverseEntity="Jour" syncable="YES"/>
     </entity>
@@ -68,6 +68,7 @@
         <element name="Activite" positionX="115" positionY="27" width="128" height="133"/>
         <element name="CentreHospitalier" positionX="-171" positionY="375" width="128" height="75"/>
         <element name="Evenement" positionX="160" positionY="207" width="128" height="28"/>
+        <element name="Heure" positionX="-216" positionY="18" width="128" height="73"/>
         <element name="Jour" positionX="-216" positionY="117" width="128" height="88"/>
         <element name="Medecin" positionX="-270" positionY="486" width="128" height="88"/>
         <element name="Medicament" positionX="-324" positionY="252" width="128" height="165"/>
@@ -78,6 +79,5 @@
         <element name="TypeActivite" positionX="-209" positionY="-117" width="128" height="73"/>
         <element name="TypeEvenement" positionX="-29" positionY="363" width="128" height="60"/>
         <element name="TypeSymptome" positionX="142" positionY="480" width="128" height="60"/>
-        <element name="Heure" positionX="-216" positionY="18" width="128" height="73"/>
     </elements>
 </model>

@@ -22,9 +22,8 @@ class ActiviteAjoutViewController: UIViewController {
         print(listeHeuresActivite)
         print(dateDebutActivite)
         print(dateFinActivite)
-        for heure in listeHeuresActivite{
-           /* saveNewActivite(withNom : self.nomActivite, withHours : heure, withDays : self.listeJoursActivite, withDateDebut: self.dateDebutActivite, withDateFin : self.dateFinActivite )*/
-        }
+           saveNewActivite(withNom : self.nomActivite, withHours : listeHeuresActivite, withJours : self.listeJoursActivite, withDateDebut: self.dateDebutActivite, withDateFin : self.dateFinActivite )
+        
        
         // Do any additional setup after loading the view.
     }
@@ -35,13 +34,19 @@ class ActiviteAjoutViewController: UIViewController {
     }
     
     //TODO
-    /*func saveNewActivite( withNom nom: TypeActivite, withHours heure : String, withDays days : [String],withDateDebut dateDebut: String, withDateFin dateFin: String){
+    func saveNewActivite( withNom nom: TypeActivite, withHours heures : [String], withJours jours : [String],withDateDebut dateDebut: String, withDateFin dateFin: String){
+        
+        
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
             //  self.alertError(errorMsg: " Could not save symptome ", userInfo : "Unknown reason" )
             return
         }
+        let context = appDelegate.persistentContainer.viewContext
+        let activite = Activite(context : context)
+        let heure = Heure(context : context)
         
+
         // On convertit les dates de string à date
         // La time zone est celle de Lisbonne, après des tests c'est celle qui correspond
         let dateFormatter = DateFormatter()
@@ -54,35 +59,36 @@ class ActiviteAjoutViewController: UIViewController {
             fatalError("ERROR: Date conversion failed due to mismatched format.")
         }
         dateFormatter.dateFormat = "hh mm a"
-        guard let heureGood = dateFormatter.date(from:heure) else {
-            fatalError("ERROR: Date conversion failed due to mismatched format.")
+        // On convertit et on ajoute les heures une par une
+        for uneHeure in heures {
+            guard let heureGood = dateFormatter.date(from:uneHeure) else {
+                fatalError("ERROR: Date conversion failed due to mismatched format.")
+            }
+            heure.heure = heureGood
+
         }
         
         
         
         
-        
-        let context = appDelegate.persistentContainer.viewContext
-        let activite = Activite(context : context)
-        
-        activite.estDeType = nom
+        print( "lalalalalalalalala")
+        print(nom)
         activite.dateFin = dateFinGood
         activite.dateDebut = dateDebutGood
-        activite.sePasse = 
-        
+        activite.estDeType? = nom
+        //activite.sePasseA = "dzad"
       
-        return true
-        
-    }*/
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        do{
+            try context.save()
+        }
+        catch  {
+            //  self.alertError(errorMsg: " Could not save type ", userInfo : "Unknown reason" )
+            return
+        }
+      
     }
-    */
+
+    
+    
 
 }
