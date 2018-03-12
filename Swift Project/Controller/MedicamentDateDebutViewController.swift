@@ -9,10 +9,19 @@
 import UIKit
 
 class MedicamentDateDebutViewController: UIViewController {
-
+    @IBOutlet weak var myDatePicker: UIDatePicker!
+    var medicamentPasse = Medicament()
+    var libelleMedicamentPasse = String()
+    var presentationBreveMedicamentPasse = String()
+    var DoseMedicamentPasse = String()
+    var presentationDetailleMedicamentPasse = String()
+    var nbPriseMedicamentPasse = String()
+    var frequencePriseMedicamentPasse = String()
+    var heuresPasse: [String] = []
+    var dateChoisi = String()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        changerValueDateQuandDateChange(self)
         // Do any additional setup after loading the view.
     }
 
@@ -21,7 +30,33 @@ class MedicamentDateDebutViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    let showJourActiviteSegue = "AjoutDateFinSegue"
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == showJourActiviteSegue {
+            let MedicamentDateFinViewController = segue.destination as! MedicamentDateFinViewController
+            
+            MedicamentDateFinViewController.medicamentPasse = self.medicamentPasse
+            MedicamentDateFinViewController.libelleMedicamentPasse = self.libelleMedicamentPasse
+            MedicamentDateFinViewController.presentationBreveMedicamentPasse = self.presentationBreveMedicamentPasse
+            MedicamentDateFinViewController.DoseMedicamentPasse = self.DoseMedicamentPasse
+            MedicamentDateFinViewController.presentationDetailleMedicamentPasse = self.presentationDetailleMedicamentPasse
+            MedicamentDateFinViewController.nbPriseMedicamentPasse = self.nbPriseMedicamentPasse
+            MedicamentDateFinViewController.frequencePriseMedicamentPasse = self.frequencePriseMedicamentPasse
+            MedicamentDateFinViewController.heuresPasse = self.heuresPasse
+            MedicamentDateFinViewController.dateDebutPasse = self.dateChoisi
+            
+        }
+    }
+    @IBAction func changerValueDateQuandDateChange(_ sender: Any) {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+        let selectedDate = dateFormatter.string(from: myDatePicker.date)
+        dateChoisi = selectedDate
+        print(dateChoisi)
+        
+    }
     /*
     // MARK: - Navigation
 
