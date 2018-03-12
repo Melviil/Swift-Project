@@ -2223,7 +2223,7 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="oIL-h6-TaH">
                                 <rect key="frame" x="0.0" y="176" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="541612540.84617805">
-                                    <!--2018-03-01 3:55:40 PM +0000-->
+                                    <!--2018-03-01 15:55:40 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
                                 <connections>
@@ -2295,7 +2295,7 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="xAY-Zh-CQb">
                                 <rect key="frame" x="0.0" y="176" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="541612540.84617805">
-                                    <!--2018-03-01 3:55:40 PM +0000-->
+                                    <!--2018-03-01 15:55:40 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
                                 <connections>
@@ -2519,9 +2519,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qZA-ny-VeU"/>
-        <segue reference="GzT-13-6fG"/>
-        <segue reference="T3w-sW-ecJ"/>
+        <segue reference="22e-ci-dcA"/>
         <segue reference="gr5-qa-Q1k"/>
     </inferredMetricsTieBreakers>
 </document>

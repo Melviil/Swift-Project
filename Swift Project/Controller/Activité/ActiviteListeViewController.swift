@@ -20,6 +20,7 @@ class ActiviteListeViewController: UIViewController, UITableViewDataSource, UITa
     override func viewDidLoad() {
         super.viewDidLoad()
         myTableView.dataSource = self
+        myTableView.delegate = self
         //TODO GETActivite table
         
         
