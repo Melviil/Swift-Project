@@ -8,7 +8,7 @@ class ActiviteTypeViewController: UIViewController, UIPickerViewDelegate, UIPick
     
     let segueShowNomActivite = "showNomActiviteSegue"
      var typesactivite : [TypeActivite] = []
-     var activitePasse = TypeActivite() ;
+     var activitePasse = TypeActivite() 
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -33,8 +33,8 @@ class ActiviteTypeViewController: UIViewController, UIPickerViewDelegate, UIPick
         
         do{
             try self.typesactivite = context.fetch(request)
-            print(self.typesactivite[0])
             if self.typesactivite.isEmpty == false {
+                print(self.typesactivite[0])
                 self.activitePasse = self.typesactivite[0]
             }
         }

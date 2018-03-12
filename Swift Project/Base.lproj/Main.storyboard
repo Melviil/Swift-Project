@@ -17,10 +17,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Activite Liste View Controller-->
         <scene sceneID="mCD-Hn-OeY">
             <objects>
-                <viewController id="202-L5-TJ7" sceneMemberID="viewController">
+                <viewController id="202-L5-TJ7" customClass="ActiviteListeViewController" customModule="Swift_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WUE-DQ-DPR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,6 +74,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="keH-re-bDn"/>
                     </view>
+                    <connections>
+                        <outlet property="myTableView" destination="wrY-kL-1Rr" id="gZr-gq-fU7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FEr-TB-toc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
