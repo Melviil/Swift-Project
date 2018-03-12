@@ -635,7 +635,7 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="zN0-mF-ebF"/>
-                                    <barButtonItem title="Item" systemItem="save" id="RFJ-aj-vNu">
+                                    <barButtonItem systemItem="save" id="RFJ-aj-vNu">
                                         <connections>
                                             <segue destination="Qtt-M5-6ZX" kind="unwind" unwindAction="unwindToHourListAfterSavingHourWithSegue:" id="UHu-GC-m8q"/>
                                         </connections>
@@ -1211,12 +1211,18 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type de rendez vous :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ffF-Ue-l8m">
                                 <rect key="frame" x="16" y="212" width="197" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="YXc-RY-2Yc"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Numéro du docteur :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="m4p-9s-TNm">
                                 <rect key="frame" x="16" y="308" width="186" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="Bv3-aX-clT"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1251,10 +1257,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqh-Hc-jYP">
                                 <rect key="frame" x="37" y="518" width="246" height="42"/>
                                 <color key="backgroundColor" red="0.23529411759999999" green="0.57254901960000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="246" id="Xyq-L6-eBK"/>
-                                    <constraint firstAttribute="height" constant="42" id="yqh-I9-AzM"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="tintColor" red="0.23529411759999999" green="0.57254901960000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Ajouter un rendez vous">
@@ -1289,14 +1291,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="pSK-SL-Fu6" firstAttribute="top" secondItem="m4p-9s-TNm" secondAttribute="bottom" constant="20" id="1RE-5w-AR8"/>
-                            <constraint firstItem="egZ-d7-pHt" firstAttribute="top" secondItem="co4-eD-2v8" secondAttribute="top" constant="13" id="5RS-a8-HyR"/>
-                            <constraint firstItem="ffF-Ue-l8m" firstAttribute="leading" secondItem="co4-eD-2v8" secondAttribute="leading" constant="16" id="7Am-Xc-oVO"/>
-                            <constraint firstItem="ffF-Ue-l8m" firstAttribute="top" secondItem="HGm-GO-Shi" secondAttribute="bottom" constant="20" id="8N4-59-KHU"/>
+                            <constraint firstItem="ffF-Ue-l8m" firstAttribute="top" secondItem="HGm-GO-Shi" secondAttribute="bottom" constant="20" id="1to-Lv-naX"/>
                             <constraint firstItem="pSK-SL-Fu6" firstAttribute="leading" secondItem="co4-eD-2v8" secondAttribute="leading" constant="32" id="FQR-ky-DeY"/>
                             <constraint firstItem="bDu-3f-Bue" firstAttribute="centerY" secondItem="1hm-k6-Y1y" secondAttribute="centerY" id="Fij-KG-ODT"/>
-                            <constraint firstItem="aqh-Hc-jYP" firstAttribute="centerX" secondItem="uW9-bs-XJY" secondAttribute="centerX" id="Pa8-cz-jiJ"/>
-                            <constraint firstItem="jpM-Di-Fea" firstAttribute="top" secondItem="ffF-Ue-l8m" secondAttribute="bottom" constant="20" id="S6J-CU-kJb"/>
+                            <constraint firstItem="co4-eD-2v8" firstAttribute="bottom" secondItem="aqh-Hc-jYP" secondAttribute="bottom" constant="8" id="Hqv-ze-Vem"/>
+                            <constraint firstItem="aqh-Hc-jYP" firstAttribute="centerX" secondItem="uW9-bs-XJY" secondAttribute="centerX" id="Ly2-QL-gFN"/>
+                            <constraint firstItem="ffF-Ue-l8m" firstAttribute="leading" secondItem="co4-eD-2v8" secondAttribute="leading" constant="16" id="PKQ-2w-6gK"/>
+                            <constraint firstItem="aqh-Hc-jYP" firstAttribute="top" secondItem="1hm-k6-Y1y" secondAttribute="bottom" constant="88" id="QvT-Vh-dGo"/>
+                            <constraint firstItem="egZ-d7-pHt" firstAttribute="top" secondItem="co4-eD-2v8" secondAttribute="top" constant="13" id="TFm-6B-tAO"/>
                             <constraint firstItem="jhA-kT-2mJ" firstAttribute="top" secondItem="an6-mh-KzY" secondAttribute="bottom" constant="19" id="TMB-C1-0LZ"/>
+                            <constraint firstItem="jpM-Di-Fea" firstAttribute="top" secondItem="ffF-Ue-l8m" secondAttribute="bottom" constant="20" id="Vbb-CD-4EE"/>
                             <constraint firstItem="jhA-kT-2mJ" firstAttribute="leading" secondItem="co4-eD-2v8" secondAttribute="leading" constant="16" id="WbC-zr-6RD"/>
                             <constraint firstItem="co4-eD-2v8" firstAttribute="trailing" secondItem="bDu-3f-Bue" secondAttribute="trailing" constant="41" id="Yt1-AL-BKV"/>
                             <constraint firstItem="HGm-GO-Shi" firstAttribute="top" secondItem="jhA-kT-2mJ" secondAttribute="bottom" constant="10" id="bRR-7d-8Nm"/>
@@ -1307,12 +1311,14 @@
                             <constraint firstItem="an6-mh-KzY" firstAttribute="top" secondItem="egZ-d7-pHt" secondAttribute="bottom" constant="25" id="iLP-cN-cSh"/>
                             <constraint firstItem="m4p-9s-TNm" firstAttribute="leading" secondItem="co4-eD-2v8" secondAttribute="leading" constant="16" id="ikA-oo-mEy"/>
                             <constraint firstItem="jpM-Di-Fea" firstAttribute="leading" secondItem="co4-eD-2v8" secondAttribute="leading" constant="32" id="jiM-tJ-flP"/>
+                            <constraint firstItem="co4-eD-2v8" firstAttribute="trailing" secondItem="ffF-Ue-l8m" secondAttribute="trailing" constant="107" id="kas-3j-vbZ"/>
                             <constraint firstItem="co4-eD-2v8" firstAttribute="bottom" secondItem="aqh-Hc-jYP" secondAttribute="bottom" constant="8" id="meh-Cd-3oB"/>
                             <constraint firstItem="bDu-3f-Bue" firstAttribute="leading" secondItem="1hm-k6-Y1y" secondAttribute="trailing" constant="14" id="q8p-za-lSl"/>
                             <constraint firstItem="egZ-d7-pHt" firstAttribute="centerX" secondItem="uW9-bs-XJY" secondAttribute="centerX" id="qlr-nQ-DRr"/>
                             <constraint firstItem="an6-mh-KzY" firstAttribute="centerX" secondItem="uW9-bs-XJY" secondAttribute="centerX" id="sXs-aG-29g"/>
                             <constraint firstItem="co4-eD-2v8" firstAttribute="trailing" secondItem="pSK-SL-Fu6" secondAttribute="trailing" constant="100" id="tNQ-rl-0d1"/>
                             <constraint firstItem="1hm-k6-Y1y" firstAttribute="top" secondItem="pSK-SL-Fu6" secondAttribute="bottom" constant="20" id="tQq-gw-Fvj"/>
+                            <constraint firstItem="aqh-Hc-jYP" firstAttribute="top" secondItem="bDu-3f-Bue" secondAttribute="bottom" constant="85.5" id="u97-zG-bEW"/>
                             <constraint firstItem="HGm-GO-Shi" firstAttribute="leading" secondItem="co4-eD-2v8" secondAttribute="leading" constant="32" id="x3e-UP-gFD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="co4-eD-2v8"/>
@@ -2069,13 +2075,13 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="VVp-46-YZ9"/>
-                                    <barButtonItem title="Item" systemItem="cancel" id="JVG-kd-QCf">
+                                    <barButtonItem systemItem="cancel" id="JVG-kd-QCf">
                                         <connections>
                                             <action selector="CancelButton:" destination="EHa-EO-HqI" id="6g7-kf-b9s"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Euz-gM-yJT"/>
-                                    <barButtonItem title="Item" systemItem="save" id="5Tf-pE-IOj"/>
+                                    <barButtonItem systemItem="save" id="5Tf-pE-IOj"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="cdV-1v-d5G"/>
                                 </items>
                             </toolbar>
@@ -2519,7 +2525,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="22e-ci-dcA"/>
         <segue reference="gr5-qa-Q1k"/>
     </inferredMetricsTieBreakers>
 </document>
