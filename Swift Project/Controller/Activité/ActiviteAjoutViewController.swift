@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ActiviteAjoutViewController: UIViewController {
     var nomActivite = TypeActivite()
@@ -44,8 +45,9 @@ class ActiviteAjoutViewController: UIViewController {
         }
         let context = appDelegate.persistentContainer.viewContext
         let activite = Activite(context : context)
-        let heure = Heure(context : context)
-        
+        let heureTable = Heure(context : context)
+        let jourTable = Jour(context : context)
+
 
         // On convertit les dates de string à date
         // La time zone est celle de Lisbonne, après des tests c'est celle qui correspond
@@ -58,25 +60,28 @@ class ActiviteAjoutViewController: UIViewController {
         guard let dateDebutGood = dateFormatter.date(from:dateDebut) else {
             fatalError("ERROR: Date conversion failed due to mismatched format.")
         }
-        dateFormatter.dateFormat = "hh mm a"
-        // On convertit et on ajoute les heures une par une
-        for uneHeure in heures {
-            guard let heureGood = dateFormatter.date(from:uneHeure) else {
-                fatalError("ERROR: Date conversion failed due to mismatched format.")
-            }
-            heure.heure = heureGood
+      
+        
 
-        }
-        
-        
-        
         
         print( "lalalalalalalalala")
         print(nom)
         activite.dateFin = dateFinGood
         activite.dateDebut = dateDebutGood
-        activite.estDeType? = nom
-        //activite.sePasseA = "dzad"
+        activite.estDeType = nom
+        dateFormatter.dateFormat = "hh mm a"
+
+        for heure in heures {
+            guard let heureGood = dateFormatter.date(from:heure) else {
+                fatalError("ERROR: Date conversion failed due to mismatched format.")
+            }
+            heureTable.libelleHeure = heureGood
+            activite.addToSePasseA(heureTable)
+        } 
+        for jour in jours {
+            jourTable.libelleJour = jour
+            activite.addToSePasseLe(jourTable)
+        }
       
         do{
             try context.save()

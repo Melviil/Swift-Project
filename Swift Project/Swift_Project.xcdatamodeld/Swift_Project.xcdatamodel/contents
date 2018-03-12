@@ -4,7 +4,7 @@
         <attribute name="dateDebut" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="dateFin" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="idActivite" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="estDeType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TypeActivite" inverseName="correspondA" inverseEntity="TypeActivite" syncable="YES"/>
+        <relationship name="estDeType" maxCount="1" deletionRule="Nullify" destinationEntity="TypeActivite" inverseName="correspondA" inverseEntity="TypeActivite" syncable="YES"/>
         <relationship name="sePasseA" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Heure" inverseName="contient" inverseEntity="Heure" syncable="YES"/>
         <relationship name="sePasseLe" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Jour" inverseName="contient" inverseEntity="Jour" syncable="YES"/>
     </entity>
@@ -14,7 +14,7 @@
     </entity>
     <entity name="Evenement" representedClassName="Evenement" syncable="YES" codeGenerationType="class"/>
     <entity name="Heure" representedClassName="Heure" syncable="YES" codeGenerationType="class">
-        <attribute name="heure" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="libelleHeure" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <relationship name="contient" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Activite" inverseName="sePasseA" inverseEntity="Activite" syncable="YES"/>
     </entity>
     <entity name="Jour" representedClassName="Jour" syncable="YES" codeGenerationType="class">
