@@ -54,7 +54,6 @@ class ActiviteListeViewController: UIViewController, UITableViewDataSource, UITa
                 print(selectedDateDebut)
                 print(selectedDateFin)
                    typeActivite = activite.estDeType?.libelleTypeActivite
-                
                 //print(typeActivite)
                 activites.append(  typeActivite! + " du " + selectedDateDebut + " jusqu'au " + selectedDateFin)
             }
