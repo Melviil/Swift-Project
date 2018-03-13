@@ -15,6 +15,7 @@ class ActiviteListeViewController: UIViewController, UITableViewDataSource, UITa
      var selectedDateDebut = String()
      var selectedDateFin = String()
     var typeActivite : String?
+    var joursActivite : Date?
 
     @IBOutlet weak var myTableView: UITableView!
     override func viewDidLoad() {
@@ -45,7 +46,9 @@ class ActiviteListeViewController: UIViewController, UITableViewDataSource, UITa
                 
             
                 let dateFormatter = DateFormatter()
-                dateFormatter.dateFormat = "dd-MM-yyyy"
+                dateFormatter.dateFormat = "dd MMMM"
+                dateFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
+
                 dateFormatter.timeZone = NSTimeZone(name: "WET")! as TimeZone
 
                 selectedDateDebut = dateFormatter.string(from: activite.dateDebut!)
@@ -54,8 +57,10 @@ class ActiviteListeViewController: UIViewController, UITableViewDataSource, UITa
                 print(selectedDateDebut)
                 print(selectedDateFin)
                    typeActivite = activite.estDeType?.libelleTypeActivite
-                //print(typeActivite)
-                activites.append(  typeActivite! + " du " + selectedDateDebut + " jusqu'au " + selectedDateFin)
+                
+                
+                
+                activites.append(  typeActivite! + " du " + selectedDateDebut + " au " + selectedDateFin)
             }
         }
         // Do any additional setup after loading the view.
