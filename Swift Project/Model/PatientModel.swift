@@ -22,7 +22,6 @@ class PatientModel {
         }
     } ;
     
-    
     var  nomPatient: String? {
         get{
             return self.dao.nomPatient ;

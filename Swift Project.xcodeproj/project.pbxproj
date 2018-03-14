@@ -59,6 +59,8 @@
 		BE9F4C8320592724002DBB3D /* RendezVousModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F4C8220592724002DBB3D /* RendezVousModel.swift */; };
 		BE9F4C852059385A002DBB3D /* SprecialiteExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F4C842059385A002DBB3D /* SprecialiteExtension.swift */; };
 		BE9F4C8720593970002DBB3D /* TypeActiviteExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F4C8620593970002DBB3D /* TypeActiviteExtension.swift */; };
+		BE9F4C89205940E1002DBB3D /* TypeEvenementExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F4C88205940E1002DBB3D /* TypeEvenementExtension.swift */; };
+		BE9F4C8B20594404002DBB3D /* TypeSymptomeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F4C8A20594404002DBB3D /* TypeSymptomeExtension.swift */; };
 		BECF995920545A81009420DE /* PatientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECF995820545A81009420DE /* PatientModel.swift */; };
 		BECF995B20552A60009420DE /* MedicamentHeureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECF995A20552A60009420DE /* MedicamentHeureViewController.swift */; };
 		BECF995D20552FF0009420DE /* MedicamentAjoutHeureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECF995C20552FF0009420DE /* MedicamentAjoutHeureViewController.swift */; };
@@ -137,6 +139,8 @@
 		BE9F4C8220592724002DBB3D /* RendezVousModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RendezVousModel.swift; sourceTree = "<group>"; };
 		BE9F4C842059385A002DBB3D /* SprecialiteExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprecialiteExtension.swift; sourceTree = "<group>"; };
 		BE9F4C8620593970002DBB3D /* TypeActiviteExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeActiviteExtension.swift; sourceTree = "<group>"; };
+		BE9F4C88205940E1002DBB3D /* TypeEvenementExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeEvenementExtension.swift; sourceTree = "<group>"; };
+		BE9F4C8A20594404002DBB3D /* TypeSymptomeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeSymptomeExtension.swift; sourceTree = "<group>"; };
 		BECF995820545A81009420DE /* PatientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientModel.swift; sourceTree = "<group>"; };
 		BECF995A20552A60009420DE /* MedicamentHeureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentHeureViewController.swift; sourceTree = "<group>"; };
 		BECF995C20552FF0009420DE /* MedicamentAjoutHeureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentAjoutHeureViewController.swift; sourceTree = "<group>"; };
@@ -297,6 +301,8 @@
 				BE9F4C80205926CC002DBB3D /* RendezVousExtension.swift */,
 				BE9F4C842059385A002DBB3D /* SprecialiteExtension.swift */,
 				BE9F4C8620593970002DBB3D /* TypeActiviteExtension.swift */,
+				BE9F4C88205940E1002DBB3D /* TypeEvenementExtension.swift */,
+				BE9F4C8A20594404002DBB3D /* TypeSymptomeExtension.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -465,6 +471,7 @@
 				BC99F0132046B83E00D2FBA0 /* ActiviteHeuresViewController.swift in Sources */,
 				BC6AD69E205565B7001F1E04 /* SurveillanceDateViewController.swift in Sources */,
 				BC6AD6A5205573BF001F1E04 /* SpecialiteModel.swift in Sources */,
+				BE9F4C8B20594404002DBB3D /* TypeSymptomeExtension.swift in Sources */,
 				BC6AD69C205565AC001F1E04 /* SurveillanceHeureViewController.swift in Sources */,
 				BC14172F2056BDC2008A4B8B /* ActiviteListeViewController.swift in Sources */,
 				BC567C88204BFBED00764B79 /* SymptomeAjoutViewController.swift in Sources */,
@@ -504,6 +511,7 @@
 				BE4F32A020557AAA00C6121A /* MedicamentDateDebutViewController.swift in Sources */,
 				BE3107BA2057187D0087EA02 /* RDVAjoutHeureViewController.swift in Sources */,
 				BC0C9D0E203830230067EBB8 /* AppDelegate.swift in Sources */,
+				BE9F4C89205940E1002DBB3D /* TypeEvenementExtension.swift in Sources */,
 				BECF995F20553523009420DE /* MedicamentDescriptionViewController.swift in Sources */,
 				BC6AD6A720557435001F1E04 /* CentreHospitalierModel.swift in Sources */,
 				BE9F4C8320592724002DBB3D /* RendezVousModel.swift in Sources */,
