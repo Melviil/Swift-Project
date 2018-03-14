@@ -45,9 +45,20 @@
 		BCD7C4F3205032190010A584 /* ActiviteAjoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD7C4F2205032190010A584 /* ActiviteAjoutViewController.swift */; };
 		BCDB983D2056F88C0081FCA9 /* SymptomeHeureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDB983C2056F88C0081FCA9 /* SymptomeHeureViewController.swift */; };
 		BCDB983F2056FA570081FCA9 /* SymptomeDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDB983E2056FA570081FCA9 /* SymptomeDateViewController.swift */; };
+		BE3107BA2057187D0087EA02 /* RDVAjoutHeureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3107B92057187D0087EA02 /* RDVAjoutHeureViewController.swift */; };
 		BE4F32A020557AAA00C6121A /* MedicamentDateDebutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F329F20557AAA00C6121A /* MedicamentDateDebutViewController.swift */; };
 		BE4F32A220557AB900C6121A /* MedicamentDateFinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F32A120557AB900C6121A /* MedicamentDateFinViewController.swift */; };
 		BE4F32A420557BB600C6121A /* MedicamentAjoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F32A320557BB600C6121A /* MedicamentAjoutViewController.swift */; };
+		BE9F4C7420591323002DBB3D /* PatientExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F4C7320591323002DBB3D /* PatientExtension.swift */; };
+		BE9F4C77205915B5002DBB3D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F4C76205915B5002DBB3D /* CoreDataManager.swift */; };
+		BE9F4C7820591B43002DBB3D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F4C76205915B5002DBB3D /* CoreDataManager.swift */; };
+		BE9F4C7920591E4B002DBB3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0C9D0D203830220067EBB8 /* AppDelegate.swift */; };
+		BE9F4C7B2059212E002DBB3D /* MedecinExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F4C7A2059212E002DBB3D /* MedecinExtension.swift */; };
+		BE9F4C7D20592348002DBB3D /* CentreHospitalierExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F4C7C20592348002DBB3D /* CentreHospitalierExtension.swift */; };
+		BE9F4C81205926CC002DBB3D /* RendezVousExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F4C80205926CC002DBB3D /* RendezVousExtension.swift */; };
+		BE9F4C8320592724002DBB3D /* RendezVousModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F4C8220592724002DBB3D /* RendezVousModel.swift */; };
+		BE9F4C852059385A002DBB3D /* SprecialiteExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F4C842059385A002DBB3D /* SprecialiteExtension.swift */; };
+		BE9F4C8720593970002DBB3D /* TypeActiviteExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F4C8620593970002DBB3D /* TypeActiviteExtension.swift */; };
 		BECF995920545A81009420DE /* PatientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECF995820545A81009420DE /* PatientModel.swift */; };
 		BECF995B20552A60009420DE /* MedicamentHeureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECF995A20552A60009420DE /* MedicamentHeureViewController.swift */; };
 		BECF995D20552FF0009420DE /* MedicamentAjoutHeureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECF995C20552FF0009420DE /* MedicamentAjoutHeureViewController.swift */; };
@@ -114,9 +125,18 @@
 		BCD7C4F2205032190010A584 /* ActiviteAjoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiviteAjoutViewController.swift; sourceTree = "<group>"; };
 		BCDB983C2056F88C0081FCA9 /* SymptomeHeureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymptomeHeureViewController.swift; sourceTree = "<group>"; };
 		BCDB983E2056FA570081FCA9 /* SymptomeDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomeDateViewController.swift; sourceTree = "<group>"; };
+		BE3107B92057187D0087EA02 /* RDVAjoutHeureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDVAjoutHeureViewController.swift; sourceTree = "<group>"; };
 		BE4F329F20557AAA00C6121A /* MedicamentDateDebutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentDateDebutViewController.swift; sourceTree = "<group>"; };
 		BE4F32A120557AB900C6121A /* MedicamentDateFinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentDateFinViewController.swift; sourceTree = "<group>"; };
 		BE4F32A320557BB600C6121A /* MedicamentAjoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentAjoutViewController.swift; sourceTree = "<group>"; };
+		BE9F4C7320591323002DBB3D /* PatientExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientExtension.swift; sourceTree = "<group>"; };
+		BE9F4C76205915B5002DBB3D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		BE9F4C7A2059212E002DBB3D /* MedecinExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedecinExtension.swift; sourceTree = "<group>"; };
+		BE9F4C7C20592348002DBB3D /* CentreHospitalierExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentreHospitalierExtension.swift; sourceTree = "<group>"; };
+		BE9F4C80205926CC002DBB3D /* RendezVousExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RendezVousExtension.swift; sourceTree = "<group>"; };
+		BE9F4C8220592724002DBB3D /* RendezVousModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RendezVousModel.swift; sourceTree = "<group>"; };
+		BE9F4C842059385A002DBB3D /* SprecialiteExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprecialiteExtension.swift; sourceTree = "<group>"; };
+		BE9F4C8620593970002DBB3D /* TypeActiviteExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeActiviteExtension.swift; sourceTree = "<group>"; };
 		BECF995820545A81009420DE /* PatientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientModel.swift; sourceTree = "<group>"; };
 		BECF995A20552A60009420DE /* MedicamentHeureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentHeureViewController.swift; sourceTree = "<group>"; };
 		BECF995C20552FF0009420DE /* MedicamentAjoutHeureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentAjoutHeureViewController.swift; sourceTree = "<group>"; };
@@ -171,6 +191,8 @@
 		BC0C9D0C203830220067EBB8 /* Swift Project */ = {
 			isa = PBXGroup;
 			children = (
+				BE9F4C752059159B002DBB3D /* Helper */,
+				BE9F4C72205912B8002DBB3D /* CoreData */,
 				BECF9955205457D0009420DE /* Model */,
 				BCAFD280204C4D9C0037ADBD /* Controller */,
 				BC0C9D0D203830220067EBB8 /* AppDelegate.swift */,
@@ -242,6 +264,7 @@
 		BCAFD280204C4D9C0037ADBD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BE3107B6205702B90087EA02 /* Rendez-vous */,
 				BC6AD696205564F2001F1E04 /* Activité */,
 				BC6AD69720556503001F1E04 /* Symptome */,
 				BC04ED97203AE235008F6AC3 /* Contact Page.swift */,
@@ -255,6 +278,35 @@
 				BC6AD69820556568001F1E04 /* Surveillance */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		BE3107B6205702B90087EA02 /* Rendez-vous */ = {
+			isa = PBXGroup;
+			children = (
+				BE3107B92057187D0087EA02 /* RDVAjoutHeureViewController.swift */,
+			);
+			path = "Rendez-vous";
+			sourceTree = "<group>";
+		};
+		BE9F4C72205912B8002DBB3D /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				BE9F4C7320591323002DBB3D /* PatientExtension.swift */,
+				BE9F4C7A2059212E002DBB3D /* MedecinExtension.swift */,
+				BE9F4C7C20592348002DBB3D /* CentreHospitalierExtension.swift */,
+				BE9F4C80205926CC002DBB3D /* RendezVousExtension.swift */,
+				BE9F4C842059385A002DBB3D /* SprecialiteExtension.swift */,
+				BE9F4C8620593970002DBB3D /* TypeActiviteExtension.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		BE9F4C752059159B002DBB3D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				BE9F4C76205915B5002DBB3D /* CoreDataManager.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		BECF9955205457D0009420DE /* Model */ = {
@@ -272,6 +324,7 @@
 				BC6AD6B2205575DE001F1E04 /* TypeEvenementModel.swift */,
 				BC6AD6B42055769F001F1E04 /* EvenementModel.swift */,
 				BC6AD6B620557815001F1E04 /* ListeSymptomesModel.swift */,
+				BE9F4C8220592724002DBB3D /* RendezVousModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -418,21 +471,28 @@
 				BC646C5920501CAC004F3A2B /* ActiviteDateDebutViewController.swift in Sources */,
 				BE4F32A220557AB900C6121A /* MedicamentDateFinViewController.swift in Sources */,
 				BECF995B20552A60009420DE /* MedicamentHeureViewController.swift in Sources */,
+				BE9F4C7B2059212E002DBB3D /* MedecinExtension.swift in Sources */,
 				BECF995D20552FF0009420DE /* MedicamentAjoutHeureViewController.swift in Sources */,
 				BE4F32A420557BB600C6121A /* MedicamentAjoutViewController.swift in Sources */,
 				BC6AD6B120557570001F1E04 /* TypeActiviteModel.swift in Sources */,
+				BE9F4C77205915B5002DBB3D /* CoreDataManager.swift in Sources */,
 				BC6AD6AD20557511001F1E04 /* TypeSymptomeModel.swift in Sources */,
+				BE9F4C7420591323002DBB3D /* PatientExtension.swift in Sources */,
 				BC6AD6B52055769F001F1E04 /* EvenementModel.swift in Sources */,
 				BC6AD6A1205565CD001F1E04 /* SurveillanceAjoutViewController.swift in Sources */,
+				BE9F4C7D20592348002DBB3D /* CentreHospitalierExtension.swift in Sources */,
 				BC0C9D16203830240067EBB8 /* Swift_Project.xcdatamodeld in Sources */,
 				BC567C82204B103E00764B79 /* SymptomeTypeViewController.swift in Sources */,
 				BC6AD6B3205575DE001F1E04 /* TypeEvenementModel.swift in Sources */,
 				BCD7C4F3205032190010A584 /* ActiviteAjoutViewController.swift in Sources */,
+				BE9F4C852059385A002DBB3D /* SprecialiteExtension.swift in Sources */,
+				BE9F4C81205926CC002DBB3D /* RendezVousExtension.swift in Sources */,
 				BC646C5B20501F7E004F3A2B /* ActiviteDateFinViewController.swift in Sources */,
 				BC6AD6AF2055752C001F1E04 /* ActiviteModel.swift in Sources */,
 				BC0C9D10203830230067EBB8 /* ViewController.swift in Sources */,
 				BCDB983F2056FA570081FCA9 /* SymptomeDateViewController.swift in Sources */,
 				BECF995920545A81009420DE /* PatientModel.swift in Sources */,
+				BE9F4C8720593970002DBB3D /* TypeActiviteExtension.swift in Sources */,
 				BC6FE5AA204487F100D862B6 /* ActiviteJoursViewController.swift in Sources */,
 				BC6FE5A8204465F900D862B6 /* ActiviteTypeViewController.swift in Sources */,
 				BC086C682048564B006D2310 /* ActiviteHeureModallyViewController.swift in Sources */,
@@ -442,9 +502,11 @@
 				BC04ED98203AE235008F6AC3 /* Contact Page.swift in Sources */,
 				BC6FE5A62044434600D862B6 /* MedecinController.swift in Sources */,
 				BE4F32A020557AAA00C6121A /* MedicamentDateDebutViewController.swift in Sources */,
+				BE3107BA2057187D0087EA02 /* RDVAjoutHeureViewController.swift in Sources */,
 				BC0C9D0E203830230067EBB8 /* AppDelegate.swift in Sources */,
 				BECF995F20553523009420DE /* MedicamentDescriptionViewController.swift in Sources */,
 				BC6AD6A720557435001F1E04 /* CentreHospitalierModel.swift in Sources */,
+				BE9F4C8320592724002DBB3D /* RendezVousModel.swift in Sources */,
 				BC6AD69A20556595001F1E04 /* SurveillanceTypeViewController.swift in Sources */,
 				BCDB983D2056F88C0081FCA9 /* SymptomeHeureViewController.swift in Sources */,
 				BC6AD6A320557351001F1E04 /* MedecinModel.swift in Sources */,
@@ -455,6 +517,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE9F4C7920591E4B002DBB3D /* AppDelegate.swift in Sources */,
+				BE9F4C7820591B43002DBB3D /* CoreDataManager.swift in Sources */,
 				BC04ED99203AE235008F6AC3 /* Contact Page.swift in Sources */,
 				BC0C9D26203830300067EBB8 /* Swift_ProjectTests.swift in Sources */,
 			);
@@ -608,7 +672,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = S7KSHL8K5A;
 				INFOPLIST_FILE = "Swift Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Polytech.Swift-Project";
@@ -623,7 +687,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = S7KSHL8K5A;
 				INFOPLIST_FILE = "Swift Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Polytech.Swift-Project";

@@ -9,7 +9,28 @@
 import Foundation
 import CoreData
 
-
-extension TypeActivite{
+class TypeActiviteModel {
     
+
+private var dao : TypeActivite
+
+    var libelleTypeActivite : String {
+        get{
+            return self.dao.libelleTypeActivite! ;
+        }
+        set{
+            self.dao.libelleTypeActivite = newValue;
+        }
+    } ;
+
+
+
+    init(libelleTypeActivite: String){
+        guard let dao = TypeActivite.getNewTypeActiviteDAO() else {
+            fatalError("unable to get DAO for tyepActivite")
+        }
+        self.dao = dao ;
+        self.dao.libelleTypeActivite = libelleTypeActivite;
+    }
+
 }
