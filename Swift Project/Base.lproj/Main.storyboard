@@ -49,7 +49,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wrY-kL-1Rr">
-                                <rect key="frame" x="40" y="88" width="240" height="349"/>
+                                <rect key="frame" x="15" y="88" width="290" height="349"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vos activités" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Hv-Bc-mb0">
@@ -61,9 +61,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wrY-kL-1Rr" firstAttribute="leading" secondItem="keH-re-bDn" secondAttribute="leading" constant="40" id="DVT-Qg-IQr"/>
-                            <constraint firstItem="keH-re-bDn" firstAttribute="trailing" secondItem="wrY-kL-1Rr" secondAttribute="trailing" constant="40" id="Ekb-Sm-eH6"/>
                             <constraint firstItem="9DS-Q8-Jqy" firstAttribute="top" secondItem="wrY-kL-1Rr" secondAttribute="bottom" constant="64.5" id="HG7-CB-qcM"/>
+                            <constraint firstAttribute="trailing" secondItem="wrY-kL-1Rr" secondAttribute="trailing" constant="15" id="Icp-n8-ChS"/>
+                            <constraint firstItem="wrY-kL-1Rr" firstAttribute="leading" secondItem="keH-re-bDn" secondAttribute="leading" constant="15" id="Nyt-V8-B6m"/>
                             <constraint firstItem="9DS-Q8-Jqy" firstAttribute="leading" secondItem="keH-re-bDn" secondAttribute="leading" constant="48" id="QMf-BI-Vee"/>
                             <constraint firstItem="5Hv-Bc-mb0" firstAttribute="top" secondItem="keH-re-bDn" secondAttribute="top" constant="18" id="XgM-Do-BWP"/>
                             <constraint firstItem="5Hv-Bc-mb0" firstAttribute="centerX" secondItem="WUE-DQ-DPR" secondAttribute="centerX" id="qYD-hR-ARN"/>
@@ -492,7 +492,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="DvG-nO-WzW" kind="presentation" identifier="AjoutActiviteSegue" id="kAZ-Dg-tKx"/>
+                                    <segue destination="DvG-nO-WzW" kind="show" identifier="AjoutActiviteSegue" id="dXW-SL-hYL"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom Activité" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEz-AC-Xl6">
@@ -912,6 +912,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="addTypeAct:" destination="P94-Ko-fRh" eventType="touchUpInside" id="QoZ-kE-49a"/>
+                                    <action selector="revenirMenu:" destination="NeD-pE-su0" eventType="touchUpInside" id="cTO-oG-u8k"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="JgW-rQ-GoZ"/>
                                 </connections>
                             </button>
@@ -930,7 +931,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oYD-qL-PXf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3140.625" y="798.59154929577471"/>
+            <point key="canvasLocation" x="-5574" y="825"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="XKP-TZ-eWS">
@@ -986,7 +987,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nU6-De-fnT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3255" y="-102"/>
+            <point key="canvasLocation" x="-3255" y="-111"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="TzJ-bk-z9J">
@@ -1052,7 +1053,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lvX-rk-Fkg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6128" y="-107"/>
+            <point key="canvasLocation" x="-6324" y="-109"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="JTj-0D-l3V">
@@ -1120,7 +1121,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KE1-Zn-VQK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5476" y="-108"/>
+            <point key="canvasLocation" x="-5573" y="-110"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="9rc-Tb-GhE">
@@ -1297,7 +1298,6 @@
                             <constraint firstItem="jhA-kT-2mJ" firstAttribute="top" secondItem="an6-mh-KzY" secondAttribute="bottom" constant="33" id="2bT-7B-zdp"/>
                             <constraint firstItem="co4-eD-2v8" firstAttribute="trailing" secondItem="m4p-9s-TNm" secondAttribute="trailing" constant="118" id="5ee-bD-22p"/>
                             <constraint firstItem="ffF-Ue-l8m" firstAttribute="top" secondItem="HGm-GO-Shi" secondAttribute="bottom" constant="20" id="7Y1-sM-3Ug"/>
-                            <constraint firstItem="aqh-Hc-jYP" firstAttribute="top" secondItem="1hm-k6-Y1y" secondAttribute="bottom" constant="64" id="Ehr-JT-CZO"/>
                             <constraint firstItem="pSK-SL-Fu6" firstAttribute="leading" secondItem="co4-eD-2v8" secondAttribute="leading" constant="32" id="FQR-ky-DeY"/>
                             <constraint firstItem="bDu-3f-Bue" firstAttribute="centerY" secondItem="1hm-k6-Y1y" secondAttribute="centerY" id="Fij-KG-ODT"/>
                             <constraint firstItem="co4-eD-2v8" firstAttribute="bottom" secondItem="aqh-Hc-jYP" secondAttribute="bottom" constant="8" id="Hqv-ze-Vem"/>
@@ -1329,7 +1329,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Vz-pl-9Wq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4007" y="-102"/>
+            <point key="canvasLocation" x="-4009" y="-111"/>
         </scene>
         <!--Symptome Date View Controller-->
         <scene sceneID="fh7-yE-9pb">
@@ -1391,7 +1391,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JfO-2U-dKR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2408" y="801"/>
+            <point key="canvasLocation" x="-4809" y="825"/>
         </scene>
         <!--Symptome Heure View Controller-->
         <scene sceneID="E5e-Md-CbX">
@@ -1460,7 +1460,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ooJ-DQ-2ez" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1598" y="796"/>
+            <point key="canvasLocation" x="-4009" y="801"/>
         </scene>
         <!--Symptome Type View Controller-->
         <scene sceneID="Z6L-7n-RRC">
@@ -1519,7 +1519,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2mC-Js-rIf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-803" y="801"/>
+            <point key="canvasLocation" x="-3255" y="801"/>
         </scene>
         <!--Surveillance Ajout View Controller-->
         <scene sceneID="IXm-rD-E7S">
@@ -1550,6 +1550,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="addTypeAct:" destination="P94-Ko-fRh" eventType="touchUpInside" id="dSe-r6-Rwx"/>
+                                    <action selector="revenirMenu:" destination="y4G-oo-hLf" eventType="touchUpInside" id="nHq-GX-mNb"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="gr5-qa-Q1k"/>
                                 </connections>
                             </button>
@@ -1577,7 +1578,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tam-LL-vop" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3145" y="1552"/>
+            <point key="canvasLocation" x="-5574" y="1613"/>
         </scene>
         <!--Surveillance Date View Controller-->
         <scene sceneID="9OS-aj-82z">
@@ -1648,7 +1649,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4S7-Fc-c7n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2399" y="1554"/>
+            <point key="canvasLocation" x="-4809" y="1614"/>
         </scene>
         <!--Surveillance Heure View Controller-->
         <scene sceneID="EtK-ag-lyF">
@@ -1719,7 +1720,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ved-Kb-fSt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1599" y="1548"/>
+            <point key="canvasLocation" x="-4009" y="1613"/>
         </scene>
         <!--Surveillance Type View Controller-->
         <scene sceneID="BM6-9g-71L">
@@ -1735,9 +1736,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LYE-hA-92V">
-                                <rect key="frame" x="0.0" y="176" width="320" height="216"/>
-                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fa7-yz-jbM">
                                 <rect key="frame" x="22.5" y="520" width="275" height="40"/>
                                 <color key="backgroundColor" red="0.23529411759999999" green="0.57254901960000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1756,6 +1754,9 @@
                                     <segue destination="74U-4q-frq" kind="show" identifier="showNomSurveillanceSegue" id="RIQ-fc-Hky"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LYE-hA-92V">
+                                <rect key="frame" x="0.0" y="176" width="320" height="216"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1774,7 +1775,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uU3-Gq-YbH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-798.75" y="1547.5352112676057"/>
+            <point key="canvasLocation" x="-3255" y="1612"/>
         </scene>
         <!--Medecin Controller-->
         <scene sceneID="cCv-m8-OnS">
@@ -1829,7 +1830,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h3c-un-lrJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="161" y="819"/>
+            <point key="canvasLocation" x="227" y="942"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="RLf-aH-XyZ">
@@ -1839,38 +1840,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SL8-1h-cpI">
-                                <rect key="frame" x="137" y="526" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="8sd-C3-BzQ" kind="show" id="cAx-bS-kPM"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yzv-Jy-zDc">
-                                <rect key="frame" x="40" y="60" width="240" height="436"/>
+                                <rect key="frame" x="40" y="89" width="240" height="407"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nc6-P3-7Pr">
+                                <rect key="frame" x="22" y="512" width="276" height="44"/>
+                                <color key="backgroundColor" red="0.23529411759999999" green="0.57254901960000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Ajouter les médicaments">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="8sd-C3-BzQ" kind="show" id="913-9L-n8g"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mes médicaments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Syy-7s-9PY">
+                                <rect key="frame" x="57.5" y="30" width="205.5" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="lot-me-0QH" firstAttribute="bottom" secondItem="SL8-1h-cpI" secondAttribute="bottom" constant="12" id="6D1-DH-s64"/>
+                            <constraint firstItem="nc6-P3-7Pr" firstAttribute="top" secondItem="yzv-Jy-zDc" secondAttribute="bottom" constant="16" id="6Vi-73-u4m"/>
                             <constraint firstItem="yzv-Jy-zDc" firstAttribute="leading" secondItem="lot-me-0QH" secondAttribute="leading" constant="40" id="Fz5-kA-yMu"/>
-                            <constraint firstItem="yzv-Jy-zDc" firstAttribute="top" secondItem="lot-me-0QH" secondAttribute="top" constant="40" id="Luf-JU-Tgh"/>
-                            <constraint firstItem="SL8-1h-cpI" firstAttribute="centerX" secondItem="3wD-Vb-2Le" secondAttribute="centerX" id="dxx-ea-fbI"/>
+                            <constraint firstItem="nc6-P3-7Pr" firstAttribute="centerX" secondItem="3wD-Vb-2Le" secondAttribute="centerX" id="OoW-i3-opP"/>
+                            <constraint firstItem="yzv-Jy-zDc" firstAttribute="top" secondItem="Syy-7s-9PY" secondAttribute="bottom" constant="27" id="Xdt-Q3-QAn"/>
                             <constraint firstItem="lot-me-0QH" firstAttribute="trailing" secondItem="yzv-Jy-zDc" secondAttribute="trailing" constant="40" id="eTR-bs-F8r"/>
-                            <constraint firstItem="SL8-1h-cpI" firstAttribute="top" secondItem="yzv-Jy-zDc" secondAttribute="bottom" constant="30" id="umm-6O-gG4"/>
+                            <constraint firstItem="Syy-7s-9PY" firstAttribute="top" secondItem="lot-me-0QH" secondAttribute="top" constant="10" id="iDf-0J-uRV"/>
+                            <constraint firstItem="lot-me-0QH" firstAttribute="bottom" secondItem="nc6-P3-7Pr" secondAttribute="bottom" constant="12" id="m7Y-7G-BiH"/>
+                            <constraint firstItem="Syy-7s-9PY" firstAttribute="centerX" secondItem="3wD-Vb-2Le" secondAttribute="centerX" id="ryN-6b-Y76"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lot-me-0QH"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o4e-IV-a23" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1096.875" y="818.66197183098598"/>
+            <point key="canvasLocation" x="1065" y="943"/>
         </scene>
-        <!--Medicament Ajouter Description View Controller-->
+        <!--Medicament Description View Controller-->
         <scene sceneID="uGR-ch-db6">
             <objects>
-                <viewController id="8sd-C3-BzQ" customClass="MedicamentAjouterDescriptionViewController" customModule="Swift_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8sd-C3-BzQ" customClass="MedicamentDescriptionViewController" customModule="Swift_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="14u-4h-S8S">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1899,7 +1917,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Médicament à sucer contre les maux de tête " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hm8-I8-lPg">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Médicament à sucer avec une boîte jaune " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hm8-I8-lPg">
                                 <rect key="frame" x="30" y="253" width="255" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2038,10 +2056,10 @@
                     </view>
                     <connections>
                         <outlet property="DoseMedicament" destination="0Rn-kA-uS1" id="sQO-bz-sOa"/>
-                        <outlet property="frequencePriseMedicament" destination="p1p-wV-gvw" id="mYY-B7-ka4"/>
-                        <outlet property="libelleMedicament" destination="dHd-nl-K6y" id="zYb-hr-NqR"/>
-                        <outlet property="nbPriseMedicament" destination="nWZ-H6-Dtv" id="YsC-uf-hbd"/>
-                        <outlet property="presentationBreveMedicament" destination="Rbr-oX-rgg" id="4He-Ww-BY5"/>
+                        <outlet property="frequencePriseMedicament" destination="p1p-wV-gvw" id="Hl8-ah-64f"/>
+                        <outlet property="libelleMedicament" destination="dHd-nl-K6y" id="Saw-mY-AUx"/>
+                        <outlet property="nbPriseMedicament" destination="nWZ-H6-Dtv" id="FKu-6g-95Y"/>
+                        <outlet property="presentationBreveMedicament" destination="Rbr-oX-rgg" id="eH1-Hc-6VJ"/>
                         <outlet property="presentationDetailleMedicament" destination="Hm8-I8-lPg" id="uW4-h3-X4K"/>
                     </connections>
                 </viewController>
@@ -2116,19 +2134,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom Médicament" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eU5-td-bcZ">
-                                <rect key="frame" x="63.5" y="33" width="193" height="30"/>
+                                <rect key="frame" x="63.5" y="30" width="193" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Veuillez saisir les heures de prise " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EvT-kH-lWz">
-                                <rect key="frame" x="32" y="73" width="256" height="21"/>
+                                <rect key="frame" x="32" y="70" width="256" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9p-9k-IDF">
-                                <rect key="frame" x="11.5" y="116" width="297" height="44"/>
+                                <rect key="frame" x="11.5" y="113" width="297" height="44"/>
                                 <color key="backgroundColor" red="0.23529411759999999" green="0.57254901960000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Ajouter une nouvelle heure">
@@ -2160,7 +2178,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HHx-rE-rpg">
-                                <rect key="frame" x="40" y="180" width="240" height="316"/>
+                                <rect key="frame" x="40" y="177" width="240" height="319"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="SNh-IE-6nh" id="Ti5-Lh-BUp"/>
@@ -2176,12 +2194,12 @@
                             <constraint firstItem="HHx-rE-rpg" firstAttribute="top" secondItem="e9p-9k-IDF" secondAttribute="bottom" constant="20" id="PZJ-FI-OLG"/>
                             <constraint firstItem="9gF-13-wl5" firstAttribute="trailing" secondItem="HHx-rE-rpg" secondAttribute="trailing" constant="40" id="RfV-vb-NSa"/>
                             <constraint firstItem="9gF-13-wl5" firstAttribute="bottom" secondItem="grq-Jc-lls" secondAttribute="bottom" constant="8" id="Xol-tV-qZ4"/>
-                            <constraint firstItem="eU5-td-bcZ" firstAttribute="top" secondItem="9gF-13-wl5" secondAttribute="top" constant="13" id="bV9-3X-4oR"/>
                             <constraint firstItem="grq-Jc-lls" firstAttribute="top" secondItem="HHx-rE-rpg" secondAttribute="bottom" constant="20" id="gQ5-ac-Ccq"/>
                             <constraint firstItem="grq-Jc-lls" firstAttribute="centerX" secondItem="7lS-ny-242" secondAttribute="centerX" id="l3j-pu-vL2"/>
                             <constraint firstItem="HHx-rE-rpg" firstAttribute="leading" secondItem="9gF-13-wl5" secondAttribute="leading" constant="40" id="nzL-dU-jsh"/>
                             <constraint firstItem="EvT-kH-lWz" firstAttribute="centerX" secondItem="7lS-ny-242" secondAttribute="centerX" id="ssn-tv-CSc"/>
                             <constraint firstItem="e9p-9k-IDF" firstAttribute="centerX" secondItem="7lS-ny-242" secondAttribute="centerX" id="u1X-nS-qGy"/>
+                            <constraint firstItem="eU5-td-bcZ" firstAttribute="top" secondItem="9gF-13-wl5" secondAttribute="top" constant="10" id="zUK-ib-CAx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9gF-13-wl5"/>
                     </view>
@@ -2214,10 +2232,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P42-zx-QBL">
-                                <rect key="frame" x="27.5" y="516" width="266" height="44"/>
+                                <rect key="frame" x="45.5" y="516" width="229" height="44"/>
                                 <color key="backgroundColor" red="0.23529411759999999" green="0.57254901960000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="Ajouter la date de debut">
+                                <state key="normal" title="Ajouter la date de fin">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -2286,10 +2304,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HEh-a7-p8s">
-                                <rect key="frame" x="45.5" y="516" width="229" height="44"/>
+                                <rect key="frame" x="49.5" y="516" width="222" height="44"/>
                                 <color key="backgroundColor" red="0.23529411759999999" green="0.57254901960000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="Ajouter la date de fin">
+                                <state key="normal" title="Valider medicament">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -2369,6 +2387,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="addTypeAct:" destination="P94-Ko-fRh" eventType="touchUpInside" id="RqB-vh-xad"/>
+                                    <action selector="revenirMenu:" destination="PY9-b0-I7R" eventType="touchUpInside" id="CYO-GI-eGb"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="GzT-13-6fG"/>
                                 </connections>
                             </button>
@@ -2506,7 +2525,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HWr-59-oaJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1671" y="136"/>
+            <point key="canvasLocation" x="1894" y="106"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PfL-BC-VMg">
@@ -2524,10 +2543,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="69T-Xk-QZ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-534" y="33"/>
+            <point key="canvasLocation" x="-896" y="33"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gr5-qa-Q1k"/>
+        <segue reference="dXW-SL-hYL"/>
+        <segue reference="mKS-47-aCc"/>
     </inferredMetricsTieBreakers>
 </document>

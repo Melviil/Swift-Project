@@ -69,7 +69,7 @@
         <element name="CentreHospitalier" positionX="-171" positionY="375" width="128" height="75"/>
         <element name="Evenement" positionX="160" positionY="207" width="128" height="28"/>
         <element name="Heure" positionX="-216" positionY="18" width="128" height="73"/>
-        <element name="Jour" positionX="-216" positionY="117" width="128" height="88"/>
+        <element name="Jour" positionX="-216" positionY="117" width="128" height="90"/>
         <element name="Medecin" positionX="-270" positionY="486" width="128" height="88"/>
         <element name="Medicament" positionX="-324" positionY="252" width="128" height="165"/>
         <element name="Patient" positionX="-65" positionY="468" width="128" height="90"/>

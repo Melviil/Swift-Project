@@ -21,7 +21,8 @@ class ActiviteHeureModallyViewController: UIViewController {
     @IBAction func changerValueDateQuandDateChange(_ sender: Any) {
    
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "hh mm a"
+        dateFormatter.dateFormat = "HH mm"
+        dateFormatter.timeZone = TimeZone.current
         let selectedDate = dateFormatter.string(from: myDatePicker.date)
         heureChoisie = selectedDate
        

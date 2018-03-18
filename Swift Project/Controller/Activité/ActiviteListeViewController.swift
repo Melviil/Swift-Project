@@ -20,9 +20,23 @@ class ActiviteListeViewController: UIViewController, UITableViewDataSource, UITa
     @IBOutlet weak var myTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
         myTableView.dataSource = self
         myTableView.delegate = self
         //TODO GETActivite table
+       
+        
+        
+        var date = DateComponents()
+        date.year = 2016
+        date.month = 11
+        date.day = 2
+        date.hour = 6
+        date.minute = 30
+        
+      
         
         
         myTableView.dataSource = self
@@ -57,15 +71,29 @@ class ActiviteListeViewController: UIViewController, UITableViewDataSource, UITa
                 print(selectedDateDebut)
                 print(selectedDateFin)
                    typeActivite = activite.estDeType?.libelleTypeActivite
+                if let heures = activite.sePasseA {
+                    for h in heures{
+                        print("1")
+                        if let heure = h as? Heure{
+                            print("2")
+                            dateFormatter.dateFormat = "HH:mm"
+                            let selectedDate = dateFormatter.string(from: heure.libelleHeure!)
+                            print(selectedDate)
+                            activites.append(  typeActivite! + " du " + selectedDateDebut + " au " + selectedDateFin + " à " + selectedDate)
+
+                        }
+                    }
+                }
                 
-                
-                
-                activites.append(  typeActivite! + " du " + selectedDateDebut + " au " + selectedDateFin)
             }
         }
         // Do any additional setup after loading the view.
+    
+        
+      
+        
+        
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

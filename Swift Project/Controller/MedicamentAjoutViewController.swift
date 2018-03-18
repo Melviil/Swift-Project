@@ -31,6 +31,9 @@ class MedicamentAjoutViewController: UIViewController {
     }
     
 
+    @IBAction func revenirMenu(_ sender: Any) {
+        self.dismiss(animated:true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 

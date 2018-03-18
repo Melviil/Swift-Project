@@ -15,13 +15,12 @@ class MedicamentDescriptionViewController: UIViewController {
     let segueDescriptionMedoc = "ShowDescriptionMedicamentSegue"
 
     @IBOutlet weak var libelleMedicament: UITextField!
-    @IBOutlet weak var presentationBreveMedicament: UITextField!
-    @IBOutlet weak var DoseMedicament: UITextField!
-    @IBOutlet weak var presentationDetailleMedicament: UITextField!
-    @IBOutlet weak var nbPriseMedicament: UITextField!
     @IBOutlet weak var frequencePriseMedicament: UITextField!
+    @IBOutlet weak var nbPriseMedicament: UITextField!
+    @IBOutlet weak var presentationDetailleMedicament: UITextField!
+    @IBOutlet weak var presentationBreveMedicament: UITextField!
     
-    
+    @IBOutlet weak var DoseMedicament: UITextField!
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == segueDescriptionMedoc {

@@ -6,7 +6,8 @@
 //  Copyright © 2018 Melvil. All rights reserved.
 //
 
-import UIKit
+import Foundation
+import CoreData
 
 class Contact_Page: NSObject {
 
