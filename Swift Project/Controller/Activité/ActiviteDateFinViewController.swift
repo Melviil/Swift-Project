@@ -13,7 +13,7 @@ class ActiviteDateFinViewController: UIViewController {
     @IBOutlet weak var myDatePicker: UIDatePicker!
 
     var nomActivite = TypeActivite()
-    var listeJoursActivite : [String] = []
+    var listeJoursActivite : [Jour] = []
     var listeHeuresActivite: [String] = []
     var dateDebutActivite = String()
     var dateChoisi = String()

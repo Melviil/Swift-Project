@@ -15,7 +15,7 @@ class ActiviteJoursViewController: UIViewController {
     let showJourActiviteSegue = "showJourActiviteSegue";
     
     var nomActivite = TypeActivite() ;
-    var joursActivite : [String] = [];
+    var joursActivite : [Jour] = [];
     var jour11 : String = "" ;
 
     
@@ -55,26 +55,29 @@ class ActiviteJoursViewController: UIViewController {
     }
     
     @IBAction func valideHeureActivite(_ sender: Any) {
+        let daoF = CoreDataDAOFactory.getInstance()
+        let patientDAO = daoF.getJourDAO()
+        
         if lunSwitch.isOn {
-            joursActivite.append("Lundi")
+           try? joursActivite.append(patientDAO.getByName(jourParametre: "Lundi")![0])
         }
         if marSwitch.isOn {
-            joursActivite.append("Mardi")
+            try? joursActivite.append(patientDAO.getByName(jourParametre: "Mardi")![0])
         }
         if merSwitch.isOn {
-            joursActivite.append("Mercredi")
+            try? joursActivite.append(patientDAO.getByName(jourParametre: "Mercredi")![0])
         }
         if jeuSwitch.isOn {
-            joursActivite.append("Jeudi")
+            try? joursActivite.append(patientDAO.getByName(jourParametre: "Jeudi")![0])
         }
         if venSwitch.isOn {
-            joursActivite.append("Vendredi")
+            try? joursActivite.append(patientDAO.getByName(jourParametre: "Vendredi")![0])
         }
         if samSwitch.isOn {
-            joursActivite.append("Samedi")
+            try? joursActivite.append(patientDAO.getByName(jourParametre: "Samedi")![0])
         }
         if dimSwitch.isOn {
-            joursActivite.append("Dimanche")
+            try? joursActivite.append(patientDAO.getByName(jourParametre: "Dimanche")![0])
         }
         print(joursActivite)
         print(jour11)

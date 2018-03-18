@@ -17,7 +17,17 @@ class CoreDataJourDAO: JourDAO {
     init(context:  NSManagedObjectContext){
         self.context = context
     }
-    
+    func getByName(jourParametre : String) throws -> [Jour]? {
+        let request: NSFetchRequest<Jour> = NSFetchRequest(entityName: self.entityName)
+        request.predicate = NSPredicate(format: "libelleJour == %@", jourParametre)
+
+        do {
+            let jours: [Jour] = try CoreDataManager.context.fetch(request)
+            return jours
+        } catch let error as NSError {
+            throw error
+        }
+    }
     func getAll() throws -> [Jour]? {
         let request: NSFetchRequest<Jour> = NSFetchRequest(entityName: self.entityName)
         do {

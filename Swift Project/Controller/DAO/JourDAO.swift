@@ -13,5 +13,6 @@ protocol JourDAO {
     func getAll() throws -> [Jour]?
     func save(jour: Jour) throws
     func remove(jour: Jour) throws
+    func getByName(jourParametre : String) throws -> [Jour]?
 }
 

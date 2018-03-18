@@ -12,7 +12,7 @@ import UserNotifications
 
 class ActiviteAjoutViewController: UIViewController {
     var nomActivite = TypeActivite()
-    var listeJoursActivite : [String] = []
+    var listeJoursActivite : [Jour] = []
     var listeHeuresActivite: [String] = []
     var dateDebutActivite = String()
     var dateFinActivite = String()
@@ -38,7 +38,7 @@ class ActiviteAjoutViewController: UIViewController {
     }
     
     //TODO
-    func saveNewActivite( withNom nom: TypeActivite, withHours heures : [String], withJours jours : [String],withDateDebut dateDebut: String, withDateFin dateFin: String){
+    func saveNewActivite( withNom nom: TypeActivite, withHours heures : [String], withJours jours : [Jour],withDateDebut dateDebut: String, withDateFin dateFin: String){
         
         
         
@@ -49,7 +49,6 @@ class ActiviteAjoutViewController: UIViewController {
         let context = appDelegate.persistentContainer.viewContext
         let activite = Activite(context : context)
         let heureTable = Heure(context : context)
-        let jourTable = Jour(context : context)
 
 
         // On convertit les dates de string à date
@@ -86,8 +85,7 @@ class ActiviteAjoutViewController: UIViewController {
             activite.addToSePasseA(heureTable)
         } 
         for jour in jours {
-            jourTable.libelleJour = jour
-            activite.addToSePasseLe(jourTable)
+            activite.addToSePasseLe(jour)
         }
       
         do{

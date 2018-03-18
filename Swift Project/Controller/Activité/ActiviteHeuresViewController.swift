@@ -11,7 +11,7 @@ import UIKit
 class ActiviteHeuresViewController: UIViewController, UITableViewDataSource {
     
     var nomActivite = TypeActivite() ;
-    var listeJoursActivite : [String] = [];
+    var listeJoursActivite : [Jour] = [];
     var hours: [String] = []
 
  

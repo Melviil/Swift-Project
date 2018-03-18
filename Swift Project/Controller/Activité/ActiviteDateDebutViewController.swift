@@ -12,7 +12,7 @@ class ActiviteDateDebutViewController: UIViewController {
     @IBOutlet weak var myDatePicker: UIDatePicker!
     @IBOutlet weak var labelActivite: UILabel!
     var nomActivite = TypeActivite()
-    var listeJoursActivite : [String] = []
+    var listeJoursActivite : [Jour] = []
     var listeHeuresActivite: [String] = []
     var dateChoisi = String()
     override func viewDidLoad() {
