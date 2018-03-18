@@ -59,13 +59,36 @@ class SuiviPatientViewController: UIViewController , UITableViewDelegate, UITabl
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MM"
+        let currentDate = dateFormatter.string(from:date)
+        var daydifference = getDateSelected()
         
-
+        
         let cell = UITableViewCell()
         cell.textLabel?.text = String(describing: self.jours[indexPath.row])
         return cell
     }
     
+//
+//    // (Previous code goes here)
+//
+//    // What will the date and time be be ten days from now?
+//    let tenDaysFromNow = userCalendar.dateByAddingUnit(
+//        [.Day],
+//        value: 10,
+//        toDate: NSDate(),
+//        options: [])!
+//
+//    // What weekday (Sunday through Saturday) will it be ten days from now, and
+//    // which weekday of the month will it be -- the 1st, 2nd, 3rd...?
+//    let weekdayAndWeekdayOrdinal: NSCalendarUnit = [.Weekday, .WeekdayOrdinal]
+//    let tenDaysFromNowComponents = userCalendar.components(
+//        weekdayAndWeekdayOrdinal,
+//        fromDate: tenDaysFromNow)
+//    tenDaysFromNowComponents.weekday
+//    tenDaysFromNowComponents.weekdayOrdinal
     
     /*
     // MARK: - Navigation
@@ -76,5 +99,9 @@ class SuiviPatientViewController: UIViewController , UITableViewDelegate, UITabl
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func getDateSelected()-> Int{
+        return dateSelected
+    }
 
 }
