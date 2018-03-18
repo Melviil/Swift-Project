@@ -45,7 +45,6 @@ class ActiviteAjoutViewController: UIViewController {
         let activiteDAO = daoF.getActiviteDAO()
         let activite: Activite = activiteDAO.create()
         let heureDAO = daoF.getHeureDAO()
-        let heure: Heure = heureDAO.create()
 
 
         // On convertit les drates de string à date
@@ -67,6 +66,7 @@ class ActiviteAjoutViewController: UIViewController {
         dateFormatter.dateFormat = "HH mm"
 
         for uneHeure in heures {
+            let heure: Heure = heureDAO.create()
             let calendar = Calendar.current
             //On repasse la date en Date
             guard let heureGood = dateFormatter.date(from:uneHeure) else {
