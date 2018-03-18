@@ -441,7 +441,7 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="a1U-J8-H14">
                                 <rect key="frame" x="0.0" y="176" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="541612540.84617805">
-                                    <!--2018-03-01 3:55:40 PM +0000-->
+                                    <!--2018-03-01 15:55:40 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
                                 <connections>
@@ -510,7 +510,7 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="gCQ-Fy-f6M">
                                 <rect key="frame" x="0.0" y="176" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="541612540.84617805">
-                                    <!--2018-03-01 3:55:40 PM +0000-->
+                                    <!--2018-03-01 15:55:40 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
                                 <connections>
@@ -578,7 +578,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="addTypeAct:" destination="P94-Ko-fRh" eventType="touchUpInside" id="4rM-35-AOM"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="mKS-47-aCc"/>
                                 </connections>
                             </button>
@@ -611,7 +610,7 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="J7k-ny-ghm">
                                 <rect key="frame" x="0.0" y="176" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="541505328.75500202">
-                                    <!--2018-02-28 10:08:48 AM +0000-->
+                                    <!--2018-02-28 10:08:48 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
                                 <connections>
@@ -911,7 +910,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="addTypeAct:" destination="P94-Ko-fRh" eventType="touchUpInside" id="QoZ-kE-49a"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="JgW-rQ-GoZ"/>
                                 </connections>
                             </button>
@@ -964,7 +962,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="addTypeAct:" destination="P94-Ko-fRh" eventType="touchUpInside" id="FGH-H5-J04"/>
                                     <segue destination="GX3-6n-i1G" kind="show" id="0fH-Or-qz1"/>
                                 </connections>
                             </button>
@@ -1015,14 +1012,11 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="addTypeAct:" destination="P94-Ko-fRh" eventType="touchUpInside" id="tiL-qW-cRM"/>
-                                </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="sh2-Gi-rEX">
                                 <rect key="frame" x="0.0" y="176" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="541612540.84617805">
-                                    <!--2018-03-01 3:55:40 PM +0000-->
+                                    <!--2018-03-01 15:55:40 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
                                 <connections>
@@ -1065,7 +1059,7 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="KYg-1d-Ozm">
                                 <rect key="frame" x="0.0" y="176" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="541505328.75500202">
-                                    <!--2018-02-28 10:08:48 AM +0000-->
+                                    <!--2018-02-28 10:08:48 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
                                 <connections>
@@ -1098,7 +1092,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="addTypeAct:" destination="P94-Ko-fRh" eventType="touchUpInside" id="Vjk-3S-Dpu"/>
                                     <segue destination="sIk-7s-BJG" kind="show" id="djo-cl-g6S"/>
                                 </connections>
                             </button>
@@ -1133,7 +1126,7 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="nkM-j9-stz">
                                 <rect key="frame" x="0.0" y="176" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="541505328.75500202">
-                                    <!--2018-02-28 10:08:48 AM +0000-->
+                                    <!--2018-02-28 10:08:48 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
                                 <connections>
@@ -1160,7 +1153,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="addTypeAct:" destination="P94-Ko-fRh" eventType="touchUpInside" id="gKM-4n-mvw"/>
                                     <segue destination="P7p-Tv-TLz" kind="show" id="KR0-Ve-itc"/>
                                 </connections>
                             </button>
@@ -1266,7 +1258,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="addTypeAct:" destination="P94-Ko-fRh" eventType="touchUpInside" id="cCi-1p-HuB"/>
                                     <segue destination="ot1-aM-r3X" kind="show" id="TaC-DH-LVG"/>
                                 </connections>
                             </button>
@@ -1310,13 +1301,13 @@
                             <constraint firstItem="an6-mh-KzY" firstAttribute="top" secondItem="egZ-d7-pHt" secondAttribute="bottom" constant="25" id="iLP-cN-cSh"/>
                             <constraint firstItem="m4p-9s-TNm" firstAttribute="leading" secondItem="co4-eD-2v8" secondAttribute="leading" constant="16" id="ikA-oo-mEy"/>
                             <constraint firstItem="jpM-Di-Fea" firstAttribute="leading" secondItem="co4-eD-2v8" secondAttribute="leading" constant="32" id="jiM-tJ-flP"/>
-                            <constraint firstItem="co4-eD-2v8" firstAttribute="bottom" secondItem="aqh-Hc-jYP" secondAttribute="bottom" constant="8" id="meh-Cd-3oB"/>
                             <constraint firstItem="bDu-3f-Bue" firstAttribute="leading" secondItem="1hm-k6-Y1y" secondAttribute="trailing" constant="14" id="q8p-za-lSl"/>
                             <constraint firstItem="egZ-d7-pHt" firstAttribute="centerX" secondItem="uW9-bs-XJY" secondAttribute="centerX" id="qlr-nQ-DRr"/>
                             <constraint firstItem="an6-mh-KzY" firstAttribute="centerX" secondItem="uW9-bs-XJY" secondAttribute="centerX" id="sXs-aG-29g"/>
                             <constraint firstItem="co4-eD-2v8" firstAttribute="trailing" secondItem="pSK-SL-Fu6" secondAttribute="trailing" constant="100" id="tNQ-rl-0d1"/>
                             <constraint firstItem="1hm-k6-Y1y" firstAttribute="top" secondItem="pSK-SL-Fu6" secondAttribute="bottom" constant="20" id="tQq-gw-Fvj"/>
                             <constraint firstItem="HGm-GO-Shi" firstAttribute="leading" secondItem="co4-eD-2v8" secondAttribute="leading" constant="32" id="x3e-UP-gFD"/>
+                            <constraint firstItem="co4-eD-2v8" firstAttribute="bottom" secondItem="aqh-Hc-jYP" secondAttribute="bottom" constant="8" id="xfk-Df-jGM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="co4-eD-2v8"/>
                     </view>
@@ -1343,7 +1334,7 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="10" translatesAutoresizingMaskIntoConstraints="NO" id="AKU-D9-oHN">
                                 <rect key="frame" x="0.0" y="176" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="541615249.10474002">
-                                    <!--2018-03-01 4:40:49 PM +0000-->
+                                    <!--2018-03-01 16:40:49 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
                                 <connections>
@@ -1370,7 +1361,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="addTypeAct:" destination="P94-Ko-fRh" eventType="touchUpInside" id="3m1-eK-H0Z"/>
                                     <segue destination="NeD-pE-su0" kind="presentation" identifier="showAllInfosSuiviSegue" id="y4c-Xb-l0C"/>
                                 </connections>
                             </button>
@@ -1411,7 +1401,7 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="jkj-Qs-GV5">
                                 <rect key="frame" x="0.0" y="176" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="541615249.10474002">
-                                    <!--2018-03-01 4:40:49 PM +0000-->
+                                    <!--2018-03-01 16:40:49 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
                                 <connections>
@@ -1432,7 +1422,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="addTypeAct:" destination="P94-Ko-fRh" eventType="touchUpInside" id="ssw-wL-mhb"/>
                                     <segue destination="ZnF-Q2-ZBr" kind="show" identifier="showNomHeureSuiviSegue" id="9lQ-ib-z2R"/>
                                 </connections>
                             </button>
@@ -1498,7 +1487,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="addTypeAct:" destination="P94-Ko-fRh" eventType="touchUpInside" id="dZC-df-OIp"/>
                                     <segue destination="tc3-zK-jsM" kind="show" identifier="showNomSuiviSegue" id="qgV-Mf-3ho"/>
                                 </connections>
                             </button>
@@ -1550,7 +1538,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="addTypeAct:" destination="P94-Ko-fRh" eventType="touchUpInside" id="dSe-r6-Rwx"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="gr5-qa-Q1k"/>
                                 </connections>
                             </button>
@@ -1602,7 +1589,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="addTypeAct:" destination="P94-Ko-fRh" eventType="touchUpInside" id="wjf-nc-ziU"/>
                                     <segue destination="y4G-oo-hLf" kind="show" identifier="saveNewSurveillance" id="T3w-sW-ecJ"/>
                                 </connections>
                             </button>
@@ -1621,7 +1607,7 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="10" translatesAutoresizingMaskIntoConstraints="NO" id="2rW-NH-9q7">
                                 <rect key="frame" x="0.0" y="176" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="541615249.10474002">
-                                    <!--2018-03-01 4:40:49 PM +0000-->
+                                    <!--2018-03-01 16:40:49 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
                                 <connections>
@@ -1673,7 +1659,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="addTypeAct:" destination="P94-Ko-fRh" eventType="touchUpInside" id="JYz-zC-wx8"/>
                                     <segue destination="mQE-GA-9ez" kind="show" id="xf0-HB-IWs"/>
                                 </connections>
                             </button>
@@ -1686,7 +1671,7 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="CaA-0v-wg6">
                                 <rect key="frame" x="0.0" y="176" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="541615249.10474002">
-                                    <!--2018-03-01 4:40:49 PM +0000-->
+                                    <!--2018-03-01 16:40:49 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
                                 <connections>
@@ -1753,7 +1738,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="addTypeAct:" destination="P94-Ko-fRh" eventType="touchUpInside" id="3zI-9p-Tmx"/>
                                     <segue destination="74U-4q-frq" kind="show" identifier="showNomSurveillanceSegue" id="RIQ-fc-Hky"/>
                                 </connections>
                             </button>
@@ -1798,7 +1782,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="addTypeAct:" destination="P94-Ko-fRh" eventType="touchUpInside" id="oXX-Nh-14i"/>
+                                    <action selector="addTypeAct:" destination="P94-Ko-fRh" eventType="touchUpInside" id="QGM-44-9j7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Xf-bx-Bfu">
@@ -1813,9 +1797,6 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="addTypeAct:" destination="P94-Ko-fRh" eventType="touchUpInside" id="MzM-1W-j5J"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibw-RQ-37n">
                                 <rect key="frame" x="21" y="208" width="278" height="30"/>
@@ -1830,8 +1811,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="addTypeAct:" destination="P94-Ko-fRh" eventType="touchUpInside" id="nS6-6m-TMH"/>
-                                    <segue destination="EDy-Qe-sRU" kind="show" id="7sB-OH-zHp"/>
+                                    <segue destination="EDy-Qe-sRU" kind="show" id="SxD-no-qFC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1865,26 +1845,47 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VzF-gw-5o9">
-                                <rect key="frame" x="40" y="175" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VzF-gw-5o9">
+                                <rect key="frame" x="40" y="193" width="240" height="335"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oXt-xs-PC7">
+                                <rect key="frame" x="8" y="140" width="304" height="29"/>
+                                <segments>
+                                    <segment title="Jour 1"/>
+                                    <segment title="Jour 2"/>
+                                    <segment title="Jour 3"/>
+                                    <segment title="Jour 4"/>
+                                    <segment title="Jour 5"/>
+                                </segments>
+                                <connections>
+                                    <action selector="indexChanged:" destination="EDy-Qe-sRU" eventType="valueChanged" id="mBI-Bt-51m"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Sfu-Ov-LXc" firstAttribute="trailing" secondItem="VzF-gw-5o9" secondAttribute="trailing" constant="40" id="0CW-Fb-eLG"/>
+                            <constraint firstItem="oXt-xs-PC7" firstAttribute="leading" secondItem="Sfu-Ov-LXc" secondAttribute="leading" constant="8" id="5uk-cP-qzJ"/>
+                            <constraint firstItem="VzF-gw-5o9" firstAttribute="leading" secondItem="Sfu-Ov-LXc" secondAttribute="leading" constant="40" id="JLd-cF-Coq"/>
                             <constraint firstItem="5aB-A9-5AS" firstAttribute="centerX" secondItem="FmQ-6e-5ew" secondAttribute="centerX" id="O7A-N6-IMo"/>
+                            <constraint firstItem="oXt-xs-PC7" firstAttribute="top" secondItem="5aB-A9-5AS" secondAttribute="bottom" constant="17" id="OtB-wt-3mR"/>
+                            <constraint firstItem="VzF-gw-5o9" firstAttribute="top" secondItem="oXt-xs-PC7" secondAttribute="bottom" constant="25" id="Xis-V5-rUF"/>
                             <constraint firstItem="5aB-A9-5AS" firstAttribute="top" secondItem="Sfu-Ov-LXc" secondAttribute="top" constant="18" id="ZnK-HW-H8X"/>
+                            <constraint firstItem="Sfu-Ov-LXc" firstAttribute="bottom" secondItem="VzF-gw-5o9" secondAttribute="bottom" constant="40" id="jwQ-tV-Xi6"/>
+                            <constraint firstItem="VzF-gw-5o9" firstAttribute="centerX" secondItem="FmQ-6e-5ew" secondAttribute="centerX" id="klb-8x-mnz"/>
+                            <constraint firstItem="Sfu-Ov-LXc" firstAttribute="trailing" secondItem="oXt-xs-PC7" secondAttribute="trailing" constant="8" id="mFN-DI-03S"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Sfu-Ov-LXc"/>
                     </view>
                     <connections>
+                        <outlet property="segmentedControl" destination="oXt-xs-PC7" id="9AO-IX-ttI"/>
                         <outlet property="tableJour" destination="VzF-gw-5o9" id="BjH-IX-ybF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aa5-km-2cH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1380" y="1761"/>
+            <point key="canvasLocation" x="1380" y="1760.9154929577464"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="RLf-aH-XyZ">
@@ -2121,7 +2122,7 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="Vf6-3d-Jl4">
                                 <rect key="frame" x="0.0" y="176" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="542451569.88140905">
-                                    <!--2018-03-11 8:59:29 AM +0000-->
+                                    <!--2018-03-11 08:59:29 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
                                 <connections>
@@ -2287,7 +2288,7 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="oIL-h6-TaH">
                                 <rect key="frame" x="0.0" y="176" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="541612540.84617805">
-                                    <!--2018-03-01 3:55:40 PM +0000-->
+                                    <!--2018-03-01 15:55:40 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
                                 <connections>
@@ -2359,7 +2360,7 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="xAY-Zh-CQb">
                                 <rect key="frame" x="0.0" y="176" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="541612540.84617805">
-                                    <!--2018-03-01 3:55:40 PM +0000-->
+                                    <!--2018-03-01 15:55:40 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
                                 <connections>
@@ -2423,7 +2424,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="addTypeAct:" destination="P94-Ko-fRh" eventType="touchUpInside" id="RqB-vh-xad"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="GzT-13-6fG"/>
                                 </connections>
                             </button>

@@ -128,7 +128,7 @@
 		BCD7C4F2205032190010A584 /* ActiviteAjoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiviteAjoutViewController.swift; sourceTree = "<group>"; };
 		BCDB983C2056F88C0081FCA9 /* SymptomeHeureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymptomeHeureViewController.swift; sourceTree = "<group>"; };
 		BCDB983E2056FA570081FCA9 /* SymptomeDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomeDateViewController.swift; sourceTree = "<group>"; };
-		BE211F00205E7D36009AA058 /* SuiviPatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SuiviPatientViewController.swift; path = Controller/SuiviPatientViewController.swift; sourceTree = "<group>"; };
+		BE211F00205E7D36009AA058 /* SuiviPatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuiviPatientViewController.swift; sourceTree = "<group>"; };
 		BE3107B92057187D0087EA02 /* RDVAjoutHeureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDVAjoutHeureViewController.swift; sourceTree = "<group>"; };
 		BE4F329F20557AAA00C6121A /* MedicamentDateDebutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentDateDebutViewController.swift; sourceTree = "<group>"; };
 		BE4F32A120557AB900C6121A /* MedicamentDateFinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentDateFinViewController.swift; sourceTree = "<group>"; };
@@ -204,7 +204,6 @@
 				BC0C9D0D203830220067EBB8 /* AppDelegate.swift */,
 				BC0C9D0F203830230067EBB8 /* ViewController.swift */,
 				BC0C9D11203830230067EBB8 /* Main.storyboard */,
-				BE211F00205E7D36009AA058 /* SuiviPatientViewController.swift */,
 				BC0C9D17203830240067EBB8 /* Assets.xcassets */,
 				BC0C9D1C203830250067EBB8 /* Info.plist */,
 				BC0C9D14203830230067EBB8 /* Swift_Project.xcdatamodeld */,
@@ -271,6 +270,7 @@
 		BCAFD280204C4D9C0037ADBD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BCE6D908205EAEA8003068B8 /* Suivi */,
 				BE3107B6205702B90087EA02 /* Rendez-vous */,
 				BC6AD696205564F2001F1E04 /* Activité */,
 				BC6AD69720556503001F1E04 /* Symptome */,
@@ -285,6 +285,14 @@
 				BC6AD69820556568001F1E04 /* Surveillance */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		BCE6D908205EAEA8003068B8 /* Suivi */ = {
+			isa = PBXGroup;
+			children = (
+				BE211F00205E7D36009AA058 /* SuiviPatientViewController.swift */,
+			);
+			path = Suivi;
 			sourceTree = "<group>";
 		};
 		BE3107B6205702B90087EA02 /* Rendez-vous */ = {
