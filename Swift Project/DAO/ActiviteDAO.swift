@@ -7,3 +7,12 @@
 //
 
 import Foundation
+import CoreData
+
+protocol ActiviteDAO {
+    func getAll() throws -> [Activite]?
+    func save(activite: Activite) throws
+    func remove(activite: Activite) throws
+    func addJourActivite(jour : Jour, activite: Activite) throws
+    func addHeureActivite(heure : Heure, activite: Activite) throws
+}

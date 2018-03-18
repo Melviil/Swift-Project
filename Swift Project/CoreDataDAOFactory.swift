@@ -11,6 +11,9 @@ import CoreData
 
 class CoreDataDAOFactory: ProtocolDAOFactory{
     typealias A = CoreDataJourDAO
+    typealias B = CoreDataActiviteDAO
+    typealias C = CoreDataHeureDAO
+
    
     
     private static var instance: CoreDataDAOFactory?
@@ -25,6 +28,12 @@ class CoreDataDAOFactory: ProtocolDAOFactory{
     }
     func getJourDAO() -> CoreDataJourDAO {
         return CoreDataJourDAO(context: self.context)
+    }
+    func getActiviteDAO() -> CoreDataActiviteDAO {
+        return CoreDataActiviteDAO(context: self.context)
+    }
+    func getHeureDAO() -> CoreDataHeureDAO {
+        return CoreDataHeureDAO(context: self.context)
     }
     
 }

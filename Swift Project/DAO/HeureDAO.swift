@@ -7,3 +7,11 @@
 //
 
 import Foundation
+import CoreData
+
+protocol HeureDAO {
+    func getAll() throws -> [Heure]?
+    func save(heure: Heure) throws
+    func remove(heure: Heure) throws
+}
+

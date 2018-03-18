@@ -20,12 +20,7 @@ class ActiviteAjoutViewController: UIViewController {
         super.viewDidLoad()
         UNUserNotificationCenter.current().requestAuthorization(options : [.alert, .sound, .badge], completionHandler : {didAllow, error in})
         self.navigationItem.setHidesBackButton(true, animated:true);
-        print("INFORMATIONS AJOUT")
-        print(nomActivite)
-        print(listeJoursActivite)
-        print(listeHeuresActivite)
-        print(dateDebutActivite)
-        print(dateFinActivite)
+        
            saveNewActivite(withNom : self.nomActivite, withHours : listeHeuresActivite, withJours : self.listeJoursActivite, withDateDebut: self.dateDebutActivite, withDateFin : self.dateFinActivite )
         
        
@@ -46,12 +41,14 @@ class ActiviteAjoutViewController: UIViewController {
             //  self.alertError(errorMsg: " Could not save symptome ", userInfo : "Unknown reason" )
             return
         }
-        let context = appDelegate.persistentContainer.viewContext
-        let activite = Activite(context : context)
-        let heureTable = Heure(context : context)
+        let daoF = CoreDataDAOFactory.getInstance()
+        let activiteDAO = daoF.getActiviteDAO()
+        let activite: Activite = activiteDAO.create()
+        let heureDAO = daoF.getHeureDAO()
+        let heure: Heure = heureDAO.create()
 
 
-        // On convertit les dates de string à date
+        // On convertit les drates de string à date
         // La time zone est celle de Lisbonne, après des tests c'est celle qui correspond
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy"
@@ -62,38 +59,43 @@ class ActiviteAjoutViewController: UIViewController {
         guard let dateDebutGood = dateFormatter.date(from:dateDebut) else {
             fatalError("ERROR: Date conversion failed due to mismatched format.")
         }
-      
-        
-
-        
-        print( "lalalalalalalalala")
-        print(nom)
+    //fin conversion heures/jous
         activite.dateFin = dateFinGood
         activite.dateDebut = dateDebutGood
         activite.estDeType = nom
         dateFormatter.timeZone = TimeZone.current
         dateFormatter.dateFormat = "HH mm"
 
-        for heure in heures {
+        for uneHeure in heures {
             let calendar = Calendar.current
-            guard let heureGood = dateFormatter.date(from:heure) else {
+            //On repasse la date en Date
+            guard let heureGood = dateFormatter.date(from:uneHeure) else {
                 fatalError("ERROR: Date conversion failed due to mismatched format.")
             }
-           
             self.ajouterNotif(jour: 1,heure: calendar.component(.hour, from: heureGood), minute: calendar.component(.minute, from: heureGood))
-            heureTable.libelleHeure = heureGood
-            activite.addToSePasseA(heureTable)
+            heure.libelleHeure = heureGood
+            do{
+                try heureDAO.save(heure: heure)
+            }catch{
+            }
+            do{
+                try activiteDAO.addHeureActivite(heure:  heure, activite: activite)
+            }catch {
+                
+            }
+
         } 
         for jour in jours {
-            activite.addToSePasseLe(jour)
+
+            do{
+                try activiteDAO.addJourActivite(jour: jour, activite: activite)
+            }catch {
+            
+            }
         }
-      
         do{
-            try context.save()
-        }
-        catch  {
-            //  self.alertError(errorMsg: " Could not save type ", userInfo : "Unknown reason" )
-            return
+            try activiteDAO.save(activite: activite)
+        }catch{
         }
       
     }
