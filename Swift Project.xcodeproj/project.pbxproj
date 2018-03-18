@@ -45,6 +45,7 @@
 		BCD7C4F3205032190010A584 /* ActiviteAjoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD7C4F2205032190010A584 /* ActiviteAjoutViewController.swift */; };
 		BCDB983D2056F88C0081FCA9 /* SymptomeHeureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDB983C2056F88C0081FCA9 /* SymptomeHeureViewController.swift */; };
 		BCDB983F2056FA570081FCA9 /* SymptomeDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDB983E2056FA570081FCA9 /* SymptomeDateViewController.swift */; };
+		BE211F01205E7D36009AA058 /* SuiviPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE211F00205E7D36009AA058 /* SuiviPatientViewController.swift */; };
 		BE3107BA2057187D0087EA02 /* RDVAjoutHeureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3107B92057187D0087EA02 /* RDVAjoutHeureViewController.swift */; };
 		BE4F32A020557AAA00C6121A /* MedicamentDateDebutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F329F20557AAA00C6121A /* MedicamentDateDebutViewController.swift */; };
 		BE4F32A220557AB900C6121A /* MedicamentDateFinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F32A120557AB900C6121A /* MedicamentDateFinViewController.swift */; };
@@ -127,6 +128,7 @@
 		BCD7C4F2205032190010A584 /* ActiviteAjoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiviteAjoutViewController.swift; sourceTree = "<group>"; };
 		BCDB983C2056F88C0081FCA9 /* SymptomeHeureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymptomeHeureViewController.swift; sourceTree = "<group>"; };
 		BCDB983E2056FA570081FCA9 /* SymptomeDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomeDateViewController.swift; sourceTree = "<group>"; };
+		BE211F00205E7D36009AA058 /* SuiviPatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SuiviPatientViewController.swift; path = Controller/SuiviPatientViewController.swift; sourceTree = "<group>"; };
 		BE3107B92057187D0087EA02 /* RDVAjoutHeureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDVAjoutHeureViewController.swift; sourceTree = "<group>"; };
 		BE4F329F20557AAA00C6121A /* MedicamentDateDebutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentDateDebutViewController.swift; sourceTree = "<group>"; };
 		BE4F32A120557AB900C6121A /* MedicamentDateFinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentDateFinViewController.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				BC0C9D0D203830220067EBB8 /* AppDelegate.swift */,
 				BC0C9D0F203830230067EBB8 /* ViewController.swift */,
 				BC0C9D11203830230067EBB8 /* Main.storyboard */,
+				BE211F00205E7D36009AA058 /* SuiviPatientViewController.swift */,
 				BC0C9D17203830240067EBB8 /* Assets.xcassets */,
 				BC0C9D1C203830250067EBB8 /* Info.plist */,
 				BC0C9D14203830230067EBB8 /* Swift_Project.xcdatamodeld */,
@@ -505,6 +508,7 @@
 				BC086C682048564B006D2310 /* ActiviteHeureModallyViewController.swift in Sources */,
 				BC6AD6AB205574EE001F1E04 /* SymptomeModel.swift in Sources */,
 				BC6AD6B720557815001F1E04 /* ListeSymptomesModel.swift in Sources */,
+				BE211F01205E7D36009AA058 /* SuiviPatientViewController.swift in Sources */,
 				BC6AD6A9205574BD001F1E04 /* MedicamentModel.swift in Sources */,
 				BC04ED98203AE235008F6AC3 /* Contact Page.swift in Sources */,
 				BC6FE5A62044434600D862B6 /* MedecinController.swift in Sources */,

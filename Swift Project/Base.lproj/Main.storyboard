@@ -1817,12 +1817,31 @@
                                     <action selector="addTypeAct:" destination="P94-Ko-fRh" eventType="touchUpInside" id="MzM-1W-j5J"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibw-RQ-37n">
+                                <rect key="frame" x="21" y="208" width="278" height="30"/>
+                                <color key="backgroundColor" red="0.23529411759999999" green="0.57254901960000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.23529411759999999" green="0.57254901960000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Consulter le suivi sur les 5 derniers jours">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addTypeAct:" destination="P94-Ko-fRh" eventType="touchUpInside" id="nS6-6m-TMH"/>
+                                    <segue destination="EDy-Qe-sRU" kind="show" id="7sB-OH-zHp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ibw-RQ-37n" firstAttribute="top" secondItem="8Xf-bx-Bfu" secondAttribute="bottom" constant="27" id="0mY-ic-RIh"/>
                             <constraint firstItem="VUG-Zl-ahY" firstAttribute="top" secondItem="uWb-Il-hX4" secondAttribute="top" constant="30" id="Bj2-IL-mHg"/>
                             <constraint firstItem="8Xf-bx-Bfu" firstAttribute="centerX" secondItem="i0p-PT-8Ax" secondAttribute="centerX" id="DbY-DB-JUM"/>
                             <constraint firstItem="VUG-Zl-ahY" firstAttribute="centerX" secondItem="i0p-PT-8Ax" secondAttribute="centerX" id="WLs-C3-mlk"/>
+                            <constraint firstItem="ibw-RQ-37n" firstAttribute="centerX" secondItem="i0p-PT-8Ax" secondAttribute="centerX" id="YF8-l7-EPX"/>
                             <constraint firstItem="8Xf-bx-Bfu" firstAttribute="top" secondItem="VUG-Zl-ahY" secondAttribute="bottom" constant="27" id="qQV-sa-fJP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uWb-Il-hX4"/>
@@ -1830,7 +1849,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h3c-un-lrJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="161" y="819"/>
+            <point key="canvasLocation" x="231" y="1451"/>
+        </scene>
+        <!--Suivi Patient View Controller-->
+        <scene sceneID="npc-b1-VPq">
+            <objects>
+                <viewController id="EDy-Qe-sRU" customClass="SuiviPatientViewController" customModule="Swift_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FmQ-6e-5ew">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suivi du Patient" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5aB-A9-5AS">
+                                <rect key="frame" x="48" y="82" width="224" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VzF-gw-5o9">
+                                <rect key="frame" x="40" y="175" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5aB-A9-5AS" firstAttribute="centerX" secondItem="FmQ-6e-5ew" secondAttribute="centerX" id="O7A-N6-IMo"/>
+                            <constraint firstItem="5aB-A9-5AS" firstAttribute="top" secondItem="Sfu-Ov-LXc" secondAttribute="top" constant="18" id="ZnK-HW-H8X"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Sfu-Ov-LXc"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableJour" destination="VzF-gw-5o9" id="BjH-IX-ybF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aa5-km-2cH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1380" y="1761"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="RLf-aH-XyZ">
