@@ -63,7 +63,7 @@ class ActiviteListeViewController: UIViewController, UITableViewDataSource, UITa
                 dateFormatter.dateFormat = "dd MMMM"
                 dateFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
 
-                dateFormatter.timeZone = NSTimeZone(name: "WET")! as TimeZone
+                dateFormatter.timeZone = TimeZone.current
 
                 selectedDateDebut = dateFormatter.string(from: activite.dateDebut!)
 
