@@ -59,13 +59,17 @@ class SuiviPatientViewController: UIViewController , UITableViewDelegate, UITabl
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let date = Date()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd MM"
-        let currentDate = dateFormatter.string(from:date)
-        var daydifference = getDateSelected()
+//        let date = Date()
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = "dd MM"
+       // let currentDate = dateFormatter.string(from:date)
+      //  var daydifference =
         
-        
+        var dayComp = DateComponents()
+        dayComp.day = getDateSelected()
+        let datetoday = Calendar.current.date(byAdding: dayComp, to: Date()) //fetch current date
+        let dateneeded = Calendar.current.component(.weekday, from: datetoday!) // getdate needed by number selected
+        print(dateneeded)
         let cell = UITableViewCell()
         cell.textLabel?.text = String(describing: self.jours[indexPath.row])
         return cell
