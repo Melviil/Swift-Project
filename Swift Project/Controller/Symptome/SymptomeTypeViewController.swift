@@ -8,17 +8,18 @@
 //
 
 import UIKit
+import CoreData
 
 class SymptomeTypeViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
    
     
     @IBOutlet weak var picker: UIPickerView!
-    var pickerData: [String] = [String]()
+    var pickerData: [TypeSymptome] = []
     
     let segueShowNomSuivi = "showNomSuiviSegue"
 
-    var nomSuivi = "null"
+    var nomSuivi : TypeSymptome!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -35,7 +36,16 @@ class SymptomeTypeViewController: UIViewController, UIPickerViewDataSource, UIPi
         super.viewDidLoad()
         picker.dataSource = self
         picker.delegate = self
-        pickerData = ["ON", "OFF", "DYSKYNESIE", "OUBLIE"]
+        
+        
+        //GET type symtpome
+        let daoF = CoreDataDAOFactory.getInstance()
+        let typeSymptomeDAO = daoF.getTypeSymptomeDAO()
+        do{
+            try pickerData = typeSymptomeDAO.getAll()!
+        }catch {
+            
+        }
         self.nomSuivi=pickerData[0]
         // Do any additional setup after loading the view.
     }
@@ -55,7 +65,7 @@ class SymptomeTypeViewController: UIViewController, UIPickerViewDataSource, UIPi
     
     // The data to return for the row and component (column) that's being passed in
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerData[row]
+        return pickerData[row].libelleTypeSymptome
     }
     func pickerView( _ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)  {
         nomSuivi = pickerData[row]

@@ -7,15 +7,15 @@
 //
 
 import UIKit
-
+import CoreData
 class SymptomeDateViewController: UIViewController {
     
     
     @IBOutlet weak var myDatePicker: UIDatePicker!
     
-    var nomSuiviSend = String() // nom sent by segue
-    var heureSuiviSend = String() // heure sent by segue
-    var dateChoisi = "" // date getted now
+    var nomSuiviSend : TypeSymptome! // type sent by segue
+    var heureSuiviSend = Date() // heure sent by segue
+    var dateChoisi = Date() // date getted now
     
     let segueShowNomSuivi = "showAllInfosSuiviSegue"
     
@@ -42,12 +42,7 @@ class SymptomeDateViewController: UIViewController {
     }
     
     @IBAction func changerValueDateQuandDateChange(_ sender: Any) {
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MM-yyyy"
-        let selectedDate = dateFormatter.string(from: myDatePicker.date)
-        dateChoisi = selectedDate
-        
+        dateChoisi = myDatePicker.date
 }
 
 /*

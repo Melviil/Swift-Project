@@ -12,40 +12,34 @@ import CoreData
 class SymptomeAjoutViewController: UIViewController {
     
     
-    var nomSuiviSend = String() // nom sent by segue
-    var heureSuiviSend = String() // heure sent by segue
-    var dateSuiviSend = "" // date sent by segue
+    var nomSuiviSend : TypeSymptome! // typeSymptome sent by segue
+    var heureSuiviSend = Date() // heure sent by segue
+    var dateSuiviSend = Date() // date sent by segue
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    self.navigationItem.setHidesBackButton(true, animated:true);
+
         print(self.nomSuiviSend)
         print(self.heureSuiviSend)
         print(self.dateSuiviSend)
         self.saveNewSymptome( withNom : self.nomSuiviSend, withHeure: self.heureSuiviSend, withDate : self.dateSuiviSend)
         // Do any additional setup after loading the view.
     }
-    func saveNewSymptome( withNom nom: String, withHeure heure: String,withDate date: String){
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
-            //  self.alertError(errorMsg: " Could not save symptome ", userInfo : "Unknown reason" )
-            return
-        }
-        let context = appDelegate.persistentContainer.viewContext
-        let symptome = Symptome(context : context)
-        symptome.heureSymptome = nom
-        symptome.dateSymptome = heure
-        symptome.typeSymptome = date
+    func saveNewSymptome( withNom nom: TypeSymptome, withHeure heure: Date,withDate date: Date){
+     
+        let daoF = CoreDataDAOFactory.getInstance()
+        let symptomeDAO = daoF.getSymptomeDAO()
+        let symptome: Symptome = symptomeDAO.create()
+        symptome.heureSymptome = heure
+        symptome.dateSymptome = date
+        symptome.aUnType = nom
         
         do{
-            try context.save()
+            try symptomeDAO.save(symptome: symptome)
+        }catch{
         }
-        catch {
-            //TODO gérer les erreurs
-            
-            return
-        }
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,10 +47,7 @@ class SymptomeAjoutViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func revenirMenu(_ sender: Any) {
-        self.dismiss(animated:true, completion: nil)
-        
-    }
+   
     
     /*
     // MARK: - Navigation

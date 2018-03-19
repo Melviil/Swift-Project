@@ -50,9 +50,9 @@
         <attribute name="libelleSpecialite" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Symptome" representedClassName="Symptome" syncable="YES" codeGenerationType="class">
-        <attribute name="dateSymptome" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="heureSymptome" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="typeSymptome" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dateSymptome" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="heureSymptome" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="aUnType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TypeSymptome" inverseName="aDes" inverseEntity="TypeSymptome" syncable="YES"/>
     </entity>
     <entity name="TypeActivite" representedClassName="TypeActivite" syncable="YES" codeGenerationType="class">
         <attribute name="libelleTypeActivite" optional="YES" attributeType="String" syncable="YES"/>
@@ -63,6 +63,7 @@
     </entity>
     <entity name="TypeSymptome" representedClassName="TypeSymptome" syncable="YES" codeGenerationType="class">
         <attribute name="libelleTypeSymptome" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="aDes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Symptome" inverseName="aUnType" inverseEntity="Symptome" syncable="YES"/>
     </entity>
     <elements>
         <element name="Activite" positionX="115" positionY="27" width="128" height="133"/>
@@ -75,9 +76,9 @@
         <element name="Patient" positionX="-65" positionY="468" width="128" height="90"/>
         <element name="RendezVous" positionX="-108" positionY="252" width="128" height="73"/>
         <element name="Specialite" positionX="97" positionY="270" width="128" height="60"/>
-        <element name="Symptome" positionX="115" positionY="360" width="128" height="88"/>
+        <element name="Symptome" positionX="115" positionY="360" width="128" height="90"/>
         <element name="TypeActivite" positionX="-209" positionY="-117" width="128" height="73"/>
         <element name="TypeEvenement" positionX="-29" positionY="363" width="128" height="60"/>
-        <element name="TypeSymptome" positionX="142" positionY="480" width="128" height="60"/>
+        <element name="TypeSymptome" positionX="142" positionY="480" width="128" height="75"/>
     </elements>
 </model>

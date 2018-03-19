@@ -34,13 +34,6 @@ class ActiviteAjoutViewController: UIViewController {
     
     //TODO
     func saveNewActivite( withNom nom: TypeActivite, withHours heures : [String], withJours jours : [Jour],withDateDebut dateDebut: String, withDateFin dateFin: String){
-        
-        
-        
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
-            //  self.alertError(errorMsg: " Could not save symptome ", userInfo : "Unknown reason" )
-            return
-        }
         let daoF = CoreDataDAOFactory.getInstance()
         let activiteDAO = daoF.getActiviteDAO()
         let activite: Activite = activiteDAO.create()
@@ -121,6 +114,9 @@ class ActiviteAjoutViewController: UIViewController {
         UNUserNotificationCenter.current().add(request2, withCompletionHandler: nil)
     }
 
-
+    @IBAction func enelverModally(_ sender: Any) {
+            self.dismiss(animated:true, completion: nil)
+    }
+    
 
 }

@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import CoreData
 
 class SymptomeHeureViewController: UIViewController {
 
     @IBOutlet weak var myDatePicker: UIDatePicker!
-    var heureChoisie = ""
+    var heureChoisie = Date()
     let segueShowNomSuivi = "showNomHeureSuiviSegue"
-    var nomSuiviSend = String()
+    var nomSuiviSend : TypeSymptome!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,12 +40,7 @@ class SymptomeHeureViewController: UIViewController {
     }
     
     @IBAction func changerValueDateQuandDateChange(_ sender: Any) {
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "hh mm a"
-        let selectedDate = dateFormatter.string(from: myDatePicker.date)
-        heureChoisie = selectedDate
-        print(heureChoisie)
+        heureChoisie = myDatePicker.date
         
     }
     /*

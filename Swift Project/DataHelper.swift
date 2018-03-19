@@ -11,6 +11,7 @@ public class DataHelper {
     
     static func seedDataStore() {
         seedJour()
+        seedTypeSymptome()
     }
     fileprivate static func seedJour(){
         let jours = JourSeed().jours
@@ -26,5 +27,19 @@ public class DataHelper {
                 fatalError("Error cannot populate DB")
             }
         }
-}
+    }
+    fileprivate static func seedTypeSymptome(){
+        let TypeSymptomes = TypeSymptomeSeed().TypeSymptomes
+        let TypeSymptomeDAO = CoreDataDAOFactory.getInstance().getTypeSymptomeDAO()
+        for TypeSymptome in TypeSymptomes {
+            let newTypeSymptome: TypeSymptome = TypeSymptomeDAO.create()
+            newTypeSymptome.libelleTypeSymptome = TypeSymptome.nom
+            do{
+                try TypeSymptomeDAO.save(typeSymptome: newTypeSymptome)
+            }catch {
+                fatalError("Error cannot populate DB")
+            }
+        }
+    }
+
 }
