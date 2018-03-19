@@ -42,10 +42,14 @@ class SurveillanceDateViewController: UIViewController {
     
     @IBAction func changerValueDateQuandDateChange(_ sender: Any) {
         
-       
-        let selectedDate = myDatePicker.date
-        dateChoisi = selectedDate
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMMM"
+        dateFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
         
+        dateFormatter.timeZone = TimeZone.current
+        
+        let date = dateFormatter.string(from: myDatePicker.date)
+        dateChoisi = dateFormatter.date(from : date)!
     }
     /*
     // MARK: - Navigation

@@ -41,7 +41,11 @@ class SurveillanceHeureViewController: UIViewController {
     @IBAction func changerValueDateQuandDateChange(_ sender: Any) {
         
         
-        heureChoisie = myDatePicker.date
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH mm"
+        dateFormatter.timeZone = TimeZone.current
+        let selectedDate = dateFormatter.string(from: myDatePicker.date)
+        heureChoisie = dateFormatter.date(from: selectedDate)!
         
     }
 
