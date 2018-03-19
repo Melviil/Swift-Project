@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import CoreData
 
 class SurveillanceHeureViewController: UIViewController {
     
     @IBOutlet weak var myDatePicker: UIDatePicker!
-    var heureChoisie = ""
+    var heureChoisie = Date()
     let segueShowNomSuivi = "showNomHeureSurveillanceSegue"
-    var nomSurveillanceSend = String()
+    var nomSurveillanceSend : TypeSurveillance!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +28,6 @@ class SurveillanceHeureViewController: UIViewController {
             let SurveillanceDateViewController = segue.destination as! SurveillanceDateViewController
             SurveillanceDateViewController.nomSurveillanceSend = self.nomSurveillanceSend
             SurveillanceDateViewController.heureSurveillanceSend = self.heureChoisie
-            
-            
         }
         
     }
@@ -41,11 +40,8 @@ class SurveillanceHeureViewController: UIViewController {
     
     @IBAction func changerValueDateQuandDateChange(_ sender: Any) {
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "hh mm a"
-        let selectedDate = dateFormatter.string(from: myDatePicker.date)
-        heureChoisie = selectedDate
-        print(heureChoisie)
+        
+        heureChoisie = myDatePicker.date
         
     }
 

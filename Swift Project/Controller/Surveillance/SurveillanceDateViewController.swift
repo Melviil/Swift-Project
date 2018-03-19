@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
 class SurveillanceDateViewController: UIViewController {
     @IBOutlet weak var myDatePicker: UIDatePicker!
-    var nomSurveillanceSend = String() // nom sent by segue
-    var heureSurveillanceSend = String() // heure sent by segue
-    var dateChoisi = "" // date getted now
+    var nomSurveillanceSend : TypeSurveillance! // nom sent by segue
+    var heureSurveillanceSend = Date() // heure sent by segue
+    var dateChoisi = Date() // date getted now
     
     let segueShowNomSuivi = "showAllInfosSurveillanceSegue"
     override func viewDidLoad() {
@@ -41,9 +42,8 @@ class SurveillanceDateViewController: UIViewController {
     
     @IBAction func changerValueDateQuandDateChange(_ sender: Any) {
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MM-yyyy"
-        let selectedDate = dateFormatter.string(from: myDatePicker.date)
+       
+        let selectedDate = myDatePicker.date
         dateChoisi = selectedDate
         
     }

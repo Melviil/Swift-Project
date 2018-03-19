@@ -44,7 +44,7 @@ class ActiviteAjoutViewController: UIViewController {
         // La time zone est celle de Lisbonne, après des tests c'est celle qui correspond
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy"
-        dateFormatter.timeZone = NSTimeZone(name: "WET")! as TimeZone
+        dateFormatter.timeZone = TimeZone.current
         guard let dateFinGood = dateFormatter.date(from:dateFin) else {
             fatalError("ERROR: Date conversion failed due to mismatched format.")
         }

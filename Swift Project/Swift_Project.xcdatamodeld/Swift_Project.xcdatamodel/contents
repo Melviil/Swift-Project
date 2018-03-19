@@ -12,7 +12,6 @@
         <attribute name="adresseCentreHospitalier" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nomCentreHospitalier" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Evenement" representedClassName="Evenement" syncable="YES" codeGenerationType="class"/>
     <entity name="Heure" representedClassName="Heure" syncable="YES" codeGenerationType="class">
         <attribute name="libelleHeure" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <relationship name="contient" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Activite" inverseName="sePasseA" inverseEntity="Activite" syncable="YES"/>
@@ -49,6 +48,11 @@
     <entity name="Specialite" representedClassName="Specialite" syncable="YES" codeGenerationType="class">
         <attribute name="libelleSpecialite" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="Surveillance" representedClassName="Surveillance" syncable="YES" codeGenerationType="class">
+        <attribute name="dateSurveillance" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="heureSurveillance" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="aUnTypeSurveillance" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TypeSurveillance" inverseName="aDes" inverseEntity="TypeSurveillance" syncable="YES"/>
+    </entity>
     <entity name="Symptome" representedClassName="Symptome" syncable="YES" codeGenerationType="class">
         <attribute name="dateSymptome" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="heureSymptome" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -58,8 +62,9 @@
         <attribute name="libelleTypeActivite" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="correspondA" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Activite" inverseName="estDeType" inverseEntity="Activite" syncable="YES"/>
     </entity>
-    <entity name="TypeEvenement" representedClassName="TypeEvenement" syncable="YES" codeGenerationType="class">
-        <attribute name="libelleTypeEvenement" optional="YES" attributeType="String" syncable="YES"/>
+    <entity name="TypeSurveillance" representedClassName="TypeSurveillance" syncable="YES" codeGenerationType="class">
+        <attribute name="libelleTypeSurveillance" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="aDes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Surveillance" inverseName="aUnTypeSurveillance" inverseEntity="Surveillance" syncable="YES"/>
     </entity>
     <entity name="TypeSymptome" representedClassName="TypeSymptome" syncable="YES" codeGenerationType="class">
         <attribute name="libelleTypeSymptome" optional="YES" attributeType="String" syncable="YES"/>
@@ -68,8 +73,8 @@
     <elements>
         <element name="Activite" positionX="115" positionY="27" width="128" height="133"/>
         <element name="CentreHospitalier" positionX="-171" positionY="375" width="128" height="75"/>
-        <element name="Evenement" positionX="160" positionY="207" width="128" height="28"/>
-        <element name="Heure" positionX="-216" positionY="18" width="128" height="73"/>
+        <element name="Surveillance" positionX="45" positionY="171" width="128" height="88"/>
+        <element name="Heure" positionX="-216" positionY="18" width="128" height="75"/>
         <element name="Jour" positionX="-216" positionY="117" width="128" height="90"/>
         <element name="Medecin" positionX="-270" positionY="486" width="128" height="88"/>
         <element name="Medicament" positionX="-324" positionY="252" width="128" height="165"/>
@@ -78,7 +83,7 @@
         <element name="Specialite" positionX="97" positionY="270" width="128" height="60"/>
         <element name="Symptome" positionX="115" positionY="360" width="128" height="90"/>
         <element name="TypeActivite" positionX="-209" positionY="-117" width="128" height="73"/>
-        <element name="TypeEvenement" positionX="-29" positionY="363" width="128" height="60"/>
+        <element name="TypeSurveillance" positionX="-29" positionY="363" width="128" height="75"/>
         <element name="TypeSymptome" positionX="142" positionY="480" width="128" height="75"/>
     </elements>
 </model>

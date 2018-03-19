@@ -7,36 +7,46 @@
 //
 
 import UIKit
+import CoreData
 
 class SurveillanceAjoutViewController: UIViewController {
-    var nomSurveillanceSend = String() // nom sent by segue
-    var heureSurveillanceSend = String() // heure sent by segue
-    var dateSurveillanceSend = "" // date sent by segue
+    var nomSurveillanceSend : TypeSurveillance! // nom sent by segue
+    var heureSurveillanceSend = Date() // heure sent by segue
+    var dateSurveillanceSend = Date() // date sent by segue
     override func viewDidLoad() {
         super.viewDidLoad()
-        saveNewSurveillance()
-        // Do any additional setup after loading the view.
+        print(self.nomSurveillanceSend)
+        print(self.heureSurveillanceSend)
+        print(self.dateSurveillanceSend)
+         self.saveNewSurveillance( withNom : self.nomSurveillanceSend, withHeure: self.heureSurveillanceSend, withDate : self.dateSurveillanceSend)
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func saveNewSurveillance(){ // TODO
-        
-        }
+   
 
     @IBAction func revenirMenu(_ sender: Any) {
         self.dismiss(animated:true, completion: nil)
     }
-    /*
-    // MARK: - Navigation
+    
+    func saveNewSurveillance( withNom nom: TypeSurveillance, withHeure heure: Date,withDate date: Date){
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let daoF = CoreDataDAOFactory.getInstance()
+        let surveillanceDAO = daoF.getSurveillanceDAO()
+        let surveillance: Surveillance = surveillanceDAO.create()
+        surveillance.heureSurveillance = heure
+        surveillance.dateSurveillance = date
+        
+        
+        do{
+            try surveillanceDAO.save(surveillance: surveillance)
+        }catch{
+        }
+        
     }
-    */
+    
 
 }

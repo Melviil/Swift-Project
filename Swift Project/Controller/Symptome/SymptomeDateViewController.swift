@@ -42,6 +42,8 @@ class SymptomeDateViewController: UIViewController {
     }
     
     @IBAction func changerValueDateQuandDateChange(_ sender: Any) {
+        
+        
         dateChoisi = myDatePicker.date
 }
 

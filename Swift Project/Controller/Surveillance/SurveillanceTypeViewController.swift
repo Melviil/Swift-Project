@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
 class SurveillanceTypeViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate  {
     @IBOutlet weak var picker: UIPickerView!
-    var pickerData: [String] = [String]()
+    var pickerData: [TypeSurveillance] = [] 
     let segueShowNomSuivi = "showNomSurveillanceSegue"
-    var nomSurveillance = ""
+    var nomSurveillance : TypeSurveillance!
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == segueShowNomSuivi {
@@ -28,7 +29,18 @@ class SurveillanceTypeViewController: UIViewController, UIPickerViewDataSource, 
         super.viewDidLoad()
         picker.dataSource = self
         picker.delegate = self
-        pickerData = ["mettre", "les", "maladies", "OUBLIE"]
+        
+        let daoF = CoreDataDAOFactory.getInstance()
+        let typeSurveillanceDAO = daoF.getTypeSurveillanceDAO()
+       
+        do{
+            try pickerData = typeSurveillanceDAO.getAll()!
+        }
+        catch{
+            
+        }
+        
+        
         self.nomSurveillance=pickerData[0]
         // Do any additional setup after loading the view.
     }
@@ -48,7 +60,7 @@ class SurveillanceTypeViewController: UIViewController, UIPickerViewDataSource, 
     
     // The data to return for the row and component (column) that's being passed in
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerData[row]
+        return pickerData[row].libelleTypeSurveillance
     }
     func pickerView( _ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)  {
         nomSurveillance = pickerData[row]

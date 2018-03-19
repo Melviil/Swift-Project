@@ -10,6 +10,6 @@ import Foundation
 import CoreData
 
 
-extension Evenement{
+extension Surveillance{
     
 }
