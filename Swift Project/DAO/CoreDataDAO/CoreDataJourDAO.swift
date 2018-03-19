@@ -28,6 +28,7 @@ class CoreDataJourDAO: JourDAO {
             throw error
         }
     }
+    
     func getAll() throws -> [Jour]? {
         let request: NSFetchRequest<Jour> = NSFetchRequest(entityName: self.entityName)
         do {

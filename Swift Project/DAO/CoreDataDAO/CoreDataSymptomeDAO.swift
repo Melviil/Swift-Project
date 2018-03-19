@@ -38,4 +38,30 @@ func save(symptome: Symptome) throws{
 func remove(symptome: Symptome) throws{
     
 }
+    
+    func getSymptomeByDay(date : Date) throws -> [Symptome]? {
+        
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = "dd MMMM"
+//        dateFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
+//
+//        dateFormatter.timeZone = TimeZone.current
+//
+//        let dateString = dateFormatter.string(from: date)
+//        let dateChoisi = dateFormatter.date(from : dateString)!
+//
+//        let request: NSFetchRequest<Symptome> = NSFetchRequest(entityName: self.entityName)
+//        request.predicate = NSPredicate(format: "dateSymptome == %@", dateChoisi as CVarArg)
+        
+        let request: NSFetchRequest<Symptome> = NSFetchRequest(entityName: self.entityName)
+        request.predicate = NSPredicate(format: "dateSymptome == %@", date as CVarArg)
+        
+        do {
+            let symptomes: [Symptome] = try CoreDataManager.context.fetch(request)
+            return symptomes
+        } catch let error as NSError {
+            throw error
+        }
+    }
+    
 }

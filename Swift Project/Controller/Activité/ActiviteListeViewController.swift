@@ -20,25 +20,10 @@ class ActiviteListeViewController: UIViewController, UITableViewDataSource, UITa
     @IBOutlet weak var myTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
         myTableView.dataSource = self
         myTableView.delegate = self
         //TODO GETActivite table
        
-        
-        
-        var date = DateComponents()
-        date.year = 2016
-        date.month = 11
-        date.day = 2
-        date.hour = 6
-        date.minute = 30
-        
-      
-        
-        
         myTableView.dataSource = self
         myTableView.delegate = self
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
@@ -112,5 +97,7 @@ class ActiviteListeViewController: UIViewController, UITableViewDataSource, UITa
         cell.textLabel?.text = String(describing: self.activites[indexPath.row])
         return cell
     }
+    
+    
 
 }

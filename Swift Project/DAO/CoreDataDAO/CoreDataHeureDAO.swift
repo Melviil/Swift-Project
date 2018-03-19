@@ -25,6 +25,7 @@ class CoreDataHeureDAO: HeureDAO {
         } catch let error as NSError {
             throw error
         }
+        
     }
     func create() -> Heure{
         return Heure(context: self.context)
@@ -36,6 +37,9 @@ class CoreDataHeureDAO: HeureDAO {
             throw error
         }
     }
+    
+    
+    
     func remove(heure: Heure) throws{
         
     }
