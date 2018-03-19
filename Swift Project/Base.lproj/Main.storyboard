@@ -1287,15 +1287,7 @@
                                     <action selector="rdvRegulier:" destination="GX3-6n-i1G" eventType="valueChanged" id="Z2O-OE-Mvv"/>
                                 </connections>
                             </switch>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="05 55 25 04 83" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pSK-SL-Fu6">
-                                <rect key="frame" x="32" y="378" width="188" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="0Mv-DV-d21"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>

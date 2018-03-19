@@ -11,14 +11,14 @@ import Foundation
 import UIKit
 import CoreData
 
-extension TypeEvenement {
-    static func getNewTypeEvenementDAO() -> TypeEvenement? {
+extension TypeSurveillance {
+    static func getNewTypeEvenementDAO() -> TypeSurveillance? {
         
         
         guard let entity = NSEntityDescription.entity(forEntityName: "TypeEvenement", in: CoreDataManager.context) else {
             return nil
         }
-        return TypeEvenement(entity: entity, insertInto : CoreDataManager.context)
+        return TypeSurveillance(entity: entity, insertInto : CoreDataManager.context)
     }
 }
 

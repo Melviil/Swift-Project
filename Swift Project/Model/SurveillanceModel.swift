@@ -1,5 +1,5 @@
 //
-//  EvenementModel.swift
+//  SymptomeModel.swift
 //  Swift Project
 //
 //  Created by Melvil on 11/03/2018.
@@ -10,6 +10,6 @@ import Foundation
 import CoreData
 
 
-extension Surveillance{
+extension Symptome{
     
 }

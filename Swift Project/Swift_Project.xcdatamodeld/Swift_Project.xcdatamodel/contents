@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17D47" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Activite" representedClassName="Activite" syncable="YES" codeGenerationType="class">
         <attribute name="dateDebut" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="dateFin" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -69,16 +69,15 @@
     </entity>
     <entity name="TypeSurveillance" representedClassName="TypeSurveillance" syncable="YES" codeGenerationType="class">
         <attribute name="libelleTypeSurveillance" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="aDes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Surveillance" inverseName="aUnTypeSurveillance" inverseEntity="Surveillance" syncable="YES"/>
+        <relationship name="aDes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Surveillance" inverseName="aUnTypeSurveillance" inverseEntity="Surveillance" syncable="YES"/>
     </entity>
     <entity name="TypeSymptome" representedClassName="TypeSymptome" syncable="YES" codeGenerationType="class">
         <attribute name="libelleTypeSymptome" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="aDes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Symptome" inverseName="aUnType" inverseEntity="Symptome" syncable="YES"/>
+        <relationship name="aDes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Symptome" inverseName="aUnType" inverseEntity="Symptome" syncable="YES"/>
     </entity>
     <elements>
         <element name="Activite" positionX="115" positionY="27" width="128" height="133"/>
         <element name="CentreHospitalier" positionX="-171" positionY="375" width="128" height="75"/>
-        <element name="Surveillance" positionX="45" positionY="171" width="128" height="88"/>
         <element name="Heure" positionX="-216" positionY="18" width="128" height="75"/>
         <element name="Jour" positionX="-216" positionY="117" width="128" height="90"/>
         <element name="Medecin" positionX="-270" positionY="486" width="128" height="88"/>
@@ -86,9 +85,10 @@
         <element name="Patient" positionX="-65" positionY="468" width="128" height="90"/>
         <element name="RendezVous" positionX="-108" positionY="252" width="128" height="105"/>
         <element name="Specialite" positionX="97" positionY="270" width="128" height="60"/>
+        <element name="Surveillance" positionX="45" positionY="171" width="128" height="88"/>
         <element name="Symptome" positionX="115" positionY="360" width="128" height="90"/>
         <element name="TypeActivite" positionX="-209" positionY="-117" width="128" height="73"/>
-        <element name="TypeSurveillance" positionX="-29" positionY="363" width="128" height="75"/>
-        <element name="TypeSymptome" positionX="142" positionY="480" width="128" height="75"/>
+        <element name="TypeSurveillance" positionX="-29" positionY="363" width="128" height="73"/>
+        <element name="TypeSymptome" positionX="142" positionY="480" width="128" height="73"/>
     </elements>
 </model>

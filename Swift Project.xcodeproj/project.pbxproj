@@ -31,6 +31,7 @@
 		BC322EB1205FB5EE005A20DE /* CoreDataTypeSurveillanceDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC322EB0205FB5EE005A20DE /* CoreDataTypeSurveillanceDAO.swift */; };
 		BC322EB3205FDAC4005A20DE /* SurveillanceDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC322EB2205FDAC4005A20DE /* SurveillanceDAO.swift */; };
 		BC322EB5205FDAF8005A20DE /* CoreDataSurveillanceDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC322EB4205FDAF8005A20DE /* CoreDataSurveillanceDAO.swift */; };
+		BC322EB9205FEDE9005A20DE /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC322EB8205FEDE8005A20DE /* CoreDataManager.swift */; };
 		BC567C82204B103E00764B79 /* SymptomeTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC567C81204B103E00764B79 /* SymptomeTypeViewController.swift */; };
 		BC567C88204BFBED00764B79 /* SymptomeAjoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC567C87204BFBED00764B79 /* SymptomeAjoutViewController.swift */; };
 		BC646C5920501CAC004F3A2B /* ActiviteDateDebutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC646C5820501CAC004F3A2B /* ActiviteDateDebutViewController.swift */; };
@@ -43,12 +44,10 @@
 		BC6AD6A5205573BF001F1E04 /* SpecialiteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6AD6A4205573BF001F1E04 /* SpecialiteModel.swift */; };
 		BC6AD6A720557435001F1E04 /* CentreHospitalierModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6AD6A620557435001F1E04 /* CentreHospitalierModel.swift */; };
 		BC6AD6A9205574BD001F1E04 /* MedicamentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6AD6A8205574BD001F1E04 /* MedicamentModel.swift */; };
-		BC6AD6AB205574EE001F1E04 /* SymptomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6AD6AA205574EE001F1E04 /* SymptomeModel.swift */; };
+		BC6AD6AB205574EE001F1E04 /* SurveillanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6AD6AA205574EE001F1E04 /* SurveillanceModel.swift */; };
 		BC6AD6AD20557511001F1E04 /* TypeSymptomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6AD6AC20557511001F1E04 /* TypeSymptomeModel.swift */; };
 		BC6AD6AF2055752C001F1E04 /* ActiviteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6AD6AE2055752C001F1E04 /* ActiviteModel.swift */; };
 		BC6AD6B120557570001F1E04 /* TypeActiviteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6AD6B020557570001F1E04 /* TypeActiviteModel.swift */; };
-		BC6AD6B3205575DE001F1E04 /* TypeSruveillanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6AD6B2205575DE001F1E04 /* TypeSruveillanceModel.swift */; };
-		BC6AD6B52055769F001F1E04 /* SurveillanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6AD6B42055769F001F1E04 /* SurveillanceModel.swift */; };
 		BC6AD6B720557815001F1E04 /* ListeSymptomesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6AD6B620557815001F1E04 /* ListeSymptomesModel.swift */; };
 		BC6FE5A62044434600D862B6 /* MedecinController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6FE5A52044434500D862B6 /* MedecinController.swift */; };
 		BC6FE5A8204465F900D862B6 /* ActiviteTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6FE5A7204465F900D862B6 /* ActiviteTypeViewController.swift */; };
@@ -60,7 +59,6 @@
 		BCE6D8F8205E9C77003068B8 /* JourSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE6D8F7205E9C77003068B8 /* JourSeed.swift */; };
 		BCE6D8FE205EA06F003068B8 /* JourDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE6D8FD205EA06F003068B8 /* JourDAO.swift */; };
 		BCE6D8FF205EA592003068B8 /* CoreDataJourDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE6D8F9205EA013003068B8 /* CoreDataJourDAO.swift */; };
-		BCE6D901205EA706003068B8 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE6D900205EA706003068B8 /* CoreDataManager.swift */; };
 		BCE6D903205EA821003068B8 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE6D902205EA821003068B8 /* DataHelper.swift */; };
 		BCE6D905205EA8AF003068B8 /* CoreDataDAOFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE6D904205EA8AF003068B8 /* CoreDataDAOFactory.swift */; };
 		BCE6D907205EA8EF003068B8 /* ProtocolDAOFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE6D906205EA8EF003068B8 /* ProtocolDAOFactory.swift */; };
@@ -70,8 +68,6 @@
 		BE4F32A220557AB900C6121A /* MedicamentDateFinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F32A120557AB900C6121A /* MedicamentDateFinViewController.swift */; };
 		BE4F32A420557BB600C6121A /* MedicamentAjoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F32A320557BB600C6121A /* MedicamentAjoutViewController.swift */; };
 		BE9F4C7420591323002DBB3D /* PatientExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F4C7320591323002DBB3D /* PatientExtension.swift */; };
-		BE9F4C77205915B5002DBB3D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F4C76205915B5002DBB3D /* CoreDataManager.swift */; };
-		BE9F4C7820591B43002DBB3D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F4C76205915B5002DBB3D /* CoreDataManager.swift */; };
 		BE9F4C7920591E4B002DBB3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0C9D0D203830220067EBB8 /* AppDelegate.swift */; };
 		BE9F4C7B2059212E002DBB3D /* MedecinExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F4C7A2059212E002DBB3D /* MedecinExtension.swift */; };
 		BE9F4C7D20592348002DBB3D /* CentreHospitalierExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F4C7C20592348002DBB3D /* CentreHospitalierExtension.swift */; };
@@ -135,6 +131,7 @@
 		BC322EB0205FB5EE005A20DE /* CoreDataTypeSurveillanceDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTypeSurveillanceDAO.swift; sourceTree = "<group>"; };
 		BC322EB2205FDAC4005A20DE /* SurveillanceDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveillanceDAO.swift; sourceTree = "<group>"; };
 		BC322EB4205FDAF8005A20DE /* CoreDataSurveillanceDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataSurveillanceDAO.swift; sourceTree = "<group>"; };
+		BC322EB8205FEDE8005A20DE /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		BC567C81204B103E00764B79 /* SymptomeTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomeTypeViewController.swift; sourceTree = "<group>"; };
 		BC567C87204BFBED00764B79 /* SymptomeAjoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomeAjoutViewController.swift; sourceTree = "<group>"; };
 		BC646C5820501CAC004F3A2B /* ActiviteDateDebutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiviteDateDebutViewController.swift; sourceTree = "<group>"; };
@@ -147,12 +144,10 @@
 		BC6AD6A4205573BF001F1E04 /* SpecialiteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialiteModel.swift; sourceTree = "<group>"; };
 		BC6AD6A620557435001F1E04 /* CentreHospitalierModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentreHospitalierModel.swift; sourceTree = "<group>"; };
 		BC6AD6A8205574BD001F1E04 /* MedicamentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentModel.swift; sourceTree = "<group>"; };
-		BC6AD6AA205574EE001F1E04 /* SymptomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomeModel.swift; sourceTree = "<group>"; };
+		BC6AD6AA205574EE001F1E04 /* SurveillanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveillanceModel.swift; sourceTree = "<group>"; };
 		BC6AD6AC20557511001F1E04 /* TypeSymptomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeSymptomeModel.swift; sourceTree = "<group>"; };
 		BC6AD6AE2055752C001F1E04 /* ActiviteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiviteModel.swift; sourceTree = "<group>"; };
 		BC6AD6B020557570001F1E04 /* TypeActiviteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeActiviteModel.swift; sourceTree = "<group>"; };
-		BC6AD6B2205575DE001F1E04 /* TypeSruveillanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeSruveillanceModel.swift; sourceTree = "<group>"; };
-		BC6AD6B42055769F001F1E04 /* SurveillanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveillanceModel.swift; sourceTree = "<group>"; };
 		BC6AD6B620557815001F1E04 /* ListeSymptomesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeSymptomesModel.swift; sourceTree = "<group>"; };
 		BC6FE5A52044434500D862B6 /* MedecinController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedecinController.swift; sourceTree = "<group>"; };
 		BC6FE5A7204465F900D862B6 /* ActiviteTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiviteTypeViewController.swift; sourceTree = "<group>"; };
@@ -164,7 +159,6 @@
 		BCE6D8F7205E9C77003068B8 /* JourSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourSeed.swift; sourceTree = "<group>"; };
 		BCE6D8F9205EA013003068B8 /* CoreDataJourDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataJourDAO.swift; sourceTree = "<group>"; };
 		BCE6D8FD205EA06F003068B8 /* JourDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourDAO.swift; sourceTree = "<group>"; };
-		BCE6D900205EA706003068B8 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		BCE6D902205EA821003068B8 /* DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
 		BCE6D904205EA8AF003068B8 /* CoreDataDAOFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDAOFactory.swift; sourceTree = "<group>"; };
 		BCE6D906205EA8EF003068B8 /* ProtocolDAOFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolDAOFactory.swift; sourceTree = "<group>"; };
@@ -174,7 +168,6 @@
 		BE4F32A120557AB900C6121A /* MedicamentDateFinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentDateFinViewController.swift; sourceTree = "<group>"; };
 		BE4F32A320557BB600C6121A /* MedicamentAjoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentAjoutViewController.swift; sourceTree = "<group>"; };
 		BE9F4C7320591323002DBB3D /* PatientExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientExtension.swift; sourceTree = "<group>"; };
-		BE9F4C76205915B5002DBB3D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		BE9F4C7A2059212E002DBB3D /* MedecinExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedecinExtension.swift; sourceTree = "<group>"; };
 		BE9F4C7C20592348002DBB3D /* CentreHospitalierExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentreHospitalierExtension.swift; sourceTree = "<group>"; };
 		BE9F4C80205926CC002DBB3D /* RendezVousExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RendezVousExtension.swift; sourceTree = "<group>"; };
@@ -251,7 +244,6 @@
 		BC0C9D0C203830220067EBB8 /* Swift Project */ = {
 			isa = PBXGroup;
 			children = (
-				BE9F4C752059159B002DBB3D /* Helper */,
 				BE9F4C72205912B8002DBB3D /* CoreData */,
 				BECF9955205457D0009420DE /* Model */,
 				BCAFD280204C4D9C0037ADBD /* Controller */,
@@ -340,45 +332,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		BCE6D908205EAEA8003068B8 /* Suivi */ = {
-			isa = PBXGroup;
-			children = (
-				BE211F00205E7D36009AA058 /* SuiviPatientViewController.swift */,
-			);
-			path = Suivi;
-			sourceTree = "<group>";
-		};
-		BE3107B6205702B90087EA02 /* Rendez-vous */ = {
-			isa = PBXGroup;
-			children = (
-				BE3107B92057187D0087EA02 /* RDVAjoutHeureViewController.swift */,
-			);
-			path = "Rendez-vous";
-			sourceTree = "<group>";
-		};
-		BE9F4C72205912B8002DBB3D /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				BE9F4C7320591323002DBB3D /* PatientExtension.swift */,
-				BE9F4C7A2059212E002DBB3D /* MedecinExtension.swift */,
-				BE9F4C7C20592348002DBB3D /* CentreHospitalierExtension.swift */,
-				BE9F4C80205926CC002DBB3D /* RendezVousExtension.swift */,
-				BE9F4C842059385A002DBB3D /* SprecialiteExtension.swift */,
-				BE9F4C8620593970002DBB3D /* TypeActiviteExtension.swift */,
-				BE9F4C88205940E1002DBB3D /* TypeEvenementExtension.swift */,
-				BE9F4C8A20594404002DBB3D /* TypeSymptomeExtension.swift */,
-			);
-			path = CoreData;
-			sourceTree = "<group>";
-		};
-		BE9F4C752059159B002DBB3D /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				BE9F4C76205915B5002DBB3D /* CoreDataManager.swift */,
-			);
-			path = Helper;
-			sourceTree = "<group>";
-		};
 		BCE6D8F6205E9C31003068B8 /* Seeds */ = {
 			isa = PBXGroup;
 			children = (
@@ -414,9 +367,40 @@
 				BC322EA5205F9C7D005A20DE /* CoreDataTypeSymptomeDAO.swift */,
 				BC09AA10205F183200FACC62 /* CoreDataActiviteDAO.swift */,
 				BC09AA15205F21CF00FACC62 /* CoreDataHeureDAO.swift */,
-				BCE6D900205EA706003068B8 /* CoreDataManager.swift */,
+				BC322EB8205FEDE8005A20DE /* CoreDataManager.swift */,
 			);
 			path = CoreDataDAO;
+			sourceTree = "<group>";
+		};
+		BCE6D908205EAEA8003068B8 /* Suivi */ = {
+			isa = PBXGroup;
+			children = (
+				BE211F00205E7D36009AA058 /* SuiviPatientViewController.swift */,
+			);
+			path = Suivi;
+			sourceTree = "<group>";
+		};
+		BE3107B6205702B90087EA02 /* Rendez-vous */ = {
+			isa = PBXGroup;
+			children = (
+				BE3107B92057187D0087EA02 /* RDVAjoutHeureViewController.swift */,
+			);
+			path = "Rendez-vous";
+			sourceTree = "<group>";
+		};
+		BE9F4C72205912B8002DBB3D /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				BE9F4C7320591323002DBB3D /* PatientExtension.swift */,
+				BE9F4C7A2059212E002DBB3D /* MedecinExtension.swift */,
+				BE9F4C7C20592348002DBB3D /* CentreHospitalierExtension.swift */,
+				BE9F4C80205926CC002DBB3D /* RendezVousExtension.swift */,
+				BE9F4C842059385A002DBB3D /* SprecialiteExtension.swift */,
+				BE9F4C8620593970002DBB3D /* TypeActiviteExtension.swift */,
+				BE9F4C88205940E1002DBB3D /* TypeEvenementExtension.swift */,
+				BE9F4C8A20594404002DBB3D /* TypeSymptomeExtension.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		BECF9955205457D0009420DE /* Model */ = {
@@ -427,12 +411,10 @@
 				BC6AD6A4205573BF001F1E04 /* SpecialiteModel.swift */,
 				BC6AD6A620557435001F1E04 /* CentreHospitalierModel.swift */,
 				BC6AD6A8205574BD001F1E04 /* MedicamentModel.swift */,
-				BC6AD6AA205574EE001F1E04 /* SymptomeModel.swift */,
+				BC6AD6AA205574EE001F1E04 /* SurveillanceModel.swift */,
 				BC6AD6AC20557511001F1E04 /* TypeSymptomeModel.swift */,
 				BC6AD6AE2055752C001F1E04 /* ActiviteModel.swift */,
 				BC6AD6B020557570001F1E04 /* TypeActiviteModel.swift */,
-				BC6AD6B2205575DE001F1E04 /* TypeSruveillanceModel.swift */,
-				BC6AD6B42055769F001F1E04 /* SurveillanceModel.swift */,
 				BC6AD6B620557815001F1E04 /* ListeSymptomesModel.swift */,
 				BE9F4C8220592724002DBB3D /* RendezVousModel.swift */,
 			);
@@ -592,24 +574,20 @@
 				BE4F32A420557BB600C6121A /* MedicamentAjoutViewController.swift in Sources */,
 				BC6AD6B120557570001F1E04 /* TypeActiviteModel.swift in Sources */,
 				BC322EA4205F9C4E005A20DE /* TypeSymptomeDAO.swift in Sources */,
-				BE9F4C77205915B5002DBB3D /* CoreDataManager.swift in Sources */,
 				BC6AD6AD20557511001F1E04 /* TypeSymptomeModel.swift in Sources */,
-				BC6AD6B52055769F001F1E04 /* SurveillanceModel.swift in Sources */,
 				BE9F4C7420591323002DBB3D /* PatientExtension.swift in Sources */,
-				BC6AD6B52055769F001F1E04 /* EvenementModel.swift in Sources */,
 				BC6AD6A1205565CD001F1E04 /* SurveillanceAjoutViewController.swift in Sources */,
 				BE9F4C7D20592348002DBB3D /* CentreHospitalierExtension.swift in Sources */,
 				BC0C9D16203830240067EBB8 /* Swift_Project.xcdatamodeld in Sources */,
 				BC567C82204B103E00764B79 /* SymptomeTypeViewController.swift in Sources */,
 				BC322EAD205FB420005A20DE /* TypeSurveillanceSeed.swift in Sources */,
-				BC6AD6B3205575DE001F1E04 /* TypeSruveillanceModel.swift in Sources */,
 				BCD7C4F3205032190010A584 /* ActiviteAjoutViewController.swift in Sources */,
 				BE9F4C852059385A002DBB3D /* SprecialiteExtension.swift in Sources */,
 				BE9F4C81205926CC002DBB3D /* RendezVousExtension.swift in Sources */,
 				BC646C5B20501F7E004F3A2B /* ActiviteDateFinViewController.swift in Sources */,
+				BC322EB9205FEDE9005A20DE /* CoreDataManager.swift in Sources */,
 				BC6AD6AF2055752C001F1E04 /* ActiviteModel.swift in Sources */,
 				BC0C9D10203830230067EBB8 /* ViewController.swift in Sources */,
-				BCE6D901205EA706003068B8 /* CoreDataManager.swift in Sources */,
 				BCDB983F2056FA570081FCA9 /* SymptomeDateViewController.swift in Sources */,
 				BECF995920545A81009420DE /* PatientModel.swift in Sources */,
 				BE9F4C8720593970002DBB3D /* TypeActiviteExtension.swift in Sources */,
@@ -622,7 +600,7 @@
 				BCE6D907205EA8EF003068B8 /* ProtocolDAOFactory.swift in Sources */,
 				BCE6D903205EA821003068B8 /* DataHelper.swift in Sources */,
 				BCE6D8FE205EA06F003068B8 /* JourDAO.swift in Sources */,
-				BC6AD6AB205574EE001F1E04 /* SymptomeModel.swift in Sources */,
+				BC6AD6AB205574EE001F1E04 /* SurveillanceModel.swift in Sources */,
 				BC6AD6B720557815001F1E04 /* ListeSymptomesModel.swift in Sources */,
 				BE211F01205E7D36009AA058 /* SuiviPatientViewController.swift in Sources */,
 				BC6AD6A9205574BD001F1E04 /* MedicamentModel.swift in Sources */,
@@ -653,8 +631,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE9F4C7920591E4B002DBB3D /* AppDelegate.swift in Sources */,
-				BE9F4C7820591B43002DBB3D /* CoreDataManager.swift in Sources */,
-				BC04ED99203AE235008F6AC3 /* Contact Page.swift in Sources */,
 				BC0C9D26203830300067EBB8 /* Swift_ProjectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
