@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17D47" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Activite" representedClassName="Activite" syncable="YES" codeGenerationType="class">
         <attribute name="dateDebut" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="dateFin" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -9,8 +9,11 @@
         <relationship name="sePasseLe" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Jour" inverseName="contient" inverseEntity="Jour" syncable="YES"/>
     </entity>
     <entity name="CentreHospitalier" representedClassName="CentreHospitalier" syncable="YES" codeGenerationType="class">
-        <attribute name="adresseCentreHospitalier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cpAdresseCentreHospitalier" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="nomCentreHospitalier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="numeroAdresseCentreHospitalier" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="rueAdresseCentreHospitalier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="villeAdresseCentreHospitalier" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Heure" representedClassName="Heure" syncable="YES" codeGenerationType="class">
         <attribute name="libelleHeure" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -23,7 +26,7 @@
     </entity>
     <entity name="Medecin" representedClassName="Medecin" syncable="YES" codeGenerationType="class">
         <attribute name="nomMedecin" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="prenomMedecinn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="prenomMedecin" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="tel" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="Medicament" representedClassName="Medicament" syncable="YES" codeGenerationType="class">
@@ -42,7 +45,9 @@
         <attribute name="prenomPatient" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="RendezVous" representedClassName="RendezVous" syncable="YES" codeGenerationType="class">
+        <attribute name="dateRdv" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="frequence" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="heureRDV" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="tpsPourArriver" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
     </entity>
     <entity name="Specialite" representedClassName="Specialite" syncable="YES" codeGenerationType="class">
@@ -79,7 +84,7 @@
         <element name="Medecin" positionX="-270" positionY="486" width="128" height="88"/>
         <element name="Medicament" positionX="-324" positionY="252" width="128" height="165"/>
         <element name="Patient" positionX="-65" positionY="468" width="128" height="90"/>
-        <element name="RendezVous" positionX="-108" positionY="252" width="128" height="73"/>
+        <element name="RendezVous" positionX="-108" positionY="252" width="128" height="105"/>
         <element name="Specialite" positionX="97" positionY="270" width="128" height="60"/>
         <element name="Symptome" positionX="115" positionY="360" width="128" height="90"/>
         <element name="TypeActivite" positionX="-209" positionY="-117" width="128" height="73"/>

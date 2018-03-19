@@ -9,7 +9,29 @@
 import Foundation
 import CoreData
 
-
-extension TypeSymptome{
+class TypeSymptomeModel {
+    
+    
+    private var dao : TypeSymptome
+    
+    var libelleTypeSymptome : String {
+        get{
+            return self.dao.libelleTypeSymptome! ;
+        }
+        set{
+            self.dao.libelleTypeSymptome = newValue;
+        }
+    } ;
+    
+    
+    
+    init(libelleTypeSymptome: String){
+        guard let dao = TypeSymptome.getNewTypeSymptomeDAO() else {
+            fatalError("unable to get DAO for TypeSymptome")
+        }
+        self.dao = dao ;
+        self.dao.libelleTypeSymptome = libelleTypeSymptome;
+    }
     
 }
+
