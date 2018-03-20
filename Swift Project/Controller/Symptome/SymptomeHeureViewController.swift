@@ -44,6 +44,7 @@ class SymptomeHeureViewController: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH mm"
         dateFormatter.timeZone = TimeZone.current
+
         let selectedDate = dateFormatter.string(from: myDatePicker.date)
         heureChoisie = dateFormatter.date(from: selectedDate)!
     }

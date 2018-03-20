@@ -40,19 +40,31 @@ func remove(symptome: Symptome) throws{
 }
     
     func getSymptomeByDate(date: Date)  -> [Symptome]? {
-        
-        
+        /*
        let dateFormatter = DateFormatter()
-       dateFormatter.dateFormat = "dd-mm-aaaa"
+       dateFormatter.dateFormat = "dd-MM-yyyy"
        dateFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
 
         dateFormatter.timeZone = TimeZone.current
         let dateString = dateFormatter.string(from: date)
-        let datetrunc = dateString.index(of: " ")
-        print(datetrunc!)
+        print(dateString)
+        let trimmedString = dateString.trimmingCharacters(in: .whitespaces)
+        print(trimmedString)
         let dateDate = dateFormatter.date(from: dateString)
         print("dateDate")
         print(dateDate!);
+        let date = NSDate()
+ 
+ 
+         */
+      
+      
+        let calendar = Calendar.current
+        let date = calendar.startOfDay(for: date) //On recupere le debut d'aujourd'ui
+        let components = calendar.dateComponents([.year, .month, .day, .hour, .minute],from: date)
+        let dateDebutDelaJourneeEnFr = calendar.date(from: components)!
+        print("date debut journée="+dateDebutDelaJourneeEnFr.description)
+       
 
         //        let dateChoisi = dateFormatter.date(from : dateString)!
 //
@@ -60,11 +72,16 @@ func remove(symptome: Symptome) throws{
 //        request.predicate = NSPredicate(format: "dateSymptome == %@", dateChoisi as CVarArg)
         
         let request: NSFetchRequest<Symptome> = NSFetchRequest(entityName: self.entityName)
-        request.predicate = NSPredicate(format: "dateSymptome contains[c] %@", date as CVarArg)
+        request.predicate = NSPredicate(format: "(dateSymptome == %@)", dateDebutDelaJourneeEnFr as CVarArg)
       
 
         do {
             let symptomes: [Symptome] = try CoreDataManager.context.fetch(request)
+            print("symptomes")
+                print(symptomes)
+            print(dateDebutDelaJourneeEnFr)
+            
+            
             return symptomes
         } catch let error as NSError{
              fatalError("could not get symptome by date " + error.description)

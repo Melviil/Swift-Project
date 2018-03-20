@@ -52,6 +52,8 @@ class ActiviteAjoutViewController: UIViewController {
         guard let dateDebutGood = dateFormatter.date(from:dateDebut) else {
             fatalError("ERROR: Date conversion failed due to mismatched format.")
         }
+      
+
     //fin conversion heures/jous
         activite.dateFin = dateFinGood
         activite.dateDebut = dateDebutGood
