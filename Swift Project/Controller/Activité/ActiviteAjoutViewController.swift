@@ -16,6 +16,7 @@ class ActiviteAjoutViewController: UIViewController {
     var listeHeuresActivite: [String] = []
     var dateDebutActivite = String()
     var dateFinActivite = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         UNUserNotificationCenter.current().requestAuthorization(options : [.alert, .sound, .badge], completionHandler : {didAllow, error in})

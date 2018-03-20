@@ -32,6 +32,8 @@
 		BC322EB3205FDAC4005A20DE /* SurveillanceDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC322EB2205FDAC4005A20DE /* SurveillanceDAO.swift */; };
 		BC322EB5205FDAF8005A20DE /* CoreDataSurveillanceDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC322EB4205FDAF8005A20DE /* CoreDataSurveillanceDAO.swift */; };
 		BC322EB9205FEDE9005A20DE /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC322EB8205FEDE8005A20DE /* CoreDataManager.swift */; };
+		BC322EBB2061152D005A20DE /* SymptomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC322EBA2061152C005A20DE /* SymptomeModel.swift */; };
+		BC322EBD20611639005A20DE /* SymptomeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC322EBC20611638005A20DE /* SymptomeExtension.swift */; };
 		BC567C82204B103E00764B79 /* SymptomeTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC567C81204B103E00764B79 /* SymptomeTypeViewController.swift */; };
 		BC567C88204BFBED00764B79 /* SymptomeAjoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC567C87204BFBED00764B79 /* SymptomeAjoutViewController.swift */; };
 		BC646C5920501CAC004F3A2B /* ActiviteDateDebutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC646C5820501CAC004F3A2B /* ActiviteDateDebutViewController.swift */; };
@@ -132,6 +134,8 @@
 		BC322EB2205FDAC4005A20DE /* SurveillanceDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveillanceDAO.swift; sourceTree = "<group>"; };
 		BC322EB4205FDAF8005A20DE /* CoreDataSurveillanceDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataSurveillanceDAO.swift; sourceTree = "<group>"; };
 		BC322EB8205FEDE8005A20DE /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		BC322EBA2061152C005A20DE /* SymptomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomeModel.swift; sourceTree = "<group>"; };
+		BC322EBC20611638005A20DE /* SymptomeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomeExtension.swift; sourceTree = "<group>"; };
 		BC567C81204B103E00764B79 /* SymptomeTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomeTypeViewController.swift; sourceTree = "<group>"; };
 		BC567C87204BFBED00764B79 /* SymptomeAjoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomeAjoutViewController.swift; sourceTree = "<group>"; };
 		BC646C5820501CAC004F3A2B /* ActiviteDateDebutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiviteDateDebutViewController.swift; sourceTree = "<group>"; };
@@ -399,6 +403,7 @@
 				BE9F4C8620593970002DBB3D /* TypeActiviteExtension.swift */,
 				BE9F4C88205940E1002DBB3D /* TypeEvenementExtension.swift */,
 				BE9F4C8A20594404002DBB3D /* TypeSymptomeExtension.swift */,
+				BC322EBC20611638005A20DE /* SymptomeExtension.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -417,6 +422,7 @@
 				BC6AD6B020557570001F1E04 /* TypeActiviteModel.swift */,
 				BC6AD6B620557815001F1E04 /* ListeSymptomesModel.swift */,
 				BE9F4C8220592724002DBB3D /* RendezVousModel.swift */,
+				BC322EBA2061152C005A20DE /* SymptomeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -556,6 +562,7 @@
 			files = (
 				BC322EB5205FDAF8005A20DE /* CoreDataSurveillanceDAO.swift in Sources */,
 				BC99F0132046B83E00D2FBA0 /* ActiviteHeuresViewController.swift in Sources */,
+				BC322EBD20611639005A20DE /* SymptomeExtension.swift in Sources */,
 				BC09AA0F205F17FB00FACC62 /* ActiviteDAO.swift in Sources */,
 				BC09AA14205F21A400FACC62 /* HeureDAO.swift in Sources */,
 				BC6AD69E205565B7001F1E04 /* SurveillanceDateViewController.swift in Sources */,
@@ -595,6 +602,7 @@
 				BC322EA9205FA450005A20DE /* SymptomeDAO.swift in Sources */,
 				BC6FE5A8204465F900D862B6 /* ActiviteTypeViewController.swift in Sources */,
 				BC086C682048564B006D2310 /* ActiviteHeureModallyViewController.swift in Sources */,
+				BC322EBB2061152D005A20DE /* SymptomeModel.swift in Sources */,
 				BC322EA2205F9A58005A20DE /* TypeSymptomeSeed.swift in Sources */,
 				BCE6D8F8205E9C77003068B8 /* JourSeed.swift in Sources */,
 				BCE6D907205EA8EF003068B8 /* ProtocolDAOFactory.swift in Sources */,

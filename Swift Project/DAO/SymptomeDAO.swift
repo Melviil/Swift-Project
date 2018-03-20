@@ -11,6 +11,7 @@ import CoreData
 
 protocol SymptomeDAO {
     func getAll() throws -> [Symptome]?
+    func getSymptomeByDate(date:Date) throws -> [Symptome]?
     func save(symptome: Symptome) throws
     func remove(symptome: Symptome) throws
 }

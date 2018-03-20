@@ -12,10 +12,12 @@ import CoreData
 class SuiviPatientViewController: UIViewController , UITableViewDelegate, UITableViewDataSource {
 
     var jours = ["Jour 1","Jour 2","Jour 3","Jour 4","Jour 5"]
-    var dateSelected : Int = 1
-    var mesSymptomes : [Symptome] = []
+    var dateSelected : Int = 3
+    var mesSymptomes : [Symptome]!
     var symptomes : [String] = []
+    let symptomeDAO = CoreDataDAOFactory.getInstance().getSymptomeDAO()
 
+    
     
     @IBOutlet weak var tableJour: UITableView!
     
@@ -38,40 +40,7 @@ class SuiviPatientViewController: UIViewController , UITableViewDelegate, UITabl
         catch{
             return
         }
-        
-//        for symptome in mesSymptomes{
-//            if (symptome. != nil && activite.dateFin != nil){
-//
-//
-//                let dateFormatter = DateFormatter()
-//                dateFormatter.dateFormat = "dd MMMM"
-//                dateFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
-//
-//                dateFormatter.timeZone = TimeZone.current
-//
-//                selectedDateDebut = dateFormatter.string(from: activite.dateDebut!)
-//
-//                selectedDateFin = dateFormatter.string(from: activite.dateFin!)
-//                print(selectedDateDebut)
-//                print(selectedDateFin)
-//                typeActivite = activite.estDeType?.libelleTypeActivite
-//                if let heures = activite.sePasseA {
-//                    for h in heures{
-//                        print("1")
-//                        if let heure = h as? Heure{
-//                            print("2")
-//                            dateFormatter.dateFormat = "HH:mm"
-//                            let selectedDate = dateFormatter.string(from: heure.libelleHeure!)
-//                            print(selectedDate)
-//                            activites.append(  typeActivite! + " du " + selectedDateDebut + " au " + selectedDateFin + " à " + selectedDate)
-//
-//                        }
-//                    }
-//                }
-//
-//            }
-//        }
-        
+
     for symptome in mesSymptomes{
         
        let typeSymptome = symptome.aUnType?.libelleTypeSymptome
@@ -90,10 +59,6 @@ class SuiviPatientViewController: UIViewController , UITableViewDelegate, UITabl
          print(selectedDate)
          print(selectedHour)
          symptomes.append( selectedDate + " " + selectedHour + " " + typeSymptome!)
-
-//
-//            let dateSymptome = symptome.dateSymptome
-//            let heureSymptome = symptome.heureSymptome
 
         }
         
@@ -153,16 +118,18 @@ class SuiviPatientViewController: UIViewController , UITableViewDelegate, UITabl
         
 
         let date : Date = getDate()
+        print("date")
         print(date)
-        
-       // self.symptomes = getSymptomeByDay(date) STOPPED HERE 
-        
+        self.mesSymptomes = self.symptomeDAO.getSymptomeByDate(date: date)!
+        print(self.symptomeDAO.getSymptomeByDate(date: date))
+        print("mesSymptomes")
+        print(mesSymptomes);
         let cell = UITableViewCell()
-        cell.textLabel?.text = String(describing: self.symptomes[indexPath.row])
+        cell.textLabel?.text = String(describing: self.mesSymptomes[indexPath.row])
         return cell
     }
     
-//
+//r
 //    // (Previous code goes here)
 //
 //    // What will the date and time be be ten days from now?
@@ -190,31 +157,19 @@ class SuiviPatientViewController: UIViewController , UITableViewDelegate, UITabl
         // Pass the selected object to the new view controller.
     }
     */
-    
-    func getDaySelected()-> Int{
-        return self.dateSelected
-    }
+  
     
     func getDate()-> Date{
-//        var dayComp = DateComponents()
-//        dayComp.day = 0-(getDaySelected())
-//        print("getDateSelected")
-//        print(self.dateSelected)
-//        print("daycomp: ")
-//        print(dayComp)
-//        let datetoday = Calendar.current.date(byAdding: dayComp, to: Date()) //fetch current date
-//        print("daytoday : ")
-//        let dateneeded = Calendar.current.component(.weekday, from: datetoday!) // getdate needed by number selected
-//        print("dateneeded : ")
-//        print(dateneeded)
-//        return dayComp
+        //retourne le jours voulu en fonction du picker
+
         let aujo = Date()
-        //let calendar = Calendar.current
         let nbjoursavant = self.dateSelected
         print("nbJours")
         print(nbjoursavant)
         let jourVoulu: Date = Calendar.current.date(byAdding: .day, value: 0-nbjoursavant , to : aujo)!
         return jourVoulu
     }
+    
+    
 
 }

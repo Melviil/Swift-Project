@@ -39,28 +39,35 @@ func remove(symptome: Symptome) throws{
     
 }
     
-    func getSymptomeByDay(date : Date) throws -> [Symptome]? {
+    func getSymptomeByDate(date: Date)  -> [Symptome]? {
         
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = "dd MMMM"
-//        dateFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
-//
-//        dateFormatter.timeZone = TimeZone.current
-//
-//        let dateString = dateFormatter.string(from: date)
-//        let dateChoisi = dateFormatter.date(from : dateString)!
+        
+       let dateFormatter = DateFormatter()
+       dateFormatter.dateFormat = "dd-mm-aaaa"
+       dateFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
+
+        dateFormatter.timeZone = TimeZone.current
+        let dateString = dateFormatter.string(from: date)
+        let datetrunc = dateString.index(of: " ")
+        print(datetrunc!)
+        let dateDate = dateFormatter.date(from: dateString)
+        print("dateDate")
+        print(dateDate!);
+
+        //        let dateChoisi = dateFormatter.date(from : dateString)!
 //
 //        let request: NSFetchRequest<Symptome> = NSFetchRequest(entityName: self.entityName)
 //        request.predicate = NSPredicate(format: "dateSymptome == %@", dateChoisi as CVarArg)
         
         let request: NSFetchRequest<Symptome> = NSFetchRequest(entityName: self.entityName)
-        request.predicate = NSPredicate(format: "dateSymptome == %@", date as CVarArg)
-        
+        request.predicate = NSPredicate(format: "dateSymptome contains[c] %@", date as CVarArg)
+      
+
         do {
             let symptomes: [Symptome] = try CoreDataManager.context.fetch(request)
             return symptomes
-        } catch let error as NSError {
-            throw error
+        } catch let error as NSError{
+             fatalError("could not get symptome by date " + error.description)
         }
     }
     
