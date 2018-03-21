@@ -12,11 +12,11 @@ import CoreData
 class SuiviPatientViewController: UIViewController , UITableViewDelegate, UITableViewDataSource {
 
     var jours = ["Jour 1","Jour 2","Jour 3","Jour 4","Jour 5"]
-    var dateSelected : Int = 3
+    var dateSelected : Int = 1
     var mesSymptomes : [Symptome]!
     var symptomes : [String] = []
     let symptomeDAO = CoreDataDAOFactory.getInstance().getSymptomeDAO()
-
+    let calendar = Calendar.current
     
     
     @IBOutlet weak var tableJour: UITableView!
@@ -25,47 +25,9 @@ class SuiviPatientViewController: UIViewController , UITableViewDelegate, UITabl
         super.viewDidLoad()
         tableJour.dataSource = self
         tableJour.delegate = self
-    
-        // Do any additional setup after loading the view.
-//        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
-//            //Ajouter une error a display
-//            return
-//        }
-//        let context = appDelegate.persistentContainer.viewContext
-//        let request  : NSFetchRequest<Symptome> = Symptome.fetchRequest()
-//
-//        do{
-//            try self.mesSymptomes = context.fetch(request)
-//        }
-//        catch{
-//            return
-//        }
-//
-//    for symptome in mesSymptomes{
-//
-//       let typeSymptome = symptome.aUnType?.libelleTypeSymptome
-//
-//       let dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = "dd MMMM"
-//        dateFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
-//
-//        dateFormatter.timeZone = TimeZone.current
-//
-//         let selectedDate = dateFormatter.string(from: symptome.dateSymptome!)
-//
-//
-//         dateFormatter.dateFormat = "HH:mm"
-//         let selectedHour = dateFormatter.string(from: symptome.heureSymptome!)
-//         print(selectedDate)
-//         print(selectedHour)
-//         symptomes.append( selectedDate + " " + selectedHour + " " + typeSymptome!)
-//
-//        }
-        
-        self.dateSelected = 1;
         let date : Date = getDate()
+        dateAffichée.text = heureBienAffichee(withDate :date)
         self.mesSymptomes = self.symptomeDAO.getSymptomeByDate(date: date)!
-
         
     }
     
@@ -80,35 +42,39 @@ class SuiviPatientViewController: UIViewController , UITableViewDelegate, UITabl
             self.dateSelected = 1;
             let date : Date = getDate()
             self.mesSymptomes = self.symptomeDAO.getSymptomeByDate(date: date)!
-            textfield.text = "-1";
+            dateAffichée.text = heureBienAffichee(withDate :date)
             
         case 1:
             self.dateSelected = 2;
             let date : Date = getDate()
             self.mesSymptomes = self.symptomeDAO.getSymptomeByDate(date: date)!
-             textfield.text = "-2";
+            dateAffichée.text = heureBienAffichee(withDate :date)
+
         case 2:
             self.dateSelected = 3;
             let date : Date = getDate()
             self.mesSymptomes = self.symptomeDAO.getSymptomeByDate(date: date)!
-             textfield.text = "-3";
+            dateAffichée.text = heureBienAffichee(withDate :date)
+
         case 3:
             self.dateSelected = 4;
             let date : Date = getDate()
             self.mesSymptomes = self.symptomeDAO.getSymptomeByDate(date: date)!
-             textfield.text = "-4";
+            dateAffichée.text = heureBienAffichee(withDate :date)
+
         case 4:
             self.dateSelected = 5;
             let date : Date = getDate()
             self.mesSymptomes = self.symptomeDAO.getSymptomeByDate(date: date)!
-             textfield.text = "-5";
+            dateAffichée.text = heureBienAffichee(withDate :date)
+
         default:
             self.dateSelected = 1;
             let date : Date = getDate()
             self.mesSymptomes = self.symptomeDAO.getSymptomeByDate(date: date)!
-             textfield.text = "-1";
+            dateAffichée.text = heureBienAffichee(withDate :date)
+
         }
-        print("dateSelected")
         print(dateSelected)
         tableJour.reloadData()
         
@@ -127,21 +93,12 @@ class SuiviPatientViewController: UIViewController , UITableViewDelegate, UITabl
         return self.mesSymptomes.count
     }
     
-    @IBOutlet weak var textfield: UITextField!
+    @IBOutlet weak var dateAffichée: UILabel!
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-
-        let date : Date = getDate()
-        print("date")
-        print(date)
-//        mesSymptomes = self.symptomeDAO.getSymptomeByDate(date: date)!
-//        print(symptomeDAO.getSymptomeByDate(date: date))
-        print("mesSymptomes")
-        print(mesSymptomes);
         let cell = UITableViewCell()
         if (mesSymptomes.count != 0) && (indexPath.row < mesSymptomes.count){
-            let calendar = Calendar.current
             let hour = calendar.component(.hour, from: self.mesSymptomes[indexPath.row].heureSymptome!)
             cell.textLabel?.text = String(hour) + "h : " +  String(describing: self.mesSymptomes[indexPath.row].aUnType!.libelleTypeSymptome!)
         }
@@ -150,37 +107,9 @@ class SuiviPatientViewController: UIViewController , UITableViewDelegate, UITabl
         }
         return cell
     }
-    
-//r
-//    // (Previous code goes here)
-//
-//    // What will the date and time be be ten days from now?
-//    let tenDaysFromNow = userCalendar.dateByAddingUnit(
-//        [.Day],
-//        value: 10,
-//        toDate: NSDate(),
-//        options: [])!
-//
-//    // What weekday (Sunday through Saturday) will it be ten days from now, and
-//    // which weekday of the month will it be -- the 1st, 2nd, 3rd...?
-//    let weekdayAndWeekdayOrdinal: NSCalendarUnit = [.Weekday, .WeekdayOrdinal]
-//    let tenDaysFromNowComponents = userCalendar.components(
-//        weekdayAndWeekdayOrdinal,
-//        fromDate: tenDaysFromNow)
-//    tenDaysFromNowComponents.weekday
-//    tenDaysFromNowComponents.weekdayOrdinal
-    
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
   
-    
+    //Retourne la date moins le nombre de jour voulu
     func getDate()-> Date{
         //retourne le jours voulu en fonction du picker
 
@@ -190,6 +119,17 @@ class SuiviPatientViewController: UIViewController , UITableViewDelegate, UITabl
         print(nbjoursavant)
         let jourVoulu: Date = Calendar.current.date(byAdding: .day, value: 0-nbjoursavant , to : aujo)!
         return jourVoulu
+    }
+    // Retourne la date en Francais bien affichée
+    func heureBienAffichee(withDate dateRecupere: Date) -> String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMMM yyy "
+        dateFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
+        
+        dateFormatter.timeZone = TimeZone.current
+        
+        let selectedDate = dateFormatter.string(from: dateRecupere)
+        return selectedDate
     }
     
     

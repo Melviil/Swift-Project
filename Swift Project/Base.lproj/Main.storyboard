@@ -1413,8 +1413,8 @@
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="30" translatesAutoresizingMaskIntoConstraints="NO" id="jkj-Qs-GV5">
                                 <rect key="frame" x="0.0" y="176" width="320" height="216"/>
-                                <date key="date" timeIntervalSinceReferenceDate="541615249.10474002">
-                                    <!--2018-03-01 16:40:49 +0000-->
+                                <date key="date" timeIntervalSinceReferenceDate="541594800.10474002">
+                                    <!--2018-03-01 11:00:00 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="fr"/>
                                 <connections>
@@ -1860,10 +1860,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VzF-gw-5o9">
-                                <rect key="frame" x="40" y="149" width="240" height="379"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oXt-xs-PC7">
                                 <rect key="frame" x="8" y="96" width="304" height="29"/>
                                 <segments>
@@ -1877,33 +1873,38 @@
                                     <action selector="indexChanged:" destination="EDy-Qe-sRU" eventType="valueChanged" id="mBI-Bt-51m"/>
                                 </connections>
                             </segmentedControl>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YXm-pV-neh">
-                                <rect key="frame" x="74" y="538" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4K-qL-2hO">
+                                <rect key="frame" x="137" y="136" width="46.5" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VzF-gw-5o9">
+                                <rect key="frame" x="40" y="171" width="240" height="377"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Sfu-Ov-LXc" firstAttribute="trailing" secondItem="VzF-gw-5o9" secondAttribute="trailing" constant="40" id="0CW-Fb-eLG"/>
                             <constraint firstItem="oXt-xs-PC7" firstAttribute="leading" secondItem="Sfu-Ov-LXc" secondAttribute="leading" constant="8" id="5uk-cP-qzJ"/>
+                            <constraint firstItem="Sfu-Ov-LXc" firstAttribute="bottom" secondItem="VzF-gw-5o9" secondAttribute="bottom" constant="20" id="6q8-Qp-s9c"/>
                             <constraint firstItem="VzF-gw-5o9" firstAttribute="leading" secondItem="Sfu-Ov-LXc" secondAttribute="leading" constant="40" id="JLd-cF-Coq"/>
                             <constraint firstItem="5aB-A9-5AS" firstAttribute="centerX" secondItem="FmQ-6e-5ew" secondAttribute="centerX" id="O7A-N6-IMo"/>
+                            <constraint firstItem="VzF-gw-5o9" firstAttribute="top" secondItem="E4K-qL-2hO" secondAttribute="bottom" constant="12" id="OaS-Xh-7if"/>
                             <constraint firstItem="oXt-xs-PC7" firstAttribute="top" secondItem="5aB-A9-5AS" secondAttribute="bottom" constant="17" id="OtB-wt-3mR"/>
-                            <constraint firstItem="VzF-gw-5o9" firstAttribute="top" secondItem="oXt-xs-PC7" secondAttribute="bottom" constant="25" id="Xis-V5-rUF"/>
                             <constraint firstItem="5aB-A9-5AS" firstAttribute="top" secondItem="Sfu-Ov-LXc" secondAttribute="top" constant="18" id="ZnK-HW-H8X"/>
-                            <constraint firstItem="Sfu-Ov-LXc" firstAttribute="bottom" secondItem="VzF-gw-5o9" secondAttribute="bottom" constant="40" id="jwQ-tV-Xi6"/>
+                            <constraint firstItem="E4K-qL-2hO" firstAttribute="top" secondItem="oXt-xs-PC7" secondAttribute="bottom" constant="12" id="eiA-pU-Nuq"/>
                             <constraint firstItem="VzF-gw-5o9" firstAttribute="centerX" secondItem="FmQ-6e-5ew" secondAttribute="centerX" id="klb-8x-mnz"/>
                             <constraint firstItem="Sfu-Ov-LXc" firstAttribute="trailing" secondItem="oXt-xs-PC7" secondAttribute="trailing" constant="8" id="mFN-DI-03S"/>
+                            <constraint firstItem="E4K-qL-2hO" firstAttribute="centerX" secondItem="FmQ-6e-5ew" secondAttribute="centerX" id="n8u-yx-zpK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Sfu-Ov-LXc"/>
                     </view>
                     <connections>
+                        <outlet property="dateAffichée" destination="E4K-qL-2hO" id="gx4-9n-YZc"/>
                         <outlet property="segmentedControl" destination="oXt-xs-PC7" id="9AO-IX-ttI"/>
                         <outlet property="tableJour" destination="VzF-gw-5o9" id="BjH-IX-ybF"/>
-                        <outlet property="textfield" destination="YXm-pV-neh" id="sLh-n9-w3h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aa5-km-2cH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2625,7 +2626,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9lQ-ib-z2R"/>
         <segue reference="Qct-K3-GKD"/>
     </inferredMetricsTieBreakers>
 </document>
