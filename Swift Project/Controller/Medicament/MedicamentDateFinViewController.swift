@@ -34,6 +34,7 @@ class MedicamentDateFinViewController: UIViewController {
     }
     
     let showJourActiviteSegue = "AjoutMedicamentSegue"
+   
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == showJourActiviteSegue {

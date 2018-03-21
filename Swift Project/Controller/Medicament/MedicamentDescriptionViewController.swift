@@ -21,6 +21,43 @@ class MedicamentDescriptionViewController: UIViewController {
     @IBOutlet weak var presentationBreveMedicament: UITextField!
     
     @IBOutlet weak var DoseMedicament: UITextField!
+    
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        let alert = UIAlertController(title: "Oh oh!", message:"Veuillez remplir tous les champs", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in })
+        if ( identifier == segueDescriptionMedoc){
+            guard libelleMedicament.hasText else{
+                self.present(alert, animated: true){}
+                return false
+            }
+            guard frequencePriseMedicament.hasText else{
+                self.present(alert, animated: true){}
+                return false
+            }
+            guard libelleMedicament.hasText else{
+                self.present(alert, animated: true){}
+                return false
+            }
+            guard nbPriseMedicament.hasText else{
+                self.present(alert, animated: true){}
+                return false
+            }
+            guard presentationDetailleMedicament.hasText else{
+                self.present(alert, animated: true){}
+                return false
+            }
+            guard presentationBreveMedicament.hasText else{
+                self.present(alert, animated: true){}
+                return false
+            }
+            
+        }
+        return true
+        
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == segueDescriptionMedoc {

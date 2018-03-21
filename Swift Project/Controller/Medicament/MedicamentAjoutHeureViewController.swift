@@ -20,6 +20,7 @@ class MedicamentAjoutHeureViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        changerValueDateQuandDateChange(self)
         // Dispose of any resources that can be recreated.
     }
       @IBOutlet weak var myDatePicker: UIDatePicker!
@@ -30,7 +31,7 @@ class MedicamentAjoutHeureViewController: UIViewController {
     @IBAction func changerValueDateQuandDateChange(_ sender: Any) {
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "hh mm a"
+        dateFormatter.dateFormat = "HH mm"
         let selectedDate = dateFormatter.string(from: myDatePicker.date)
         heureChoisie = selectedDate
         

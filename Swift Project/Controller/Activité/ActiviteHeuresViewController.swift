@@ -20,8 +20,7 @@ class ActiviteHeuresViewController: UIViewController, UITableViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        labelActivite.text = nomActivite.libelleTypeActivite       
-
+        labelActivite.text = nomActivite.libelleTypeActivite
 
         }
     

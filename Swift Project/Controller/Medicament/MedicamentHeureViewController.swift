@@ -37,7 +37,7 @@ class MedicamentHeureViewController: UIViewController, UITableViewDataSource {
         let newHeure = segue.source as! MedicamentAjoutHeureViewController
         print(newHeure.heureChoisie)
         hours.append(newHeure.heureChoisie)
-        
+        tableViewHours.reloadData()
     }
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -49,14 +49,14 @@ class MedicamentHeureViewController: UIViewController, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = self.hours[indexPath.row]
+        cell.textLabel?.text = String(describing: self.hours[indexPath.row])
         return cell
     }
    
-    let showJourActiviteSegue = "AjoutDateDebutSegue"
+    let showJourMadicamentSegue = "AjoutDateDebutSegue"
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == showJourActiviteSegue {
+        if segue.identifier == showJourMadicamentSegue {
             let MedicamentDateDebutViewController = segue.destination as! MedicamentDateDebutViewController
             MedicamentDateDebutViewController.medicamentPasse = self.medicamentPasse
             MedicamentDateDebutViewController.libelleMedicamentPasse = self.libelleMedicamentPasse

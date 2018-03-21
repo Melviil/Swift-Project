@@ -216,8 +216,8 @@
 			children = (
 				BC6FE5A52044434500D862B6 /* MedecinController.swift */,
 				BECF995E20553523009420DE /* MedicamentDescriptionViewController.swift */,
-				BECF995C20552FF0009420DE /* MedicamentAjoutHeureViewController.swift */,
 				BECF995A20552A60009420DE /* MedicamentHeureViewController.swift */,
+				BECF995C20552FF0009420DE /* MedicamentAjoutHeureViewController.swift */,
 				BE4F329F20557AAA00C6121A /* MedicamentDateDebutViewController.swift */,
 				BE4F32A120557AB900C6121A /* MedicamentDateFinViewController.swift */,
 				BE4F32A320557BB600C6121A /* MedicamentAjoutViewController.swift */,

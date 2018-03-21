@@ -21,7 +21,7 @@ class MedicamentAjoutViewController: UIViewController {
     var dateFinPasse = String()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.setHidesBackButton(true, animated:true);
         // Do any additional setup after loading the view.
     }
 
@@ -31,9 +31,7 @@ class MedicamentAjoutViewController: UIViewController {
     }
     
 
-    @IBAction func revenirMenu(_ sender: Any) {
-        self.dismiss(animated:true, completion: nil)
-    }
+   
     /*
     // MARK: - Navigation
 
