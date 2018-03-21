@@ -1411,7 +1411,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="jkj-Qs-GV5">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="30" translatesAutoresizingMaskIntoConstraints="NO" id="jkj-Qs-GV5">
                                 <rect key="frame" x="0.0" y="176" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="541615249.10474002">
                                     <!--2018-03-01 16:40:49 +0000-->
@@ -2625,6 +2625,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="9lQ-ib-z2R"/>
         <segue reference="Qct-K3-GKD"/>
     </inferredMetricsTieBreakers>
 </document>

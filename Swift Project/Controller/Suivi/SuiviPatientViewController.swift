@@ -141,7 +141,9 @@ class SuiviPatientViewController: UIViewController , UITableViewDelegate, UITabl
         print(mesSymptomes);
         let cell = UITableViewCell()
         if (mesSymptomes.count != 0) && (indexPath.row < mesSymptomes.count){
-            cell.textLabel?.text = String(describing: self.mesSymptomes[indexPath.row].heureSymptome) + " : " +  String(describing: self.mesSymptomes[indexPath.row].aUnType)
+            let calendar = Calendar.current
+            let hour = calendar.component(.hour, from: self.mesSymptomes[indexPath.row].heureSymptome!)
+            cell.textLabel?.text = String(hour) + "h : " +  String(describing: self.mesSymptomes[indexPath.row].aUnType!.libelleTypeSymptome!)
         }
         else{
             print("table view : Index out of range=" + String(indexPath.row))

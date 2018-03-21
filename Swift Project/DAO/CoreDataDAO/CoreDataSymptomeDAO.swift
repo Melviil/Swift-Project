@@ -72,11 +72,15 @@ func remove(symptome: Symptome) throws{
 //        request.predicate = NSPredicate(format: "dateSymptome == %@", dateChoisi as CVarArg)
         
         let request: NSFetchRequest<Symptome> = NSFetchRequest(entityName: self.entityName)
+        let sort = NSSortDescriptor(key: #keyPath(Symptome.heureSymptome), ascending: true)
+        request.sortDescriptors = [sort]
+
         request.predicate = NSPredicate(format: "(dateSymptome == %@)", dateDebutDelaJourneeEnFr as CVarArg)
       
 
         do {
             let symptomes: [Symptome] = try CoreDataManager.context.fetch(request)
+            
             print("symptomes")
                 print(symptomes)
             print(dateDebutDelaJourneeEnFr)
