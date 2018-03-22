@@ -10,7 +10,6 @@ import UIKit
 
 class MedicamentDateDebutViewController: UIViewController {
     @IBOutlet weak var myDatePicker: UIDatePicker!
-    var medicamentPasse = Medicament()
     var libelleMedicamentPasse = String()
     var presentationBreveMedicamentPasse = String()
     var DoseMedicamentPasse = String()
@@ -36,7 +35,6 @@ class MedicamentDateDebutViewController: UIViewController {
         if segue.identifier == showJourActiviteSegue {
             let MedicamentDateFinViewController = segue.destination as! MedicamentDateFinViewController
             
-            MedicamentDateFinViewController.medicamentPasse = self.medicamentPasse
             MedicamentDateFinViewController.libelleMedicamentPasse = self.libelleMedicamentPasse
             MedicamentDateFinViewController.presentationBreveMedicamentPasse = self.presentationBreveMedicamentPasse
             MedicamentDateFinViewController.DoseMedicamentPasse = self.DoseMedicamentPasse

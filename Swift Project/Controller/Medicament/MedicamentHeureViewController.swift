@@ -13,7 +13,6 @@ class MedicamentHeureViewController: UIViewController, UITableViewDataSource {
     var hours: [String] = []
 
     @IBOutlet weak var tableViewHours: UITableView!
-    var medicamentPasse = Medicament() 
     var libelleMedicamentPasse = String()
     var presentationBreveMedicamentPasse = String()
     var DoseMedicamentPasse = String()
@@ -35,7 +34,6 @@ class MedicamentHeureViewController: UIViewController, UITableViewDataSource {
     // executé au retour du modally
     @IBAction func unwindToHourListAfterSavingHour(segue: UIStoryboardSegue){
         let newHeure = segue.source as! MedicamentAjoutHeureViewController
-        print(newHeure.heureChoisie)
         hours.append(newHeure.heureChoisie)
         tableViewHours.reloadData()
     }
@@ -52,13 +50,13 @@ class MedicamentHeureViewController: UIViewController, UITableViewDataSource {
         cell.textLabel?.text = String(describing: self.hours[indexPath.row])
         return cell
     }
+
    
     let showJourMadicamentSegue = "AjoutDateDebutSegue"
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == showJourMadicamentSegue {
             let MedicamentDateDebutViewController = segue.destination as! MedicamentDateDebutViewController
-            MedicamentDateDebutViewController.medicamentPasse = self.medicamentPasse
             MedicamentDateDebutViewController.libelleMedicamentPasse = self.libelleMedicamentPasse
             MedicamentDateDebutViewController.presentationBreveMedicamentPasse = self.presentationBreveMedicamentPasse
             MedicamentDateDebutViewController.DoseMedicamentPasse = self.DoseMedicamentPasse

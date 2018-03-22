@@ -49,32 +49,7 @@ class RDVAjoutHeureViewController: UIViewController {
 //    }
     
     
-    @objc func textFieldDidChange(_ textField: UITextField) {
-        if textField.text?.count == 1 {
-            if textField.text?.first == " " {
-                textField.text = ""
-                return
-            }
-        }
-        guard
-            let nomDocteur = nomDocteurTF.text, !nomDocteur.isEmpty,
-            let typeRDV = typeRDV.text, !typeRDV.isEmpty,
-            let numDocteur = numDocteur.text, !numDocteur.isEmpty
-            else {
-                ajoutHeureBoutton.isEnabled = false
-                return
-        }
-        ajoutHeureBoutton.isEnabled = true
-    }
-    
-    /*
-    // MARK: - Navigation
+  
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -18,6 +18,7 @@
     <entity name="Heure" representedClassName="Heure" syncable="YES" codeGenerationType="class">
         <attribute name="libelleHeure" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <relationship name="contient" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Activite" inverseName="sePasseA" inverseEntity="Activite" syncable="YES"/>
+        <relationship name="prendreA" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Medicament" inverseName="aPrendreA" inverseEntity="Medicament" syncable="YES"/>
     </entity>
     <entity name="Jour" representedClassName="Jour" syncable="YES" codeGenerationType="class">
         <attribute name="idJour" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -34,10 +35,10 @@
         <attribute name="dateFinMedicament" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="doseMedicament" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="frequenceMedicament" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="heureMedicament" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nomMedicament" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="presentationBreveMedicament" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="presentationMedicament" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="aPrendreA" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Heure" inverseName="prendreA" inverseEntity="Heure" syncable="YES"/>
     </entity>
     <entity name="Patient" representedClassName="Patient" syncable="YES" codeGenerationType="class">
         <attribute name="dateNaissance" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -78,7 +79,7 @@
     <elements>
         <element name="Activite" positionX="115" positionY="27" width="128" height="133"/>
         <element name="CentreHospitalier" positionX="-171" positionY="375" width="128" height="75"/>
-        <element name="Heure" positionX="-216" positionY="18" width="128" height="75"/>
+        <element name="Heure" positionX="-216" positionY="18" width="128" height="90"/>
         <element name="Jour" positionX="-216" positionY="117" width="128" height="90"/>
         <element name="Medecin" positionX="-270" positionY="486" width="128" height="88"/>
         <element name="Medicament" positionX="-324" positionY="252" width="128" height="165"/>

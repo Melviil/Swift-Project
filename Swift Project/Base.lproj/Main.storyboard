@@ -2280,6 +2280,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="SNh-IE-6nh" id="Ti5-Lh-BUp"/>
+                                    <outlet property="delegate" destination="e6s-PT-JpW" id="uvY-Bp-qCQ"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -2302,7 +2303,7 @@
                         <viewLayoutGuide key="safeArea" id="9gF-13-wl5"/>
                     </view>
                     <connections>
-                        <outlet property="tableViewHours" destination="HHx-rE-rpg" id="tsa-hM-tgd"/>
+                        <outlet property="tableViewHours" destination="HHx-rE-rpg" id="GCT-I4-MZN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c65-Ef-dCm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2644,7 +2645,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="aCa-iD-CW0"/>
-        <segue reference="GzT-13-6fG"/>
+        <segue reference="Qct-K3-GKD"/>
     </inferredMetricsTieBreakers>
 </document>

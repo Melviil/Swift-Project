@@ -11,7 +11,6 @@ import CoreData
 
 class MedicamentDescriptionViewController: UIViewController {
     
-    var medicament = Medicament() ;
     let segueDescriptionMedoc = "ShowDescriptionMedicamentSegue"
 
     @IBOutlet weak var libelleMedicament: UITextField!
@@ -62,7 +61,6 @@ class MedicamentDescriptionViewController: UIViewController {
         
         if segue.identifier == segueDescriptionMedoc {
             let medicamentHeure = segue.destination as! MedicamentHeureViewController
-            medicamentHeure.medicamentPasse = self.medicament
             medicamentHeure.libelleMedicamentPasse = self.libelleMedicament.text!
             medicamentHeure.presentationBreveMedicamentPasse = self.presentationBreveMedicament.text!
             medicamentHeure.DoseMedicamentPasse = self.DoseMedicament.text!

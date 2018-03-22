@@ -47,7 +47,6 @@ class SuiviPatientViewController: UIViewController , UITableViewDelegate, UITabl
         case 1:
             self.dateSelected = 2;
             let date : Date = getDate()
-            self.mesSymptomes = self.symptomeDAO.getSymptomeByDate(date: date)!
             dateAffichée.text = heureBienAffichee(withDate :date)
 
         case 2:
