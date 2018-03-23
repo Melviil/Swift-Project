@@ -39,6 +39,38 @@ class CoreDataMedicamentDAO: MedicamentDAO {
     func remove(medicament: Medicament) throws{
         
     }
+    func getMedicamentsByDate(date: Date)  -> [Medicament]? {
+        let calendar = Calendar.current
+        let date = calendar.startOfDay(for: date) //On recupere le debut d'aujourd'ui
+        let components = calendar.dateComponents([.year, .month, .day, .hour, .minute],from: date)
+        let dateDebutDelaJourneeEnFr = calendar.date(from: components)!
+        print("date debut journée="+dateDebutDelaJourneeEnFr.description)
+        let request: NSFetchRequest<Medicament> = NSFetchRequest(entityName: self.entityName)
+        let sort = NSSortDescriptor(key: #keyPath(Medicament.aPrendreA), ascending: true)
+        
+        request.sortDescriptors = [sort]
+        request.predicate = NSPredicate(format: "(dateDebutMedicament <= %@) AND (dateFinMedicament >= %@) ", dateDebutDelaJourneeEnFr as CVarArg, dateDebutDelaJourneeEnFr as CVarArg)
+        
+        
+        
+        
+        
+        do {
+            
+            let medicaments: [Medicament] = try CoreDataManager.context.fetch(request)
+            
+            print("medicaments")
+            print(medicaments)
+            print(dateDebutDelaJourneeEnFr)
+            return medicaments
+            
+        } catch let error as NSError{
+            
+            fatalError("could not get medicaments by date " + error.description)
+            
+        }
+        
+    }
     
     func addHeureMedicament(heure : Heure, medicament: Medicament) throws {
         medicament.addToAPrendreA(heure)
