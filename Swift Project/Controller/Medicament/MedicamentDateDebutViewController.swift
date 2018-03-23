@@ -14,8 +14,6 @@ class MedicamentDateDebutViewController: UIViewController {
     var presentationBreveMedicamentPasse = String()
     var DoseMedicamentPasse = String()
     var presentationDetailleMedicamentPasse = String()
-    var nbPriseMedicamentPasse = String()
-    var frequencePriseMedicamentPasse = String()
     var heuresPasse: [String] = []
     var dateChoisi = String()
     override func viewDidLoad() {
@@ -39,8 +37,6 @@ class MedicamentDateDebutViewController: UIViewController {
             MedicamentDateFinViewController.presentationBreveMedicamentPasse = self.presentationBreveMedicamentPasse
             MedicamentDateFinViewController.DoseMedicamentPasse = self.DoseMedicamentPasse
             MedicamentDateFinViewController.presentationDetailleMedicamentPasse = self.presentationDetailleMedicamentPasse
-            MedicamentDateFinViewController.nbPriseMedicamentPasse = self.nbPriseMedicamentPasse
-            MedicamentDateFinViewController.frequencePriseMedicamentPasse = self.frequencePriseMedicamentPasse
             MedicamentDateFinViewController.heuresPasse = self.heuresPasse
             MedicamentDateFinViewController.dateDebutPasse = self.dateChoisi
             

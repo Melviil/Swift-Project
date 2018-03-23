@@ -14,8 +14,6 @@ class MedicamentDescriptionViewController: UIViewController {
     let segueDescriptionMedoc = "ShowDescriptionMedicamentSegue"
 
     @IBOutlet weak var libelleMedicament: UITextField!
-    @IBOutlet weak var frequencePriseMedicament: UITextField!
-    @IBOutlet weak var nbPriseMedicament: UITextField!
     @IBOutlet weak var presentationDetailleMedicament: UITextField!
     @IBOutlet weak var presentationBreveMedicament: UITextField!
     
@@ -30,18 +28,12 @@ class MedicamentDescriptionViewController: UIViewController {
                 self.present(alert, animated: true){}
                 return false
             }
-            guard frequencePriseMedicament.hasText else{
-                self.present(alert, animated: true){}
-                return false
-            }
+          
             guard libelleMedicament.hasText else{
                 self.present(alert, animated: true){}
                 return false
             }
-            guard nbPriseMedicament.hasText else{
-                self.present(alert, animated: true){}
-                return false
-            }
+          
             guard presentationDetailleMedicament.hasText else{
                 self.present(alert, animated: true){}
                 return false
@@ -65,8 +57,6 @@ class MedicamentDescriptionViewController: UIViewController {
             medicamentHeure.presentationBreveMedicamentPasse = self.presentationBreveMedicament.text!
             medicamentHeure.DoseMedicamentPasse = self.DoseMedicament.text!
             medicamentHeure.presentationDetailleMedicamentPasse = self.presentationDetailleMedicament.text!
-            medicamentHeure.nbPriseMedicamentPasse = self.nbPriseMedicament.text!
-            medicamentHeure.frequencePriseMedicamentPasse = self.frequencePriseMedicament.text!
         }
         
     }

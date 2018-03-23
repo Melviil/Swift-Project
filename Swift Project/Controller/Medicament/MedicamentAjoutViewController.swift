@@ -13,8 +13,6 @@ class MedicamentAjoutViewController: UIViewController {
     var presentationBreveMedicamentPasse = String()
     var DoseMedicamentPasse = String()
     var presentationDetailleMedicamentPasse = String()
-    var nbPriseMedicamentPasse = String()
-    var frequencePriseMedicamentPasse = String()
     var heuresPasse: [String] = []
     var dateDebutPasse = String()
     var dateFinPasse = String()
@@ -25,7 +23,7 @@ class MedicamentAjoutViewController: UIViewController {
         self.navigationItem.setHidesBackButton(true, animated:true);
         // Do any additional setup after loading the view.
         
-        saveNewMedicament(withLibelle: libelleMedicamentPasse, withPresentationBreve: presentationBreveMedicamentPasse, withDose: DoseMedicamentPasse, withPresentationDetaille: presentationDetailleMedicamentPasse, withHeures: heuresPasse, withNbPrise : nbPriseMedicamentPasse, withFrequence: frequencePriseMedicamentPasse, withDateDebut: dateFinPasse, withDateFin: dateFinPasse)
+        saveNewMedicament(withLibelle: libelleMedicamentPasse, withPresentationBreve: presentationBreveMedicamentPasse, withDose: DoseMedicamentPasse, withPresentationDetaille: presentationDetailleMedicamentPasse, withHeures: heuresPasse, withDateDebut: dateFinPasse, withDateFin: dateFinPasse)
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,7 +31,7 @@ class MedicamentAjoutViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func saveNewMedicament( withLibelle libelle: String, withPresentationBreve presentationBreve : String, withDose dose : String, withPresentationDetaille presentationDetaille : String, withHeures heures : [String],withNbPrise nbprise : String, withFrequence frequence : String,  withDateDebut dateDebut: String, withDateFin dateFin: String){
+    func saveNewMedicament( withLibelle libelle: String, withPresentationBreve presentationBreve : String, withDose dose : String, withPresentationDetaille presentationDetaille : String, withHeures heures : [String],  withDateDebut dateDebut: String, withDateFin dateFin: String){
        
         let daoF = CoreDataDAOFactory.getInstance()
         let medicamentDAO = daoF.getMedicamentDAO()
@@ -46,7 +44,6 @@ class MedicamentAjoutViewController: UIViewController {
       
         medicament.doseMedicament = dose
         medicament.nomMedicament = libelle
-        medicament.frequenceMedicament = frequence
         
         
         let dateFormatter = DateFormatter()

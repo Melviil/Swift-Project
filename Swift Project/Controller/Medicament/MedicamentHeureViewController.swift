@@ -17,8 +17,7 @@ class MedicamentHeureViewController: UIViewController, UITableViewDataSource {
     var presentationBreveMedicamentPasse = String()
     var DoseMedicamentPasse = String()
     var presentationDetailleMedicamentPasse = String()
-    var nbPriseMedicamentPasse = String()
-    var frequencePriseMedicamentPasse = String()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,8 +59,6 @@ class MedicamentHeureViewController: UIViewController, UITableViewDataSource {
             MedicamentDateDebutViewController.presentationBreveMedicamentPasse = self.presentationBreveMedicamentPasse
             MedicamentDateDebutViewController.DoseMedicamentPasse = self.DoseMedicamentPasse
             MedicamentDateDebutViewController.presentationDetailleMedicamentPasse = self.presentationDetailleMedicamentPasse
-            MedicamentDateDebutViewController.nbPriseMedicamentPasse = self.nbPriseMedicamentPasse
-            MedicamentDateDebutViewController.frequencePriseMedicamentPasse = self.frequencePriseMedicamentPasse
             MedicamentDateDebutViewController.heuresPasse = self.hours
             
         }
