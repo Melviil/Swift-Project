@@ -14,6 +14,7 @@ class MedicamentAjoutHeureViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        changerValueDateQuandDateChange(self)
 
         // Do any additional setup after loading the view.
     }
