@@ -18,6 +18,8 @@ class MedicamentAjoutViewController: UIViewController {
     var heuresPasse: [String] = []
     var dateDebutPasse = String()
     var dateFinPasse = String()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated:true);

@@ -88,6 +88,9 @@
 		BECF995B20552A60009420DE /* MedicamentHeureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECF995A20552A60009420DE /* MedicamentHeureViewController.swift */; };
 		BECF995D20552FF0009420DE /* MedicamentAjoutHeureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECF995C20552FF0009420DE /* MedicamentAjoutHeureViewController.swift */; };
 		BECF995F20553523009420DE /* MedicamentDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECF995E20553523009420DE /* MedicamentDescriptionViewController.swift */; };
+		FE4213A920642657004EC5D7 /* AgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4213A820642657004EC5D7 /* AgendaViewController.swift */; };
+		FE4213AC2064E2E8004EC5D7 /* CellMedocCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4213AB2064E2E8004EC5D7 /* CellMedocCollectionViewCell.swift */; };
+		FE4213AD2064E2E8004EC5D7 /* CellMedocCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4213AB2064E2E8004EC5D7 /* CellMedocCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -194,6 +197,8 @@
 		BECF995A20552A60009420DE /* MedicamentHeureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentHeureViewController.swift; sourceTree = "<group>"; };
 		BECF995C20552FF0009420DE /* MedicamentAjoutHeureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentAjoutHeureViewController.swift; sourceTree = "<group>"; };
 		BECF995E20553523009420DE /* MedicamentDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentDescriptionViewController.swift; sourceTree = "<group>"; };
+		FE4213A820642657004EC5D7 /* AgendaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaViewController.swift; sourceTree = "<group>"; };
+		FE4213AB2064E2E8004EC5D7 /* CellMedocCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellMedocCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -335,6 +340,7 @@
 		BCAFD280204C4D9C0037ADBD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FE4213A12063A211004EC5D7 /* Agenda */,
 				BCE6D908205EAEA8003068B8 /* Suivi */,
 				BE3107B6205702B90087EA02 /* Rendez-vous */,
 				BC04ED97203AE235008F6AC3 /* Contact Page.swift */,
@@ -440,6 +446,15 @@
 				BC322EBA2061152C005A20DE /* SymptomeModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FE4213A12063A211004EC5D7 /* Agenda */ = {
+			isa = PBXGroup;
+			children = (
+				FE4213A820642657004EC5D7 /* AgendaViewController.swift */,
+				FE4213AB2064E2E8004EC5D7 /* CellMedocCollectionViewCell.swift */,
+			);
+			path = Agenda;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -590,6 +605,7 @@
 				BC567C88204BFBED00764B79 /* SymptomeAjoutViewController.swift in Sources */,
 				BC646C5920501CAC004F3A2B /* ActiviteDateDebutViewController.swift in Sources */,
 				BE4F32A220557AB900C6121A /* MedicamentDateFinViewController.swift in Sources */,
+				FE4213AC2064E2E8004EC5D7 /* CellMedocCollectionViewCell.swift in Sources */,
 				BECF995B20552A60009420DE /* MedicamentHeureViewController.swift in Sources */,
 				BC322EAF205FB528005A20DE /* TypeSurveillanceDAO.swift in Sources */,
 				BE9F4C7B2059212E002DBB3D /* MedecinExtension.swift in Sources */,
@@ -624,6 +640,7 @@
 				BC086C682048564B006D2310 /* ActiviteHeureModallyViewController.swift in Sources */,
 				BC322EBB2061152D005A20DE /* SymptomeModel.swift in Sources */,
 				BC322EA2205F9A58005A20DE /* TypeSymptomeSeed.swift in Sources */,
+				FE4213A920642657004EC5D7 /* AgendaViewController.swift in Sources */,
 				BCE6D8F8205E9C77003068B8 /* JourSeed.swift in Sources */,
 				BCE6D907205EA8EF003068B8 /* ProtocolDAOFactory.swift in Sources */,
 				BCE6D903205EA821003068B8 /* DataHelper.swift in Sources */,
@@ -659,6 +676,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE9F4C7920591E4B002DBB3D /* AppDelegate.swift in Sources */,
+				FE4213AD2064E2E8004EC5D7 /* CellMedocCollectionViewCell.swift in Sources */,
 				BC0C9D26203830300067EBB8 /* Swift_ProjectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
