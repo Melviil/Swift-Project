@@ -988,10 +988,10 @@
             </objects>
             <point key="canvasLocation" x="-3255" y="-111"/>
         </scene>
-        <!--View Controller-->
+        <!--Ajout Date View Controller-->
         <scene sceneID="TzJ-bk-z9J">
             <objects>
-                <viewController id="sIk-7s-BJG" sceneMemberID="viewController">
+                <viewController id="sIk-7s-BJG" customClass="RDVAjoutDateViewController" customModule="Swift_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vy7-w9-nQZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1046,15 +1046,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="atT-bJ-qLf"/>
                     </view>
+                    <connections>
+                        <outlet property="myDatePicker" destination="sh2-Gi-rEX" id="b97-fo-hnJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lvX-rk-Fkg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-6324" y="-109"/>
         </scene>
-        <!--View Controller-->
+        <!--Ajout Heure View Controller-->
         <scene sceneID="JTj-0D-l3V">
             <objects>
-                <viewController id="P7p-Tv-TLz" sceneMemberID="viewController">
+                <viewController id="P7p-Tv-TLz" customClass="RDVAjoutHeureViewController" customModule="Swift_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n4b-du-sVq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1113,15 +1116,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oFk-Jb-Og6"/>
                     </view>
+                    <connections>
+                        <outlet property="myPickerDate" destination="KYg-1d-Ozm" id="0u5-bz-3Fg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KE1-Zn-VQK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-5573" y="-110"/>
         </scene>
-        <!--View Controller-->
+        <!--Ajout Temps View Controller-->
         <scene sceneID="9rc-Tb-GhE">
             <objects>
-                <viewController id="ot1-aM-r3X" sceneMemberID="viewController">
+                <viewController id="ot1-aM-r3X" customClass="RDVAjoutTempsViewController" customModule="Swift_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hum-GE-X7H">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1184,10 +1190,10 @@
             </objects>
             <point key="canvasLocation" x="-4809.375" y="-106.69014084507042"/>
         </scene>
-        <!--Ajout Heure View Controller-->
+        <!--Ajout Infos View Controller-->
         <scene sceneID="Tya-Zo-cGd">
             <objects>
-                <viewController id="GX3-6n-i1G" customClass="RDVAjoutHeureViewController" customModule="Swift_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GX3-6n-i1G" customClass="RDVAjoutInfosViewController" customModule="Swift_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uW9-bs-XJY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1266,7 +1272,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="ot1-aM-r3X" kind="show" id="TaC-DH-LVG"/>
+                                    <segue destination="ot1-aM-r3X" kind="show" identifier="ajoutHeureRdv" id="TaC-DH-LVG"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Veuillez saisir les informations sur le rdv" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="an6-mh-KzY">
