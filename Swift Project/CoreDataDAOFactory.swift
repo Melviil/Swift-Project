@@ -18,6 +18,9 @@ class CoreDataDAOFactory: ProtocolDAOFactory{
     typealias F = CoreDataTypeSurveillanceDAO
     typealias G = CoreDataSurveillanceDAO
     typealias H = CoreDataMedicamentDAO
+    typealias I = CoreDataTypeMedicamentDAO
+    typealias J = CoreDataDoseMedicamentDAO
+
    
     
     private static var instance: CoreDataDAOFactory?
@@ -53,6 +56,12 @@ class CoreDataDAOFactory: ProtocolDAOFactory{
     }
     func getMedicamentDAO() -> CoreDataMedicamentDAO {
         return CoreDataMedicamentDAO(context: self.context)
+    }
+    func getTypeMedicamentDAO() -> CoreDataTypeMedicamentDAO {
+        return CoreDataTypeMedicamentDAO(context: self.context)
+    }
+    func getDoseMedicamentDAO() -> CoreDataDoseMedicamentDAO {
+        return CoreDataDoseMedicamentDAO(context: self.context)
     }
     
 }

@@ -88,6 +88,14 @@
 		BECF995B20552A60009420DE /* MedicamentHeureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECF995A20552A60009420DE /* MedicamentHeureViewController.swift */; };
 		BECF995D20552FF0009420DE /* MedicamentAjoutHeureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECF995C20552FF0009420DE /* MedicamentAjoutHeureViewController.swift */; };
 		BECF995F20553523009420DE /* MedicamentDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECF995E20553523009420DE /* MedicamentDescriptionViewController.swift */; };
+		FE3FC8A3206673D70065D9F9 /* TypeMedicamentSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FC8A2206673D70065D9F9 /* TypeMedicamentSeed.swift */; };
+		FE3FC8A7206675F20065D9F9 /* MedicamentTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FC8A6206675F20065D9F9 /* MedicamentTypeViewController.swift */; };
+		FE3FC8A9206676C30065D9F9 /* TypeMedicamentDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FC8A8206676C30065D9F9 /* TypeMedicamentDAO.swift */; };
+		FE3FC8AB206676EA0065D9F9 /* CoreDateTypeMedicamentDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FC8AA206676EA0065D9F9 /* CoreDateTypeMedicamentDAO.swift */; };
+		FE3FC8AD20667AD70065D9F9 /* DoseMedicamentSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FC8AC20667AD70065D9F9 /* DoseMedicamentSeed.swift */; };
+		FE3FC8AF20667B390065D9F9 /* CoreDataDoseMedicamentDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FC8AE20667B390065D9F9 /* CoreDataDoseMedicamentDAO.swift */; };
+		FE3FC8B220667BE70065D9F9 /* DoseMedicamentDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FC8B120667BE70065D9F9 /* DoseMedicamentDAO.swift */; };
+		FE3FC8B520667D340065D9F9 /* MedicamentDoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FC8B420667D340065D9F9 /* MedicamentDoseViewController.swift */; };
 		FE4213A920642657004EC5D7 /* AgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4213A820642657004EC5D7 /* AgendaViewController.swift */; };
 		FE4213AC2064E2E8004EC5D7 /* CellMedocCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4213AB2064E2E8004EC5D7 /* CellMedocCollectionViewCell.swift */; };
 		FE4213AD2064E2E8004EC5D7 /* CellMedocCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4213AB2064E2E8004EC5D7 /* CellMedocCollectionViewCell.swift */; };
@@ -199,6 +207,14 @@
 		BECF995A20552A60009420DE /* MedicamentHeureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentHeureViewController.swift; sourceTree = "<group>"; };
 		BECF995C20552FF0009420DE /* MedicamentAjoutHeureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentAjoutHeureViewController.swift; sourceTree = "<group>"; };
 		BECF995E20553523009420DE /* MedicamentDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentDescriptionViewController.swift; sourceTree = "<group>"; };
+		FE3FC8A2206673D70065D9F9 /* TypeMedicamentSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeMedicamentSeed.swift; sourceTree = "<group>"; };
+		FE3FC8A6206675F20065D9F9 /* MedicamentTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentTypeViewController.swift; sourceTree = "<group>"; };
+		FE3FC8A8206676C30065D9F9 /* TypeMedicamentDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeMedicamentDAO.swift; sourceTree = "<group>"; };
+		FE3FC8AA206676EA0065D9F9 /* CoreDateTypeMedicamentDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDateTypeMedicamentDAO.swift; sourceTree = "<group>"; };
+		FE3FC8AC20667AD70065D9F9 /* DoseMedicamentSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoseMedicamentSeed.swift; sourceTree = "<group>"; };
+		FE3FC8AE20667B390065D9F9 /* CoreDataDoseMedicamentDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDoseMedicamentDAO.swift; sourceTree = "<group>"; };
+		FE3FC8B120667BE70065D9F9 /* DoseMedicamentDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoseMedicamentDAO.swift; sourceTree = "<group>"; };
+		FE3FC8B420667D340065D9F9 /* MedicamentDoseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentDoseViewController.swift; sourceTree = "<group>"; };
 		FE4213A820642657004EC5D7 /* AgendaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaViewController.swift; sourceTree = "<group>"; };
 		FE4213AB2064E2E8004EC5D7 /* CellMedocCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellMedocCollectionViewCell.swift; sourceTree = "<group>"; };
 		FE780160206656E20026E7D1 /* CellActiviteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellActiviteCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -233,6 +249,8 @@
 			isa = PBXGroup;
 			children = (
 				BCFA134F2065AA130013FF40 /* MedicamentListeViewController.swift */,
+				FE3FC8B420667D340065D9F9 /* MedicamentDoseViewController.swift */,
+				FE3FC8A6206675F20065D9F9 /* MedicamentTypeViewController.swift */,
 				BECF995E20553523009420DE /* MedicamentDescriptionViewController.swift */,
 				BECF995A20552A60009420DE /* MedicamentHeureViewController.swift */,
 				BECF995C20552FF0009420DE /* MedicamentAjoutHeureViewController.swift */,
@@ -360,6 +378,8 @@
 			isa = PBXGroup;
 			children = (
 				BCE6D8F7205E9C77003068B8 /* JourSeed.swift */,
+				FE3FC8A2206673D70065D9F9 /* TypeMedicamentSeed.swift */,
+				FE3FC8AC20667AD70065D9F9 /* DoseMedicamentSeed.swift */,
 				BC322EA1205F9A58005A20DE /* TypeSymptomeSeed.swift */,
 				BC322EAC205FB420005A20DE /* TypeSurveillanceSeed.swift */,
 			);
@@ -371,10 +391,12 @@
 			children = (
 				BCE6D8FD205EA06F003068B8 /* JourDAO.swift */,
 				BC09AA13205F21A400FACC62 /* HeureDAO.swift */,
+				FE3FC8A8206676C30065D9F9 /* TypeMedicamentDAO.swift */,
 				BC09AA0E205F17FB00FACC62 /* ActiviteDAO.swift */,
 				BC322EA3205F9C4E005A20DE /* TypeSymptomeDAO.swift */,
 				BC322EA8205FA450005A20DE /* SymptomeDAO.swift */,
 				BC322EAE205FB528005A20DE /* TypeSurveillanceDAO.swift */,
+				FE3FC8B120667BE70065D9F9 /* DoseMedicamentDAO.swift */,
 				BC322EB2205FDAC4005A20DE /* SurveillanceDAO.swift */,
 				BC7FA79420638732000824BE /* MedicamentDAO.swift */,
 				BCE6D8FC205EA028003068B8 /* CoreDataDAO */,
@@ -387,9 +409,11 @@
 			children = (
 				BCE6D8F9205EA013003068B8 /* CoreDataJourDAO.swift */,
 				BC322EB0205FB5EE005A20DE /* CoreDataTypeSurveillanceDAO.swift */,
+				FE3FC8AA206676EA0065D9F9 /* CoreDateTypeMedicamentDAO.swift */,
 				BC7FA79620638794000824BE /* CoreDataMedicamentDAO.swift */,
 				BC322EB4205FDAF8005A20DE /* CoreDataSurveillanceDAO.swift */,
 				BC322EAA205FA487005A20DE /* CoreDataSymptomeDAO.swift */,
+				FE3FC8AE20667B390065D9F9 /* CoreDataDoseMedicamentDAO.swift */,
 				BC322EA5205F9C7D005A20DE /* CoreDataTypeSymptomeDAO.swift */,
 				BC09AA10205F183200FACC62 /* CoreDataActiviteDAO.swift */,
 				BC09AA15205F21CF00FACC62 /* CoreDataHeureDAO.swift */,
@@ -601,6 +625,7 @@
 				BC09AA0F205F17FB00FACC62 /* ActiviteDAO.swift in Sources */,
 				BC09AA14205F21A400FACC62 /* HeureDAO.swift in Sources */,
 				BC6AD69E205565B7001F1E04 /* SurveillanceDateViewController.swift in Sources */,
+				FE3FC8B520667D340065D9F9 /* MedicamentDoseViewController.swift in Sources */,
 				BC322EA6205F9C7D005A20DE /* CoreDataTypeSymptomeDAO.swift in Sources */,
 				BC6AD6A5205573BF001F1E04 /* SpecialiteModel.swift in Sources */,
 				BC7FA79B2063A962000824BE /* RDVAjoutHeureViewController.swift in Sources */,
@@ -620,6 +645,7 @@
 				BE4F32A420557BB600C6121A /* MedicamentAjoutViewController.swift in Sources */,
 				BC6AD6B120557570001F1E04 /* TypeActiviteModel.swift in Sources */,
 				BC322EA4205F9C4E005A20DE /* TypeSymptomeDAO.swift in Sources */,
+				FE3FC8B220667BE70065D9F9 /* DoseMedicamentDAO.swift in Sources */,
 				BC6AD6AD20557511001F1E04 /* TypeSymptomeModel.swift in Sources */,
 				BE9F4C7420591323002DBB3D /* PatientExtension.swift in Sources */,
 				BC6AD6A1205565CD001F1E04 /* SurveillanceAjoutViewController.swift in Sources */,
@@ -628,6 +654,7 @@
 				BC0C9D16203830240067EBB8 /* Swift_Project.xcdatamodeld in Sources */,
 				FE780161206656E20026E7D1 /* CellActiviteCollectionViewCell.swift in Sources */,
 				BC7FA79D2063A976000824BE /* RDVAjoutDateViewController.swift in Sources */,
+				FE3FC8A7206675F20065D9F9 /* MedicamentTypeViewController.swift in Sources */,
 				BC567C82204B103E00764B79 /* SymptomeTypeViewController.swift in Sources */,
 				BC322EAD205FB420005A20DE /* TypeSurveillanceSeed.swift in Sources */,
 				BCD7C4F3205032190010A584 /* ActiviteAjoutViewController.swift in Sources */,
@@ -636,6 +663,8 @@
 				BC646C5B20501F7E004F3A2B /* ActiviteDateFinViewController.swift in Sources */,
 				BC322EB9205FEDE9005A20DE /* CoreDataManager.swift in Sources */,
 				BC6AD6AF2055752C001F1E04 /* ActiviteModel.swift in Sources */,
+				FE3FC8AB206676EA0065D9F9 /* CoreDateTypeMedicamentDAO.swift in Sources */,
+				FE3FC8AF20667B390065D9F9 /* CoreDataDoseMedicamentDAO.swift in Sources */,
 				BC0C9D10203830230067EBB8 /* ViewController.swift in Sources */,
 				BCDB983F2056FA570081FCA9 /* SymptomeDateViewController.swift in Sources */,
 				BECF995920545A81009420DE /* PatientModel.swift in Sources */,
@@ -651,6 +680,7 @@
 				BCE6D907205EA8EF003068B8 /* ProtocolDAOFactory.swift in Sources */,
 				BCE6D903205EA821003068B8 /* DataHelper.swift in Sources */,
 				BCE6D8FE205EA06F003068B8 /* JourDAO.swift in Sources */,
+				FE3FC8A3206673D70065D9F9 /* TypeMedicamentSeed.swift in Sources */,
 				BC6AD6AB205574EE001F1E04 /* SurveillanceModel.swift in Sources */,
 				BC6AD6B720557815001F1E04 /* ListeSymptomesModel.swift in Sources */,
 				BE211F01205E7D36009AA058 /* SuiviPatientViewController.swift in Sources */,
@@ -670,11 +700,13 @@
 				BE9F4C8320592724002DBB3D /* RendezVousModel.swift in Sources */,
 				BC09AA16205F21CF00FACC62 /* CoreDataHeureDAO.swift in Sources */,
 				BCFA13502065AA130013FF40 /* MedicamentListeViewController.swift in Sources */,
+				FE3FC8AD20667AD70065D9F9 /* DoseMedicamentSeed.swift in Sources */,
 				BC322EB1205FB5EE005A20DE /* CoreDataTypeSurveillanceDAO.swift in Sources */,
 				BC6AD69A20556595001F1E04 /* SurveillanceTypeViewController.swift in Sources */,
 				BCDB983D2056F88C0081FCA9 /* SymptomeHeureViewController.swift in Sources */,
 				BC6AD6A320557351001F1E04 /* MedecinModel.swift in Sources */,
 				BCE6D8FF205EA592003068B8 /* CoreDataJourDAO.swift in Sources */,
+				FE3FC8A9206676C30065D9F9 /* TypeMedicamentDAO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -59,7 +59,7 @@
                                                 </label>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" red="0.1234399331" green="1" blue="0.54424646330000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.58511813925934653" green="0.74502851022060823" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="bottomMargin" secondItem="JnU-PC-oGn" secondAttribute="bottom" constant="15" id="8Sk-gA-UJC"/>
                                             <constraint firstItem="JnU-PC-oGn" firstAttribute="top" secondItem="2Iu-oJ-fXQ" secondAttribute="topMargin" constant="15" id="LbS-G0-WhN"/>
@@ -104,7 +104,7 @@
                                                 </label>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" red="1" green="0.2877801303594022" blue="0.31713039937542109" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="1" green="0.7529388869350967" blue="0.56602425826207892" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="t8J-Wk-38s" firstAttribute="leading" secondItem="RI9-k7-Ud4" secondAttribute="leadingMargin" constant="12" id="Ljh-Ci-vQE"/>
                                             <constraint firstItem="2Du-ff-2xN" firstAttribute="top" secondItem="RI9-k7-Ud4" secondAttribute="topMargin" constant="12" id="PfG-tI-ZJN"/>
@@ -2122,6 +2122,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Fb-NM-cHN">
+                                <rect key="frame" x="274" y="232" width="46" height="207"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="Um5-5J-Pjo" kind="show" id="YDa-wR-UPH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -2142,7 +2150,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o4e-IV-a23" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1065" y="943"/>
+            <point key="canvasLocation" x="1065" y="942.25352112676057"/>
         </scene>
         <!--Medicament Description View Controller-->
         <scene sceneID="uGR-ch-db6">
@@ -2331,6 +2339,113 @@
                 <exit id="tlp-dg-u8h" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3204" y="1746"/>
+        </scene>
+        <!--Medicament Type View Controller-->
+        <scene sceneID="Mpo-Ho-KJZ">
+            <objects>
+                <viewController id="Um5-5J-Pjo" customClass="MedicamentTypeViewController" customModule="Swift_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ELd-RW-KTe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ajouter un médicament" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cY-Bn-RFF">
+                                <rect key="frame" x="30.5" y="74" width="259.5" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWZ-j1-Pgm">
+                                <rect key="frame" x="61" y="512" width="198" height="44"/>
+                                <color key="backgroundColor" red="0.23529411759999999" green="0.57254901960000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Choisir les heures">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Z66-4F-P5W" kind="show" identifier="doseMedics" id="vzJ-kt-XKd"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5z0-eM-Ug5">
+                                <rect key="frame" x="0.0" y="176.5" width="320" height="216"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5z0-eM-Ug5" firstAttribute="top" secondItem="0cY-Bn-RFF" secondAttribute="bottom" constant="71" id="Axy-wT-2gz"/>
+                            <constraint firstItem="0cY-Bn-RFF" firstAttribute="top" secondItem="hk8-UE-S8R" secondAttribute="top" constant="10" id="E4Q-na-x9C"/>
+                            <constraint firstItem="hk8-UE-S8R" firstAttribute="bottom" secondItem="DWZ-j1-Pgm" secondAttribute="bottom" constant="12" id="F3W-Hm-HKb"/>
+                            <constraint firstItem="DWZ-j1-Pgm" firstAttribute="top" secondItem="5z0-eM-Ug5" secondAttribute="bottom" constant="120" id="MnM-kj-beN"/>
+                            <constraint firstItem="0cY-Bn-RFF" firstAttribute="centerX" secondItem="ELd-RW-KTe" secondAttribute="centerX" id="W36-5x-8Ff"/>
+                            <constraint firstItem="5z0-eM-Ug5" firstAttribute="centerY" secondItem="ELd-RW-KTe" secondAttribute="centerY" id="WPv-ZU-cSU"/>
+                            <constraint firstItem="DWZ-j1-Pgm" firstAttribute="centerX" secondItem="ELd-RW-KTe" secondAttribute="centerX" id="bQG-sL-qXI"/>
+                            <constraint firstItem="5z0-eM-Ug5" firstAttribute="centerX" secondItem="ELd-RW-KTe" secondAttribute="centerX" id="rZ2-4I-ayT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hk8-UE-S8R"/>
+                    </view>
+                    <connections>
+                        <outlet property="myPickerView" destination="5z0-eM-Ug5" id="yGf-9i-sr6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yjn-pb-nOY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2331" y="1745"/>
+        </scene>
+        <!--Medicament Dose View Controller-->
+        <scene sceneID="fwV-yZ-ylV">
+            <objects>
+                <viewController id="Z66-4F-P5W" customClass="MedicamentDoseViewController" customModule="Swift_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mQu-UL-XeA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ajouter un médicament" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9J-ZK-H2d">
+                                <rect key="frame" x="31" y="74" width="259.5" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwU-Xk-IgK">
+                                <rect key="frame" x="60" y="499.5" width="198" height="56.5"/>
+                                <color key="backgroundColor" red="0.23529411759999999" green="0.57254901960000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Choisir les heures">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fqw-S8-EuM">
+                                <rect key="frame" x="0.0" y="188.5" width="320" height="191"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fqw-S8-EuM" firstAttribute="centerX" secondItem="mQu-UL-XeA" secondAttribute="centerX" id="2o5-V2-LBJ"/>
+                            <constraint firstItem="l9J-ZK-H2d" firstAttribute="top" secondItem="pPU-VJ-g4x" secondAttribute="top" constant="10" id="4ep-mh-KNG"/>
+                            <constraint firstItem="fqw-S8-EuM" firstAttribute="centerX" secondItem="mQu-UL-XeA" secondAttribute="centerX" id="A6f-rT-ca3"/>
+                            <constraint firstItem="pPU-VJ-g4x" firstAttribute="bottom" secondItem="gwU-Xk-IgK" secondAttribute="bottom" constant="12" id="DZg-up-T9G"/>
+                            <constraint firstItem="l9J-ZK-H2d" firstAttribute="centerX" secondItem="mQu-UL-XeA" secondAttribute="centerX" id="GF4-k9-zSd"/>
+                            <constraint firstItem="fqw-S8-EuM" firstAttribute="centerY" secondItem="mQu-UL-XeA" secondAttribute="centerY" id="hYh-WV-6SL"/>
+                            <constraint firstItem="fqw-S8-EuM" firstAttribute="top" secondItem="l9J-ZK-H2d" secondAttribute="bottom" constant="114.5" id="mfu-f8-ZQi"/>
+                            <constraint firstItem="gwU-Xk-IgK" firstAttribute="top" secondItem="fqw-S8-EuM" secondAttribute="bottom" constant="120" id="p1M-Yj-aW1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pPU-VJ-g4x"/>
+                    </view>
+                    <connections>
+                        <outlet property="myPickerView" destination="fqw-S8-EuM" id="WM6-kh-Aik"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9uP-2a-apV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2301" y="2555"/>
         </scene>
         <!--Medicament Heure View Controller-->
         <scene sceneID="qua-jI-l1i">

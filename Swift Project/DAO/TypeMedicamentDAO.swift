@@ -7,3 +7,11 @@
 //
 
 import Foundation
+import CoreData
+
+protocol TypeMedicamentDAO {
+    func getAll() throws -> [TypeMedicament]?
+    func save(typeMedicament: TypeMedicament) throws
+    func remove(typeMedicament: TypeMedicament) throws
+}
+

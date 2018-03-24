@@ -13,7 +13,12 @@ public class DataHelper {
         seedJour()
         seedTypeSymptome()
         seedTypeSurveillance()
-}
+        seedDoseMedicament()
+
+        seedTypeMedicament()
+
+
+    }
     fileprivate static func seedJour(){
         let jours = JourSeed().jours
         let jourDAO = CoreDataDAOFactory.getInstance().getJourDAO()
@@ -50,6 +55,41 @@ public class DataHelper {
             newTypeSurveillance.libelleTypeSurveillance = TypeSurveillance.nom
             do{
                 try TypeSurveillanceDAO.save(typeSurveillance: newTypeSurveillance)
+            }catch {
+                fatalError("Error cannot populate DB")
+            }
+        }
+    }
+    fileprivate static func seedTypeMedicament(){
+        let TypeMedicaments = TypeMedicamentSeed().TypeMedicaments
+        let TypeMedicamentDAO = CoreDataDAOFactory.getInstance().getTypeMedicamentDAO()
+        let DoseMedicaments = DoseMedicamentSeed().DoseMedicaments
+        let DoseMedicamentDAO = CoreDataDAOFactory.getInstance().getDoseMedicamentDAO()
+        for TypeMedicament in TypeMedicaments {
+            let newTypeMedicament: TypeMedicament = TypeMedicamentDAO.create()
+            newTypeMedicament.libelleTypeMedicament = TypeMedicament.nom
+            for doseRecup in TypeMedicament.doses{
+                print(doseRecup)
+                let dosesss = DoseMedicamentDAO.getMedicamentsByDoseName(name: doseRecup)
+                if (dosesss?[0] != nil){
+                    newTypeMedicament.aUneDose =  dosesss?[0]
+                }
+            }
+            do{
+                try TypeMedicamentDAO.save(typeMedicament: newTypeMedicament)
+            }catch {
+                fatalError("Error cannot populate DB")
+            }
+        }
+    }
+    fileprivate static func seedDoseMedicament(){
+        let DoseMedicaments = DoseMedicamentSeed().DoseMedicaments
+        let DoseMedicamentDAO = CoreDataDAOFactory.getInstance().getDoseMedicamentDAO()
+        for DoseMedicament in DoseMedicaments {
+            let newDoseMedicament: DoseMedicament = DoseMedicamentDAO.create()
+            newDoseMedicament.libelleDoseMedicament = DoseMedicament.nom
+            do{
+                try DoseMedicamentDAO.save(doseMedicament: newDoseMedicament)
             }catch {
                 fatalError("Error cannot populate DB")
             }
