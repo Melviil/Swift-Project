@@ -47,4 +47,19 @@ class CoreDataActiviteDAO: ActiviteDAO {
         activite.addToSePasseA(heure)
         
     }
+    func getActivitesByDate(date: Date)  -> [Activite]? {
+        let calendar = Calendar.current
+        let date = calendar.startOfDay(for: date) //On recupere le debut d'aujourd'ui
+        let components = calendar.dateComponents([.year, .month, .day, .hour, .minute],from: date)
+        let dateDebutDelaJourneeEnFr = calendar.date(from: components)!
+        let request: NSFetchRequest<Activite> = NSFetchRequest(entityName: self.entityName)
+        request.predicate = NSPredicate(format: "(dateDebut <= %@) AND (dateFin >= %@) ", dateDebutDelaJourneeEnFr as CVarArg, dateDebutDelaJourneeEnFr as CVarArg)
+        do {
+            let activites: [Activite] = try CoreDataManager.context.fetch(request)
+            return activites
+        } catch let error as NSError{
+            fatalError("could not get medicaments by date " + error.description)
+        }
+    }
+    
 }

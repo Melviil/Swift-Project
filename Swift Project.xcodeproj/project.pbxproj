@@ -91,6 +91,7 @@
 		FE4213A920642657004EC5D7 /* AgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4213A820642657004EC5D7 /* AgendaViewController.swift */; };
 		FE4213AC2064E2E8004EC5D7 /* CellMedocCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4213AB2064E2E8004EC5D7 /* CellMedocCollectionViewCell.swift */; };
 		FE4213AD2064E2E8004EC5D7 /* CellMedocCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4213AB2064E2E8004EC5D7 /* CellMedocCollectionViewCell.swift */; };
+		FE780161206656E20026E7D1 /* CellActiviteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE780160206656E20026E7D1 /* CellActiviteCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -200,6 +201,7 @@
 		BECF995E20553523009420DE /* MedicamentDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentDescriptionViewController.swift; sourceTree = "<group>"; };
 		FE4213A820642657004EC5D7 /* AgendaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaViewController.swift; sourceTree = "<group>"; };
 		FE4213AB2064E2E8004EC5D7 /* CellMedocCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellMedocCollectionViewCell.swift; sourceTree = "<group>"; };
+		FE780160206656E20026E7D1 /* CellActiviteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellActiviteCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -455,6 +457,7 @@
 			children = (
 				FE4213A820642657004EC5D7 /* AgendaViewController.swift */,
 				FE4213AB2064E2E8004EC5D7 /* CellMedocCollectionViewCell.swift */,
+				FE780160206656E20026E7D1 /* CellActiviteCollectionViewCell.swift */,
 			);
 			path = Agenda;
 			sourceTree = "<group>";
@@ -623,6 +626,7 @@
 				BC7FA79720638794000824BE /* CoreDataMedicamentDAO.swift in Sources */,
 				BE9F4C7D20592348002DBB3D /* CentreHospitalierExtension.swift in Sources */,
 				BC0C9D16203830240067EBB8 /* Swift_Project.xcdatamodeld in Sources */,
+				FE780161206656E20026E7D1 /* CellActiviteCollectionViewCell.swift in Sources */,
 				BC7FA79D2063A976000824BE /* RDVAjoutDateViewController.swift in Sources */,
 				BC567C82204B103E00764B79 /* SymptomeTypeViewController.swift in Sources */,
 				BC322EAD205FB420005A20DE /* TypeSurveillanceSeed.swift in Sources */,

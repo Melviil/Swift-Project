@@ -100,11 +100,6 @@ class ActiviteAjoutViewController: UIViewController {
         content.title = self.nomActivite.libelleTypeActivite!
         content.body = "Pensez à faire votre scéance de sport!"
         content.badge = 1
-       // let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
-      //  let request  = UNNotificationRequest(identifier: "timerDone", content: content, trigger: trigger)
-       // UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
-        
-        
         
         // add notification for Mondays at 11:00 a.m.
         var dateComponents = DateComponents()

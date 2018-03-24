@@ -15,41 +15,47 @@ class AgendaViewController: UIViewController, UICollectionViewDataSource, UIColl
     var numberOfCells = Int()
     let dateToday = Date()
     var arrayMedicament : [Medicament]!
+    var arrayActivite : [Activite]!
+    var arrayAllString = [[String]]()
     let medicamentDAO = CoreDataDAOFactory.getInstance().getMedicamentDAO()
+    let activiteDAO = CoreDataDAOFactory.getInstance().getActiviteDAO()
+
     let calendar = Calendar.current
     
+    
+    
+    
     @IBOutlet weak var agendaCollectionView: UICollectionView!
-
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return arrayMedicament.count
+        return arrayAllString.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CellMedocCollectionViewCell
-        
-        cell.nomMedicament.text = arrayMedicament[indexPath.row].nomMedicament
-        cell.doseMedicamentLabel.text = arrayMedicament[indexPath.row].doseMedicament
-        let heuresM : [Heure] = arrayMedicament[indexPath.row].aPrendreA?.allObjects as! [Heure]
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "HH:mm"
-        dateFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
-        dateFormatter.timeZone = TimeZone.current
-        
-            for h in heuresM{
-                print("1")
-                if let heure = h as? Heure{
-                    print("2")
-                    dateFormatter.dateFormat = "HH:mm"
-                    let selectedDate = dateFormatter.string(from: heure.libelleHeure!)
-                    print(selectedDate)
-                    cell.heurePriseMedicamentLabel.text = selectedDate
+        let cellMedoc = collectionView.dequeueReusableCell(withReuseIdentifier: "cellMed", for: indexPath) as! CellMedocCollectionViewCell
+        let cellAct = collectionView.dequeueReusableCell(withReuseIdentifier: "cellAct", for: indexPath) as! CellActiviteCollectionViewCell
+        print(indexPath)
+        if ((arrayAllString.count != 0) && (indexPath.row < arrayAllString.count)){
+            print("lalalalla")
+            print(arrayAllString)
+            if (  arrayAllString[indexPath.row][0] == "medicament"){
+                cellMedoc.doseMedicamentLabel.text = arrayAllString[indexPath.row][3]
+                cellMedoc.nomMedicament.text = arrayAllString[indexPath.row][1]
+                cellMedoc.heurePriseMedicamentLabel.text = arrayAllString[indexPath.row][2]
+                return cellMedoc
+            }
 
-                }
+            if (  arrayAllString[indexPath.row][0] == "activite"){
+                cellAct.nomActivite.text = arrayAllString[indexPath.row][1]
+                cellAct.heureActiviteLabel.text = arrayAllString[indexPath.row][2]
+             
+                return cellAct
+            }
         }
-        return cell
+            return cellAct
     }
     
 
@@ -57,10 +63,17 @@ class AgendaViewController: UIViewController, UICollectionViewDataSource, UIColl
         super.viewDidLoad()
         agendaCollectionView.dataSource = self
         agendaCollectionView.delegate = self
-        print("current date : ")
-        print(dateToday)
-        self.arrayMedicament = self.medicamentDAO.getMedicamentsByDate(date: dateToday)
+        
+        ajoutDesMedicamentsDansMatrice()
+        ajoutDesActivitesDansMatrice()
+        var dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        
+        arrayAllString = arrayAllString.sorted(by: { dateFormatter.date(from:$0[2])?.compare(dateFormatter.date(from:$1[2])!) == .orderedAscending })
 
+        
+        
+       
         // Do any additional setup after loading the view.
     }
 
@@ -68,7 +81,37 @@ class AgendaViewController: UIViewController, UICollectionViewDataSource, UIColl
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    func ajoutDesMedicamentsDansMatrice(){
+        let dateFormatter = DateFormatter() // TODO : factoriser le dateFormatter
+        dateFormatter.dateFormat = "HH:mm"
+        dateFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
+        dateFormatter.timeZone = TimeZone.current
+        self.arrayMedicament = self.medicamentDAO.getMedicamentsByDate(date: dateToday)
+        for medicament in arrayMedicament{
+            let heuresM : [Heure] = medicament.aPrendreA?.allObjects as! [Heure]
+            for h in heuresM{
+                let dose =  medicament.doseMedicament!
+                let nom = medicament.nomMedicament!
+                let heure = dateFormatter.string(from: h.libelleHeure!)
+                arrayAllString.append(["medicament",nom,String(describing: heure),dose])
+            }
+        }
+    }
+    func ajoutDesActivitesDansMatrice(){
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        dateFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
+        dateFormatter.timeZone = TimeZone.current
+        self.arrayActivite = self.activiteDAO.getActivitesByDate(date: dateToday)
+        for activite in arrayActivite{
+            let heuresM : [Heure] = activite.sePasseA!.allObjects as! [Heure]
+            for h in heuresM{
+                let nom = activite.estDeType?.libelleTypeActivite!
+                let heure = dateFormatter.string(from: h.libelleHeure!)
+                arrayAllString.append(["activite",nom!,String(describing: heure)])
+            }
+        }
+    }
 
     /*
     // MARK: - Navigation
