@@ -45,15 +45,12 @@ class CoreDataMedicamentDAO: MedicamentDAO {
         let components = calendar.dateComponents([.year, .month, .day, .hour, .minute],from: date)
         let dateDebutDelaJourneeEnFr = calendar.date(from: components)!
         print("date debut journée="+dateDebutDelaJourneeEnFr.description)
+        
         let request: NSFetchRequest<Medicament> = NSFetchRequest(entityName: self.entityName)
-        let sort = NSSortDescriptor(key: #keyPath(Medicament.aPrendreA), ascending: true)
+       //let sort = NSSortDescriptor(key: #keyPath(Medicament.aPrendreA), ascending: true)
         
-        request.sortDescriptors = [sort]
+        //request.sortDescriptors = [sort]
         request.predicate = NSPredicate(format: "(dateDebutMedicament <= %@) AND (dateFinMedicament >= %@) ", dateDebutDelaJourneeEnFr as CVarArg, dateDebutDelaJourneeEnFr as CVarArg)
-        
-        
-        
-        
         
         do {
             
@@ -61,6 +58,7 @@ class CoreDataMedicamentDAO: MedicamentDAO {
             
             print("medicaments")
             print(medicaments)
+            print("dateDebutDelaJourneeEnFr")
             print(dateDebutDelaJourneeEnFr)
             return medicaments
             

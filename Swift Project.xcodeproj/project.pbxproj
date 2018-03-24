@@ -75,7 +75,6 @@
 		BE4F32A220557AB900C6121A /* MedicamentDateFinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F32A120557AB900C6121A /* MedicamentDateFinViewController.swift */; };
 		BE4F32A420557BB600C6121A /* MedicamentAjoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F32A320557BB600C6121A /* MedicamentAjoutViewController.swift */; };
 		BE9F4C7420591323002DBB3D /* PatientExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F4C7320591323002DBB3D /* PatientExtension.swift */; };
-		BE9F4C7920591E4B002DBB3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0C9D0D203830220067EBB8 /* AppDelegate.swift */; };
 		BE9F4C7B2059212E002DBB3D /* MedecinExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F4C7A2059212E002DBB3D /* MedecinExtension.swift */; };
 		BE9F4C7D20592348002DBB3D /* CentreHospitalierExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F4C7C20592348002DBB3D /* CentreHospitalierExtension.swift */; };
 		BE9F4C81205926CC002DBB3D /* RendezVousExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F4C80205926CC002DBB3D /* RendezVousExtension.swift */; };
@@ -675,7 +674,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE9F4C7920591E4B002DBB3D /* AppDelegate.swift in Sources */,
 				FE4213AD2064E2E8004EC5D7 /* CellMedocCollectionViewCell.swift in Sources */,
 				BC0C9D26203830300067EBB8 /* Swift_ProjectTests.swift in Sources */,
 			);
