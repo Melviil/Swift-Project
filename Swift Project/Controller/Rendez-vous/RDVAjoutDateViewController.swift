@@ -15,7 +15,12 @@ class RDVAjoutDateViewController: UIViewController {
     var numDocteurSent = String()
     var dateChoisi = String()
     var heureChoisieSent = String()
+    var tempsPourArriverRDVSent = String()
+    
+    
+    
     @IBOutlet weak var myDatePicker: UIDatePicker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         changerValueDateQuandDateChange(self)
@@ -24,6 +29,7 @@ class RDVAjoutDateViewController: UIViewController {
         print(numDocteurSent)
         print(heureChoisieSent)
         print(dateChoisi)
+        print(tempsPourArriverRDVSent)
         
         // Do any additional setup after loading the view.
     }
@@ -41,5 +47,23 @@ class RDVAjoutDateViewController: UIViewController {
         dateChoisi = selectedDate
         print(dateChoisi)
         
+    }
+    
+    let AjoutRdvSegue = "AjoutRdvSegue"
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == AjoutRdvSegue {
+            let RDVAjoutViewController = segue.destination as! RDVAjoutViewController
+            
+            RDVAjoutViewController.nomDocteurTFSent = self.nomDocteurTFSent
+            RDVAjoutViewController.numDocteurSent = self.numDocteurSent
+            RDVAjoutViewController.typeRDVSent = self.typeRDVSent
+            RDVAjoutViewController.tempsPourArriverRDVSent = self.tempsPourArriverRDVSent
+            RDVAjoutViewController.heureChoisieSent = self.heureChoisieSent
+            RDVAjoutViewController.dateChoisiSent = self.dateChoisi
+
+            
+            
+        }
     }
 }

@@ -16,6 +16,8 @@ class MedicamentDateDebutViewController: UIViewController {
     var presentationDetailleMedicamentPasse = String()
     var heuresPasse: [String] = []
     var dateChoisi = String()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         changerValueDateQuandDateChange(self)
