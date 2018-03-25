@@ -56,7 +56,13 @@ class CoreDataMedicamentDAO: MedicamentDAO {
     
     func addHeureMedicament(heure : Heure, medicament: Medicament) throws {
         medicament.addToAPrendreA(heure)
-        
     }
+    func addTypeMedicament(typeMedicament : TypeMedicament, medicament: Medicament) throws {
+        medicament.a = typeMedicament
+    }
+    func addDoseMedicament(doseMedicament : DoseMedicament, medicament: Medicament) throws {
+        medicament.aUneDose = doseMedicament
+    }
+
 }
 

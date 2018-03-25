@@ -13,12 +13,11 @@ class MedicamentHeureViewController: UIViewController, UITableViewDataSource {
     var hours: [String] = []
 
     @IBOutlet weak var tableViewHours: UITableView!
-    var libelleMedicamentPasse = String()
     var presentationBreveMedicamentPasse = String()
-    var DoseMedicamentPasse = String()
     var presentationDetailleMedicamentPasse = String()
+    var doseMedicSend : DoseMedicament!
+    var nomMedicSend : TypeMedicament!
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -55,11 +54,11 @@ class MedicamentHeureViewController: UIViewController, UITableViewDataSource {
         
         if segue.identifier == showJourMadicamentSegue {
             let MedicamentDateDebutViewController = segue.destination as! MedicamentDateDebutViewController
-            MedicamentDateDebutViewController.libelleMedicamentPasse = self.libelleMedicamentPasse
             MedicamentDateDebutViewController.presentationBreveMedicamentPasse = self.presentationBreveMedicamentPasse
-            MedicamentDateDebutViewController.DoseMedicamentPasse = self.DoseMedicamentPasse
             MedicamentDateDebutViewController.presentationDetailleMedicamentPasse = self.presentationDetailleMedicamentPasse
             MedicamentDateDebutViewController.heuresPasse = self.hours
+            MedicamentDateDebutViewController.nomMedicSend = self.nomMedicSend
+            MedicamentDateDebutViewController.doseMedicSend = self.doseMedicSend
             
         }
     }

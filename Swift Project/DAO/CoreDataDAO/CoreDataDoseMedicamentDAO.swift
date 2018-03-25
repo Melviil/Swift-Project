@@ -49,10 +49,10 @@ class CoreDataDoseMedicamentDAO: DoseMedicamentDAO {
             fatalError("could not get medicaments by date " + error.description)
         }
     }
-    func getAllByMedicament(nmedic : TypeMedicament)  -> [DoseMedicament]? {
+    func getAllByMedicament(nmedic : TypeMedicament)  -> [DoseMedicament] {
         
         let request: NSFetchRequest<DoseMedicament> = NSFetchRequest(entityName:"DoseMedicament")
-        request.predicate = NSPredicate(format: " contient.libelleTypeMedicament ==%@", nmedic.libelleTypeMedicament!)
+        request.predicate = NSPredicate(format: " ANY contient.libelleTypeMedicament == %@", nmedic.libelleTypeMedicament!)
         do {
             let doseMedic: [DoseMedicament] = try CoreDataManager.context.fetch(request)
             return doseMedic

@@ -90,10 +90,10 @@ class AgendaViewController: UIViewController, UICollectionViewDataSource, UIColl
         for medicament in arrayMedicament{
             let heuresM : [Heure] = medicament.aPrendreA?.allObjects as! [Heure]
             for h in heuresM{
-                let dose =  medicament.doseMedicament!
-                let nom = medicament.nomMedicament!
+                let dose =  medicament.aUneDose?.libelleDoseMedicament!
+                let nom = medicament.a?.libelleTypeMedicament!
                 let heure = dateFormatter.string(from: h.libelleHeure!)
-                arrayAllString.append(["medicament",nom,String(describing: heure),dose])
+                arrayAllString.append(["medicament",nom!,String(describing: heure),dose!])
             }
         }
     }

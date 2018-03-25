@@ -53,6 +53,9 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heure" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCH-58-tz2">
                                                     <rect key="frame" x="225" y="23" width="47" height="20"/>
                                                     <accessibility key="accessibilityConfiguration" identifier="heureactivite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="47" id="JZQ-zE-uwb"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -2082,7 +2085,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aa5-km-2cH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1380" y="1760.9154929577464"/>
+            <point key="canvasLocation" x="227" y="1758"/>
         </scene>
         <!--Medicament Liste View Controller-->
         <scene sceneID="RLf-aH-XyZ">
@@ -2113,7 +2116,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="8sd-C3-BzQ" kind="show" id="913-9L-n8g"/>
+                                    <segue destination="Um5-5J-Pjo" kind="show" id="3sR-X2-ItY"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mes médicaments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Syy-7s-9PY">
@@ -2122,14 +2125,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Fb-NM-cHN">
-                                <rect key="frame" x="274" y="232" width="46" height="207"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="Um5-5J-Pjo" kind="show" id="YDa-wR-UPH"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -2160,12 +2155,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SpA-hu-vpj">
-                                <rect key="frame" x="32" y="122" width="75" height="25.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Présentation brève :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BiH-BR-qaK">
                                 <rect key="frame" x="30" y="166" width="180" height="25.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -2178,20 +2167,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dose/nombre pillules : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="B5w-Sf-zwb">
-                                <rect key="frame" x="31" y="335" width="207" height="26"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Médicament à sucer avec une boîte jaune " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hm8-I8-lPg">
                                 <rect key="frame" x="30" y="297" width="255" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Aspirine" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dHd-nl-K6y">
-                                <rect key="frame" x="98" y="122" width="187" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -2208,15 +2185,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="2 gellules de 500mg" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Rn-kA-uS1">
-                                <rect key="frame" x="33" y="376" width="255" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Yo-Ct-6Q0">
                                 <rect key="frame" x="48" y="512" width="224" height="44"/>
                                 <color key="backgroundColor" red="0.23529411759999999" green="0.57254901960000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="0PR-O2-ib9"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Choisir les heures">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2233,42 +2207,28 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="4Yo-Ct-6Q0" firstAttribute="top" secondItem="0Rn-kA-uS1" secondAttribute="bottom" constant="106" id="1Zb-Tb-aRz"/>
                             <constraint firstItem="iNx-4m-2Qg" firstAttribute="trailing" secondItem="4Yo-Ct-6Q0" secondAttribute="trailing" constant="48" id="1w0-kj-MSZ"/>
-                            <constraint firstItem="iNx-4m-2Qg" firstAttribute="trailing" secondItem="0Rn-kA-uS1" secondAttribute="trailing" constant="32" id="31s-ku-CZG"/>
                             <constraint firstItem="Hm8-I8-lPg" firstAttribute="leading" secondItem="iNx-4m-2Qg" secondAttribute="leading" constant="30" id="3MY-kC-tMx"/>
                             <constraint firstItem="iNx-4m-2Qg" firstAttribute="trailing" secondItem="BiH-BR-qaK" secondAttribute="trailing" constant="110" id="4up-v7-Gbs"/>
+                            <constraint firstItem="4Yo-Ct-6Q0" firstAttribute="top" secondItem="Hm8-I8-lPg" secondAttribute="bottom" constant="185" id="5c1-Wx-HIW"/>
                             <constraint firstItem="Rbr-oX-rgg" firstAttribute="leading" secondItem="iNx-4m-2Qg" secondAttribute="leading" constant="35" id="97P-yU-waU"/>
+                            <constraint firstItem="BiH-BR-qaK" firstAttribute="top" secondItem="ofK-h3-eDI" secondAttribute="bottom" constant="60.5" id="9fA-QH-Z1l"/>
                             <constraint firstItem="ofK-h3-eDI" firstAttribute="top" secondItem="iNx-4m-2Qg" secondAttribute="top" constant="10" id="DLf-7r-ocu"/>
-                            <constraint firstItem="B5w-Sf-zwb" firstAttribute="top" secondItem="Hm8-I8-lPg" secondAttribute="bottom" constant="8" id="E5I-GN-Txv"/>
                             <constraint firstItem="8b5-Cm-ajh" firstAttribute="leading" secondItem="iNx-4m-2Qg" secondAttribute="leading" constant="30" id="Khn-8U-5ys"/>
                             <constraint firstItem="ofK-h3-eDI" firstAttribute="centerX" secondItem="14u-4h-S8S" secondAttribute="centerX" id="Pjl-Nw-z4i"/>
-                            <constraint firstItem="SpA-hu-vpj" firstAttribute="leading" secondItem="iNx-4m-2Qg" secondAttribute="leading" constant="32" id="Qf7-lg-GD1"/>
                             <constraint firstItem="iNx-4m-2Qg" firstAttribute="trailing" secondItem="Hm8-I8-lPg" secondAttribute="trailing" constant="35" id="Qy5-WK-ueE"/>
                             <constraint firstItem="Rbr-oX-rgg" firstAttribute="top" secondItem="BiH-BR-qaK" secondAttribute="bottom" constant="7.5" id="RTD-o5-h5w"/>
-                            <constraint firstItem="iNx-4m-2Qg" firstAttribute="trailing" secondItem="dHd-nl-K6y" secondAttribute="trailing" constant="35" id="TcT-DW-hay"/>
-                            <constraint firstItem="dHd-nl-K6y" firstAttribute="leading" secondItem="iNx-4m-2Qg" secondAttribute="leading" constant="98" id="Viy-Vi-Thb"/>
-                            <constraint firstItem="0Rn-kA-uS1" firstAttribute="top" secondItem="B5w-Sf-zwb" secondAttribute="bottom" constant="15" id="Yfb-IF-hsG"/>
                             <constraint firstItem="Hm8-I8-lPg" firstAttribute="top" secondItem="8b5-Cm-ajh" secondAttribute="bottom" constant="29.5" id="ZjG-sf-OeV"/>
                             <constraint firstItem="4Yo-Ct-6Q0" firstAttribute="leading" secondItem="iNx-4m-2Qg" secondAttribute="leading" constant="48" id="abS-2h-YlM"/>
-                            <constraint firstItem="BiH-BR-qaK" firstAttribute="top" secondItem="dHd-nl-K6y" secondAttribute="bottom" constant="14" id="bhR-ZA-nDc"/>
-                            <constraint firstItem="B5w-Sf-zwb" firstAttribute="leading" secondItem="iNx-4m-2Qg" secondAttribute="leading" constant="31" id="ecL-jw-3jX"/>
-                            <constraint firstItem="iNx-4m-2Qg" firstAttribute="trailing" secondItem="B5w-Sf-zwb" secondAttribute="trailing" constant="82" id="fCO-M3-4MX"/>
                             <constraint firstItem="BiH-BR-qaK" firstAttribute="leading" secondItem="iNx-4m-2Qg" secondAttribute="leading" constant="30" id="fk2-w8-Izf"/>
                             <constraint firstItem="iNx-4m-2Qg" firstAttribute="trailing" secondItem="8b5-Cm-ajh" secondAttribute="trailing" constant="110" id="h3X-f1-434"/>
-                            <constraint firstItem="0Rn-kA-uS1" firstAttribute="leading" secondItem="iNx-4m-2Qg" secondAttribute="leading" constant="33" id="qpa-UQ-qdR"/>
                             <constraint firstItem="8b5-Cm-ajh" firstAttribute="top" secondItem="Rbr-oX-rgg" secondAttribute="bottom" constant="13" id="r44-Wn-N8C"/>
-                            <constraint firstItem="dHd-nl-K6y" firstAttribute="top" secondItem="ofK-h3-eDI" secondAttribute="bottom" constant="16.5" id="sQw-s7-S6n"/>
                             <constraint firstItem="iNx-4m-2Qg" firstAttribute="bottom" secondItem="4Yo-Ct-6Q0" secondAttribute="bottom" constant="12" id="tfv-2d-FYC"/>
                             <constraint firstItem="iNx-4m-2Qg" firstAttribute="trailing" secondItem="Rbr-oX-rgg" secondAttribute="trailing" constant="35" id="tsm-DS-OBw"/>
-                            <constraint firstItem="iNx-4m-2Qg" firstAttribute="trailing" secondItem="SpA-hu-vpj" secondAttribute="trailing" constant="213" id="xdZ-UI-xEw"/>
-                            <constraint firstItem="SpA-hu-vpj" firstAttribute="top" secondItem="ofK-h3-eDI" secondAttribute="bottom" constant="16.5" id="xtr-8a-uZC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iNx-4m-2Qg"/>
                     </view>
                     <connections>
-                        <outlet property="DoseMedicament" destination="0Rn-kA-uS1" id="sQO-bz-sOa"/>
-                        <outlet property="libelleMedicament" destination="dHd-nl-K6y" id="Saw-mY-AUx"/>
                         <outlet property="presentationBreveMedicament" destination="Rbr-oX-rgg" id="eH1-Hc-6VJ"/>
                         <outlet property="presentationDetailleMedicament" destination="Hm8-I8-lPg" id="uW4-h3-X4K"/>
                     </connections>
@@ -2367,7 +2327,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="Z66-4F-P5W" kind="show" identifier="doseMedics" id="vzJ-kt-XKd"/>
+                                    <segue destination="Z66-4F-P5W" kind="show" identifier="showDoseMedicSegue" id="vzJ-kt-XKd"/>
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5z0-eM-Ug5">
@@ -2393,7 +2353,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yjn-pb-nOY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2331" y="1745"/>
+            <point key="canvasLocation" x="1065" y="1793"/>
         </scene>
         <!--Medicament Dose View Controller-->
         <scene sceneID="fwV-yZ-ylV">
@@ -2409,8 +2369,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwU-Xk-IgK">
-                                <rect key="frame" x="60" y="499.5" width="198" height="56.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwU-Xk-IgK">
+                                <rect key="frame" x="61" y="499.5" width="198" height="56.5"/>
                                 <color key="backgroundColor" red="0.23529411759999999" green="0.57254901960000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Choisir les heures">
@@ -2421,6 +2381,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="8sd-C3-BzQ" kind="show" identifier="showDescMedicSegue" id="gBM-IX-HM3"/>
+                                </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fqw-S8-EuM">
                                 <rect key="frame" x="0.0" y="188.5" width="320" height="191"/>
@@ -2431,6 +2394,7 @@
                             <constraint firstItem="fqw-S8-EuM" firstAttribute="centerX" secondItem="mQu-UL-XeA" secondAttribute="centerX" id="2o5-V2-LBJ"/>
                             <constraint firstItem="l9J-ZK-H2d" firstAttribute="top" secondItem="pPU-VJ-g4x" secondAttribute="top" constant="10" id="4ep-mh-KNG"/>
                             <constraint firstItem="fqw-S8-EuM" firstAttribute="centerX" secondItem="mQu-UL-XeA" secondAttribute="centerX" id="A6f-rT-ca3"/>
+                            <constraint firstItem="gwU-Xk-IgK" firstAttribute="centerX" secondItem="mQu-UL-XeA" secondAttribute="centerX" id="BLx-iR-aXG"/>
                             <constraint firstItem="pPU-VJ-g4x" firstAttribute="bottom" secondItem="gwU-Xk-IgK" secondAttribute="bottom" constant="12" id="DZg-up-T9G"/>
                             <constraint firstItem="l9J-ZK-H2d" firstAttribute="centerX" secondItem="mQu-UL-XeA" secondAttribute="centerX" id="GF4-k9-zSd"/>
                             <constraint firstItem="fqw-S8-EuM" firstAttribute="centerY" secondItem="mQu-UL-XeA" secondAttribute="centerY" id="hYh-WV-6SL"/>
@@ -2445,7 +2409,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9uP-2a-apV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2301" y="2555"/>
+            <point key="canvasLocation" x="1894" y="1793"/>
         </scene>
         <!--Medicament Heure View Controller-->
         <scene sceneID="qua-jI-l1i">

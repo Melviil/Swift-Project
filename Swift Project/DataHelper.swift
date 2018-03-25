@@ -14,7 +14,6 @@ public class DataHelper {
         seedTypeSymptome()
         seedTypeSurveillance()
         seedDoseMedicament()
-
         seedTypeMedicament()
 
 
@@ -71,8 +70,12 @@ public class DataHelper {
             for doseRecup in TypeMedicament.doses{
                 print(doseRecup)
                 let dosesss = DoseMedicamentDAO.getMedicamentsByDoseName(name: doseRecup)
-                if (dosesss?[0] != nil){
-                    newTypeMedicament.aUneDose =  dosesss?[0]
+                if (dosesss?.count != 0){
+                    do{
+                        try TypeMedicamentDAO.addDoseTypeMedicament(typeMedicament: newTypeMedicament, dose: (dosesss?[0])!)
+                    }catch{
+                        fatalError("Error cannot populate DB")
+                    }
                 }
             }
             do{

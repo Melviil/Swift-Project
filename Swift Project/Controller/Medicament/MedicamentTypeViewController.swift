@@ -13,7 +13,7 @@ class MedicamentTypeViewController: UIViewController, UIPickerViewDelegate, UIPi
 
     @IBOutlet weak var myPickerView: UIPickerView!
     var pickerData: [TypeMedicament] = []
-    let segueShowNomSuivi = "showNomMedicSegue"
+    let segueShowNomSuivi = "showDoseMedicSegue"
     
     var nomMedic : TypeMedicament!
     override func viewDidLoad() {
@@ -55,7 +55,7 @@ class MedicamentTypeViewController: UIViewController, UIPickerViewDelegate, UIPi
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "doseMedics" {
+        if segue.identifier == segueShowNomSuivi {
             let doseMedic = segue.destination as! MedicamentDoseViewController
             doseMedic.nomMedicSend = self.nomMedic
             

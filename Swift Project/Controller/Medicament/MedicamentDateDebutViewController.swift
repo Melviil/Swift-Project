@@ -10,12 +10,12 @@ import UIKit
 
 class MedicamentDateDebutViewController: UIViewController {
     @IBOutlet weak var myDatePicker: UIDatePicker!
-    var libelleMedicamentPasse = String()
     var presentationBreveMedicamentPasse = String()
-    var DoseMedicamentPasse = String()
     var presentationDetailleMedicamentPasse = String()
     var heuresPasse: [String] = []
     var dateChoisi = String()
+    var doseMedicSend : DoseMedicament!
+    var nomMedicSend : TypeMedicament!
     override func viewDidLoad() {
         super.viewDidLoad()
         changerValueDateQuandDateChange(self)
@@ -33,12 +33,12 @@ class MedicamentDateDebutViewController: UIViewController {
         if segue.identifier == showJourActiviteSegue {
             let MedicamentDateFinViewController = segue.destination as! MedicamentDateFinViewController
             
-            MedicamentDateFinViewController.libelleMedicamentPasse = self.libelleMedicamentPasse
             MedicamentDateFinViewController.presentationBreveMedicamentPasse = self.presentationBreveMedicamentPasse
-            MedicamentDateFinViewController.DoseMedicamentPasse = self.DoseMedicamentPasse
             MedicamentDateFinViewController.presentationDetailleMedicamentPasse = self.presentationDetailleMedicamentPasse
             MedicamentDateFinViewController.heuresPasse = self.heuresPasse
             MedicamentDateFinViewController.dateDebutPasse = self.dateChoisi
+            MedicamentDateFinViewController.nomMedicSend = self.nomMedicSend
+            MedicamentDateFinViewController.doseMedicSend = self.doseMedicSend
             
         }
     }

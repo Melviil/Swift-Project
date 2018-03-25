@@ -249,8 +249,8 @@
 			isa = PBXGroup;
 			children = (
 				BCFA134F2065AA130013FF40 /* MedicamentListeViewController.swift */,
-				FE3FC8B420667D340065D9F9 /* MedicamentDoseViewController.swift */,
 				FE3FC8A6206675F20065D9F9 /* MedicamentTypeViewController.swift */,
+				FE3FC8B420667D340065D9F9 /* MedicamentDoseViewController.swift */,
 				BECF995E20553523009420DE /* MedicamentDescriptionViewController.swift */,
 				BECF995A20552A60009420DE /* MedicamentHeureViewController.swift */,
 				BECF995C20552FF0009420DE /* MedicamentAjoutHeureViewController.swift */,

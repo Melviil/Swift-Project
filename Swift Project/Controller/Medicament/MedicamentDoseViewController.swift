@@ -15,9 +15,10 @@ class MedicamentDoseViewController: UIViewController, UIPickerViewDelegate, UIPi
     
     @IBOutlet weak var myPickerView: UIPickerView!
     var pickerData: [DoseMedicament] = []
-    let segueShowNomSuivi = "showNomMedicSegue"
+    let segueShowNomSuivi = "showDescMedicSegue"
     var nomMedicSend : TypeMedicament!
     var doseMedic : DoseMedicament!
+    var doses : [DoseMedicament] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         myPickerView.delegate = self
@@ -26,12 +27,11 @@ class MedicamentDoseViewController: UIViewController, UIPickerViewDelegate, UIPi
         //GET type symtpome
         let daoF = CoreDataDAOFactory.getInstance()
         let DoseMedicamentDAO = daoF.getDoseMedicamentDAO()
-        do{
-            try pickerData = DoseMedicamentDAO.getAllByMedicament(nmedic: nomMedicSend)!
-            print(pickerData)
-        }catch {
-            
+            doses = DoseMedicamentDAO.getAllByMedicament(nmedic: nomMedicSend)
+        for dose in doses {
+            pickerData.append(dose)
         }
+            print(pickerData)
         self.doseMedic=pickerData[0]
         // Do any additional setup after loading the view.
     }
@@ -58,15 +58,16 @@ class MedicamentDoseViewController: UIViewController, UIPickerViewDelegate, UIPi
     }
     
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == segueShowNomSuivi {
+            let descriptionMedic = segue.destination as! MedicamentDescriptionViewController
+            descriptionMedic.nomMedicSend = self.nomMedicSend
+            descriptionMedic.doseMedicSend = self.doseMedic
+            
+        }
+        
+    }
     
 }
 

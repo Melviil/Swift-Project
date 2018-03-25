@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17C88" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Activite" representedClassName="Activite" syncable="YES" codeGenerationType="class">
         <attribute name="dateDebut" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="dateFin" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -17,7 +17,8 @@
     </entity>
     <entity name="DoseMedicament" representedClassName="DoseMedicament" syncable="YES" codeGenerationType="class">
         <attribute name="libelleDoseMedicament" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="contient" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TypeMedicament" inverseName="aUneDose" inverseEntity="TypeMedicament" syncable="YES"/>
+        <relationship name="aDesMedic" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Medicament" inverseName="aUneDose" inverseEntity="Medicament" syncable="YES"/>
+        <relationship name="contient" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TypeMedicament" inverseName="aUneDose" inverseEntity="TypeMedicament" syncable="YES"/>
     </entity>
     <entity name="Heure" representedClassName="Heure" syncable="YES" codeGenerationType="class">
         <attribute name="libelleHeure" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -37,12 +38,11 @@
     <entity name="Medicament" representedClassName="Medicament" syncable="YES" codeGenerationType="class">
         <attribute name="dateDebutMedicament" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="dateFinMedicament" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="doseMedicament" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="nomMedicament" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="presentationBreveMedicament" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="presentationMedicament" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="a" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TypeMedicament" inverseName="aDes" inverseEntity="TypeMedicament" syncable="YES"/>
+        <relationship name="a" maxCount="1" deletionRule="Nullify" destinationEntity="TypeMedicament" inverseName="aDes" inverseEntity="TypeMedicament" syncable="YES"/>
         <relationship name="aPrendreA" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Heure" inverseName="prendreA" inverseEntity="Heure" syncable="YES"/>
+        <relationship name="aUneDose" maxCount="1" deletionRule="Nullify" destinationEntity="DoseMedicament" inverseName="aDesMedic" inverseEntity="DoseMedicament" syncable="YES"/>
     </entity>
     <entity name="Patient" representedClassName="Patient" syncable="YES" codeGenerationType="class">
         <attribute name="dateNaissance" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -75,7 +75,7 @@
     <entity name="TypeMedicament" representedClassName="TypeMedicament" syncable="YES" codeGenerationType="class">
         <attribute name="libelleTypeMedicament" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="aDes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Medicament" inverseName="a" inverseEntity="Medicament" syncable="YES"/>
-        <relationship name="aUneDose" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DoseMedicament" inverseName="contient" inverseEntity="DoseMedicament" syncable="YES"/>
+        <relationship name="aUneDose" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DoseMedicament" inverseName="contient" inverseEntity="DoseMedicament" syncable="YES"/>
     </entity>
     <entity name="TypeSurveillance" representedClassName="TypeSurveillance" syncable="YES" codeGenerationType="class">
         <attribute name="libelleTypeSurveillance" optional="YES" attributeType="String" syncable="YES"/>
@@ -88,19 +88,19 @@
     <elements>
         <element name="Activite" positionX="115" positionY="27" width="128" height="133"/>
         <element name="CentreHospitalier" positionX="-171" positionY="375" width="128" height="75"/>
+        <element name="DoseMedicament" positionX="-495" positionY="-34" width="128" height="88"/>
         <element name="Heure" positionX="-216" positionY="18" width="128" height="90"/>
         <element name="Jour" positionX="-216" positionY="117" width="128" height="90"/>
         <element name="Medecin" positionX="-270" positionY="486" width="128" height="88"/>
-        <element name="Medicament" positionX="-495" positionY="225" width="128" height="163"/>
+        <element name="Medicament" positionX="-495" positionY="234" width="128" height="150"/>
         <element name="Patient" positionX="-65" positionY="468" width="128" height="90"/>
         <element name="RendezVous" positionX="-108" positionY="252" width="128" height="105"/>
         <element name="Specialite" positionX="97" positionY="270" width="128" height="60"/>
         <element name="Surveillance" positionX="45" positionY="171" width="128" height="88"/>
         <element name="Symptome" positionX="115" positionY="360" width="128" height="90"/>
         <element name="TypeActivite" positionX="-209" positionY="-117" width="128" height="73"/>
+        <element name="TypeMedicament" positionX="-1008" positionY="72" width="128" height="88"/>
         <element name="TypeSurveillance" positionX="-29" positionY="363" width="128" height="73"/>
         <element name="TypeSymptome" positionX="142" positionY="480" width="128" height="73"/>
-        <element name="TypeMedicament" positionX="-495" positionY="72" width="128" height="88"/>
-        <element name="DoseMedicament" positionX="-495" positionY="-34" width="128" height="73"/>
     </elements>
 </model>

@@ -39,6 +39,10 @@ class CoreDataTypeMedicamentDAO: TypeMedicamentDAO {
     func remove(typeMedicament: TypeMedicament) throws{
         
     }
+    func addDoseTypeMedicament(typeMedicament : TypeMedicament, dose: DoseMedicament) throws {
+        typeMedicament.addToAUneDose(dose)
+        
+    }
     
 
     
