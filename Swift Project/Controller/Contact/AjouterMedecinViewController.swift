@@ -37,8 +37,10 @@ class AjouterMedecinViewController: UIViewController {
         medecin.titreMedecin = titreMedecinTextField.text
         medecin.telephoneMedecin = telMedecinTextField.text
         
+        print("avant ajout")
         do{
             try medecinDAO.save(medecin: medecin)
+            print("wesh done")
         }catch{
             print("walla ca marche pas")
         }

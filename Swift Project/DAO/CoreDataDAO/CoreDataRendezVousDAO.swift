@@ -81,4 +81,9 @@ class CoreDataRendezVousDAO: RendezVousDAO {
         rendezVous.prisA = heure
         
     }
+    
+    func addMedecinRdv(rendezVous: RendezVous, medecin: Medecin) throws {
+        rendezVous.avec = medecin
+        
+    }
 }

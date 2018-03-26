@@ -10,9 +10,7 @@ import UIKit
 
 class RDVAjoutViewController: UIViewController {
 
-    var nomDocteurTFSent = String()
-    var typeRDVSent = String()
-    var numDocteurSent = String()
+    var medecinSent : Medecin?
     var dateChoisiSent = String()
     var heureChoisieSent = String()
     var tempsPourArriverRDVSent = String()
@@ -20,7 +18,9 @@ class RDVAjoutViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    
+    saveNewRDV(withMedecin : medecinSent!, withdateChoisi: dateChoisiSent, withheureChoisie: heureChoisieSent, withtempsPourArriverRDV: tempsPourArriverRDVSent)
+        
         // Do any additional setup after loading the view.
     }
 
@@ -31,7 +31,7 @@ class RDVAjoutViewController: UIViewController {
     
 
     
-    func saveNewRDV( withNomDocteur nomDocteurTFSent: String, withtypeRDV typeRDVSent : String, withnumDocteur numDocteurSent : String, withdateChoisi dateChoisiSent : String, withheureChoisie heureChoisieSent : String,  withtempsPourArriverRDV tempsPourArriverRDVSent: String){
+    func saveNewRDV( withMedecin medecinSent : Medecin ,withdateChoisi dateChoisiSent : String, withheureChoisie heureChoisieSent : String,  withtempsPourArriverRDV tempsPourArriverRDVSent: String){
         
         let daoF = CoreDataDAOFactory.getInstance()
         let rdvDAO = daoF.getRendezVousDAO()
@@ -44,18 +44,22 @@ class RDVAjoutViewController: UIViewController {
         dateFormatter.dateFormat = "dd-MM-yyyy"
         dateFormatter.timeZone = TimeZone.current
         
-        guard let dateChoisi = dateFormatter.date(from:dateChoisiSent) else {
+        let heureFormatter = DateFormatter()
+        heureFormatter.dateFormat = "HH:mm"
+        heureFormatter.timeZone = TimeZone.current
+        
+        guard let dateChoisiSent = dateFormatter.date(from:dateChoisiSent) else {
             fatalError("ERROR: Date conversion failed due to mismatched format.")
         }
-        guard let heureChoisie = dateFormatter.date(from:heureChoisieSent) else {
+        guard let heureChoisie = heureFormatter.date(from:heureChoisieSent) else {
             fatalError("ERROR: Date conversion failed due to mismatched format.")
         }
-        guard let tempsPourArriverRDV = dateFormatter.date(from:tempsPourArriverRDVSent) else {
+        guard let tempsPourArriverRDV = heureFormatter.date(from:tempsPourArriverRDVSent) else {
             fatalError("ERROR: Date conversion failed due to mismatched format.")
         }
         
         
-        rendezVous.dateRdv = dateChoisi
+        rendezVous.dateRdv = dateChoisiSent
         rendezVous.heureRDV = heureChoisie
         rendezVous.tpsPourArriver = tempsPourArriverRDV
         
@@ -64,11 +68,8 @@ class RDVAjoutViewController: UIViewController {
         
         
         let medecin: Medecin = medecinDAO.create()
-// REPRENDRE ICI , STOPPED TO ADD MEDECIN
-//        guard let heureGood = dateFormatter.date(from:uneHeure) else {
-//            fatalError("ERROR: Date conversion failed due to mismatched format.")
-//        }
-//
+        
+     
 //        for uneHeure in heures {
 //            let heure: Heure = heureDAO.create()
 //
@@ -87,6 +88,18 @@ class RDVAjoutViewController: UIViewController {
 //
 //            }
 //        }
+        
+        
+        do{
+            try rdvDAO.addMedecinRdv(rendezVous: rendezVous, medecin: medecin)
+        }catch {print("medecin rdv non ajoute")}
+        
+        
+        do{
+            try rdvDAO.save(rendezVous: rendezVous)
+        }catch {print("rdv non ajoute")}
+        
+   
     /*
     // MARK: - Navigation
 

@@ -10,16 +10,14 @@ import Foundation
 
 class RDVAjoutTempsViewController: UIViewController {
     
-    var nomDocteurTFSent = String()
-    var typeRDVSent = String()
-    var numDocteurSent = String()
+   
     var heureChoisie = ""
+    var medecinSent : Medecin?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(nomDocteurTFSent)
-        print(typeRDVSent)
-        print(numDocteurSent)
+        print("medecin sent")
+        print(medecinSent!)
         changerValueHeureWhenHeureChange(self)
         
         // Do any additional setup after loading the view.
@@ -32,14 +30,14 @@ class RDVAjoutTempsViewController: UIViewController {
     
     
     let AjoutTpsPourArriverSegue = "AjoutTpsPourArriverSegue"
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == AjoutTpsPourArriverSegue {
-            let AjoutHeureViewController = segue.destination as! AjoutHeureViewController
+            let AjoutHeureViewController = segue.destination as! RDVAjoutHeureViewController
         
-            AjoutHeureViewController.nomDocteurTFSent = self.nomDocteurTFSent
-            AjoutHeureViewController.numDocteurSent = self.numDocteurSent
-            AjoutHeureViewController.typeRDVSent = self.typeRDVSent
+           
+            AjoutHeureViewController.medecinSent = self.medecinSent
             AjoutHeureViewController.tempsPourArriverRDV = self.heureChoisie
             
         }

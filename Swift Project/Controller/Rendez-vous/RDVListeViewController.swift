@@ -7,14 +7,59 @@
 //
 
 import UIKit
+import CoreData
+import Foundation
 
-class RDVListeViewController: UIViewController {
-
+class RDVListeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+   
+    var rdvs: [RendezVous]?
+    var rdvString : [String] = []
+    
     @IBOutlet weak var rdvListeTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        rdvListeTableView.dataSource = self
+        rdvListeTableView.delegate = self
 
-        // Do any additional setup after loading the view.
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
+            //Ajouter une error a display
+            return
+        }
+        let context = appDelegate.persistentContainer.viewContext
+        let request  : NSFetchRequest<RendezVous> = RendezVous.fetchRequest()
+        
+        do{
+            try self.rdvs = context.fetch(request)
+        }
+        catch{
+            return
+        }
+        
+        for rdv in rdvs!{
+
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd MMMM"
+            dateFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
+            dateFormatter.timeZone = TimeZone.current
+            
+            
+            let heureFormatter = DateFormatter()
+            heureFormatter.dateFormat = "HH:mm"
+            heureFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
+            heureFormatter.timeZone = TimeZone.current
+                
+            let dateRdv = dateFormatter.string(from: rdv.dateRdv!)
+            let heureRdv = heureFormatter.string(from :rdv.heureRDV!)
+            let tpsPrArriverRdv = heureFormatter.string(from :rdv.tpsPourArriver!)
+            let medecin = rdv.avec?.nomMedecin
+            
+            rdvString.append("Avec " + " le " + dateRdv + " à " + heureRdv + " il faut " + tpsPrArriverRdv + " pour y arriver" )
+                            
+        }
+        
+            
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,6 +67,11 @@ class RDVListeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = String(describing: self.rdvString[indexPath.row])
+        return cell
+    }
 
     /*
     // MARK: - Navigation
@@ -32,5 +82,14 @@ class RDVListeViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return rdvString.count
+    }
+    
 
 }

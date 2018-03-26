@@ -8,13 +8,12 @@
 import Foundation
 import UIKit
 
-class AjoutHeureViewController: UIViewController {
+class RDVAjoutHeureViewController: UIViewController {
     
     @IBOutlet weak var heureRdvDatePicker: UIDatePicker!
     @IBOutlet weak var heureRDVDatePicker: UIDatePicker!
-    var nomDocteurTFSent = String()
-    var typeRDVSent = String()
-    var numDocteurSent = String()
+    
+    var medecinSent : Medecin?
     var tempsPourArriverRDV = String()
     var heureChoisie = ""
     
@@ -22,10 +21,7 @@ class AjoutHeureViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         changerValueDateQuandDateChange(self)
-        print(nomDocteurTFSent)
-        print(typeRDVSent)
-        print(numDocteurSent)
-        print(heureChoisie)
+       
         // Do any additional setup after loading the view.
     }
 
@@ -49,12 +45,11 @@ class AjoutHeureViewController: UIViewController {
         if segue.identifier == AjoutDateRdvSegue {
             let RDVAjoutDateViewController = segue.destination as! RDVAjoutDateViewController
             
-            RDVAjoutDateViewController.nomDocteurTFSent = self.nomDocteurTFSent
-            RDVAjoutDateViewController.numDocteurSent = self.numDocteurSent
-            RDVAjoutDateViewController.typeRDVSent = self.typeRDVSent
+         
             RDVAjoutDateViewController.tempsPourArriverRDVSent = self.tempsPourArriverRDV
             RDVAjoutDateViewController.heureChoisieSent = self.heureChoisie
-            
+            RDVAjoutDateViewController.medecinSent = self.medecinSent
+
             
             
         }
