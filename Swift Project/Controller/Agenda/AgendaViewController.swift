@@ -16,10 +16,12 @@ class AgendaViewController: UIViewController, UICollectionViewDataSource, UIColl
     let dateToday = Date()
     var arrayMedicament : [Medicament]!
     var arrayActivite : [Activite]!
+    var arrayRdvs : [RendezVous]!
     var arrayAllString = [[String]]()
     let medicamentDAO = CoreDataDAOFactory.getInstance().getMedicamentDAO()
     let activiteDAO = CoreDataDAOFactory.getInstance().getActiviteDAO()
-    
+    let rendezvousDAO = CoreDataDAOFactory.getInstance().getRendezVousDAO()
+
 
     
     let calendar = Calendar.current
@@ -39,6 +41,7 @@ class AgendaViewController: UIViewController, UICollectionViewDataSource, UIColl
     {
         let cellMedoc = collectionView.dequeueReusableCell(withReuseIdentifier: "cellMed", for: indexPath) as! CellMedocCollectionViewCell
         let cellAct = collectionView.dequeueReusableCell(withReuseIdentifier: "cellAct", for: indexPath) as! CellActiviteCollectionViewCell
+         let cellRdv = collectionView.dequeueReusableCell(withReuseIdentifier: "cellRdv", for: indexPath) as! CellRdvCollectionViewCell
         print(indexPath)
         if ((arrayAllString.count != 0) && (indexPath.row < arrayAllString.count)){
             print("lalalalla")
@@ -55,6 +58,12 @@ class AgendaViewController: UIViewController, UICollectionViewDataSource, UIColl
                 cellAct.heureActiviteLabel.text = arrayAllString[indexPath.row][2]
              
                 return cellAct
+            }
+            if (  arrayAllString[indexPath.row][0] == "rendezvous"){
+                cellRdv.heureRdvLabel.text = arrayAllString[indexPath.row][2]
+                cellRdv.NomMedecinRdvLabel.text = arrayAllString[indexPath.row][1]
+                cellRdv.nomRdv.text = arrayAllString[indexPath.row][3]
+                return cellRdv
             }
         }
             return cellAct
@@ -112,6 +121,18 @@ class AgendaViewController: UIViewController, UICollectionViewDataSource, UIColl
                 let heure = dateFormatter.string(from: h.libelleHeure!)
                 arrayAllString.append(["activite",nom!,String(describing: heure)])
             }
+        }
+    }
+    func ajoutRdvDansMatrice(){
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        dateFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
+        dateFormatter.timeZone = TimeZone.current
+        for rdv in arrayRdvs{
+                let nomMed = rdv.avec?.nomMedecin
+                let heure = dateFormatter.string(from: rdv.heureRDV!)
+                let rdvNom = rdv.avec?.aUneSpecialite?.libelleSpecialite
+                arrayAllString.append(["rendezvous",nomMed!,String(describing: heure), rdvNom!])
         }
     }
 

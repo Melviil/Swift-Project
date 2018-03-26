@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 class MedicamentAjoutViewController: UIViewController {
     var presentationBreveMedicamentPasse = String()
@@ -17,10 +18,15 @@ class MedicamentAjoutViewController: UIViewController {
     var dateFinPasse = String()
     var doseMedicSend : DoseMedicament!
     var nomMedicSend : TypeMedicament!
+    let calendar = Calendar.current
+
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UNUserNotificationCenter.current().requestAuthorization(options : [.alert, .sound, .badge], completionHandler : {didAllow, error in})
+        self.navigationItem.setHidesBackButton(true, animated:true);
+        
         self.navigationItem.setHidesBackButton(true, animated:true);
         // Do any additional setup after loading the view.
         
@@ -87,10 +93,34 @@ class MedicamentAjoutViewController: UIViewController {
             }catch {
                 
             }
+            self.ajouterNotif( heure: calendar.component(.hour, from: heureGood), minute: calendar.component(.minute, from: heureGood))
         }
         
+        
     }
-   
+   public func ajouterNotif(heure h: Int, minute m: Int){
+        let content = UNMutableNotificationContent()
+        content.title = self.nomMedicSend.libelleTypeMedicament! + self.doseMedicSend.libelleDoseMedicament!
+        content.body = "Pensez à prendre votre medicament"
+        content.badge = 1
+        
+        // add notification for Mondays at 11:00 a.m.
+        var dateComponents = DateComponents()
+    
+    for day in 1...7{
+        dateComponents.day = day
+        dateComponents.hour = h
+        dateComponents.minute = m
+        print(day)
+        print(h)
+        print(m)
+        let notificationTrigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+        let id = "notif" + String(day)
+        let request2 = UNNotificationRequest(identifier: id, content: content, trigger: notificationTrigger)
+        UNUserNotificationCenter.current().add(request2, withCompletionHandler: nil)
+    }
+    
+    }
     /*
     // MARK: - Navigation
 

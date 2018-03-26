@@ -378,13 +378,13 @@
 		BCAFD280204C4D9C0037ADBD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BCFA136120666AA80013FF40 /* Contact */,
+				BC6AD696205564F2001F1E04 /* Activité */,
 				FE4213A12063A211004EC5D7 /* Agenda */,
+				BCFA136120666AA80013FF40 /* Contact */,
 				BCE6D908205EAEA8003068B8 /* Suivi */,
 				BE3107B6205702B90087EA02 /* Rendez-vous */,
-				BC6AD696205564F2001F1E04 /* Activité */,
-				BC6AD69720556503001F1E04 /* Symptome */,
 				BC09AA12205F192500FACC62 /* Medicament */,
+				BC6AD69720556503001F1E04 /* Symptome */,
 				BC6AD69820556568001F1E04 /* Surveillance */,
 			);
 			path = Controller;

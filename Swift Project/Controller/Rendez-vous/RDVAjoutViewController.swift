@@ -37,7 +37,6 @@ class RDVAjoutViewController: UIViewController {
         let rdvDAO = daoF.getRendezVousDAO()
         let rendezVous: RendezVous = rdvDAO.create()
         
-        let medecinDAO = daoF.getMedecinDAO()
 
         
         let dateFormatter = DateFormatter()
@@ -67,7 +66,6 @@ class RDVAjoutViewController: UIViewController {
         dateFormatter.dateFormat = "HH mm"
         
         
-        let medecin: Medecin = medecinDAO.create()
         
      
 //        for uneHeure in heures {
@@ -91,7 +89,7 @@ class RDVAjoutViewController: UIViewController {
         
         
         do{
-            try rdvDAO.addMedecinRdv(rendezVous: rendezVous, medecin: medecin)
+            try rdvDAO.addMedecinRdv(rendezVous: rendezVous, medecin: medecinSent)
         }catch {print("medecin rdv non ajoute")}
         
         
