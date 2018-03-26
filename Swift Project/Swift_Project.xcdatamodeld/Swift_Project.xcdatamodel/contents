@@ -23,6 +23,7 @@
     <entity name="Heure" representedClassName="Heure" syncable="YES" codeGenerationType="class">
         <attribute name="libelleHeure" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <relationship name="contient" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Activite" inverseName="sePasseA" inverseEntity="Activite" syncable="YES"/>
+        <relationship name="heureRDV" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RendezVous" inverseName="prisA" inverseEntity="RendezVous" syncable="YES"/>
         <relationship name="prendreA" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Medicament" inverseName="aPrendreA" inverseEntity="Medicament" syncable="YES"/>
     </entity>
     <entity name="Jour" representedClassName="Jour" syncable="YES" codeGenerationType="class">
@@ -33,7 +34,9 @@
     <entity name="Medecin" representedClassName="Medecin" syncable="YES" codeGenerationType="class">
         <attribute name="nomMedecin" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="prenomMedecin" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="tel" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="telephoneMedecin" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="titreMedecin" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="effectue" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RendezVous" inverseName="avec" inverseEntity="RendezVous" syncable="YES"/>
     </entity>
     <entity name="Medicament" representedClassName="Medicament" syncable="YES" codeGenerationType="class">
         <attribute name="dateDebutMedicament" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -54,6 +57,8 @@
         <attribute name="frequence" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="heureRDV" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="tpsPourArriver" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="avec" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Medecin" inverseName="effectue" inverseEntity="Medecin" syncable="YES"/>
+        <relationship name="prisA" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Heure" inverseName="heureRDV" inverseEntity="Heure" syncable="YES"/>
     </entity>
     <entity name="Specialite" representedClassName="Specialite" syncable="YES" codeGenerationType="class">
         <attribute name="libelleSpecialite" optional="YES" attributeType="String" syncable="YES"/>
@@ -94,7 +99,7 @@
         <element name="Medecin" positionX="-270" positionY="486" width="128" height="88"/>
         <element name="Medicament" positionX="-495" positionY="234" width="128" height="150"/>
         <element name="Patient" positionX="-65" positionY="468" width="128" height="90"/>
-        <element name="RendezVous" positionX="-108" positionY="252" width="128" height="105"/>
+        <element name="RendezVous" positionX="-198" positionY="207" width="128" height="133"/>
         <element name="Specialite" positionX="97" positionY="270" width="128" height="60"/>
         <element name="Surveillance" positionX="45" positionY="171" width="128" height="88"/>
         <element name="Symptome" positionX="115" positionY="360" width="128" height="90"/>
@@ -102,5 +107,7 @@
         <element name="TypeMedicament" positionX="-1008" positionY="72" width="128" height="88"/>
         <element name="TypeSurveillance" positionX="-29" positionY="363" width="128" height="73"/>
         <element name="TypeSymptome" positionX="142" positionY="480" width="128" height="73"/>
+        <element name="CentreHospitalier" positionX="-200" positionY="611" width="128" height="118"/>
+        <element name="Medecin" positionX="-432" positionY="512" width="128" height="118"/>
     </elements>
 </model>

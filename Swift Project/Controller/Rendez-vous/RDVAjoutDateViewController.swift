@@ -10,20 +10,23 @@ import Foundation
 import UIKit
 class RDVAjoutDateViewController: UIViewController {
     
-    var nomDocteurTFSent = String()
-    var typeRDVSent = String()
-    var numDocteurSent = String()
+    var medecinSent : Medecin?
     var dateChoisi = String()
     var heureChoisieSent = String()
+    var tempsPourArriverRDVSent = String()
+    
+    
+    
     @IBOutlet weak var myDatePicker: UIDatePicker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         changerValueDateQuandDateChange(self)
-        print(nomDocteurTFSent)
-        print(typeRDVSent)
-        print(numDocteurSent)
+   
+        print(" ajoutDate : medecin heurechoisieSent tempsPrArriverSent")
+        print(medecinSent!)
         print(heureChoisieSent)
-        print(dateChoisi)
+        print(tempsPourArriverRDVSent)
         
         // Do any additional setup after loading the view.
     }
@@ -41,5 +44,21 @@ class RDVAjoutDateViewController: UIViewController {
         dateChoisi = selectedDate
         print(dateChoisi)
         
+    }
+    
+    let AjoutRdvSegue = "AjoutRdvSegue"
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == AjoutRdvSegue {
+            let RDVAjoutViewController = segue.destination as! RDVAjoutViewController
+            
+            RDVAjoutViewController.medecinSent = self.medecinSent
+            RDVAjoutViewController.tempsPourArriverRDVSent = self.tempsPourArriverRDVSent
+            RDVAjoutViewController.heureChoisieSent = self.heureChoisieSent
+            RDVAjoutViewController.dateChoisiSent = self.dateChoisi
+
+            
+            
+        }
     }
 }

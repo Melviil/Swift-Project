@@ -8,19 +8,20 @@
 import Foundation
 import UIKit
 
-class AjoutHeureViewController: UIViewController {
+class RDVAjoutHeureViewController: UIViewController {
     
-    @IBOutlet weak var myPickerDate: UIDatePicker!
-    var nomDocteurTFSent = String()
-    var typeRDVSent = String()
-    var numDocteurSent = String()
+    @IBOutlet weak var heureRdvDatePicker: UIDatePicker!
+    @IBOutlet weak var heureRDVDatePicker: UIDatePicker!
+    
+    var medecinSent : Medecin?
+    var tempsPourArriverRDV = String()
+    var heureChoisie = ""
+    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         changerValueDateQuandDateChange(self)
-        print(nomDocteurTFSent)
-        print(typeRDVSent)
-        print(numDocteurSent)
-        print(heureChoisie)
+       
         // Do any additional setup after loading the view.
     }
 
@@ -28,15 +29,32 @@ class AjoutHeureViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    var heureChoisie = ""
+    
     @IBAction func changerValueDateQuandDateChange(_ sender: Any) {
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH mm"
-        let selectedDate = dateFormatter.string(from: myPickerDate.date)
+        let selectedDate = dateFormatter.string(from: heureRDVDatePicker.date)
         heureChoisie = selectedDate
         
-        
     }
+
+ let AjoutDateRdvSegue = "AjoutDateRdvSegue"
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == AjoutDateRdvSegue {
+            let RDVAjoutDateViewController = segue.destination as! RDVAjoutDateViewController
+            
+         
+            RDVAjoutDateViewController.tempsPourArriverRDVSent = self.tempsPourArriverRDV
+            RDVAjoutDateViewController.heureChoisieSent = self.heureChoisie
+            RDVAjoutDateViewController.medecinSent = self.medecinSent
+
+            
+            
+        }
+    }
+
+    
 }
 

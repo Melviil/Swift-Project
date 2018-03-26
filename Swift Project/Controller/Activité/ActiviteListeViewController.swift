@@ -12,8 +12,8 @@ import CoreData
 class ActiviteListeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var activites: [String] = []
     var mesActivites : [Activite] = []
-     var selectedDateDebut = String()
-     var selectedDateFin = String()
+    var selectedDateDebut = String()
+    var selectedDateFin = String()
     var typeActivite : String?
     var joursActivite : Date?
 

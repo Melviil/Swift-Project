@@ -39,9 +39,9 @@ class CoreDataActiviteDAO: ActiviteDAO {
     func remove(activite: Activite) throws{
         
     }
+    
     func addJourActivite(jour : Jour, activite: Activite) throws {
         activite.addToSePasseLe(jour)
-        
     }
     func addHeureActivite(heure : Heure, activite: Activite) throws {
         activite.addToSePasseA(heure)

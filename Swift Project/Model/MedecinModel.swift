@@ -33,25 +33,25 @@ class MedecinModel {
     } ;
     
     
-    var tel: Int16 {
+    var tel: String {
         get{
-            return self.dao.tel ;
+            return self.dao.telephoneMedecin! ;
         }
         set{
-            self.dao.tel = newValue;
+            self.dao.telephoneMedecin = newValue;
         }
     } ;
     
     
     
-    init(prenomMedecin: String, nomMedecin: String , tel: Int16 ){
+    init(prenomMedecin: String, nomMedecin: String , tel: String ){
         guard let dao = Medecin.getNewMedecinDAO() else {
             fatalError("unable to get DAO for MedecinModel")
         }
         self.dao = dao ;
         self.dao.nomMedecin = nomMedecin
         self.dao.prenomMedecin = prenomMedecin
-        self.dao.tel = tel
+        self.dao.telephoneMedecin = tel
         
     }
 
