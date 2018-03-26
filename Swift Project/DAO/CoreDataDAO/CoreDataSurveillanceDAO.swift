@@ -17,6 +17,7 @@ class CoreDataSurveillanceDAO: SurveillanceDAO {
     init(context:  NSManagedObjectContext){
         self.context = context
     }
+    
     func getAll() throws -> [Surveillance]? {
         let request: NSFetchRequest<Surveillance> = NSFetchRequest(entityName: self.entityName)
         do {
@@ -29,14 +30,24 @@ class CoreDataSurveillanceDAO: SurveillanceDAO {
     func create() -> Surveillance{
         return Surveillance(context: self.context)
     }
+    
+
     func save(surveillance: Surveillance) throws{
         do{
+            print("coredata avant save ")
             try CoreDataManager.save()
+            print("cd apres save")
+
         }catch let error as NSError{
             throw error
         }
     }
     func remove(surveillance: Surveillance) throws{
+        
+    }
+    
+    func addTypeSurveillanceASurveillance(surveillance : Surveillance, typeSurveillance: TypeSurveillance) throws {
+        surveillance.aUnTypeSurveillance = typeSurveillance
         
     }
 }

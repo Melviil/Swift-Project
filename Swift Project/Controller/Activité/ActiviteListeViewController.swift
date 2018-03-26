@@ -24,8 +24,7 @@ class ActiviteListeViewController: UIViewController, UITableViewDataSource, UITa
         myTableView.delegate = self
         //TODO GETActivite table
        
-        myTableView.dataSource = self
-        myTableView.delegate = self
+        
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
             //Ajouter une error a display
             return

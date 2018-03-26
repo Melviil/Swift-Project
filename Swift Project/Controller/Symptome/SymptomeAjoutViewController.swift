@@ -32,6 +32,7 @@ class SymptomeAjoutViewController: UIViewController {
         let daoF = CoreDataDAOFactory.getInstance()
         let symptomeDAO = daoF.getSymptomeDAO()
         let symptome: Symptome = symptomeDAO.create()
+        
         symptome.heureSymptome = heure
         symptome.dateSymptome = date
         symptome.aUnType = nom

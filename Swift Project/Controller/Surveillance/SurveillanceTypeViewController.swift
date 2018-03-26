@@ -14,8 +14,10 @@ class SurveillanceTypeViewController: UIViewController, UIPickerViewDataSource, 
     var pickerData: [TypeSurveillance] = [] 
     let segueShowNomSuivi = "showNomSurveillanceSegue"
     var nomSurveillance : TypeSurveillance!
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+
         if segue.identifier == segueShowNomSuivi {
             let SurveillanceHeureViewController = segue.destination as! SurveillanceHeureViewController
             SurveillanceHeureViewController.nomSurveillanceSend = self.nomSurveillance
@@ -30,6 +32,9 @@ class SurveillanceTypeViewController: UIViewController, UIPickerViewDataSource, 
         picker.dataSource = self
         picker.delegate = self
         
+        print("surveillence Date")
+        print(self.nomSurveillance)
+        
         let daoF = CoreDataDAOFactory.getInstance()
         let typeSurveillanceDAO = daoF.getTypeSurveillanceDAO()
        
@@ -39,7 +44,6 @@ class SurveillanceTypeViewController: UIViewController, UIPickerViewDataSource, 
         catch{
             
         }
-        
         
         self.nomSurveillance=pickerData[0]
         // Do any additional setup after loading the view.

@@ -19,6 +19,7 @@ class ActiviteTypeViewController: UIViewController, UIPickerViewDelegate, UIPick
         }
     
     }
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()

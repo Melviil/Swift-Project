@@ -13,14 +13,18 @@ class SurveillanceAjoutViewController: UIViewController {
     var nomSurveillanceSend : TypeSurveillance! // nom sent by segue
     var heureSurveillanceSend = Date() // heure sent by segue
     var dateSurveillanceSend = Date() // date sent by segue
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("ajout view")
         print(self.nomSurveillanceSend)
         print(self.heureSurveillanceSend)
         print(self.dateSurveillanceSend)
+       
          self.saveNewSurveillance( withNom : self.nomSurveillanceSend, withHeure: self.heureSurveillanceSend, withDate : self.dateSurveillanceSend)
-    }
     
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -32,18 +36,30 @@ class SurveillanceAjoutViewController: UIViewController {
         self.dismiss(animated:true, completion: nil)
     }
     
-    func saveNewSurveillance( withNom nom: TypeSurveillance, withHeure heure: Date,withDate date: Date){
+    func saveNewSurveillance( withNom nom: TypeSurveillance, withHeure heure: Date,withDate date: Date) {
 
         let daoF = CoreDataDAOFactory.getInstance()
         let surveillanceDAO = daoF.getSurveillanceDAO()
-        let surveillance: Surveillance = surveillanceDAO.create()
+        let surveillance : Surveillance = surveillanceDAO.create()
+        
         surveillance.heureSurveillance = heure
         surveillance.dateSurveillance = date
         
+        print("surveillance : ")
+        print(surveillance)
         
         do{
-            try surveillanceDAO.save(surveillance: surveillance)
+            try surveillanceDAO.addTypeSurveillanceASurveillance(surveillance: surveillance, typeSurveillance : nom)
         }catch{
+        }
+        
+         print("type added")
+        print(surveillance)
+        
+        do{  print("preparing surveillance added to db")
+            try surveillanceDAO.save(surveillance: surveillance)
+            print("surveillance added to db")
+        }catch {
         }
         
     }

@@ -13,4 +13,5 @@ protocol SurveillanceDAO {
     func getAll() throws -> [Surveillance]?
     func save(surveillance: Surveillance) throws
     func remove(surveillance: Surveillance) throws
+    func addTypeSurveillanceASurveillance(surveillance : Surveillance, typeSurveillance: TypeSurveillance) throws
 }

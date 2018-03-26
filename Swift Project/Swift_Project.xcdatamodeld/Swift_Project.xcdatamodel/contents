@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17C88" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Activite" representedClassName="Activite" syncable="YES" codeGenerationType="class">
         <attribute name="dateDebut" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="dateFin" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -58,6 +58,11 @@
     <entity name="Specialite" representedClassName="Specialite" syncable="YES" codeGenerationType="class">
         <attribute name="libelleSpecialite" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="SuiviMedicament" representedClassName="SuiviMedicament" syncable="YES" codeGenerationType="class">
+        <attribute name="dateSuiviMedicament" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="nbPriseOubli" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="typeSuiviMedicament" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Surveillance" representedClassName="Surveillance" syncable="YES" codeGenerationType="class">
         <attribute name="dateSurveillance" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="heureSurveillance" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -82,8 +87,10 @@
     </entity>
     <elements>
         <element name="Activite" positionX="72" positionY="-81" width="128" height="133"/>
+        <element name="CentreHospitalier" positionX="-200" positionY="611" width="128" height="118"/>
         <element name="Heure" positionX="-216" positionY="18" width="128" height="103"/>
         <element name="Jour" positionX="360" positionY="54" width="128" height="90"/>
+        <element name="Medecin" positionX="-432" positionY="512" width="128" height="118"/>
         <element name="Medicament" positionX="-495" positionY="225" width="128" height="148"/>
         <element name="Patient" positionX="-65" positionY="468" width="128" height="90"/>
         <element name="RendezVous" positionX="-198" positionY="207" width="128" height="133"/>
@@ -93,7 +100,6 @@
         <element name="TypeActivite" positionX="-209" positionY="-117" width="128" height="73"/>
         <element name="TypeSurveillance" positionX="-29" positionY="363" width="128" height="73"/>
         <element name="TypeSymptome" positionX="142" positionY="480" width="128" height="73"/>
-        <element name="CentreHospitalier" positionX="-200" positionY="611" width="128" height="118"/>
-        <element name="Medecin" positionX="-432" positionY="512" width="128" height="118"/>
+        <element name="SuiviMedicament" positionX="-315" positionY="207" width="128" height="88"/>
     </elements>
 </model>

@@ -18,6 +18,10 @@ class SurveillanceHeureViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("surveillence Heure")
+        print(self.nomSurveillanceSend)
+
         changerValueDateQuandDateChange(self) //au cas où l'utilisateur garde l'heure préséléctionnée
         
         // Do any additional setup after loading the view.
@@ -28,6 +32,7 @@ class SurveillanceHeureViewController: UIViewController {
             let SurveillanceDateViewController = segue.destination as! SurveillanceDateViewController
             SurveillanceDateViewController.nomSurveillanceSend = self.nomSurveillanceSend
             SurveillanceDateViewController.heureSurveillanceSend = self.heureChoisie
+
         }
         
     }
