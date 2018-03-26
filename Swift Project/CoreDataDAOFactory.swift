@@ -20,9 +20,8 @@ class CoreDataDAOFactory: ProtocolDAOFactory{
     typealias H = CoreDataMedicamentDAO
     typealias I = CoreDataTypeMedicamentDAO
     typealias J = CoreDataDoseMedicamentDAO
-
-    typealias I = CoreDataRendezVousDAO
-    typealias J = CoreMedecinDAO
+    typealias K = CoreDataRendezVousDAO
+    typealias L = CoreMedecinDAO
    
     
     private static var instance: CoreDataDAOFactory?
