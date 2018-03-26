@@ -19,7 +19,9 @@ class AgendaViewController: UIViewController, UICollectionViewDataSource, UIColl
     var arrayAllString = [[String]]()
     let medicamentDAO = CoreDataDAOFactory.getInstance().getMedicamentDAO()
     let activiteDAO = CoreDataDAOFactory.getInstance().getActiviteDAO()
+    
 
+    
     let calendar = Calendar.current
     
     
