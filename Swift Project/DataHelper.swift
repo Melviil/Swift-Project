@@ -62,7 +62,6 @@ public class DataHelper {
     fileprivate static func seedTypeMedicament(){
         let TypeMedicaments = TypeMedicamentSeed().TypeMedicaments
         let TypeMedicamentDAO = CoreDataDAOFactory.getInstance().getTypeMedicamentDAO()
-        let DoseMedicaments = DoseMedicamentSeed().DoseMedicaments
         let DoseMedicamentDAO = CoreDataDAOFactory.getInstance().getDoseMedicamentDAO()
         for TypeMedicament in TypeMedicaments {
             let newTypeMedicament: TypeMedicament = TypeMedicamentDAO.create()

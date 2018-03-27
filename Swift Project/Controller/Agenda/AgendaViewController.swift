@@ -162,7 +162,7 @@ class AgendaViewController: UIViewController, UICollectionViewDataSource, UIColl
 //        }
         
         if (  arrayAllString[indexPath.row][0] == "medicament"){
-          let idmedicamentpasse = arrayAllString[indexPath.row][4]
+          
            self.medicamentpasse = arrayMedicament[0]
             performSegue(withIdentifier: self.medicamentDescriptionSegue, sender: self)
         }
