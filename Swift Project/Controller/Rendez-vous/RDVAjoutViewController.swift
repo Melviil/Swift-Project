@@ -99,8 +99,8 @@ class RDVAjoutViewController: UIViewController {
         }catch {print("rdv non ajoute")}
 
         let calendar = NSCalendar.current
-        ajouterNotif(heure: calendar.component(.hour, from: heureChoisie), minute : calendar.component(.minute, from : heureChoisie), date: dateChoisi, message : "Penez à votre rendez vous")
-        ajouterNotif(heure: calendar.component(.hour, from: heureChoisie), minute : calendar.component(.minute, from : heureChoisie), date: dateChoisi, message : "Il est temps de partir pour être à l'")
+        ajouterNotif(heure: calendar.component(.hour, from: heureChoisie), minute : calendar.component(.minute, from : heureChoisie), date: dateChoisi, message : "Vous avez votre rendez vous")
+        ajouterNotif(heure: calendar.component(.hour, from: heureChoisie), minute : calendar.component(.minute, from : heureChoisie), date: dateChoisi, message : "Il est temps de partir!'")
     /*
     // MARK: - Navigation
 

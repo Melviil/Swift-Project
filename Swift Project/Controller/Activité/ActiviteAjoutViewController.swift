@@ -125,7 +125,6 @@ class ActiviteAjoutViewController: UIViewController {
             let calendar = NSCalendar.current
             let components = calendar.dateComponents([.day, .month, .year], from: startDate)
             dateComponents.month = components.month!
-            dateComponents.weekday = j
             dateComponents.year = components.year!
             dateComponents.hour = h
             dateComponents.minute = m
