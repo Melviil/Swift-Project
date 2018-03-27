@@ -33,6 +33,7 @@ class ActiviteHeureModallyViewController: UIViewController {
         self.dismiss(animated:true, completion: nil)
     }
     override func viewDidLoad() {
+        changerValueDateQuandDateChange(self)
         super.viewDidLoad()
     }
 
