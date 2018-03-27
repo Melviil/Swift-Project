@@ -101,15 +101,16 @@ class ActiviteAjoutViewController: UIViewController {
         content.body = "Pensez à faire votre scéance de sport!"
         content.badge = 1
         
-        // add notification for Mondays at 11:00 a.m.
-        var dateComponents = DateComponents()
-        dateComponents.weekday = j
-        dateComponents.hour = h
-        dateComponents.minute = m
-        let notificationTrigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
-        
-        let request2 = UNNotificationRequest(identifier: "notification1", content: content, trigger: notificationTrigger)
-        UNUserNotificationCenter.current().add(request2, withCompletionHandler: nil)
+        for day in 1...7{
+            var dateComponents = DateComponents()
+            dateComponents.weekday = day
+            dateComponents.hour = h
+            dateComponents.minute = m
+            let notificationTrigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+            
+            let request2 = UNNotificationRequest(identifier: "notification1", content: content, trigger: notificationTrigger)
+            UNUserNotificationCenter.current().add(request2, withCompletionHandler: nil)
+        }
     }
 
     @IBAction func enelverModally(_ sender: Any) {
