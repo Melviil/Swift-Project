@@ -636,6 +636,7 @@
                         <viewLayoutGuide key="safeArea" id="8T5-zx-nf0"/>
                     </view>
                     <connections>
+                        <outlet property="buttonChoisirJour" destination="HqM-R0-b74" id="16F-Hw-L7m"/>
                         <outlet property="picker" destination="8gB-nd-FUR" id="jOw-5P-fSC"/>
                     </connections>
                 </viewController>

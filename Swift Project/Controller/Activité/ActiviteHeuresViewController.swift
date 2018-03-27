@@ -60,6 +60,17 @@ class ActiviteHeuresViewController: UIViewController, UITableViewDataSource {
         }
         
     }
+    override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
+        if identifier == showJourActiviteSegue{
+            if self.hours == [] {
+                let alert = UIAlertController(title: "Oh oh!", message:"Veuillez ajouter au moins une heure", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in })
+                self.present(alert, animated: true){}
+                return false
+            }
+        }
+        return true
+    }
     
 
 }

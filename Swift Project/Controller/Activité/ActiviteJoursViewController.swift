@@ -37,8 +37,21 @@ class ActiviteJoursViewController: UIViewController {
         super.viewDidLoad()
         labelActivite.text = nomActivite.libelleTypeActivite
     }
-    
+  
+    override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
+        print(self.joursActivite)
+        valideHeureActivite(self)
+
+        if self.joursActivite == [] {
+            let alert = UIAlertController(title: "Oh oh!", message:"Veuillez ajouter au moins un jour", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in })
+            self.present(alert, animated: true){}
+            return false
+        }
+        return true
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       
         
         if segue.identifier == showJourActiviteSegue {
             let heureAlarmActivite = segue.destination as! ActiviteHeuresViewController
@@ -78,6 +91,7 @@ class ActiviteJoursViewController: UIViewController {
         }
         if dimSwitch.isOn {
             try? joursActivite.append(patientDAO.getByName(jourParametre: "Dimanche")![0])
+            print(joursActivite)
         }
 
 

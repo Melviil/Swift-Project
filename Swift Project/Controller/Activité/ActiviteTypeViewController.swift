@@ -11,6 +11,7 @@ class ActiviteTypeViewController: UIViewController, UIPickerViewDelegate, UIPick
      var activitePasse = TypeActivite() 
     
     
+    @IBOutlet weak var buttonChoisirJour: UIButton!
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == segueShowNomActivite {
@@ -32,9 +33,16 @@ class ActiviteTypeViewController: UIViewController, UIPickerViewDelegate, UIPick
         do{
             try self.typesactivite = typeActiviteDAO.getAll()!
             if self.typesactivite.isEmpty == false {
-                print(self.typesactivite[0])
                 self.activitePasse = self.typesactivite[0]
+            }else{
+                let alert = UIAlertController(title: "Oh oh!", message:"Veuillez ajouter un type d'activité", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in })
+                self.present(alert, animated: true){}
+                self.buttonChoisirJour.isEnabled = false
+                
+                
             }
+            
         }catch{
             
             }
@@ -66,7 +74,10 @@ class ActiviteTypeViewController: UIViewController, UIPickerViewDelegate, UIPick
     }
     
     func pickerView( _ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)  {
-        activitePasse = typesactivite[row]
+        if ( typesactivite.count != 0){
+            activitePasse = typesactivite[row]
+        }
+        
     }
     
 }
