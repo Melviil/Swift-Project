@@ -124,22 +124,26 @@ class ActiviteAjoutViewController: UIViewController {
             print(fmt.string(from: startDate))
             let calendar = NSCalendar.current
             let components = calendar.dateComponents([.day, .month, .year], from: startDate)
-            dateComponents.month = components.month!
-            dateComponents.year = components.year!
-            dateComponents.hour = h
-            dateComponents.minute = m
-            print(dateComponents)
-            let notificationTrigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
-            let nom = String(Int(arc4random_uniform(1000000)))
-            let request2 = UNNotificationRequest(identifier: nom , content: content, trigger: notificationTrigger)
-            // Schedule the request.
-            let center = UNUserNotificationCenter.current()
-            center.add(request2) { (error : Error?) in
-                if let theError = error {
-                    print(theError.localizedDescription)
+            let startDateWeekDate = Calendar.current.component(.weekday, from: startDate)
+            if (j == startDateWeekDate ){
+                // On regarde si le jour est bien le jour de la semaine
+                dateComponents.month = components.month!
+                dateComponents.year = components.year!
+                dateComponents.hour = h
+                dateComponents.minute = m
+                print(dateComponents)
+                let notificationTrigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+                let nom = String(Int(arc4random_uniform(1000000)))
+                let request2 = UNNotificationRequest(identifier: nom , content: content, trigger: notificationTrigger)
+                // Schedule the request.
+                let center = UNUserNotificationCenter.current()
+                center.add(request2) { (error : Error?) in
+                    if let theError = error {
+                        print(theError.localizedDescription)
+                    }
                 }
+                startDate = calendar.date(byAdding: .day, value: 1, to: startDate)!
             }
-            startDate = calendar.date(byAdding: .day, value: 1, to: startDate)!
         }
         
     }

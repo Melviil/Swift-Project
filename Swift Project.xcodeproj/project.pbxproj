@@ -96,10 +96,6 @@
 		BECF995B20552A60009420DE /* MedicamentHeureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECF995A20552A60009420DE /* MedicamentHeureViewController.swift */; };
 		BECF995D20552FF0009420DE /* MedicamentAjoutHeureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECF995C20552FF0009420DE /* MedicamentAjoutHeureViewController.swift */; };
 		BECF995F20553523009420DE /* MedicamentDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECF995E20553523009420DE /* MedicamentDescriptionViewController.swift */; };
-		FE3FC8BF2069384A0065D9F9 /* SuiviMedocViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FC8BE2069384A0065D9F9 /* SuiviMedocViewController.swift */; };
-		FE3FC8C120693BBE0065D9F9 /* SuiviMedicamentDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FC8C020693BBE0065D9F9 /* SuiviMedicamentDAO.swift */; };
-		FE3FC8C320693C250065D9F9 /* CoreDataSuiviMedicamentDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FC8C220693C250065D9F9 /* CoreDataSuiviMedicamentDAO.swift */; };
-		FE3FC8C92069529A0065D9F9 /* ConsulterSuiviViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FC8C82069529A0065D9F9 /* ConsulterSuiviViewController.swift */; };
 		FE3FC8A3206673D70065D9F9 /* TypeMedicamentSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FC8A2206673D70065D9F9 /* TypeMedicamentSeed.swift */; };
 		FE3FC8A7206675F20065D9F9 /* MedicamentTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FC8A6206675F20065D9F9 /* MedicamentTypeViewController.swift */; };
 		FE3FC8A9206676C30065D9F9 /* TypeMedicamentDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FC8A8206676C30065D9F9 /* TypeMedicamentDAO.swift */; };
@@ -108,6 +104,10 @@
 		FE3FC8AF20667B390065D9F9 /* CoreDataDoseMedicamentDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FC8AE20667B390065D9F9 /* CoreDataDoseMedicamentDAO.swift */; };
 		FE3FC8B220667BE70065D9F9 /* DoseMedicamentDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FC8B120667BE70065D9F9 /* DoseMedicamentDAO.swift */; };
 		FE3FC8B520667D340065D9F9 /* MedicamentDoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FC8B420667D340065D9F9 /* MedicamentDoseViewController.swift */; };
+		FE3FC8BF2069384A0065D9F9 /* SuiviMedocViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FC8BE2069384A0065D9F9 /* SuiviMedocViewController.swift */; };
+		FE3FC8C120693BBE0065D9F9 /* SuiviMedicamentDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FC8C020693BBE0065D9F9 /* SuiviMedicamentDAO.swift */; };
+		FE3FC8C320693C250065D9F9 /* CoreDataSuiviMedicamentDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FC8C220693C250065D9F9 /* CoreDataSuiviMedicamentDAO.swift */; };
+		FE3FC8C92069529A0065D9F9 /* ConsulterSuiviViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FC8C82069529A0065D9F9 /* ConsulterSuiviViewController.swift */; };
 		FE3FC8CB206984990065D9F9 /* ResumeMedicamentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FC8CA206984990065D9F9 /* ResumeMedicamentViewController.swift */; };
 		FE3FC8CD2069BE8E0065D9F9 /* ResumeActiviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FC8CC2069BE8E0065D9F9 /* ResumeActiviteViewController.swift */; };
 		FE4213A920642657004EC5D7 /* AgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4213A820642657004EC5D7 /* AgendaViewController.swift */; };
@@ -229,10 +229,6 @@
 		BECF995A20552A60009420DE /* MedicamentHeureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentHeureViewController.swift; sourceTree = "<group>"; };
 		BECF995C20552FF0009420DE /* MedicamentAjoutHeureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentAjoutHeureViewController.swift; sourceTree = "<group>"; };
 		BECF995E20553523009420DE /* MedicamentDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentDescriptionViewController.swift; sourceTree = "<group>"; };
-		FE3FC8BE2069384A0065D9F9 /* SuiviMedocViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuiviMedocViewController.swift; sourceTree = "<group>"; };
-		FE3FC8C020693BBE0065D9F9 /* SuiviMedicamentDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuiviMedicamentDAO.swift; sourceTree = "<group>"; };
-		FE3FC8C220693C250065D9F9 /* CoreDataSuiviMedicamentDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataSuiviMedicamentDAO.swift; sourceTree = "<group>"; };
-		FE3FC8C82069529A0065D9F9 /* ConsulterSuiviViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulterSuiviViewController.swift; sourceTree = "<group>"; };
 		FE3FC8A2206673D70065D9F9 /* TypeMedicamentSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeMedicamentSeed.swift; sourceTree = "<group>"; };
 		FE3FC8A6206675F20065D9F9 /* MedicamentTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentTypeViewController.swift; sourceTree = "<group>"; };
 		FE3FC8A8206676C30065D9F9 /* TypeMedicamentDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeMedicamentDAO.swift; sourceTree = "<group>"; };
@@ -241,6 +237,10 @@
 		FE3FC8AE20667B390065D9F9 /* CoreDataDoseMedicamentDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDoseMedicamentDAO.swift; sourceTree = "<group>"; };
 		FE3FC8B120667BE70065D9F9 /* DoseMedicamentDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoseMedicamentDAO.swift; sourceTree = "<group>"; };
 		FE3FC8B420667D340065D9F9 /* MedicamentDoseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentDoseViewController.swift; sourceTree = "<group>"; };
+		FE3FC8BE2069384A0065D9F9 /* SuiviMedocViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuiviMedocViewController.swift; sourceTree = "<group>"; };
+		FE3FC8C020693BBE0065D9F9 /* SuiviMedicamentDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuiviMedicamentDAO.swift; sourceTree = "<group>"; };
+		FE3FC8C220693C250065D9F9 /* CoreDataSuiviMedicamentDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataSuiviMedicamentDAO.swift; sourceTree = "<group>"; };
+		FE3FC8C82069529A0065D9F9 /* ConsulterSuiviViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsulterSuiviViewController.swift; sourceTree = "<group>"; };
 		FE3FC8CA206984990065D9F9 /* ResumeMedicamentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeMedicamentViewController.swift; sourceTree = "<group>"; };
 		FE3FC8CC2069BE8E0065D9F9 /* ResumeActiviteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeActiviteViewController.swift; sourceTree = "<group>"; };
 		FE4213A820642657004EC5D7 /* AgendaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaViewController.swift; sourceTree = "<group>"; };
@@ -938,10 +938,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S7KSHL8K5A;
+				DEVELOPMENT_TEAM = 5G7VE8JFAH;
 				INFOPLIST_FILE = "Swift Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Polytech.Swift-Project";
+				PRODUCT_BUNDLE_IDENTIFIER = "Polytech.Swift-Project.AppName";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -953,10 +953,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S7KSHL8K5A;
+				DEVELOPMENT_TEAM = 5G7VE8JFAH;
 				INFOPLIST_FILE = "Swift Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Polytech.Swift-Project";
+				PRODUCT_BUNDLE_IDENTIFIER = "Polytech.Swift-Project.AppName";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

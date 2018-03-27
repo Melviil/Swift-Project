@@ -93,6 +93,12 @@ class MedicamentAjoutViewController: UIViewController {
             }catch {
                 
             }
+            
+            do{
+              try  medicamentDAO.save(medicament: medicament)
+            }catch{
+                
+            }
             //self.ajouterNotif( heure: calendar.component(.hour, from: heureGood), minute: calendar.component(.minute, from: heureGood))
              //self.createRappels(heureDebut: heureGood, heureFin: dateDebutGood, dateFin: dateFinGood)
           //  self.test(date: Calendar.current.date(byAdding: .day, value: -1, to: dateDebutGood)!)
