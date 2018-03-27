@@ -12,30 +12,25 @@ import CoreData
 class ConsulterSuiviViewController: UIViewController,  UITableViewDataSource, UITableViewDelegate {
 
     var suiviString: [String] = []
-    var suivis : [SuiviMedicament]?
-    
-    
-    
-    
+    var suivis: [SuiviMedicament]! = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
     
         suiviMedicamentTableView.dataSource = self
         suiviMedicamentTableView.delegate = self
         
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
-            //Ajouter une error a display
-            return
-        }
-        let context = appDelegate.persistentContainer.viewContext
-        let request  : NSFetchRequest<SuiviMedicament> = SuiviMedicament.fetchRequest()
+        let daoF = CoreDataDAOFactory.getInstance()
+        let suiviMedicamentDAO = daoF.getSuiviMedicamentDAO()
+        
         
         do{
-            try self.suivis = context.fetch(request)
-        }
-        catch{
-            return
-        }
+            try self.suivis = suiviMedicamentDAO.getAll()!
+        }catch{}
+        
+        // Do any additional setup after loading the view.
+        
+       
         
         for s in suivis!{
             

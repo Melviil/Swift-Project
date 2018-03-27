@@ -26,19 +26,16 @@ class ContactViewController: UIViewController, UITableViewDataSource, UITableVie
         ContactTableVue.dataSource = self
         ContactTableVue.delegate = self
         
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
-            //Ajouter une error a display
-            return
-        }
-        let context = appDelegate.persistentContainer.viewContext
-        let request : NSFetchRequest<Medecin> = Medecin.fetchRequest()
+        let daoF = CoreDataDAOFactory.getInstance()
+        let medDao = daoF.getMedecinDAO()
+        
         
         do{
-            try self.contacts = context.fetch(request)
-        }
-        catch{
-            return
-        }
+            try self.contacts = medDao.getAll()!
+        }catch{}
+        
+        
+        
         
         for m in contacts{
             

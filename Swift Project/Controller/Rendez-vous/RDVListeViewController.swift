@@ -22,19 +22,14 @@ class RDVListeViewController: UIViewController, UITableViewDataSource, UITableVi
         rdvListeTableView.dataSource = self
         rdvListeTableView.delegate = self
 
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
-            //Ajouter une error a display
-            return
-        }
-        let context = appDelegate.persistentContainer.viewContext
-        let request  : NSFetchRequest<RendezVous> = RendezVous.fetchRequest()
+        let daoF = CoreDataDAOFactory.getInstance()
+        let rdvDao = daoF.getRendezVousDAO()
+        
         
         do{
-            try self.rdvs = context.fetch(request)
-        }
-        catch{
-            return
-        }
+            try self.rdvs = rdvDao.getAll()!
+        }catch{}
+     
         
         for rdv in rdvs!{
 
