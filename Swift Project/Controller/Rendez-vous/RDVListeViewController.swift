@@ -55,7 +55,7 @@ class RDVListeViewController: UIViewController, UITableViewDataSource, UITableVi
             let medecin = rdv.avec?.nomMedecin
             
 
-           rdvString.append("Rdv avec Dr" + medecin! + " à " + heureRdv + ". Partez" + tpsPrArriverRdv + "avant" )
+           rdvString.append("Dr " + medecin! + " à " + heureRdv + ". Partez" + tpsPrArriverRdv + "avant" )
         }
         
             
