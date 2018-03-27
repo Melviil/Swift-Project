@@ -46,8 +46,6 @@ class ActiviteListeViewController: UIViewController, UITableViewDataSource, UITa
                 selectedDateDebut = dateFormatter.string(from: activite.dateDebut!)
 
                 selectedDateFin = dateFormatter.string(from: activite.dateFin!)
-                print(selectedDateDebut)
-                print(selectedDateFin)
                    typeActivite = activite.estDeType?.libelleTypeActivite
                 if let heures = activite.sePasseA {
                     for h in heures{
@@ -57,6 +55,7 @@ class ActiviteListeViewController: UIViewController, UITableViewDataSource, UITa
                             dateFormatter.dateFormat = "HH:mm"
                             let selectedDate = dateFormatter.string(from: heure.libelleHeure!)
                             print(selectedDate)
+                            print(activite)
                             activites.append(  typeActivite! + " du " + selectedDateDebut + " au " + selectedDateFin + " à " + selectedDate)
 
                         }

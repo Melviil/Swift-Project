@@ -65,8 +65,24 @@ class ResumeActiviteViewController: UIViewController {
                 }
             }
         }
+        var joursFinales = ""
+
+        if let heures = activite.sePasseLe {
+            for h in heures{
+                if let heure = h as? Jour{
+                    dateFormatter.dateFormat = "dd:MM:yyy"
+                    let selectedDate = heure.libelleJour
+                    if ( joursFinales != ""){
+                        joursFinales = joursFinales + ", " // prepare plusieurs heures
+                    }
+                    joursFinales = joursFinales + selectedDate!
+                    
+                }
+            }
+        }
         self.heureActivteTextField.text = heuresFinales
-        
+        self.jourActiviteTextField.text = joursFinales
+
         // Do any additional setup after loading the view.
     }
 
