@@ -125,10 +125,11 @@ class ActiviteAjoutViewController: UIViewController {
             let calendar = NSCalendar.current
             let components = calendar.dateComponents([.day, .month, .year], from: startDate)
             dateComponents.month = components.month!
-            dateComponents.day = j
+            dateComponents.weekday = j
             dateComponents.year = components.year!
             dateComponents.hour = h
             dateComponents.minute = m
+            print(dateComponents)
             let notificationTrigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
             let nom = String(Int(arc4random_uniform(1000000)))
             let request2 = UNNotificationRequest(identifier: nom , content: content, trigger: notificationTrigger)

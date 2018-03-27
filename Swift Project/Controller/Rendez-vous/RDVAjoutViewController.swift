@@ -113,7 +113,7 @@ class RDVAjoutViewController: UIViewController {
     }
      func ajouterNotif(heure h: Int, minute m: Int, date : Date, message : String){
         let content = UNMutableNotificationContent()
-        content.title = "Rendez vous avec Dr " + String(describing: self.medecinSent)
+        content.title = "Rendez vous avec Dr " + (medecinSent?.nomMedecin)!
         content.body = message
         content.badge = 1
         let fmt = DateFormatter()
@@ -121,10 +121,12 @@ class RDVAjoutViewController: UIViewController {
         var dateComponents = DateComponents()
             let calendar = NSCalendar.current
             let components = calendar.dateComponents([.day, .month, .year], from: date)
+            dateComponents.day = components.day!
             dateComponents.month = components.month!
             dateComponents.year = components.year!
             dateComponents.hour = h
             dateComponents.minute = m
+        print(dateComponents)
             let notificationTrigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
             let nom = String(Int(arc4random_uniform(1000000)))
             let request2 = UNNotificationRequest(identifier: nom , content: content, trigger: notificationTrigger)
