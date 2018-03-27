@@ -10,6 +10,7 @@ import Foundation
 import CoreData
 
 class CoreDataSurveillanceDAO: SurveillanceDAO {
+ 
     
     private let entityName: String = "Surveillance"
     private let context: NSManagedObjectContext
@@ -48,4 +49,9 @@ class CoreDataSurveillanceDAO: SurveillanceDAO {
     func addTypeSurveillance( surveillance : Surveillance, typeSurveillance: TypeSurveillance) throws {
         surveillance.aUnTypeSurveillance = typeSurveillance
     }
+    func addTypeSurveillanceASurveillance(surveillance: Surveillance, typeSurveillance: TypeSurveillance) throws {
+        surveillance.aUnTypeSurveillance = typeSurveillance
+
+    }
+    
 }
