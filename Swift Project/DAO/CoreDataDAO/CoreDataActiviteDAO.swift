@@ -37,7 +37,11 @@ class CoreDataActiviteDAO: ActiviteDAO {
         }
     }
     func remove(activite: Activite) throws{
-        
+        do{
+            try CoreDataManager.delete(object: activite)
+        }catch let error as NSError{
+            fatalError("cannot save data: "+error.description)
+        }
     }
     
     func addJourActivite(jour : Jour, activite: Activite) throws {

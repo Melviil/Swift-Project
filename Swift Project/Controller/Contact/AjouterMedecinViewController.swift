@@ -26,6 +26,32 @@ class AjouterMedecinViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        let alert = UIAlertController(title: "Oh oh!", message:"Veuillez remplir tous les champs", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in })
+        if ( identifier == "ajoutMedecinSegue"){
+            
+            guard nomMedecinTextField.hasText else{
+                self.present(alert, animated: true){}
+                return false
+            }
+            guard prenomMedecinTextField.hasText else{
+                self.present(alert, animated: true){}
+                return false
+            }
+            guard titreMedecinTextField.hasText else{
+                self.present(alert, animated: true){}
+                return false
+            }
+            guard telMedecinTextField.hasText else{
+                self.present(alert, animated: true){}
+                return false
+            }
+            
+        }
+        return true
+        
+    }
     
     @IBAction func saveMedecin(_ sender: Any) {
         let daoF = CoreDataDAOFactory.getInstance()

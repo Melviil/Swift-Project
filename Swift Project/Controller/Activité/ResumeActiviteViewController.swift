@@ -19,6 +19,20 @@ class ResumeActiviteViewController: UIViewController {
     @IBOutlet weak var dateFinActiviteTF: UILabel!
     
     var activite : Activite!
+    
+    @IBAction func supprimerActivite(_ sender: Any) {
+        
+        let daoF = CoreDataDAOFactory.getInstance()
+        let activiteDAO = daoF.getActiviteDAO()
+        
+        do{
+            try activiteDAO.remove(activite: activite)
+
+        }catch{
+        }
+            
+        }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("activite")

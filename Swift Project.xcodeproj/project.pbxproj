@@ -114,6 +114,8 @@
 		FE4213AC2064E2E8004EC5D7 /* CellMedocCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4213AB2064E2E8004EC5D7 /* CellMedocCollectionViewCell.swift */; };
 		FE4213AD2064E2E8004EC5D7 /* CellMedocCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4213AB2064E2E8004EC5D7 /* CellMedocCollectionViewCell.swift */; };
 		FE780161206656E20026E7D1 /* CellActiviteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE780160206656E20026E7D1 /* CellActiviteCollectionViewCell.swift */; };
+		FEA5B1D6206A9FC2008B81C4 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA5B1D5206A9FC2008B81C4 /* ContactViewController.swift */; };
+		FEA5B1DD206AACBA008B81C4 /* SupprimerTypeActiviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA5B1DC206AACBA008B81C4 /* SupprimerTypeActiviteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -246,6 +248,8 @@
 		FE4213A820642657004EC5D7 /* AgendaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaViewController.swift; sourceTree = "<group>"; };
 		FE4213AB2064E2E8004EC5D7 /* CellMedocCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellMedocCollectionViewCell.swift; sourceTree = "<group>"; };
 		FE780160206656E20026E7D1 /* CellActiviteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellActiviteCollectionViewCell.swift; sourceTree = "<group>"; };
+		FEA5B1D5206A9FC2008B81C4 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		FEA5B1DC206AACBA008B81C4 /* SupprimerTypeActiviteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupprimerTypeActiviteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -392,6 +396,7 @@
 		BCAFD280204C4D9C0037ADBD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FEA5B1D9206AABF2008B81C4 /* CoteMedecin */,
 				FE3FC8BD206938090065D9F9 /* Suivi Medoc */,
 				BC6AD696205564F2001F1E04 /* Activité */,
 				FE4213A12063A211004EC5D7 /* Agenda */,
@@ -401,6 +406,7 @@
 				BC09AA12205F192500FACC62 /* Medicament */,
 				BC6AD69720556503001F1E04 /* Symptome */,
 				BC6AD69820556568001F1E04 /* Surveillance */,
+				FEA5B1D5206A9FC2008B81C4 /* ContactViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -542,6 +548,14 @@
 				BCEEC3A32069412F00DEA125 /* CellRdvCollectionViewCell.swift */,
 			);
 			path = Agenda;
+			sourceTree = "<group>";
+		};
+		FEA5B1D9206AABF2008B81C4 /* CoteMedecin */ = {
+			isa = PBXGroup;
+			children = (
+				FEA5B1DC206AACBA008B81C4 /* SupprimerTypeActiviteViewController.swift */,
+			);
+			path = CoteMedecin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -707,6 +721,7 @@
 				BCFA135920664FB80013FF40 /* RDVListeViewController.swift in Sources */,
 				FE3FC8CB206984990065D9F9 /* ResumeMedicamentViewController.swift in Sources */,
 				BC6AD6B120557570001F1E04 /* TypeActiviteModel.swift in Sources */,
+				FEA5B1D6206A9FC2008B81C4 /* ContactViewController.swift in Sources */,
 				BC322EA4205F9C4E005A20DE /* TypeSymptomeDAO.swift in Sources */,
 				FE3FC8B220667BE70065D9F9 /* DoseMedicamentDAO.swift in Sources */,
 				BC6AD6AD20557511001F1E04 /* TypeSymptomeModel.swift in Sources */,
@@ -737,6 +752,7 @@
 				BC6FE5AA204487F100D862B6 /* ActiviteJoursViewController.swift in Sources */,
 				BC322EA9205FA450005A20DE /* SymptomeDAO.swift in Sources */,
 				BCFA135B20665B530013FF40 /* RDVAjoutViewController.swift in Sources */,
+				FEA5B1DD206AACBA008B81C4 /* SupprimerTypeActiviteViewController.swift in Sources */,
 				BCFA135420664BB10013FF40 /* CoreDataRendezVousDAO.swift in Sources */,
 				BC6FE5A8204465F900D862B6 /* ActiviteTypeViewController.swift in Sources */,
 				BC086C682048564B006D2310 /* ActiviteHeureModallyViewController.swift in Sources */,

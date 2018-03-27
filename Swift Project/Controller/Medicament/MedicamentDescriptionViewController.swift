@@ -34,7 +34,6 @@ class MedicamentDescriptionViewController: UIViewController {
                 self.present(alert, animated: true){}
                 return false
             }
-            
         }
         return true
         
