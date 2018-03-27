@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class RDVAjoutViewController: UIViewController {
 
@@ -37,7 +38,6 @@ class RDVAjoutViewController: UIViewController {
         let rdvDAO = daoF.getRendezVousDAO()
         let rendezVous: RendezVous = rdvDAO.create()
         
-        let medecinDAO = daoF.getMedecinDAO()
 
         
         let dateFormatter = DateFormatter()
@@ -48,7 +48,7 @@ class RDVAjoutViewController: UIViewController {
         heureFormatter.dateFormat = "HH:mm"
         heureFormatter.timeZone = TimeZone.current
         
-        guard let dateChoisiSent = dateFormatter.date(from:dateChoisiSent) else {
+        guard let dateChoisi = dateFormatter.date(from:dateChoisiSent) else {
             fatalError("ERROR: Date conversion failed due to mismatched format.")
         }
         guard let heureChoisie = heureFormatter.date(from:heureChoisieSent) else {
@@ -59,7 +59,7 @@ class RDVAjoutViewController: UIViewController {
         }
         
         
-        rendezVous.dateRdv = dateChoisiSent
+        rendezVous.dateRdv = dateChoisi
         rendezVous.heureRDV = heureChoisie
         rendezVous.tpsPourArriver = tempsPourArriverRDV
         
@@ -67,7 +67,6 @@ class RDVAjoutViewController: UIViewController {
         dateFormatter.dateFormat = "HH mm"
         
         
-        let medecin: Medecin = medecinDAO.create()
         
      
 //        for uneHeure in heures {
@@ -91,15 +90,17 @@ class RDVAjoutViewController: UIViewController {
         
         
         do{
-            try rdvDAO.addMedecinRdv(rendezVous: rendezVous, medecin: medecin)
+            try rdvDAO.addMedecinRdv(rendezVous: rendezVous, medecin: medecinSent)
         }catch {print("medecin rdv non ajoute")}
         
         
         do{
             try rdvDAO.save(rendezVous: rendezVous)
         }catch {print("rdv non ajoute")}
-        
-   
+
+        let calendar = NSCalendar.current
+        ajouterNotif(heure: calendar.component(.hour, from: heureChoisie), minute : calendar.component(.minute, from : heureChoisie), date: dateChoisi, message : "Vous avez votre rendez vous")
+        ajouterNotif(heure: calendar.component(.hour, from: heureChoisie), minute : calendar.component(.minute, from : heureChoisie), date: dateChoisi, message : "Il est temps de partir!'")
     /*
     // MARK: - Navigation
 
@@ -109,5 +110,34 @@ class RDVAjoutViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    }
+     func ajouterNotif(heure h: Int, minute m: Int, date : Date, message : String){
+        let content = UNMutableNotificationContent()
+        content.title = "Rendez vous avec Dr " + (medecinSent?.nomMedecin)!
+        content.body = message
+        content.badge = 1
+        let fmt = DateFormatter()
+        fmt.dateFormat = "dd/MM/yyyy"
+        var dateComponents = DateComponents()
+            let calendar = NSCalendar.current
+            let components = calendar.dateComponents([.day, .month, .year], from: date)
+            dateComponents.day = components.day!
+            dateComponents.month = components.month!
+            dateComponents.year = components.year!
+            dateComponents.hour = h
+            dateComponents.minute = m
+        print(dateComponents)
+            let notificationTrigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+            let nom = String(Int(arc4random_uniform(1000000)))
+            let request2 = UNNotificationRequest(identifier: nom , content: content, trigger: notificationTrigger)
+            // Schedule the request.
+            let center = UNUserNotificationCenter.current()
+            center.add(request2) { (error : Error?) in
+                if let theError = error {
+                    print(theError.localizedDescription)
+                }
+            }
+        
+        
     }
 }

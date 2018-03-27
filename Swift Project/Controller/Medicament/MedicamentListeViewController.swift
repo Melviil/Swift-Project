@@ -53,7 +53,7 @@ class MedicamentListeViewController: UIViewController, UITableViewDataSource  {
                     }
                 }
             }
-            affichageMedicaments.append( medicament.nomMedicament! + " à " + heuresFinales + " jusqu'au " + date )
+            affichageMedicaments.append( (medicament.a?.libelleTypeMedicament!)! + " " + (medicament.aUneDose?.libelleDoseMedicament!)! + " à " + heuresFinales + " jusqu'au " + date )
         }
         // Do any additional setup after loading the view.
     }

@@ -54,8 +54,8 @@ class RDVListeViewController: UIViewController, UITableViewDataSource, UITableVi
             let tpsPrArriverRdv = heureFormatter.string(from :rdv.tpsPourArriver!)
             let medecin = rdv.avec?.nomMedecin
             
-            rdvString.append("Avec " + " le " + dateRdv + " à " + heureRdv + " il faut " + tpsPrArriverRdv + " pour y arriver" )
-                            
+
+           rdvString.append("Rdv avec Dr" + medecin! + " à " + heureRdv + ". Partez" + tpsPrArriverRdv + "avant" )
         }
         
             

@@ -7,23 +7,30 @@
 //
 
 import UIKit
+import CoreData
+import UserNotifications
 
 class MedicamentAjoutViewController: UIViewController {
-    var libelleMedicamentPasse = String()
     var presentationBreveMedicamentPasse = String()
-    var DoseMedicamentPasse = String()
     var presentationDetailleMedicamentPasse = String()
     var heuresPasse: [String] = []
     var dateDebutPasse = String()
     var dateFinPasse = String()
+    var doseMedicSend : DoseMedicament!
+    var nomMedicSend : TypeMedicament!
+    let calendar = Calendar.current
+
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UNUserNotificationCenter.current().requestAuthorization(options : [.alert, .sound, .badge], completionHandler : {didAllow, error in})
+        self.navigationItem.setHidesBackButton(true, animated:true);
+        
         self.navigationItem.setHidesBackButton(true, animated:true);
         // Do any additional setup after loading the view.
         
-        saveNewMedicament(withLibelle: libelleMedicamentPasse, withPresentationBreve: presentationBreveMedicamentPasse, withDose: DoseMedicamentPasse, withPresentationDetaille: presentationDetailleMedicamentPasse, withHeures: heuresPasse, withDateDebut: dateFinPasse, withDateFin: dateFinPasse)
+        saveNewMedicament(withType: nomMedicSend, withPresentationBreve: presentationBreveMedicamentPasse, withDose: doseMedicSend, withPresentationDetaille: presentationDetailleMedicamentPasse, withHeures: heuresPasse, withDateDebut: dateFinPasse, withDateFin: dateFinPasse)
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,7 +38,7 @@ class MedicamentAjoutViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func saveNewMedicament( withLibelle libelle: String, withPresentationBreve presentationBreve : String, withDose dose : String, withPresentationDetaille presentationDetaille : String, withHeures heures : [String],  withDateDebut dateDebut: String, withDateFin dateFin: String){
+    func saveNewMedicament( withType type: TypeMedicament, withPresentationBreve presentationBreve : String, withDose dose : DoseMedicament, withPresentationDetaille presentationDetaille : String, withHeures heures : [String],  withDateDebut dateDebut: String, withDateFin dateFin: String){
        
         let daoF = CoreDataDAOFactory.getInstance()
         let medicamentDAO = daoF.getMedicamentDAO()
@@ -41,11 +48,7 @@ class MedicamentAjoutViewController: UIViewController {
         
         medicament.presentationMedicament = presentationDetaille
         medicament.presentationBreveMedicament = presentationBreve
-      
-        medicament.doseMedicament = dose
-        medicament.nomMedicament = libelle
-        
-        
+    
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy"
         dateFormatter.timeZone = TimeZone.current
@@ -59,6 +62,14 @@ class MedicamentAjoutViewController: UIViewController {
         
         medicament.dateFinMedicament = dateFinGood
         medicament.dateDebutMedicament = dateDebutGood
+        do{
+            try medicamentDAO.addDoseMedicament(doseMedicament: dose, medicament: medicament)
+        }catch{
+        }
+        do{
+            try   medicamentDAO.addTypeMedicament(typeMedicament: type, medicament: medicament)
+        }catch{
+        }
         
         
         
@@ -82,10 +93,53 @@ class MedicamentAjoutViewController: UIViewController {
             }catch {
                 
             }
+            //self.ajouterNotif( heure: calendar.component(.hour, from: heureGood), minute: calendar.component(.minute, from: heureGood))
+             //self.createRappels(heureDebut: heureGood, heureFin: dateDebutGood, dateFin: dateFinGood)
+          //  self.test(date: Calendar.current.date(byAdding: .day, value: -1, to: dateDebutGood)!)
+          //  self.test(date: Calendar.current.date(byAdding: .day, value: -1, to: dateFinGood)!)
+            self.ajouterNotif( heure: calendar.component(.hour, from: heureGood), minute: calendar.component(.minute, from: heureGood), dateDebut: dateDebutGood, dateFin : dateFinGood)
+
         }
         
+       
+        
     }
-   
+    public func ajouterNotif(heure h: Int, minute m: Int, dateDebut : Date, dateFin : Date){
+        let content = UNMutableNotificationContent()
+        content.title = self.nomMedicSend.libelleTypeMedicament! + " " + self.doseMedicSend.libelleDoseMedicament!
+        content.body = "Pensez à prendre votre medicament"
+        content.badge = 1
+        let fmt = DateFormatter()
+        fmt.dateFormat = "dd/MM/yyyy"
+        var dateComponents = DateComponents()
+        var startDate = dateDebut // first date
+        let endDate = dateFin // last date
+        while startDate <= endDate {
+            print(fmt.string(from: startDate))
+            let calendar = NSCalendar.current
+            let components = calendar.dateComponents([.day, .month, .year], from: startDate)
+            dateComponents.month = components.month!
+            dateComponents.day = components.day!
+            dateComponents.year = components.year!
+            dateComponents.hour = h
+            dateComponents.minute = m
+            let notificationTrigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+            let nom = String(Int(arc4random_uniform(1000000)))
+            let request2 = UNNotificationRequest(identifier: nom , content: content, trigger: notificationTrigger)
+            // Schedule the request.
+            let center = UNUserNotificationCenter.current()
+            center.add(request2) { (error : Error?) in
+                if let theError = error {
+                    print(theError.localizedDescription)
+                }
+            }
+                startDate = calendar.date(byAdding: .day, value: 1, to: startDate)!
+            }
+           
+        }
+    }
+    
+
     /*
     // MARK: - Navigation
 
@@ -95,5 +149,17 @@ class MedicamentAjoutViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+   /* func test(date : Date){
+        var datelala = date // first date
+        let endDate = Date() // last date
+        
+        // Formatter for printing the date, adjust it according to your needs:
+        let fmt = DateFormatter()
+        fmt.dateFormat = "dd/MM/yyyy"
+        
+        while datelala <= endDate {
+            print(fmt.string(from: datelala))
+            datelala = Calendar.date(byAdding: .day, value: 1, to: datelala)!
+        }
+    } */
 
-}

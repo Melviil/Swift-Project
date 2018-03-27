@@ -68,7 +68,7 @@ class ActiviteAjoutViewController: UIViewController {
             guard let heureGood = dateFormatter.date(from:uneHeure) else {
                 fatalError("ERROR: Date conversion failed due to mismatched format.")
             }
-            self.ajouterNotif(jour: 1,heure: calendar.component(.hour, from: heureGood), minute: calendar.component(.minute, from: heureGood))
+            
             heure.libelleHeure = heureGood
             do{
                 try heureDAO.save(heure: heure)
@@ -93,33 +93,55 @@ class ActiviteAjoutViewController: UIViewController {
             try activiteDAO.save(activite: activite)
         }catch{
         }
-      
+      // désolé c'est pas très beau ( mais ça marche )
+        let calendar = NSCalendar.current
+
+        for jour in jours{
+            for heure in heures{
+                guard let heureGood = dateFormatter.date(from:heure) else {
+                    fatalError("ERROR: Date conversion failed due to mismatched format.")
+                }
+                self.ajouterNotif( heure: calendar.component(.hour, from: heureGood), minute: calendar.component(.minute, from: heureGood), jour : Int(jour.idJour),dateDebut: dateDebutGood, dateFin : dateFinGood)
+            }
+        }
     }
-   public func ajouterNotif(jour j : Int, heure h: Int, minute m: Int){
-        let content = UNMutableNotificationContent()
-        content.title = self.nomActivite.libelleTypeActivite!
-        content.body = "Pensez à faire votre scéance de sport!"
-        content.badge = 1
-       // let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
-      //  let request  = UNNotificationRequest(identifier: "timerDone", content: content, trigger: trigger)
-       // UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
-        
-        
-        
-        // add notification for Mondays at 11:00 a.m.
-        var dateComponents = DateComponents()
-        dateComponents.weekday = j
-        dateComponents.hour = h
-        dateComponents.minute = m
-        let notificationTrigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
-        
-        let request2 = UNNotificationRequest(identifier: "notification1", content: content, trigger: notificationTrigger)
-        UNUserNotificationCenter.current().add(request2, withCompletionHandler: nil)
-    }
+   
 
     @IBAction func enelverModally(_ sender: Any) {
             self.dismiss(animated:true, completion: nil)
     }
-    
+    public func ajouterNotif(heure h: Int, minute m: Int, jour j : Int, dateDebut : Date, dateFin : Date){
+        let content = UNMutableNotificationContent()
+        content.title = self.nomActivite.libelleTypeActivite!
+        content.body = "Pensez à effectuer votre sport"
+        content.badge = 1
+        let fmt = DateFormatter()
+        fmt.dateFormat = "dd/MM/yyyy"
+        var dateComponents = DateComponents()
+        var startDate = dateDebut // first date
+        let endDate = dateFin // last date
+        while startDate <= endDate {
+            print(fmt.string(from: startDate))
+            let calendar = NSCalendar.current
+            let components = calendar.dateComponents([.day, .month, .year], from: startDate)
+            dateComponents.month = components.month!
+            dateComponents.year = components.year!
+            dateComponents.hour = h
+            dateComponents.minute = m
+            print(dateComponents)
+            let notificationTrigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+            let nom = String(Int(arc4random_uniform(1000000)))
+            let request2 = UNNotificationRequest(identifier: nom , content: content, trigger: notificationTrigger)
+            // Schedule the request.
+            let center = UNUserNotificationCenter.current()
+            center.add(request2) { (error : Error?) in
+                if let theError = error {
+                    print(theError.localizedDescription)
+                }
+            }
+            startDate = calendar.date(byAdding: .day, value: 1, to: startDate)!
+        }
+        
+    }
 
 }
