@@ -52,6 +52,14 @@ class MedicamentAjoutViewController: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy"
         dateFormatter.timeZone = TimeZone.current
+        
+        print("datedebut medicament ajoutVC")
+        print(dateDebut)
+        
+        print("dateFin")
+        print(dateFin)
+        print(dateFinPasse)
+        
         guard let dateFinGood = dateFormatter.date(from:dateFinPasse) else {
             fatalError("ERROR: Date conversion failed due to mismatched format.")
         }
@@ -62,6 +70,11 @@ class MedicamentAjoutViewController: UIViewController {
         
         medicament.dateFinMedicament = dateFinGood
         medicament.dateDebutMedicament = dateDebutGood
+        print("datedebutGood medicament ajoutVC")
+        print(dateDebutGood)
+        print("dateFinGood")
+        print(dateFinGood)
+        
         do{
             try medicamentDAO.addDoseMedicament(doseMedicament: dose, medicament: medicament)
         }catch{
@@ -93,11 +106,9 @@ class MedicamentAjoutViewController: UIViewController {
             }catch {
                 
             }
-            
             do{
-              try  medicamentDAO.save(medicament: medicament)
+                try medicamentDAO.save(medicament: medicament)
             }catch{
-                
             }
             //self.ajouterNotif( heure: calendar.component(.hour, from: heureGood), minute: calendar.component(.minute, from: heureGood))
              //self.createRappels(heureDebut: heureGood, heureFin: dateDebutGood, dateFin: dateFinGood)

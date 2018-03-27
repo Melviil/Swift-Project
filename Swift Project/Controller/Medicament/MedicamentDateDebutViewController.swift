@@ -33,6 +33,9 @@ class MedicamentDateDebutViewController: UIViewController {
         if segue.identifier == showJourActiviteSegue {
             let MedicamentDateFinViewController = segue.destination as! MedicamentDateFinViewController
             
+            print("medicament date debut segue: date debut ")
+            print(self.dateChoisi)
+
             MedicamentDateFinViewController.presentationBreveMedicamentPasse = self.presentationBreveMedicamentPasse
             MedicamentDateFinViewController.presentationDetailleMedicamentPasse = self.presentationDetailleMedicamentPasse
             MedicamentDateFinViewController.heuresPasse = self.heuresPasse
@@ -48,7 +51,6 @@ class MedicamentDateDebutViewController: UIViewController {
         dateFormatter.dateFormat = "dd-MM-yyyy"
         let selectedDate = dateFormatter.string(from: myDatePicker.date)
         dateChoisi = selectedDate
-        print(dateChoisi)
         
     }
     /*

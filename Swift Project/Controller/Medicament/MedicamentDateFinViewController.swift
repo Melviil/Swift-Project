@@ -34,6 +34,11 @@ class MedicamentDateFinViewController: UIViewController {
    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        print("medicament date fin : segue: date debut ")
+        print(self.dateDebutPasse)
+        print("medicament date fin : segue: date fin ")
+        print(self.dateChoisi)
+        
         if segue.identifier == showJourActiviteSegue {
             let MedicamentAjoutViewController = segue.destination as! MedicamentAjoutViewController
             
@@ -53,7 +58,6 @@ class MedicamentDateFinViewController: UIViewController {
         dateFormatter.dateFormat = "dd-MM-yyyy"
         let selectedDate = dateFormatter.string(from: myDatePicker.date)
         dateChoisi = selectedDate
-        print(dateChoisi)
 
         
     }

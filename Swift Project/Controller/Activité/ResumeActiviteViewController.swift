@@ -18,7 +18,7 @@ class ResumeActiviteViewController: UIViewController {
     
     @IBOutlet weak var dateFinActiviteTF: UILabel!
     
-    var activiteP = Activite()
+    var activite : Activite!
     override func viewDidLoad() {
         super.viewDidLoad()
         print("activite")
@@ -27,19 +27,21 @@ class ResumeActiviteViewController: UIViewController {
         self.activiteNom.text = activiteP.estDeType?.libelleTypeActivite
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat =  "dd MMMM"
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         dateFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
+        
         dateFormatter.timeZone = TimeZone.current
         
-      print("date debut")
-    print(activiteP.dateDebut)
         
-//        self.dateDbtActiviteTF.text = dateFormatter.string(from: (activite?.dateDebut!)!)
-//        self.dateFinActiviteTF.text = dateFormatter.string(from: (activite?.dateFin!)!)
+      print("date debut")
+    print(activite.dateDebut)
+        
+        self.dateDbtActiviteTF.text = dateFormatter.string(from: activite.dateDebut!)
+        self.dateFinActiviteTF.text = dateFormatter.string(from: (activite.dateFin!))
 
         
          var heuresFinales = ""
-        if let heures = activiteP.sePasseLe {
+        if let heures = activite.sePasseLe {
             for h in heures{
                 if let heure = h as? Heure{
                     dateFormatter.dateFormat = "HH:mm"

@@ -40,6 +40,7 @@ class MedicamentListeViewController: UIViewController, UITableViewDataSource, UI
         
         
         for medicament in mesMedicaments{
+            
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "dd MMMM"
             dateFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
@@ -49,6 +50,7 @@ class MedicamentListeViewController: UIViewController, UITableViewDataSource, UI
             let date = dateFormatter.string(from: medicament.dateFinMedicament!)
             if let heures = medicament.aPrendreA {
                 for h in heures{
+                    print(heuresFinales)
                     if let heure = h as? Heure{
                         dateFormatter.dateFormat = "HH:mm"
                         let selectedDate = dateFormatter.string(from: heure.libelleHeure!)
@@ -97,6 +99,7 @@ class MedicamentListeViewController: UIViewController, UITableViewDataSource, UI
         if segue.identifier == "descriptionMeds" {
             let medDestination = segue.destination as! ResumeMedicamentViewController
             medDestination.medicament = mesMedicaments[(myTableView.indexPathForSelectedRow?.row)!]
+            print(mesMedicaments[(myTableView.indexPathForSelectedRow?.row)!])
         }
         
     }
