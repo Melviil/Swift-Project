@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ResumeActiviteViewController: UIViewController {
 
@@ -21,25 +22,23 @@ class ResumeActiviteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("activite")
-        print(activite)
-//        self.activiteNom.text = activite?.estDeType?.libelleTypeActivite
+        self.activiteNom.text = activite.estDeType?.libelleTypeActivite
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        dateFormatter.dateFormat = "dd MMMM yyyy"
         dateFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
         
         dateFormatter.timeZone = TimeZone.current
         
         
       print("date debut")
-    print(activite.dateDebut)
         
         self.dateDbtActiviteTF.text = dateFormatter.string(from: activite.dateDebut!)
-        self.dateFinActiviteTF.text = dateFormatter.string(from: (activite.dateFin!))
+        self.dateFinActiviteTF.text = dateFormatter.string(from: activite.dateFin!)
 
         
          var heuresFinales = ""
-        if let heures = activite.sePasseLe {
+        if let heures = activite.sePasseA {
             for h in heures{
                 if let heure = h as? Heure{
                     dateFormatter.dateFormat = "HH:mm"

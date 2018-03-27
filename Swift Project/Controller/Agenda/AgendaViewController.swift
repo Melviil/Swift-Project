@@ -50,10 +50,8 @@ class AgendaViewController: UIViewController, UICollectionViewDataSource, UIColl
         let cellAct = collectionView.dequeueReusableCell(withReuseIdentifier: "cellAct", for: indexPath) as! CellActiviteCollectionViewCell
          let cellRdv = collectionView.dequeueReusableCell(withReuseIdentifier: "cellRdv", for: indexPath) as! CellRdvCollectionViewCell
         
-        print(indexPath)
         if ((arrayAllString.count != 0) && (indexPath.row < arrayAllString.count)){
-            print("lalalalla")
-            print(arrayAllString)
+
             if (  arrayAllString[indexPath.row][0] == "medicament"){
                 cellMedoc.doseMedicamentLabel.text = arrayAllString[indexPath.row][3]
                 cellMedoc.nomMedicament.text = arrayAllString[indexPath.row][1]
@@ -149,14 +147,15 @@ class AgendaViewController: UIViewController, UICollectionViewDataSource, UIColl
 
         self.arrayRdvs = self.rendezvousDAO.getRendezVousByDate(date: dateToday)
         for rdv in arrayRdvs{
-            print("array rdcv")
-            print(arrayRdvs)
+         
                 let nomMed = rdv.avec?.nomMedecin
                 let heure = heureFormatter.string(from: rdv.heureRDV!)
                 let temps = heureFormatter.string(from: rdv.tpsPourArriver!)
                 let spéMedecin = rdv.avec?.titreMedecin
             arrayAllString.append(["rendezvous",nomMed!,String(describing: heure),spéMedecin!,temps, String(indexArrayRdv)])
                 indexArrayRdv = indexArrayRdv + 1
+       
+            
         }
     }
 
@@ -167,7 +166,6 @@ class AgendaViewController: UIViewController, UICollectionViewDataSource, UIColl
 //        }
         if (  arrayAllString[indexPath.row][0] == "medicament"){
           let idmedicamentpasse = arrayAllString[indexPath.row][4]
-         print(idmedicamentpasse)
            self.medicamentpasse = arrayMedicament[0]
             performSegue(withIdentifier: self.medicamentDescriptionSegue, sender: self)
         }

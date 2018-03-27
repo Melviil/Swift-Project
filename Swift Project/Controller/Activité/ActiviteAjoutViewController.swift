@@ -142,8 +142,9 @@ class ActiviteAjoutViewController: UIViewController {
                         print(theError.localizedDescription)
                     }
                 }
-                startDate = calendar.date(byAdding: .day, value: 1, to: startDate)!
             }
+            startDate = calendar.date(byAdding: .day, value: 1, to: startDate)!
+
         }
         
     }
