@@ -24,20 +24,15 @@ class MedicamentListeViewController: UIViewController, UITableViewDataSource, UI
         myTableView.dataSource = self
         myTableView.delegate = self
         
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
-            //Ajouter une error a display
-            return
-        }
-        let context = appDelegate.persistentContainer.viewContext
-        let request  : NSFetchRequest<Medicament> = Medicament.fetchRequest()
+        let daoF = CoreDataDAOFactory.getInstance()
+        let medDao = daoF.getMedicamentDAO()
+        
         
         do{
-            try self.mesMedicaments = context.fetch(request)
-        }
-        catch{
-            return
-        }
+            try self.mesMedicaments = medDao.getAll()!
+        }catch{}
         
+       
         
         for medicament in mesMedicaments{
             

@@ -25,19 +25,13 @@ class ActiviteListeViewController: UIViewController, UITableViewDataSource, UITa
         //TODO GETActivite table
        
         
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
-            //Ajouter une error a display
-            return
-        }
-        let context = appDelegate.persistentContainer.viewContext
-        let request  : NSFetchRequest<Activite> = Activite.fetchRequest()
+        let daoF = CoreDataDAOFactory.getInstance()
+        let activiteDAO = daoF.getActiviteDAO()
+        
         
         do{
-            try self.mesActivites = context.fetch(request)
-        }
-        catch{
-            return
-        }
+            try self.mesActivites = activiteDAO.getAll()!
+        }catch{}
         
         for activite in mesActivites{
             if (activite.dateDebut != nil && activite.dateFin != nil){

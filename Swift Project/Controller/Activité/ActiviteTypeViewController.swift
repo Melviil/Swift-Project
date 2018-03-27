@@ -25,23 +25,20 @@ class ActiviteTypeViewController: UIViewController, UIPickerViewDelegate, UIPick
         super.viewDidLoad()
         picker.dataSource = self
         picker.delegate = self
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
-            //Ajouter une error a display
-            return
-        }
-        let context = appDelegate.persistentContainer.viewContext
-        let request  : NSFetchRequest<TypeActivite> = TypeActivite.fetchRequest()
+        let daoF = CoreDataDAOFactory.getInstance()
+        let typeActiviteDAO = daoF.getTypeActiviteDAO()
+        
         
         do{
-            try self.typesactivite = context.fetch(request)
+            try self.typesactivite = typeActiviteDAO.getAll()!
             if self.typesactivite.isEmpty == false {
                 print(self.typesactivite[0])
                 self.activitePasse = self.typesactivite[0]
             }
-        }
-        catch{
-            return
-        }
+        }catch{
+            
+            }
+        
         
     }
     override func didReceiveMemoryWarning() {
