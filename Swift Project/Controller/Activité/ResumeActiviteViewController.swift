@@ -20,14 +20,18 @@ class ResumeActiviteViewController: UIViewController {
     var activite : Activite? 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.activiteNom.text = activite?.estDeType?.libelleTypeActivite
+        print("activite")
+        print(activite)
+//        self.activiteNom.text = activite?.estDeType?.libelleTypeActivite
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm"
         dateFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
         dateFormatter.timeZone = TimeZone.current
         
-      
+      print("date debut")
+    print(activite?.dateDebut)
+        
         self.dateDbtActiviteTF.text = dateFormatter.string(from: (activite?.dateDebut!)!)
         self.dateFinActiviteTF.text = dateFormatter.string(from: (activite?.dateFin!)!)
 
