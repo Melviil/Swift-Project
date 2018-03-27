@@ -49,7 +49,6 @@ class RDVListeViewController: UIViewController, UITableViewDataSource, UITableVi
             heureFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
             heureFormatter.timeZone = TimeZone.current
                 
-            let dateRdv = dateFormatter.string(from: rdv.dateRdv!)
             let heureRdv = heureFormatter.string(from :rdv.heureRDV!)
             let tpsPrArriverRdv = heureFormatter.string(from :rdv.tpsPourArriver!)
             let medecin = rdv.avec?.nomMedecin

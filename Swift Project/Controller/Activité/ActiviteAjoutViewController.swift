@@ -63,7 +63,6 @@ class ActiviteAjoutViewController: UIViewController {
 
         for uneHeure in heures {
             let heure: Heure = heureDAO.create()
-            let calendar = Calendar.current
             //On repasse la date en Date
             guard let heureGood = dateFormatter.date(from:uneHeure) else {
                 fatalError("ERROR: Date conversion failed due to mismatched format.")
