@@ -14,12 +14,14 @@ class ConsulterSuiviViewController: UIViewController,  UITableViewDataSource, UI
     var suiviString: [String] = []
     var suivis : [SuiviMedicament]?
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
         suiviMedicamentTableView.dataSource = self
         suiviMedicamentTableView.delegate = self
-        // Do any additional setup after loading the view.
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
             //Ajouter une error a display
@@ -64,7 +66,6 @@ class ConsulterSuiviViewController: UIViewController,  UITableViewDataSource, UI
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBOutlet weak var suiviMedicamentTableView: UITableView!
@@ -84,14 +85,5 @@ class ConsulterSuiviViewController: UIViewController,  UITableViewDataSource, UI
         return cell
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

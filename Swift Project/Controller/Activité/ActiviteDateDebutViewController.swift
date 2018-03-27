@@ -20,13 +20,11 @@ class ActiviteDateDebutViewController: UIViewController {
         labelActivite.text = nomActivite.libelleTypeActivite
         changerValueDateQuandDateChange(self)
 
-        // Do any additional setup after loading the view.
     }
    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
        
-        // Dispose of any resources that can be recreated.
     }
     let showJourActiviteSegue = "DateFinActiviteSegue"
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

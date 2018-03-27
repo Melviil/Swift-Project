@@ -79,9 +79,6 @@ class ActiviteJoursViewController: UIViewController {
         if dimSwitch.isOn {
             try? joursActivite.append(patientDAO.getByName(jourParametre: "Dimanche")![0])
         }
-        print(joursActivite)
-        print(jour11)
-        print("ON A FAIT LA FCT")
 
 
     }

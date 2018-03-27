@@ -16,9 +16,6 @@ class SurveillanceAjoutViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(self.nomSurveillanceSend)
-        print(self.heureSurveillanceSend)
-        print(self.dateSurveillanceSend)
          self.saveNewSurveillance( withNom : self.nomSurveillanceSend, withHeure: self.heureSurveillanceSend, withDate : self.dateSurveillanceSend)
     
     }
@@ -48,13 +45,11 @@ class SurveillanceAjoutViewController: UIViewController {
             try surveillanceDAO.addTypeSurveillanceASurveillance(surveillance: surveillance, typeSurveillance : nom)
         }catch{
         }
+
         
-         print("type added")
-        print(surveillance)
-        
-        do{  print("preparing surveillance added to db")
+        do{
             try surveillanceDAO.save(surveillance: surveillance)
-            print("surveillance added to db")
+
         }catch {
         }
         

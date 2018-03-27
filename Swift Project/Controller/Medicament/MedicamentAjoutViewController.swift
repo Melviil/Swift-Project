@@ -52,13 +52,7 @@ class MedicamentAjoutViewController: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy"
         dateFormatter.timeZone = TimeZone.current
-        
-        print("datedebut medicament ajoutVC")
-        print(dateDebut)
-        
-        print("dateFin")
-        print(dateFin)
-        print(dateFinPasse)
+
         
         guard let dateFinGood = dateFormatter.date(from:dateFinPasse) else {
             fatalError("ERROR: Date conversion failed due to mismatched format.")
@@ -70,10 +64,7 @@ class MedicamentAjoutViewController: UIViewController {
         
         medicament.dateFinMedicament = dateFinGood
         medicament.dateDebutMedicament = dateDebutGood
-        print("datedebutGood medicament ajoutVC")
-        print(dateDebutGood)
-        print("dateFinGood")
-        print(dateFinGood)
+
         
         do{
             try medicamentDAO.addDoseMedicament(doseMedicament: dose, medicament: medicament)
@@ -110,10 +101,7 @@ class MedicamentAjoutViewController: UIViewController {
                 try medicamentDAO.save(medicament: medicament)
             }catch{
             }
-            //self.ajouterNotif( heure: calendar.component(.hour, from: heureGood), minute: calendar.component(.minute, from: heureGood))
-             //self.createRappels(heureDebut: heureGood, heureFin: dateDebutGood, dateFin: dateFinGood)
-          //  self.test(date: Calendar.current.date(byAdding: .day, value: -1, to: dateDebutGood)!)
-          //  self.test(date: Calendar.current.date(byAdding: .day, value: -1, to: dateFinGood)!)
+  
             self.ajouterNotif( heure: calendar.component(.hour, from: heureGood), minute: calendar.component(.minute, from: heureGood), dateDebut: dateDebutGood, dateFin : dateFinGood)
 
         }
@@ -157,26 +145,4 @@ class MedicamentAjoutViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-   /* func test(date : Date){
-        var datelala = date // first date
-        let endDate = Date() // last date
-        
-        // Formatter for printing the date, adjust it according to your needs:
-        let fmt = DateFormatter()
-        fmt.dateFormat = "dd/MM/yyyy"
-        
-        while datelala <= endDate {
-            print(fmt.string(from: datelala))
-            datelala = Calendar.date(byAdding: .day, value: 1, to: datelala)!
-        }
-    } */
 

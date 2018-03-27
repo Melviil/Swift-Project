@@ -32,9 +32,6 @@ class SurveillanceTypeViewController: UIViewController, UIPickerViewDataSource, 
         picker.dataSource = self
         picker.delegate = self
         
-        print("surveillence Date")
-        print(self.nomSurveillance)
-        
         let daoF = CoreDataDAOFactory.getInstance()
         let typeSurveillanceDAO = daoF.getTypeSurveillanceDAO()
        
@@ -46,13 +43,12 @@ class SurveillanceTypeViewController: UIViewController, UIPickerViewDataSource, 
         }
         
         self.nomSurveillance=pickerData[0]
-        // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }

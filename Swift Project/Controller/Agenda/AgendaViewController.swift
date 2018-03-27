@@ -90,16 +90,13 @@ class AgendaViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         arrayAllString = arrayAllString.sorted(by: { dateFormatter.date(from:$0[2])?.compare(dateFormatter.date(from:$1[2])!) == .orderedAscending })
 
-        
-        
-       
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
+    
+    
     func ajoutDesMedicamentsDansMatrice(){
         let dateFormatter = DateFormatter() // TODO : factoriser le dateFormatter
         dateFormatter.dateFormat = "HH:mm"
@@ -162,8 +159,8 @@ class AgendaViewController: UIViewController, UICollectionViewDataSource, UIColl
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
 //        if arrayAllString[indexPath.row][0] == "medicament" {
-
 //        }
+        
         if (  arrayAllString[indexPath.row][0] == "medicament"){
           let idmedicamentpasse = arrayAllString[indexPath.row][4]
            self.medicamentpasse = arrayMedicament[0]
@@ -174,7 +171,6 @@ class AgendaViewController: UIViewController, UICollectionViewDataSource, UIColl
     }
     
  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
         if segue.identifier == self.medicamentDescriptionSegue {
             let medDesc = segue.destination as! ResumeMedicamentViewController
             medDesc.medicament = self.medicamentpasse

@@ -67,29 +67,7 @@ class RDVAjoutViewController: UIViewController {
         dateFormatter.timeZone = TimeZone.current
         dateFormatter.dateFormat = "HH mm"
         
-        
-        
-     
-//        for uneHeure in heures {
-//            let heure: Heure = heureDAO.create()
-//
-//            //On repasse la date en Date
-//            guard let heureGood = dateFormatter.date(from:uneHeure) else {
-//                fatalError("ERROR: Date conversion failed due to mismatched format.")
-//            }
-//            heure.libelleHeure = heureGood
-//            do{
-//                try heureDAO.save(heure: heure)
-//            }catch{
-//            }
-//            do{
-//                try medicamentDAO.addHeureMedicament(heure:  heure, medicament: medicament)
-//            }catch {
-//
-//            }
-//        }
-        
-        
+
         do{
             try rdvDAO.addMedecinRdv(rendezVous: rendezVous, medecin: medecinSent)
         }catch {print("medecin rdv non ajoute")}
@@ -103,15 +81,10 @@ class RDVAjoutViewController: UIViewController {
         ajouterNotif(heure: calendar.component(.hour, from: heureChoisie), minute : calendar.component(.minute, from : heureChoisie), date: dateChoisi, message : "Vous avez votre rendez vous")
         ajouterNotif(heure: calendar.component(.hour, from: heureChoisie), minute : calendar.component(.minute, from : heureChoisie), date: dateChoisi, message : "Il est temps de partir!'")
           ajouterNotifSymptome( date: dateChoisi, message : "Pensez à indiquer votre état durant cette heure!'")
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+        
+        
+        
     }
      func ajouterNotif(heure h: Int, minute m: Int, date : Date, message : String){
         let content = UNMutableNotificationContent()

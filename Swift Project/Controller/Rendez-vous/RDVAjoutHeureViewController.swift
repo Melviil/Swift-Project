@@ -37,9 +37,10 @@ class RDVAjoutHeureViewController: UIViewController {
         let selectedDate = dateFormatter.string(from: heureRDVDatePicker.date)
         heureChoisie = selectedDate
         
-    }
+            }
 
- let AjoutDateRdvSegue = "AjoutDateRdvSegue"
+    let AjoutDateRdvSegue = "AjoutDateRdvSegue"
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == AjoutDateRdvSegue {

@@ -23,15 +23,15 @@ class ActiviteDateFinViewController: UIViewController {
         labelActivite.text = nomActivite.libelleTypeActivite
         changerValueDateQuandDateChange(self)
 
-        // Do any additional setup after loading the view.
     }
 
     
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
+    
+    
     @IBAction func changerValueDateQuandDateChange(_ sender: Any) {
         
        let dateFormatter = DateFormatter()
