@@ -93,34 +93,53 @@ class MedicamentAjoutViewController: UIViewController {
             }catch {
                 
             }
-            self.ajouterNotif( heure: calendar.component(.hour, from: heureGood), minute: calendar.component(.minute, from: heureGood))
+            //self.ajouterNotif( heure: calendar.component(.hour, from: heureGood), minute: calendar.component(.minute, from: heureGood))
+             //self.createRappels(heureDebut: heureGood, heureFin: dateDebutGood, dateFin: dateFinGood)
+          //  self.test(date: Calendar.current.date(byAdding: .day, value: -1, to: dateDebutGood)!)
+          //  self.test(date: Calendar.current.date(byAdding: .day, value: -1, to: dateFinGood)!)
+            self.ajouterNotif( heure: calendar.component(.hour, from: heureGood), minute: calendar.component(.minute, from: heureGood), dateDebut: dateDebutGood, dateFin : dateFinGood)
+
         }
         
+       
         
     }
-   public func ajouterNotif(heure h: Int, minute m: Int){
+    public func ajouterNotif(heure h: Int, minute m: Int, dateDebut : Date, dateFin : Date){
         let content = UNMutableNotificationContent()
-        content.title = self.nomMedicSend.libelleTypeMedicament! + self.doseMedicSend.libelleDoseMedicament!
+        content.title = self.nomMedicSend.libelleTypeMedicament! + " " + self.doseMedicSend.libelleDoseMedicament!
         content.body = "Pensez à prendre votre medicament"
         content.badge = 1
-        
-        // add notification for Mondays at 11:00 a.m.
+        let fmt = DateFormatter()
+        fmt.dateFormat = "dd/MM/yyyy"
         var dateComponents = DateComponents()
-    
-    for day in 1...7{
-        dateComponents.day = day
-        dateComponents.hour = h
-        dateComponents.minute = m
-        print(day)
-        print(h)
-        print(m)
-        let notificationTrigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
-        let id = "notif" + String(day)
-        let request2 = UNNotificationRequest(identifier: id, content: content, trigger: notificationTrigger)
-        UNUserNotificationCenter.current().add(request2, withCompletionHandler: nil)
+        var startDate = dateDebut // first date
+        let endDate = dateFin // last date
+        while startDate <= endDate {
+            print(fmt.string(from: startDate))
+            let calendar = NSCalendar.current
+            let components = calendar.dateComponents([.day, .month, .year], from: startDate)
+            dateComponents.month = components.month!
+            dateComponents.day = components.day!
+            dateComponents.year = components.year!
+            dateComponents.hour = h
+            dateComponents.minute = m
+            let notificationTrigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+            let nom = String(Int(arc4random_uniform(1000000)))
+            let request2 = UNNotificationRequest(identifier: nom , content: content, trigger: notificationTrigger)
+            // Schedule the request.
+            let center = UNUserNotificationCenter.current()
+            center.add(request2) { (error : Error?) in
+                if let theError = error {
+                    print(theError.localizedDescription)
+                }
+            }
+                startDate = calendar.date(byAdding: .day, value: 1, to: startDate)!
+            }
+           
+        }
     }
     
-    }
+
     /*
     // MARK: - Navigation
 
@@ -130,5 +149,17 @@ class MedicamentAjoutViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+   /* func test(date : Date){
+        var datelala = date // first date
+        let endDate = Date() // last date
+        
+        // Formatter for printing the date, adjust it according to your needs:
+        let fmt = DateFormatter()
+        fmt.dateFormat = "dd/MM/yyyy"
+        
+        while datelala <= endDate {
+            print(fmt.string(from: datelala))
+            datelala = Calendar.date(byAdding: .day, value: 1, to: datelala)!
+        }
+    } */
 
-}
