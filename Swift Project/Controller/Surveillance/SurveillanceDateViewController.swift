@@ -16,8 +16,12 @@ class SurveillanceDateViewController: UIViewController {
     var dateChoisi = Date() // date getted now
     
     let segueShowNomSuivi = "showAllInfosSurveillanceSegue"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("date surv : typt : ")
+        print(self.nomSurveillanceSend)
+        print(self.heureSurveillanceSend)
         changerValueDateQuandDateChange(self) //au cas où l'utilisateur garde la date préséléctionnée
         // Do any additional setup after loading the view.
     }
@@ -32,6 +36,7 @@ class SurveillanceDateViewController: UIViewController {
         
         if segue.identifier == segueShowNomSuivi {
             let SurveillanceAjoutViewController = segue.destination as! SurveillanceAjoutViewController
+            
             SurveillanceAjoutViewController.nomSurveillanceSend = self.nomSurveillanceSend
             SurveillanceAjoutViewController.heureSurveillanceSend = self.heureSurveillanceSend
             SurveillanceAjoutViewController.dateSurveillanceSend = self.dateChoisi

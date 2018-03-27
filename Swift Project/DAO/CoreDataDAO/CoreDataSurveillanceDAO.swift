@@ -39,4 +39,7 @@ class CoreDataSurveillanceDAO: SurveillanceDAO {
     func remove(surveillance: Surveillance) throws{
         
     }
+    func addTypeSurveillance( surveillance : Surveillance, typeSurveillance: TypeSurveillance) throws {
+        surveillance.aUnTypeSurveillance = typeSurveillance
+    }
 }

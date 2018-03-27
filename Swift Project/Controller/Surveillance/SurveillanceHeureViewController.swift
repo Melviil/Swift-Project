@@ -13,11 +13,13 @@ class SurveillanceHeureViewController: UIViewController {
     
     @IBOutlet weak var myDatePicker: UIDatePicker!
     var heureChoisie = Date()
-    let segueShowNomSuivi = "showNomHeureSurveillanceSegue"
+    let segueShowNomSuivi = "showDateSurveillanceSegue"
     var nomSurveillanceSend : TypeSurveillance!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("heure surv") 
+        print(self.nomSurveillanceSend)
         changerValueDateQuandDateChange(self) //au cas où l'utilisateur garde l'heure préséléctionnée
         
         // Do any additional setup after loading the view.
