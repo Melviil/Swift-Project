@@ -70,7 +70,7 @@ class AgendaViewController: UIViewController, UICollectionViewDataSource, UIColl
             }
             if (  arrayAllString[indexPath.row][0] == "rendezvous"){
                 cellRdv.heureRdvLabel.text = arrayAllString[indexPath.row][2]
-                cellRdv.NomMedecinRdvLabel.text = arrayAllString[indexPath.row][1]
+                cellRdv.NomMedecinRdvLabel.text = ( "DR " + arrayAllString[indexPath.row][1])
                 cellRdv.nomRdv.text = arrayAllString[indexPath.row][3]
                 return cellRdv
             }
@@ -154,8 +154,8 @@ class AgendaViewController: UIViewController, UICollectionViewDataSource, UIColl
                 let nomMed = rdv.avec?.nomMedecin
                 let heure = heureFormatter.string(from: rdv.heureRDV!)
                 let temps = heureFormatter.string(from: rdv.tpsPourArriver!)
-                let rdvNom = rdv.avec?.aUneSpecialite?.libelleSpecialite
-                arrayAllString.append(["rendezvous",nomMed!,String(describing: heure),temps, String(indexArrayRdv)])
+                let spéMedecin = rdv.avec?.titreMedecin
+            arrayAllString.append(["rendezvous",nomMed!,String(describing: heure),spéMedecin!,temps, String(indexArrayRdv)])
                 indexArrayRdv = indexArrayRdv + 1
         }
     }
@@ -181,17 +181,6 @@ class AgendaViewController: UIViewController, UICollectionViewDataSource, UIColl
             let medDesc = segue.destination as! ResumeMedicamentViewController
             medDesc.medicament = self.medicamentpasse
         }
-   
-
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

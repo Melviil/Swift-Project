@@ -18,18 +18,18 @@ class ResumeMedicamentViewController: UIViewController {
     @IBOutlet weak var joursMedoc: UILabel!
     @IBOutlet weak var dateDbtMedoc: UILabel!
     @IBOutlet weak var dateFinMedoc: UILabel!
-    @IBOutlet weak var descriptionBreve: UILabel!
     
+    @IBOutlet weak var descriptionBreve: UITextView!
     var medicament : Medicament?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "HH:mm"
+        dateFormatter.dateFormat = "dd-MM-yyyy"
         dateFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
+        dateFormatter.timeZone = TimeZone.current
 
         
-        dateFormatter.timeZone = TimeZone.current
         
         self.nomMedoc.text = medicament?.a?.libelleTypeMedicament;
         self.doseMedoc.text = medicament?.aUneDose?.libelleDoseMedicament
@@ -37,6 +37,22 @@ class ResumeMedicamentViewController: UIViewController {
         
         self.dateDbtMedoc.text = dateFormatter.string(from: (medicament?.dateDebutMedicament!)!)
         self.dateFinMedoc.text = dateFormatter.string(from: (medicament?.dateFinMedicament!)!)
+        
+        var heuresFinales = ""
+        if let heures = medicament?.aPrendreA {
+            for h in heures{
+                if let heure = h as? Heure{
+                    dateFormatter.dateFormat = "HH:mm"
+                    let selectedDate = dateFormatter.string(from: heure.libelleHeure!)
+                    if ( heuresFinales != ""){
+                        heuresFinales = heuresFinales + ", " // prepare plusieurs heures
+                    }
+                    heuresFinales = heuresFinales + selectedDate
+                    
+                }
+            }
+        }
+        self.heuresMedoc.text = heuresFinales 
 
         
 //    faire date et heure
