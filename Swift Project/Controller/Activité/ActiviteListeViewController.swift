@@ -107,7 +107,7 @@ class ActiviteListeViewController: UIViewController, UITableViewDataSource, UITa
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "descriptionActiviteSegue" {
             let activiteDestination = segue.destination as! ResumeActiviteViewController
-            activiteDestination.activite = mesActivites[(myTableView.indexPathForSelectedRow?.row)!]
+        activiteDestination.activiteP = mesActivites[(myTableView.indexPathForSelectedRow?.row)!]
         }
         
     }
