@@ -22,9 +22,7 @@ class ResumeActiviteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("activite")
-        print(activiteP)
-        print(activiteP.estDeType?.libelleTypeActivite!)
-        self.activiteNom.text = activiteP.estDeType?.libelleTypeActivite
+        self.activiteNom.text = activite.estDeType?.libelleTypeActivite
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
@@ -34,7 +32,6 @@ class ResumeActiviteViewController: UIViewController {
         
         
       print("date debut")
-    print(activite.dateDebut)
         
         self.dateDbtActiviteTF.text = dateFormatter.string(from: activite.dateDebut!)
         self.dateFinActiviteTF.text = dateFormatter.string(from: (activite.dateFin!))
