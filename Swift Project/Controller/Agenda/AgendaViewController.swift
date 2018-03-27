@@ -49,6 +49,7 @@ class AgendaViewController: UIViewController, UICollectionViewDataSource, UIColl
         let cellMedoc = collectionView.dequeueReusableCell(withReuseIdentifier: "cellMed", for: indexPath) as! CellMedocCollectionViewCell
         let cellAct = collectionView.dequeueReusableCell(withReuseIdentifier: "cellAct", for: indexPath) as! CellActiviteCollectionViewCell
          let cellRdv = collectionView.dequeueReusableCell(withReuseIdentifier: "cellRdv", for: indexPath) as! CellRdvCollectionViewCell
+        
         print(indexPath)
         if ((arrayAllString.count != 0) && (indexPath.row < arrayAllString.count)){
             print("lalalalla")
@@ -140,41 +141,47 @@ class AgendaViewController: UIViewController, UICollectionViewDataSource, UIColl
         heureFormatter.dateFormat = "HH:mm"
         heureFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
         heureFormatter.timeZone = TimeZone.current
-        
+
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm"
         dateFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
         dateFormatter.timeZone = TimeZone.current
-        
+
         self.arrayRdvs = self.rendezvousDAO.getRendezVousByDate(date: dateToday)
         for rdv in arrayRdvs{
             print("array rdcv")
             print(arrayRdvs)
                 let nomMed = rdv.avec?.nomMedecin
                 let heure = heureFormatter.string(from: rdv.heureRDV!)
+                let temps = heureFormatter.string(from: rdv.tpsPourArriver!)
                 let rdvNom = rdv.avec?.aUneSpecialite?.libelleSpecialite
-                let rdvdate = dateFormatter.string(from: rdv.heureRDV!)
-                arrayAllString.append(["rendezvous",nomMed!,String(describing: heure), rdvNom!, String(indexArrayRdv)])
+                arrayAllString.append(["rendezvous",nomMed!,String(describing: heure),temps, String(indexArrayRdv)])
                 indexArrayRdv = indexArrayRdv + 1
         }
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
-        if arrayAllString[indexPath.row][0] == "medicament" {
-            let idmedicamentpasse = arrayAllString[indexPath.row][4]
-            print(idmedicamentpasse)
-            self.medicamentpasse = arrayMedicament[0]
+//        if arrayAllString[indexPath.row][0] == "medicament" {
+
+//        }
+        if (  arrayAllString[indexPath.row][0] == "medicament"){
+          let idmedicamentpasse = arrayAllString[indexPath.row][4]
+         print(idmedicamentpasse)
+           self.medicamentpasse = arrayMedicament[0]
+            performSegue(withIdentifier: self.medicamentDescriptionSegue, sender: self)
         }
+
 
     }
     
  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
-        if segue.identifier == medicamentDescriptionSegue {
+        if segue.identifier == self.medicamentDescriptionSegue {
             let medDesc = segue.destination as! ResumeMedicamentViewController
             medDesc.medicament = self.medicamentpasse
         }
+   
 
     }
     /*

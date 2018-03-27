@@ -86,10 +86,10 @@ class MedicamentListeViewController: UIViewController, UITableViewDataSource, UI
     }
     
     func tableView(_ tableView: UITableView,didSelectRowAt indexPath: IndexPath){
-        print("did select row ")
+        
        // medSelected = mesMedicaments[indexPath.row]
         performSegue(withIdentifier: "descriptionMeds", sender: self)
-        print("did select row after")
+
 
     }
     

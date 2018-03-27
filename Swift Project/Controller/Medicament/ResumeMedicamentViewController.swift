@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreData
+import Foundation
 
 class ResumeMedicamentViewController: UIViewController {
 
@@ -16,19 +18,23 @@ class ResumeMedicamentViewController: UIViewController {
     @IBOutlet weak var joursMedoc: UILabel!
     @IBOutlet weak var dateDbtMedoc: UILabel!
     @IBOutlet weak var dateFinMedoc: UILabel!
+    @IBOutlet weak var descriptionBreve: UILabel!
     
     var medicament : Medicament?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(medicament)
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm"
         dateFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
+
+        
         dateFormatter.timeZone = TimeZone.current
         
         self.nomMedoc.text = medicament?.a?.libelleTypeMedicament;
         self.doseMedoc.text = medicament?.aUneDose?.libelleDoseMedicament
+        self.descriptionBreve.text = medicament?.presentationMedicament
+        
         self.dateDbtMedoc.text = dateFormatter.string(from: (medicament?.dateDebutMedicament!)!)
         self.dateFinMedoc.text = dateFormatter.string(from: (medicament?.dateFinMedicament!)!)
 
