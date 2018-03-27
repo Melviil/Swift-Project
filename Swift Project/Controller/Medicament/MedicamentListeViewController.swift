@@ -9,14 +9,21 @@
 import UIKit
 import CoreData
 
-class MedicamentListeViewController: UIViewController, UITableViewDataSource  {
+class MedicamentListeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
    
     
     var mesMedicaments : [Medicament] = []
     var affichageMedicaments : [String] = []
     @IBOutlet weak var myTableView: UITableView!
+    
+    var medSelected : Medicament?
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        myTableView.dataSource = self
+        myTableView.delegate = self
+        
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
             //Ajouter une error a display
             return
@@ -78,6 +85,22 @@ class MedicamentListeViewController: UIViewController, UITableViewDataSource  {
         return cell
     }
     
+    func tableView(_ tableView: UITableView,didSelectRowAt indexPath: IndexPath){
+        
+       // medSelected = mesMedicaments[indexPath.row]
+        performSegue(withIdentifier: "descriptionMeds", sender: self)
+
+
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "descriptionMeds" {
+            let medDestination = segue.destination as! ResumeMedicamentViewController
+            medDestination.medicament = mesMedicaments[(myTableView.indexPathForSelectedRow?.row)!]
+        }
+        
+    }
+
 
 
 

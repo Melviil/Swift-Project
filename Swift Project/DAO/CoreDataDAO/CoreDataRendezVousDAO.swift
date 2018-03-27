@@ -57,7 +57,7 @@ class CoreDataRendezVousDAO: RendezVousDAO {
         //let sort = NSSortDescriptor(key: #keyPath(RendezVous.aPrendreA), ascending: true)
         
         //request.sortDescriptors = [sort]
-        request.predicate = NSPredicate(format: "(dateRDV == %@) ", dateDebutDelaJourneeEnFr as CVarArg)
+        request.predicate = NSPredicate(format: "(dateRdv == %@) ", dateDebutDelaJourneeEnFr as CVarArg)
         
         do {
             
@@ -76,6 +76,7 @@ class CoreDataRendezVousDAO: RendezVousDAO {
         }
         
     }
+    
     
     func addHeureRendezVous(heure : Heure, rendezVous: RendezVous) throws {
         rendezVous.prisA = heure

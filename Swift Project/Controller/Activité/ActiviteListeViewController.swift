@@ -88,7 +88,7 @@ class ActiviteListeViewController: UIViewController, UITableViewDataSource, UITa
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return activites.count
+        return mesActivites.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -97,6 +97,20 @@ class ActiviteListeViewController: UIViewController, UITableViewDataSource, UITa
         return cell
     }
     
+    func tableView(_ tableView: UITableView,didSelectRowAt indexPath: IndexPath){
+        
+        performSegue(withIdentifier: "descriptionActiviteSegue", sender: self)
+        print("did select row after")
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "descriptionActiviteSegue" {
+            let activiteDestination = segue.destination as! ResumeActiviteViewController
+            activiteDestination.activite = mesActivites[(myTableView.indexPathForSelectedRow?.row)!]
+        }
+        
+    }
     
 
 }

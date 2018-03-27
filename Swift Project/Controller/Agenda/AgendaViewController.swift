@@ -18,12 +18,19 @@ class AgendaViewController: UIViewController, UICollectionViewDataSource, UIColl
     var arrayActivite : [Activite]!
     var arrayRdvs : [RendezVous]!
     var arrayAllString = [[String]]()
+    var arrayAny = [[Any]]()
+    
+    var indexArrayMed = 0
+    var indexArrayActivite = 0
+    var indexArrayRdv = 0
+    
     let medicamentDAO = CoreDataDAOFactory.getInstance().getMedicamentDAO()
     let activiteDAO = CoreDataDAOFactory.getInstance().getActiviteDAO()
     let rendezvousDAO = CoreDataDAOFactory.getInstance().getRendezVousDAO()
-
-
     
+    var medicamentpasse : Medicament!
+
+    let medicamentDescriptionSegue = "medicamentDescriptionSegue"
     let calendar = Calendar.current
     
     
@@ -42,6 +49,7 @@ class AgendaViewController: UIViewController, UICollectionViewDataSource, UIColl
         let cellMedoc = collectionView.dequeueReusableCell(withReuseIdentifier: "cellMed", for: indexPath) as! CellMedocCollectionViewCell
         let cellAct = collectionView.dequeueReusableCell(withReuseIdentifier: "cellAct", for: indexPath) as! CellActiviteCollectionViewCell
          let cellRdv = collectionView.dequeueReusableCell(withReuseIdentifier: "cellRdv", for: indexPath) as! CellRdvCollectionViewCell
+        
         print(indexPath)
         if ((arrayAllString.count != 0) && (indexPath.row < arrayAllString.count)){
             print("lalalalla")
@@ -50,6 +58,7 @@ class AgendaViewController: UIViewController, UICollectionViewDataSource, UIColl
                 cellMedoc.doseMedicamentLabel.text = arrayAllString[indexPath.row][3]
                 cellMedoc.nomMedicament.text = arrayAllString[indexPath.row][1]
                 cellMedoc.heurePriseMedicamentLabel.text = arrayAllString[indexPath.row][2]
+                
                 return cellMedoc
             }
 
@@ -77,7 +86,8 @@ class AgendaViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         ajoutDesMedicamentsDansMatrice()
         ajoutDesActivitesDansMatrice()
-        var dateFormatter = DateFormatter()
+        ajoutRdvDansMatrice()
+        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm"
         
         arrayAllString = arrayAllString.sorted(by: { dateFormatter.date(from:$0[2])?.compare(dateFormatter.date(from:$1[2])!) == .orderedAscending })
@@ -104,7 +114,9 @@ class AgendaViewController: UIViewController, UICollectionViewDataSource, UIColl
                 let dose =  medicament.aUneDose?.libelleDoseMedicament!
                 let nom = medicament.a?.libelleTypeMedicament!
                 let heure = dateFormatter.string(from: h.libelleHeure!)
-                arrayAllString.append(["medicament",nom!,String(describing: heure),dose!])
+                arrayAllString.append(["medicament",nom!,String(describing: heure),dose!, String(indexArrayMed)])
+                indexArrayMed = indexArrayMed + 1
+                
             }
         }
     }
@@ -119,23 +131,59 @@ class AgendaViewController: UIViewController, UICollectionViewDataSource, UIColl
             for h in heuresM{
                 let nom = activite.estDeType?.libelleTypeActivite!
                 let heure = dateFormatter.string(from: h.libelleHeure!)
-                arrayAllString.append(["activite",nom!,String(describing: heure)])
+                arrayAllString.append(["activite",nom!,String(describing: heure), String(indexArrayActivite)])
+                indexArrayActivite = indexArrayActivite + 1
             }
         }
     }
     func ajoutRdvDansMatrice(){
+        let heureFormatter = DateFormatter()
+        heureFormatter.dateFormat = "HH:mm"
+        heureFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
+        heureFormatter.timeZone = TimeZone.current
+
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm"
         dateFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
         dateFormatter.timeZone = TimeZone.current
+
+        self.arrayRdvs = self.rendezvousDAO.getRendezVousByDate(date: dateToday)
         for rdv in arrayRdvs{
+            print("array rdcv")
+            print(arrayRdvs)
                 let nomMed = rdv.avec?.nomMedecin
-                let heure = dateFormatter.string(from: rdv.heureRDV!)
+                let heure = heureFormatter.string(from: rdv.heureRDV!)
+                let temps = heureFormatter.string(from: rdv.tpsPourArriver!)
                 let rdvNom = rdv.avec?.aUneSpecialite?.libelleSpecialite
-                arrayAllString.append(["rendezvous",nomMed!,String(describing: heure), rdvNom!])
+                arrayAllString.append(["rendezvous",nomMed!,String(describing: heure),temps, String(indexArrayRdv)])
+                indexArrayRdv = indexArrayRdv + 1
         }
     }
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+//        if arrayAllString[indexPath.row][0] == "medicament" {
+
+//        }
+        if (  arrayAllString[indexPath.row][0] == "medicament"){
+          let idmedicamentpasse = arrayAllString[indexPath.row][4]
+         print(idmedicamentpasse)
+           self.medicamentpasse = arrayMedicament[0]
+            performSegue(withIdentifier: self.medicamentDescriptionSegue, sender: self)
+        }
+
+
+    }
+    
+ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        if segue.identifier == self.medicamentDescriptionSegue {
+            let medDesc = segue.destination as! ResumeMedicamentViewController
+            medDesc.medicament = self.medicamentpasse
+        }
+   
+
+    }
     /*
     // MARK: - Navigation
 
