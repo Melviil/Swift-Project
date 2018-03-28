@@ -28,9 +28,7 @@ class ConsulterSuiviViewController: UIViewController,  UITableViewDataSource, UI
             try self.suivis = suiviMedicamentDAO.getAll()!
         }catch{}
         
-        // Do any additional setup after loading the view.
-        
-       
+               
         
         for s in suivis!{
             

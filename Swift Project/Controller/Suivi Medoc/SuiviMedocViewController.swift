@@ -16,7 +16,7 @@ class SuiviMedocViewController: UIViewController {
     @IBOutlet weak var aucunePrise: UISwitch!
     @IBOutlet weak var nbPrise: UISwitch!
     
-    @IBOutlet weak var nbMedocOublie: UITextField!
+    @IBOutlet weak var nbMedocOublie: UITextField! //contient le nombre de medicmaents oublié
     
     @IBAction func nbOubli(_ sender: Any) {
         if nbPrise.isOn {
@@ -26,7 +26,6 @@ class SuiviMedocViewController: UIViewController {
         }
         
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +41,7 @@ class SuiviMedocViewController: UIViewController {
      
      ### Usage Example: ###
      ````
-     si le switch toutes les prises est ON, on enregistre en bd que le jour X, le patient a pris toutes les prises de médicaments
+     si le switch de toutes les prises est ON, on enregistre en bd que le jour X, le patient a pris toutes les prises de médicaments
      ````
      */
     
