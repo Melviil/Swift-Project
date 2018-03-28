@@ -20,7 +20,7 @@ class MedicamentDescriptionViewController: UIViewController {
     var doseMedicSend : DoseMedicament!
     var nomMedicSend : TypeMedicament!
 
-    
+    // On regarde si tous les champs on était validé.
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         let alert = UIAlertController(title: "Oh oh!", message:"Veuillez remplir tous les champs", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in })

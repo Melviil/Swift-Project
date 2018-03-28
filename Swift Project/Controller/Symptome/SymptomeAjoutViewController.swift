@@ -20,13 +20,10 @@ class SymptomeAjoutViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     self.navigationItem.setHidesBackButton(true, animated:true);
-
-        print(self.nomSuiviSend)
-        print(self.heureSuiviSend)
-        print(self.dateSuiviSend)
         self.saveNewSymptome( withNom : self.nomSuiviSend, withHeure: self.heureSuiviSend, withDate : self.dateSuiviSend)
         // Do any additional setup after loading the view.
     }
+    //fonction ajoutant les informations dans les données persistantes grâce au DAO
     func saveNewSymptome( withNom nom: TypeSymptome, withHeure heure: Date,withDate date: Date){
      
         let daoF = CoreDataDAOFactory.getInstance()
@@ -48,16 +45,5 @@ class SymptomeAjoutViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-   
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

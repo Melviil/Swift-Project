@@ -15,9 +15,8 @@ class SurveillanceTypeViewController: UIViewController, UIPickerViewDataSource, 
     let segueShowNomSuivi = "showNomSurveillanceSegue"
     var nomSurveillance : TypeSurveillance!
     
-    
+    //fonction qui prépare l'envoie aux données vers le controller SurveillanceHeureViewControler
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
         if segue.identifier == segueShowNomSuivi {
             let SurveillanceHeureViewController = segue.destination as! SurveillanceHeureViewController
             SurveillanceHeureViewController.nomSurveillanceSend = self.nomSurveillance
@@ -32,12 +31,15 @@ class SurveillanceTypeViewController: UIViewController, UIPickerViewDataSource, 
         picker.dataSource = self
         picker.delegate = self
         
-        print("surveillence Date")
-        print(self.nomSurveillance)
-        
+        getAllSurveillances()
+       
+        // Do any additional setup after loading the view.
+    }
+    //fonction récupérant tous les types surveillances
+    func getAllSurveillances(){
         let daoF = CoreDataDAOFactory.getInstance()
         let typeSurveillanceDAO = daoF.getTypeSurveillanceDAO()
-       
+        
         do{
             try pickerData = typeSurveillanceDAO.getAll()!
         }
@@ -46,9 +48,7 @@ class SurveillanceTypeViewController: UIViewController, UIPickerViewDataSource, 
         }
         
         self.nomSurveillance=pickerData[0]
-        // Do any additional setup after loading the view.
     }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

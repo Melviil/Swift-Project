@@ -38,7 +38,8 @@ class SymptomeHeureViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    // fonction appelé à chaque fois que l'heure est changé.
+    // La valeur heureChoisie aura constemment la valeur de l'heure affiche à l'écran
     @IBAction func changerValueDateQuandDateChange(_ sender: Any) {
 
         let dateFormatter = DateFormatter()
@@ -48,14 +49,5 @@ class SymptomeHeureViewController: UIViewController {
         let selectedDate = dateFormatter.string(from: myDatePicker.date)
         heureChoisie = dateFormatter.date(from: selectedDate)!
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

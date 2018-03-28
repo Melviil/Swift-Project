@@ -33,12 +33,6 @@ class MedicamentDateFinViewController: UIViewController {
     let showJourActiviteSegue = "AjoutMedicamentSegue"
    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        print("medicament date fin : segue: date debut ")
-        print(self.dateDebutPasse)
-        print("medicament date fin : segue: date fin ")
-        print(self.dateChoisi)
-        
         if segue.identifier == showJourActiviteSegue {
             let MedicamentAjoutViewController = segue.destination as! MedicamentAjoutViewController
             
@@ -52,6 +46,8 @@ class MedicamentDateFinViewController: UIViewController {
             
         }
     }
+    // fonction appelé à chaque fois que l'heure est changé.
+    // La valeur dateChoisie aura constemment la valeur de la date affiche à l'écran
     @IBAction func changerValueDateQuandDateChange(_ sender: Any) {
         
         let dateFormatter = DateFormatter()
@@ -61,14 +57,6 @@ class MedicamentDateFinViewController: UIViewController {
 
         
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

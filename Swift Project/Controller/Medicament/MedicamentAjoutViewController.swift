@@ -24,11 +24,12 @@ class MedicamentAjoutViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Demande à l'utilisateur si il accepte de recevoir les notifications
         UNUserNotificationCenter.current().requestAuthorization(options : [.alert, .sound, .badge], completionHandler : {didAllow, error in})
+        
+        // supprime la bar permettant de revenir en arrière
         self.navigationItem.setHidesBackButton(true, animated:true);
         
-        self.navigationItem.setHidesBackButton(true, animated:true);
-        // Do any additional setup after loading the view.
         
         saveNewMedicament(withType: nomMedicSend, withPresentationBreve: presentationBreveMedicamentPasse, withDose: doseMedicSend, withPresentationDetaille: presentationDetailleMedicamentPasse, withHeures: heuresPasse, withDateDebut: dateFinPasse, withDateFin: dateFinPasse)
     }
@@ -37,7 +38,7 @@ class MedicamentAjoutViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    // sauvegarde une nouvelle prise de médicament grâce à MedicamentDAO
     func saveNewMedicament( withType type: TypeMedicament, withPresentationBreve presentationBreve : String, withDose dose : DoseMedicament, withPresentationDetaille presentationDetaille : String, withHeures heures : [String],  withDateDebut dateDebut: String, withDateFin dateFin: String){
        
         let daoF = CoreDataDAOFactory.getInstance()
@@ -121,6 +122,7 @@ class MedicamentAjoutViewController: UIViewController {
        
         
     }
+    //permet de rajouter une notification pour chaque heure chaue jour de chaque pruse de rendez vous de la dateéut à la date de fin
     public func ajouterNotif(heure h: Int, minute m: Int, dateDebut : Date, dateFin : Date){
         let content = UNMutableNotificationContent()
         content.title = self.nomMedicSend.libelleTypeMedicament! + " " + self.doseMedicSend.libelleDoseMedicament!
@@ -141,7 +143,7 @@ class MedicamentAjoutViewController: UIViewController {
             dateComponents.hour = h
             dateComponents.minute = m
             let notificationTrigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
-            let nom = String(Int(arc4random_uniform(1000000)))
+            let nom = String(describing : startDate )  + self.nomMedicSend.libelleTypeMedicament!
             let request2 = UNNotificationRequest(identifier: nom , content: content, trigger: notificationTrigger)
             // Schedule the request.
             let center = UNUserNotificationCenter.current()
@@ -154,29 +156,4 @@ class MedicamentAjoutViewController: UIViewController {
             }
            
         }
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-   /* func test(date : Date){
-        var datelala = date // first date
-        let endDate = Date() // last date
-        
-        // Formatter for printing the date, adjust it according to your needs:
-        let fmt = DateFormatter()
-        fmt.dateFormat = "dd/MM/yyyy"
-        
-        while datelala <= endDate {
-            print(fmt.string(from: datelala))
-            datelala = Calendar.date(byAdding: .day, value: 1, to: datelala)!
-        }
-    } */
-
+}

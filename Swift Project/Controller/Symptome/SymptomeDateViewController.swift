@@ -40,7 +40,8 @@ class SymptomeDateViewController: UIViewController {
         }
         
     }
-    
+    // fonction appelé à chaque fois que l'heure est changé.
+    // La valeur dateChoisie aura constemment la valeur de la date affiche à l'écran
     @IBAction func changerValueDateQuandDateChange(_ sender: Any) {
         
         
@@ -49,15 +50,4 @@ class SymptomeDateViewController: UIViewController {
         let date = dateFormatter.string(from: myDatePicker.date)
         dateChoisi = dateFormatter.date(from : date)!
 }
-
-/*
- // MARK: - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
- // Get the new view controller using segue.destinationViewController.
- // Pass the selected object to the new view controller.
- }
- */
-
 }

@@ -22,6 +22,7 @@ class SurveillanceHeureViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    //fonction qui prépare l'envoie aux données vers le controller SurveillanceDateViewControler
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == segueShowNomSuivi {
@@ -38,7 +39,8 @@ class SurveillanceHeureViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    // fonction appelé à chaque fois que l'heure est changé.
+    // La valeur heureChoisie aura constemment la valeur de l'heure affiche à l'écran
     @IBAction func changerValueDateQuandDateChange(_ sender: Any) {
         
         
@@ -50,14 +52,5 @@ class SurveillanceHeureViewController: UIViewController {
         
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -16,9 +16,6 @@ class SurveillanceAjoutViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(self.nomSurveillanceSend)
-        print(self.heureSurveillanceSend)
-        print(self.dateSurveillanceSend)
          self.saveNewSurveillance( withNom : self.nomSurveillanceSend, withHeure: self.heureSurveillanceSend, withDate : self.dateSurveillanceSend)
     
     }
@@ -32,7 +29,7 @@ class SurveillanceAjoutViewController: UIViewController {
     @IBAction func revenirMenu(_ sender: Any) {
         self.dismiss(animated:true, completion: nil)
     }
-    
+    //fonction ajoutant les informations dans les données persistantes grâce au DAO
     func saveNewSurveillance( withNom nom: TypeSurveillance, withHeure heure: Date,withDate date: Date) {
 
         let daoF = CoreDataDAOFactory.getInstance()

@@ -22,18 +22,18 @@ class MedicamentDoseViewController: UIViewController, UIPickerViewDelegate, UIPi
     override func viewDidLoad() {
         super.viewDidLoad()
         myPickerView.delegate = self
-        
-        
-        //GET type symtpome
+       getDoseMedicament()
+    }
+    //fonction récupérant les doses possibles d'un médicament
+    func getDoseMedicament(){
         let daoF = CoreDataDAOFactory.getInstance()
         let DoseMedicamentDAO = daoF.getDoseMedicamentDAO()
-            doses = DoseMedicamentDAO.getAllByMedicament(nmedic: nomMedicSend)
+        doses = DoseMedicamentDAO.getAllByMedicament(nmedic: nomMedicSend)
         for dose in doses {
-            pickerData.append(dose)
+        pickerData.append(dose)
         }
-            print(pickerData)
+        print(pickerData)
         self.doseMedic=pickerData[0]
-        // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {

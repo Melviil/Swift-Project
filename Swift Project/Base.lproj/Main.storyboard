@@ -427,7 +427,6 @@
                                             <outlet property="doseMedicamentLabel" destination="9k4-iX-WKs" id="rh2-aS-bw8"/>
                                             <outlet property="heurePriseMedicamentLabel" destination="2Du-ff-2xN" id="C34-8s-iRB"/>
                                             <outlet property="nomMedicament" destination="t8J-Wk-38s" id="em4-FR-W3w"/>
-                                            <segue destination="vZ5-nr-aQt" kind="show" identifier="medicamentDescriptionSegue" id="jtd-o5-Asg"/>
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellRdv" id="L8k-fv-3xW" customClass="CellRdvCollectionViewCell" customModule="Swift_Project" customModuleProvider="target">
@@ -3597,7 +3596,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="nGp-Qa-6IM"/>
         <segue reference="9Ys-6X-O5Y"/>
-        <segue reference="jtd-o5-Asg"/>
         <segue reference="s9V-lc-yFn"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -24,6 +24,13 @@ class MedicamentListeViewController: UIViewController, UITableViewDataSource, UI
         myTableView.dataSource = self
         myTableView.delegate = self
         
+        getAllMedicament()
+        
+       
+        // Do any additional setup after loading the view.
+    }
+    //Fonction récupérant les prises de médicaments et les affichant bien dans une table view
+    func getAllMedicament(){
         let daoF = CoreDataDAOFactory.getInstance()
         let medDao = daoF.getMedicamentDAO()
         
@@ -32,7 +39,6 @@ class MedicamentListeViewController: UIViewController, UITableViewDataSource, UI
             try self.mesMedicaments = medDao.getAll()!
         }catch{}
         
-       
         
         for medicament in mesMedicaments{
             
@@ -50,7 +56,7 @@ class MedicamentListeViewController: UIViewController, UITableViewDataSource, UI
                         dateFormatter.dateFormat = "HH:mm"
                         let selectedDate = dateFormatter.string(from: heure.libelleHeure!)
                         if ( heuresFinales != ""){
-                                heuresFinales = heuresFinales + ", " // prepare plusieurs heures
+                            heuresFinales = heuresFinales + ", " // prepare plusieurs heures
                         }
                         heuresFinales = heuresFinales + selectedDate
                         
@@ -59,9 +65,7 @@ class MedicamentListeViewController: UIViewController, UITableViewDataSource, UI
             }
             affichageMedicaments.append( (medicament.a?.libelleTypeMedicament!)! + " " + (medicament.aUneDose?.libelleDoseMedicament!)! + " à " + heuresFinales + " jusqu'au " + date )
         }
-        // Do any additional setup after loading the view.
     }
-
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

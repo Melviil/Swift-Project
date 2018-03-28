@@ -28,7 +28,7 @@ class MedicamentHeureViewController: UIViewController, UITableViewDataSource {
         // Dispose of any resources that can be recreated.
     }
     
-    // executé au retour du modally
+    // executé au retour du modally, on affiche les heures dans le tableView
     @IBAction func unwindToHourListAfterSavingHour(segue: UIStoryboardSegue){
         let newHeure = segue.source as! MedicamentAjoutHeureViewController
         hours.append(newHeure.heureChoisie)

@@ -19,9 +19,10 @@ class MedicamentTypeViewController: UIViewController, UIPickerViewDelegate, UIPi
     override func viewDidLoad() {
         super.viewDidLoad()
         myPickerView.delegate = self
-        
-        
-        //GET type symtpome
+        getAllTypeSymptome()
+    }
+    //fonction récupérant tous les types symptomes stockés dans le coreData
+    func getAllTypeSymptome(){
         let daoF = CoreDataDAOFactory.getInstance()
         let typeMedicamentDAO = daoF.getTypeMedicamentDAO()
         do{
@@ -63,14 +64,5 @@ class MedicamentTypeViewController: UIViewController, UIPickerViewDelegate, UIPi
         
     }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }

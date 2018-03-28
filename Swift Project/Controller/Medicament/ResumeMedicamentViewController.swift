@@ -24,12 +24,19 @@ class ResumeMedicamentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
+        remplirChampsResumeMedicaments()
+    
+        
+        // Do any additional setup after loading the view.
+    }
+    //fonction récupérant les varabiables récupérées dans le segue pour les afficher dans les champs de l'application
+    func remplirChampsResumeMedicaments(){
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy"
         dateFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
         dateFormatter.timeZone = TimeZone.current
-
-        
         
         self.nomMedoc.text = medicament?.a?.libelleTypeMedicament;
         self.doseMedoc.text = medicament?.aUneDose?.libelleDoseMedicament
@@ -52,28 +59,14 @@ class ResumeMedicamentViewController: UIViewController {
                 }
             }
         }
-        self.heuresMedoc.text = heuresFinales 
-
-        
-//    faire date et heure
-        
-        // Do any additional setup after loading the view.
+        self.heuresMedoc.text = heuresFinales
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
 
 }

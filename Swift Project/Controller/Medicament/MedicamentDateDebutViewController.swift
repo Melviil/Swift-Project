@@ -45,6 +45,8 @@ class MedicamentDateDebutViewController: UIViewController {
             
         }
     }
+    // fonction appelé à chaque fois que l'heure est changé.
+    // La valeur dateChoisie aura constemment la valeur de la date affiche à l'écran
     @IBAction func changerValueDateQuandDateChange(_ sender: Any) {
         
         let dateFormatter = DateFormatter()

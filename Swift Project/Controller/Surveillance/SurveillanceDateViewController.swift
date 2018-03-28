@@ -29,7 +29,7 @@ class SurveillanceDateViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    //fonction qui prépare l'envoie aux données vers le controller SurveillanceAjoutViewControler
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == saveNewSurveillance {
@@ -42,7 +42,8 @@ class SurveillanceDateViewController: UIViewController {
         }
         
     }
-    
+    // fonction appelé à chaque fois que l'heure est changé.
+    // La valeur dateChoisie aura constemment la valeur de la date affiche à l'écran
     @IBAction func changerValueDateQuandDateChange(_ sender: Any) {
         
         let dateFormatter = DateFormatter()
@@ -54,14 +55,5 @@ class SurveillanceDateViewController: UIViewController {
         let date = dateFormatter.string(from: myDatePicker.date)
         dateChoisi = dateFormatter.date(from : date)!
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
