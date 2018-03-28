@@ -319,8 +319,8 @@
 		BC0C9D0C203830220067EBB8 /* Swift Project */ = {
 			isa = PBXGroup;
 			children = (
-				BE9F4C72205912B8002DBB3D /* CoreData */,
-				BECF9955205457D0009420DE /* Model */,
+				BE9F4C72205912B8002DBB3D /* CoreDataNonUtilisé */,
+				BECF9955205457D0009420DE /* ModelNonUtilisé */,
 				BCAFD280204C4D9C0037ADBD /* Controller */,
 				BCE6D8FB205EA01E003068B8 /* DAO */,
 				BCE6D8F6205E9C31003068B8 /* Seeds */,
@@ -498,7 +498,7 @@
 			path = "Rendez-vous";
 			sourceTree = "<group>";
 		};
-		BE9F4C72205912B8002DBB3D /* CoreData */ = {
+		BE9F4C72205912B8002DBB3D /* CoreDataNonUtilisé */ = {
 			isa = PBXGroup;
 			children = (
 				BE9F4C7320591323002DBB3D /* PatientExtension.swift */,
@@ -511,10 +511,11 @@
 				BE9F4C8A20594404002DBB3D /* TypeSymptomeExtension.swift */,
 				BC322EBC20611638005A20DE /* SymptomeExtension.swift */,
 			);
-			path = CoreData;
+			name = "CoreDataNonUtilisé";
+			path = "CoreDataNonUtilisé";
 			sourceTree = "<group>";
 		};
-		BECF9955205457D0009420DE /* Model */ = {
+		BECF9955205457D0009420DE /* ModelNonUtilisé */ = {
 			isa = PBXGroup;
 			children = (
 				BECF995820545A81009420DE /* PatientModel.swift */,
@@ -530,7 +531,8 @@
 				BE9F4C8220592724002DBB3D /* RendezVousModel.swift */,
 				BC322EBA2061152C005A20DE /* SymptomeModel.swift */,
 			);
-			path = Model;
+			name = "ModelNonUtilisé";
+			path = "ModelNonUtilisé";
 			sourceTree = "<group>";
 		};
 		FE3FC8BD206938090065D9F9 /* Suivi Medoc */ = {
