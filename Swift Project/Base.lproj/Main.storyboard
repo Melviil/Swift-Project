@@ -26,32 +26,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ActiviteNom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydJ-8q-G7G">
-                                <rect key="frame" x="62.5" y="58" width="195" height="44.5"/>
+                                <rect key="frame" x="62.5" y="32" width="195" height="44.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jours :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTm-EI-d6T">
-                                <rect key="frame" x="10" y="162.5" width="75" height="32"/>
+                                <rect key="frame" x="10" y="136.5" width="75" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JourActivite" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lm3-F2-5Cw">
-                                <rect key="frame" x="176" y="162" width="134" height="32"/>
+                                <rect key="frame" x="176" y="136" width="134" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HeureActivite" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hy7-QC-Yb0">
-                                <rect key="frame" x="158" y="225" width="152" height="32"/>
+                                <rect key="frame" x="158" y="199" width="152" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DateDebutActivite" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4z-w1-quj">
-                                <rect key="frame" x="199" y="295" width="111" height="16"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <rect key="frame" x="177.5" y="269" width="132.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -85,29 +85,29 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="upj-oE-igp" kind="show" id="pEF-Im-7ap"/>
+                                    <segue destination="202-L5-TJ7" kind="show" id="SYb-vy-1fb"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date debut :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JCz-CL-NVt">
-                                <rect key="frame" x="10" y="286.5" width="137" height="32"/>
+                                <rect key="frame" x="10" y="260.5" width="137" height="35.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date fin :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="peK-gX-WDH">
-                                <rect key="frame" x="10" y="348.5" width="99.5" height="32"/>
+                                <rect key="frame" x="10" y="326" width="99.5" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heures : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFX-cE-9CF">
-                                <rect key="frame" x="10" y="224.5" width="98.5" height="32"/>
+                                <rect key="frame" x="10" y="198.5" width="98.5" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DateFinActivite" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ljo-O8-eLK">
-                                <rect key="frame" x="200" y="355" width="110" height="20"/>
+                                <rect key="frame" x="200" y="332.5" width="110" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -117,12 +117,12 @@
                         <constraints>
                             <constraint firstItem="BFX-cE-9CF" firstAttribute="top" secondItem="JTm-EI-d6T" secondAttribute="bottom" constant="30" id="0dA-A3-wzy"/>
                             <constraint firstItem="JTm-EI-d6T" firstAttribute="top" secondItem="ydJ-8q-G7G" secondAttribute="bottom" constant="60" id="3by-PG-Exn"/>
+                            <constraint firstItem="ydJ-8q-G7G" firstAttribute="top" secondItem="qwT-ho-cFY" secondAttribute="top" constant="12" id="3sE-hv-SXF"/>
                             <constraint firstItem="qwT-ho-cFY" firstAttribute="trailing" secondItem="x56-t8-2vk" secondAttribute="trailing" constant="10" id="4AR-Yx-cd6"/>
                             <constraint firstItem="Ljo-O8-eLK" firstAttribute="centerY" secondItem="peK-gX-WDH" secondAttribute="centerY" id="4sD-d1-Gdk"/>
                             <constraint firstItem="ydJ-8q-G7G" firstAttribute="centerX" secondItem="1OQ-OP-eTa" secondAttribute="centerX" id="BvL-aI-Jeh"/>
                             <constraint firstItem="qwT-ho-cFY" firstAttribute="bottom" secondItem="R8s-a8-hr9" secondAttribute="bottom" constant="10" id="C54-cB-B8N"/>
                             <constraint firstItem="F4z-w1-quj" firstAttribute="top" secondItem="hy7-QC-Yb0" secondAttribute="bottom" constant="38" id="CYi-KV-v8G"/>
-                            <constraint firstItem="ydJ-8q-G7G" firstAttribute="top" secondItem="qwT-ho-cFY" secondAttribute="top" constant="38" id="CiV-L5-Gi2"/>
                             <constraint firstItem="qwT-ho-cFY" firstAttribute="trailing" secondItem="F4z-w1-quj" secondAttribute="trailing" constant="10" id="Ohv-Cr-rfh"/>
                             <constraint firstItem="x56-t8-2vk" firstAttribute="width" secondItem="R8s-a8-hr9" secondAttribute="width" id="PW1-od-8ay"/>
                             <constraint firstItem="JTm-EI-d6T" firstAttribute="leading" secondItem="qwT-ho-cFY" secondAttribute="leading" constant="10" id="PhH-Vg-Ihu"/>
@@ -209,7 +209,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxq-bG-1jd">
-                                <rect key="frame" x="190" y="515" width="120" height="44"/>
+                                <rect key="frame" x="190" y="514" width="120" height="44"/>
                                 <color key="backgroundColor" red="0.23529411759999999" green="0.57254901960000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="diE-wq-OCI"/>
@@ -223,6 +223,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="XTf-0a-O8D" kind="show" id="01w-2M-8Mk"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dose : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIs-bg-GQC">
                                 <rect key="frame" x="30" y="103" width="88.5" height="36"/>
@@ -237,13 +240,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tx-1P-ejt">
-                                <rect key="frame" x="30" y="299" width="91" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <rect key="frame" x="30" y="299" width="147" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="3CU-zM-moo">
-                                <rect key="frame" x="40" y="327" width="240" height="165"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="3CU-zM-moo">
+                                <rect key="frame" x="40" y="340.5" width="240" height="123.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -279,6 +282,7 @@
                             <constraint firstItem="N6o-nx-yD0" firstAttribute="centerX" secondItem="HRh-uv-7Mf" secondAttribute="centerX" id="Kmi-Jf-6a7"/>
                             <constraint firstItem="lxq-bG-1jd" firstAttribute="width" secondItem="Cha-2K-gSl" secondAttribute="width" id="Mli-vq-9GS"/>
                             <constraint firstItem="1gt-tj-xyu" firstAttribute="top" secondItem="RIs-bg-GQC" secondAttribute="bottom" constant="15" id="O2n-ng-jfw"/>
+                            <constraint firstItem="Cha-2K-gSl" firstAttribute="top" secondItem="3CU-zM-moo" secondAttribute="bottom" constant="50" id="PD5-SX-1nB"/>
                             <constraint firstItem="mly-Dc-nLI" firstAttribute="centerY" secondItem="Afw-JA-fJ5" secondAttribute="centerY" id="PgF-nc-OEB"/>
                             <constraint firstItem="N6o-nx-yD0" firstAttribute="top" secondItem="p8B-Aw-wlC" secondAttribute="top" constant="8" id="SEo-ZD-pEZ"/>
                             <constraint firstItem="RIs-bg-GQC" firstAttribute="leading" secondItem="p8B-Aw-wlC" secondAttribute="leading" constant="30" id="TlY-LT-XHP"/>
@@ -287,7 +291,6 @@
                             <constraint firstItem="lxq-bG-1jd" firstAttribute="height" secondItem="Cha-2K-gSl" secondAttribute="height" id="YQ9-4C-aYJ"/>
                             <constraint firstItem="gCV-HO-Cul" firstAttribute="leading" secondItem="p8B-Aw-wlC" secondAttribute="leading" constant="30" id="YvX-JY-MrO"/>
                             <constraint firstItem="Cha-2K-gSl" firstAttribute="leading" secondItem="p8B-Aw-wlC" secondAttribute="leading" constant="10" id="ZWb-Qr-bkz"/>
-                            <constraint firstItem="p8B-Aw-wlC" firstAttribute="bottom" secondItem="lxq-bG-1jd" secondAttribute="bottom" constant="9" id="c5i-QC-4o8"/>
                             <constraint firstItem="gCV-HO-Cul" firstAttribute="top" secondItem="Afw-JA-fJ5" secondAttribute="bottom" constant="15" id="cYu-38-x6u"/>
                             <constraint firstItem="Afw-JA-fJ5" firstAttribute="leading" secondItem="p8B-Aw-wlC" secondAttribute="leading" constant="30" id="eSj-WP-NHM"/>
                             <constraint firstItem="Afw-JA-fJ5" firstAttribute="top" secondItem="1gt-tj-xyu" secondAttribute="bottom" constant="15" id="fJg-1a-kqe"/>
@@ -371,7 +374,6 @@
                                         <connections>
                                             <outlet property="heureActiviteLabel" destination="OCH-58-tz2" id="rPn-wd-XOi"/>
                                             <outlet property="nomActivite" destination="JnU-PC-oGn" id="p4q-VP-fdm"/>
-                                            <segue destination="IWS-sJ-84v" kind="show" identifier="ActivtieDescriptionSegue" id="s9V-lc-yFn"/>
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellMed" id="RI9-k7-Ud4" customClass="CellMedocCollectionViewCell" customModule="Swift_Project" customModuleProvider="target">
@@ -484,6 +486,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="D9G-ua-36l"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agenda" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jft-DG-qd4">
                                 <rect key="frame" x="104" y="28" width="113.5" height="41"/>
@@ -2276,7 +2281,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="y4G-oo-hLf" kind="show" identifier="showAllInfosSurveillanceSegue" id="T3w-sW-ecJ"/>
+                                    <segue destination="y4G-oo-hLf" kind="show" identifier="saveNewSurveillance" id="T3w-sW-ecJ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Surveillance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXD-jh-iSP">
@@ -2346,7 +2351,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="mQE-GA-9ez" kind="show" identifier="showNomHeureSurveillanceSegue" id="xf0-HB-IWs"/>
+                                    <segue destination="mQE-GA-9ez" kind="show" identifier="showDateSurveillanceSegue" id="xf0-HB-IWs"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Surveillance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leB-Xt-K22">
@@ -2567,10 +2572,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OaF-IJ-ITI">
-                                <rect key="frame" x="21" y="221" width="278" height="30"/>
+                                <rect key="frame" x="39" y="221" width="243" height="30"/>
                                 <color key="backgroundColor" red="0.23529411759999999" green="0.57254901960000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.23529411759999999" green="0.57254901960000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Consulter le suivi sur les 5 derniers jours">
+                                <state key="normal" title="Consulter le suivi des médicaments">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -3604,8 +3609,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="01w-2M-8Mk"/>
         <segue reference="nGp-Qa-6IM"/>
-        <segue reference="9Ys-6X-O5Y"/>
-        <segue reference="s9V-lc-yFn"/>
+        <segue reference="SYb-vy-1fb"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -32,6 +32,15 @@ class RDVAjoutViewController: UIViewController {
     }
     
 
+    /**
+     sauvegarde le nouveau rdv dans la bd à partir de tous les champs remplis précédemment
+     @param medecinSent, correspond au meddecin avec qui il y a rdv
+     @param heureChoisieSent les heures choisis pour le rdv
+     @param tempsPourarriver, les temps qu'il faut pr arriver au rdv
+     @param withdateChoisi la date où se déroulerait le rdv
+     
+     
+     */
     
     func saveNewRDV( withMedecin medecinSent : Medecin ,withdateChoisi dateChoisiSent : String, withheureChoisie heureChoisieSent : String,  withtempsPourArriverRDV tempsPourArriverRDVSent: String){
         
@@ -86,6 +95,16 @@ class RDVAjoutViewController: UIViewController {
         
         
     }
+    
+    /**
+     permet d'ajouter une notification pour rappeler le rdv
+     @param h les heures choisis pour notifier le rdv
+     @param m les minutes choisis pour notifier le rdv
+     @param date, la date choisis pour notifier le rdv
+     @param message, la message à afficher dans la notification
+
+     
+     */
      func ajouterNotif(heure h: Int, minute m: Int, date : Date, message : String){
         let content = UNMutableNotificationContent()
         content.title = "Rendez vous avec Dr " + (medecinSent?.nomMedecin)!
@@ -112,6 +131,8 @@ class RDVAjoutViewController: UIViewController {
                 }
             }
     }
+    
+    
     func ajouterNotifSymptome(date : Date, message : String){
         let content = UNMutableNotificationContent()
         content.title = "Etat"

@@ -30,7 +30,6 @@ class RDVAjoutInfosViewController: UIViewController, UIPickerViewDelegate, UIPic
         docteurChoisis.delegate = self
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
-            //Ajouter une error a display
             return
         }
         let context = appDelegate.persistentContainer.viewContext
@@ -45,36 +44,14 @@ class RDVAjoutInfosViewController: UIViewController, UIPickerViewDelegate, UIPic
         catch{
             return
         }
-        // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     let segueDescriptionRdv = "ajoutHeureRdv"
     
-//    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-//        let alert = UIAlertController(title: "Oh oh!", message:"Veuillez remplir tous les champs", preferredStyle: .alert)
-//        alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in })
-//        if ( identifier == segueDescriptionRdv){
-//            guard nomDocteurTF.hasText else{
-//                self.present(alert, animated: true){}
-//                return false
-//            }
-//            guard typeRDV.hasText else{
-//                self.present(alert, animated: true){}
-//                return false
-//            }
-//            guard numDocteur.hasText else{
-//                self.present(alert, animated: true){}
-//                return false
-//            }
-//        }
-//        return true
-//
-//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         

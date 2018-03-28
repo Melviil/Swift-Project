@@ -35,18 +35,20 @@ class RDVAjoutDateViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    /**
+     permet d'avoir dans la variable dtaeChoisie la date que l'utilisateur choisi dans le pickerView
+     */
     @IBAction func changerValueDateQuandDateChange(_ sender: Any) {
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy"
         let selectedDate = dateFormatter.string(from: myDatePicker.date)
         dateChoisi = selectedDate
-        print(dateChoisi)
         
     }
     
     let AjoutRdvSegue = "AjoutRdvSegue"
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == AjoutRdvSegue {

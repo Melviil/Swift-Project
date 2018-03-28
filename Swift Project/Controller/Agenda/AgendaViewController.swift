@@ -176,21 +176,13 @@ class AgendaViewController: UIViewController, UICollectionViewDataSource, UIColl
      */
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
-        
-        if (  arrayAllString[indexPath.row][0] == "medicament"){
-          
-           self.medicamentpasse = arrayMedicament[0]
-            performSegue(withIdentifier: self.medicamentDescriptionSegue, sender: self)
-        }
+ 
 
 
     }
     
  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == self.medicamentDescriptionSegue {
-            let medDesc = segue.destination as! ResumeMedicamentViewController
-            medDesc.medicament = self.medicamentpasse
-        }
+     
     }
 
 }

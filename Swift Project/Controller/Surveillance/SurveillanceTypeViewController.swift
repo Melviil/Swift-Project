@@ -20,6 +20,7 @@ class SurveillanceTypeViewController: UIViewController, UIPickerViewDataSource, 
         if segue.identifier == segueShowNomSuivi {
             let SurveillanceHeureViewController = segue.destination as! SurveillanceHeureViewController
             SurveillanceHeureViewController.nomSurveillanceSend = self.nomSurveillance
+            print(" typen omSurveillanceSend")
             print(nomSurveillance)
         }
         
@@ -32,7 +33,8 @@ class SurveillanceTypeViewController: UIViewController, UIPickerViewDataSource, 
         picker.delegate = self
         
         getAllSurveillances()
-       
+        self.nomSurveillance=pickerData[0]
+
         // Do any additional setup after loading the view.
     }
     //fonction récupérant tous les types surveillances
@@ -47,7 +49,6 @@ class SurveillanceTypeViewController: UIViewController, UIPickerViewDataSource, 
             
         }
         
-        self.nomSurveillance=pickerData[0]
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

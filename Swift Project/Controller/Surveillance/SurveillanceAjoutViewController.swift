@@ -15,6 +15,8 @@ class SurveillanceAjoutViewController: UIViewController {
     var dateSurveillanceSend = Date() // date sent by segue
     
     override func viewDidLoad() {
+        print(" ajout : nomSurveillanceSend")
+        print(nomSurveillanceSend)
         super.viewDidLoad()
          self.saveNewSurveillance( withNom : self.nomSurveillanceSend, withHeure: self.heureSurveillanceSend, withDate : self.dateSurveillanceSend)
     

@@ -64,10 +64,7 @@ class ActiviteListeViewController: UIViewController, UITableViewDataSource, UITa
     /**
      permet d'avoir toutes les activité ajoutées par le patient
      utilise la dao factory pour créer un dao d'activité
-     ## Important Notes ##
-     1. Both parameters are **double** numbers.
-     2. For a proper result the second parameter *must be other than 0*.
-     3. If the second parameter is 0 then the function will return nil.
+ 
      
      */
     

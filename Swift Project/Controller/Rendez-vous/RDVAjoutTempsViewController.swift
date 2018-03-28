@@ -16,11 +16,9 @@ class RDVAjoutTempsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("medecin sent")
-        print(medecinSent!)
+      
         changerValueHeureWhenHeureChange(self)
         
-        // Do any additional setup after loading the view.
     }
     
     @IBOutlet weak var ajoutHeureRDV: UIButton!
@@ -47,7 +45,9 @@ class RDVAjoutTempsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-  
+    /**
+     permet d'avoir dans la variable heureChoisie l`heure que l'utilisateur choisi dans le pickerView
+     */
     @IBAction func changerValueHeureWhenHeureChange(_ sender: Any) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH mm"

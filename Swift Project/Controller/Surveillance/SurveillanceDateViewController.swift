@@ -20,6 +20,10 @@ class SurveillanceDateViewController: UIViewController {
     let saveNewSurveillance = "saveNewSurveillance"
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("date nomSurveillanceSend")
+        print(self.nomSurveillanceSend)
+        print("heures sent")
+        print(self.heureSurveillanceSend)
         changerValueDateQuandDateChange(self) //au cas où l'utilisateur garde la date préséléctionnée
     }
 

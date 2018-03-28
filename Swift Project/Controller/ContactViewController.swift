@@ -76,6 +76,9 @@ class ContactViewController: UIViewController, UITableViewDataSource, UITableVie
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+     */func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
 
 }

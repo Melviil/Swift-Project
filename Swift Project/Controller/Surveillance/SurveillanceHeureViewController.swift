@@ -17,6 +17,8 @@ class SurveillanceHeureViewController: UIViewController {
     var nomSurveillanceSend : TypeSurveillance!
     
     override func viewDidLoad() {
+        print("heure : nomSurveillanceSend")
+        print(nomSurveillanceSend)
         super.viewDidLoad()
         changerValueDateQuandDateChange(self) //au cas où l'utilisateur garde l'heure préséléctionnée
         
@@ -28,6 +30,7 @@ class SurveillanceHeureViewController: UIViewController {
         if segue.identifier == segueShowNomSuivi {
             let SurveillanceDateViewController = segue.destination as! SurveillanceDateViewController
             SurveillanceDateViewController.nomSurveillanceSend = self.nomSurveillanceSend
+            print(nomSurveillanceSend)
             SurveillanceDateViewController.heureSurveillanceSend = self.heureChoisie
 
         }

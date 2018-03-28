@@ -29,7 +29,9 @@ class RDVAjoutHeureViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    /**
+     permet d'avoir dans la variable heureChoisie l`heure que l'utilisateur choisi dans le pickerView
+     */
     @IBAction func changerValueDateQuandDateChange(_ sender: Any) {
         
         let dateFormatter = DateFormatter()

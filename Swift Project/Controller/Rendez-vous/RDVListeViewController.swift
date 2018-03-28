@@ -21,38 +21,7 @@ class RDVListeViewController: UIViewController, UITableViewDataSource, UITableVi
         super.viewDidLoad()
         rdvListeTableView.dataSource = self
         rdvListeTableView.delegate = self
-
-        let daoF = CoreDataDAOFactory.getInstance()
-        let rdvDao = daoF.getRendezVousDAO()
-        
-        
-        do{
-            try self.rdvs = rdvDao.getAll()!
-        }catch{}
-     
-        
-        for rdv in rdvs!{
-
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "dd MMMM"
-            dateFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
-            dateFormatter.timeZone = TimeZone.current
-            
-            
-            let heureFormatter = DateFormatter()
-            heureFormatter.dateFormat = "HH:mm"
-            heureFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
-            heureFormatter.timeZone = TimeZone.current
-                
-            let heureRdv = heureFormatter.string(from :rdv.heureRDV!)
-            let tpsPrArriverRdv = heureFormatter.string(from :rdv.tpsPourArriver!)
-            let medecin = rdv.avec?.nomMedecin
-            
-
-           rdvString.append("Dr " + medecin! + " à " + heureRdv + ". Partez" + tpsPrArriverRdv + "avant" )
-        }
-        
-            
+        loadAllRdv()
 
     }
 
@@ -67,15 +36,6 @@ class RDVListeViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -85,5 +45,43 @@ class RDVListeViewController: UIViewController, UITableViewDataSource, UITableVi
         return rdvString.count
     }
     
+    
+    /**
+     permet d'avoir toutes les rendez-vous ajoutées par le patient
+     utilise la dao factory pour créer un dao rendez vous
+     
+     
+     */
+    func loadAllRdv() {
+        let daoF = CoreDataDAOFactory.getInstance()
+        let rdvDao = daoF.getRendezVousDAO()
+        
+        
+        do{
+            try self.rdvs = rdvDao.getAll()!
+        }catch{}
+        
+        
+        for rdv in rdvs!{
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd MMMM"
+            dateFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
+            dateFormatter.timeZone = TimeZone.current
+            
+            
+            let heureFormatter = DateFormatter()
+            heureFormatter.dateFormat = "HH:mm"
+            heureFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
+            heureFormatter.timeZone = TimeZone.current
+            
+            let heureRdv = heureFormatter.string(from :rdv.heureRDV!)
+            let tpsPrArriverRdv = heureFormatter.string(from :rdv.tpsPourArriver!)
+            let medecin = rdv.avec?.nomMedecin
+            
+            
+            rdvString.append("Dr " + medecin! + " à " + heureRdv + ". Partez" + tpsPrArriverRdv + "avant" )
+        }
+    }
 
 }

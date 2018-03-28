@@ -38,7 +38,7 @@ class ActiviteAjoutViewController: UIViewController {
      @param heures les heures choisis pour l'activité
      @param jours, les jours choisis pour pratiquer l'activité
      @param datedebut la date ou il faudrait commencer l'activite
-      @param lz date ou il faudrait arreter de faire l'acitivte
+    @param datefin la date ou il faudrait arreter de faire l'acitivte
      
 
      */
@@ -117,16 +117,19 @@ class ActiviteAjoutViewController: UIViewController {
     @IBAction func enelverModally(_ sender: Any) {
             self.dismiss(animated:true, completion: nil)
         
-        /**
-         permet d'ajouter une notification pour rappeler l'activité
-         @param h les heures choisis pour notifier l'activité
-         @param m les minutes choisis pour notifier l'activité
-         @param jours, les jours choisis pour notifier l'activité
-         @param datedebut la date ou il faudrait commencer à notifier l'activite
-         @param la date ou il faudrait arreter de notifier l'acitivte
-         
-         */
     }
+    
+    
+    
+    /**
+     permet d'ajouter une notification pour rappeler l'activité
+     @param h les heures choisis pour notifier l'activité
+     @param m les minutes choisis pour notifier l'activité
+     @param jours, les jours choisis pour notifier l'activité
+     @param datedebut la date ou il faudrait commencer à notifier l'activite
+     @param la date ou il faudrait arreter de notifier l'acitivte
+     
+     */
     public func ajouterNotif(heure h: Int, minute m: Int, jour j : Int, dateDebut : Date, dateFin : Date){
         let content = UNMutableNotificationContent()
         content.title = self.nomActivite.libelleTypeActivite!
