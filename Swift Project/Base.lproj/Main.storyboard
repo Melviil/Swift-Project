@@ -1608,6 +1608,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="enregistrerSuivi:" destination="uNk-O4-KfU" eventType="touchUpInside" id="hzX-Zf-dBH"/>
                                     <action selector="saveMedecin:" destination="nmw-Av-l5H" eventType="touchUpInside" id="VGi-YX-VD7"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="YHp-1b-qb4"/>
                                 </connections>
@@ -2481,6 +2482,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="saveMedecin:" destination="nmw-Av-l5H" eventType="touchUpInside" id="tqY-fA-y8m"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="ZCi-2P-Bbz"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dBK-Xg-irM">
@@ -3610,7 +3612,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="01w-2M-8Mk"/>
-        <segue reference="nGp-Qa-6IM"/>
+        <segue reference="ZCi-2P-Bbz"/>
         <segue reference="SYb-vy-1fb"/>
     </inferredMetricsTieBreakers>
 </document>
