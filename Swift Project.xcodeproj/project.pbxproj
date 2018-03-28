@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BC04ED98203AE235008F6AC3 /* Contact Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC04ED97203AE235008F6AC3 /* Contact Page.swift */; };
 		BC086C682048564B006D2310 /* ActiviteHeureModallyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC086C672048564B006D2310 /* ActiviteHeureModallyViewController.swift */; };
 		BC09AA0F205F17FB00FACC62 /* ActiviteDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC09AA0E205F17FB00FACC62 /* ActiviteDAO.swift */; };
 		BC09AA11205F183200FACC62 /* CoreDataActiviteDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC09AA10205F183200FACC62 /* CoreDataActiviteDAO.swift */; };
@@ -138,7 +137,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BC04ED97203AE235008F6AC3 /* Contact Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact Page.swift"; sourceTree = "<group>"; };
 		BC086C672048564B006D2310 /* ActiviteHeureModallyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiviteHeureModallyViewController.swift; sourceTree = "<group>"; };
 		BC09AA0E205F17FB00FACC62 /* ActiviteDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiviteDAO.swift; sourceTree = "<group>"; };
 		BC09AA10205F183200FACC62 /* CoreDataActiviteDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataActiviteDAO.swift; sourceTree = "<group>"; };
@@ -482,7 +480,6 @@
 		BCFA136120666AA80013FF40 /* Contact */ = {
 			isa = PBXGroup;
 			children = (
-				BC04ED97203AE235008F6AC3 /* Contact Page.swift */,
 				BCFA136220666AC90013FF40 /* AjouterMedecinViewController.swift */,
 			);
 			path = Contact;
@@ -781,7 +778,6 @@
 				BC6AD6A9205574BD001F1E04 /* MedicamentModel.swift in Sources */,
 				BC09AA11205F183200FACC62 /* CoreDataActiviteDAO.swift in Sources */,
 				BCE6D905205EA8AF003068B8 /* CoreDataDAOFactory.swift in Sources */,
-				BC04ED98203AE235008F6AC3 /* Contact Page.swift in Sources */,
 				BC6FE5A62044434600D862B6 /* MedecinController.swift in Sources */,
 				BC322EAB205FA487005A20DE /* CoreDataSymptomeDAO.swift in Sources */,
 				BC322EB3205FDAC4005A20DE /* SurveillanceDAO.swift in Sources */,

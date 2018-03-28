@@ -22,53 +22,9 @@ class ActiviteListeViewController: UIViewController, UITableViewDataSource, UITa
         super.viewDidLoad()
         myTableView.dataSource = self
         myTableView.delegate = self
-        //TODO GETActivite table
-       
-        
-        let daoF = CoreDataDAOFactory.getInstance()
-        let activiteDAO = daoF.getActiviteDAO()
-        
-        
-        do{
-            try self.mesActivites = activiteDAO.getAll()!
-        }catch{}
-        
-        for activite in mesActivites{
-            if (activite.dateDebut != nil && activite.dateFin != nil){
-                
-            
-                let dateFormatter = DateFormatter()
-                dateFormatter.dateFormat = "dd MMMM"
-                dateFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
 
-                dateFormatter.timeZone = TimeZone.current
+        getListeActivite()
 
-                selectedDateDebut = dateFormatter.string(from: activite.dateDebut!)
-
-                selectedDateFin = dateFormatter.string(from: activite.dateFin!)
-                   typeActivite = activite.estDeType?.libelleTypeActivite
-                if let heures = activite.sePasseA {
-                    for h in heures{
-                        print("1")
-                        if let heure = h as? Heure{
-                            print("2")
-                            dateFormatter.dateFormat = "HH:mm"
-                            let selectedDate = dateFormatter.string(from: heure.libelleHeure!)
-                            print(selectedDate)
-                            print(activite)
-                            activites.append(  typeActivite! + " du " + selectedDateDebut + " au " + selectedDateFin + " à " + selectedDate)
-
-                        }
-                    }
-                }
-                
-            }
-        }
-        // Do any additional setup after loading the view.
-    
-        
-      
-        
         
     }
     override func didReceiveMemoryWarning() {
@@ -103,6 +59,57 @@ class ActiviteListeViewController: UIViewController, UITableViewDataSource, UITa
         activiteDestination.activite = mesActivites[(myTableView.indexPathForSelectedRow?.row)!]
         }
         
+    }
+
+    /**
+     permet d'avoir toutes les activité ajoutées par le patient
+     utilise la dao factory pour créer un dao d'activité
+     ## Important Notes ##
+     1. Both parameters are **double** numbers.
+     2. For a proper result the second parameter *must be other than 0*.
+     3. If the second parameter is 0 then the function will return nil.
+     
+     */
+    
+    func getListeActivite(){
+        let daoF = CoreDataDAOFactory.getInstance()
+        let activiteDAO = daoF.getActiviteDAO()
+        
+        
+        do{
+            try self.mesActivites = activiteDAO.getAll()!
+        }catch{}
+        
+        for activite in mesActivites{
+            if (activite.dateDebut != nil && activite.dateFin != nil){
+                
+                
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMMM"
+        dateFormatter.locale = NSLocale(localeIdentifier: "fr_FR") as Locale!
+        
+        dateFormatter.timeZone = TimeZone.current
+        
+        selectedDateDebut = dateFormatter.string(from: activite.dateDebut!)
+        
+        selectedDateFin = dateFormatter.string(from: activite.dateFin!)
+        typeActivite = activite.estDeType?.libelleTypeActivite
+        
+        if let heures = activite.sePasseA {
+            for h in heures{
+                if let heure = h as? Heure{
+                    dateFormatter.dateFormat = "HH:mm"
+                    let selectedDate = dateFormatter.string(from: heure.libelleHeure!)
+                    print(selectedDate)
+                    print(activite)
+                    activites.append(  typeActivite! + " du " + selectedDateDebut + " au " + selectedDateFin + " à " + selectedDate)
+                    
+                        }
+                    }
+                }
+                
+            }
+        }
     }
     
 

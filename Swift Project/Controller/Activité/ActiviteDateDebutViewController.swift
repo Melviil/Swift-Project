@@ -15,20 +15,22 @@ class ActiviteDateDebutViewController: UIViewController {
     var listeJoursActivite : [Jour] = []
     var listeHeuresActivite: [String] = []
     var dateChoisi = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         labelActivite.text = nomActivite.libelleTypeActivite
         changerValueDateQuandDateChange(self)
 
-        // Do any additional setup after loading the view.
     }
    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
        
-        // Dispose of any resources that can be recreated.
     }
+    
+    
     let showJourActiviteSegue = "DateFinActiviteSegue"
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == showJourActiviteSegue {
@@ -39,6 +41,10 @@ class ActiviteDateDebutViewController: UIViewController {
             dateFinAlarmActivite.dateDebutActivite = dateChoisi
         }
     }
+    
+    /**
+     met la date dans la variable date choisi la date prise dans le date picker
+     */
     @IBAction func changerValueDateQuandDateChange(_ sender: Any) {
         
         let dateFormatter = DateFormatter()

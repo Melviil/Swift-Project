@@ -28,9 +28,7 @@ class ConsulterSuiviViewController: UIViewController,  UITableViewDataSource, UI
             try self.suivis = suiviMedicamentDAO.getAll()!
         }catch{}
         
-        // Do any additional setup after loading the view.
         
-       
         
         for s in suivis!{
             
@@ -50,18 +48,11 @@ class ConsulterSuiviViewController: UIViewController,  UITableViewDataSource, UI
             else{
                 suiviString.append(" le " + dateSuivi + " le patient a oublié " + nbprise! + "prises" )
             }
-            
-            
-            
-            
         }
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBOutlet weak var suiviMedicamentTableView: UITableView!
@@ -81,14 +72,5 @@ class ConsulterSuiviViewController: UIViewController,  UITableViewDataSource, UI
         return cell
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

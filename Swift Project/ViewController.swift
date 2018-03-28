@@ -11,6 +11,8 @@ import CoreData
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var SuiviMedoc: UIButton!
+    
     @IBAction func unwindToMenu(sender: UIStoryboardSegue){
     }
     
@@ -54,11 +56,11 @@ class ViewController: UIViewController {
         }
     }
 
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated:true);
+        SuiviMedoc?.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
+
 
         // Do any additional setup after loading the view, typically from a nib.
     }

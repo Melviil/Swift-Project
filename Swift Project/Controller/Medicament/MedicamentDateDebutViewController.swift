@@ -16,6 +16,7 @@ class MedicamentDateDebutViewController: UIViewController {
     var dateChoisi = String()
     var doseMedicSend : DoseMedicament!
     var nomMedicSend : TypeMedicament!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         changerValueDateQuandDateChange(self)
@@ -55,14 +56,6 @@ class MedicamentDateDebutViewController: UIViewController {
         dateChoisi = selectedDate
         
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

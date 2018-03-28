@@ -67,6 +67,7 @@ class ResumeMedicamentViewController: UIViewController {
     }
     
 
-   
+    /*
+    // MARK: - Navigation
 
 }

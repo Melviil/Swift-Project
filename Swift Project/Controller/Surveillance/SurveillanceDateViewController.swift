@@ -21,12 +21,10 @@ class SurveillanceDateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         changerValueDateQuandDateChange(self) //au cas où l'utilisateur garde la date préséléctionnée
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     //fonction qui prépare l'envoie aux données vers le controller SurveillanceAjoutViewControler
@@ -55,5 +53,7 @@ class SurveillanceDateViewController: UIViewController {
         let date = dateFormatter.string(from: myDatePicker.date)
         dateChoisi = dateFormatter.date(from : date)!
     }
+    /*
+    // MARK: - Navigation
 
 }

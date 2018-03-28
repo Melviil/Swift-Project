@@ -16,27 +16,35 @@ class SuiviMedocViewController: UIViewController {
     @IBOutlet weak var aucunePrise: UISwitch!
     @IBOutlet weak var nbPrise: UISwitch!
     
-    @IBOutlet weak var nbMedocOublie: UITextField!
+    @IBOutlet weak var nbMedocOublie: UITextField! //contient le nombre de medicmaents oublié
     
     @IBAction func nbOubli(_ sender: Any) {
         if nbPrise.isOn {
             nbMedocOublie.isHidden = false
+        }else {
+            nbMedocOublie.isHidden = true
         }
         
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         nbMedocOublie.isHidden = true
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
+    
+    /**
+     enregistre le suivi en fonction de la date d'aujourdhui
+     
+     ### Usage Example: ###
+     ````
+     si le switch de toutes les prises est ON, on enregistre en bd que le jour X, le patient a pris toutes les prises de médicaments
+     ````
+     */
+    
     
     @IBAction func enregistrerSuivi(_ sender: Any) {
         
@@ -66,19 +74,9 @@ class SuiviMedocViewController: UIViewController {
         }
         
         do {
-            print("lalalalal")
             try? suiviMedicamentDAO.save(suiviMedicament: suivifinal)
         }
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

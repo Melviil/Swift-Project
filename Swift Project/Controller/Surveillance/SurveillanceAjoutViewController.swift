@@ -45,13 +45,11 @@ class SurveillanceAjoutViewController: UIViewController {
             try surveillanceDAO.addTypeSurveillanceASurveillance(surveillance: surveillance, typeSurveillance : nom)
         }catch{
         }
+
         
-         print("type added")
-        print(surveillance)
-        
-        do{  print("preparing surveillance added to db")
+        do{
             try surveillanceDAO.save(surveillance: surveillance)
-            print("surveillance added to db")
+
         }catch {
         }
         

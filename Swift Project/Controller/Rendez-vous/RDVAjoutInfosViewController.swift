@@ -16,9 +16,7 @@ class RDVAjoutInfosViewController: UIViewController, UIPickerViewDelegate, UIPic
   
     
     @IBOutlet weak var docteurChoisis: UIPickerView!
-    
-
-    
+ 
     var medecins: [Medecin] = []
     var medecinPasse : Medecin?
     

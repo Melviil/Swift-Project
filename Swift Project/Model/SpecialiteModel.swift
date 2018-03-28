@@ -22,8 +22,6 @@ class SpecialiteModel {
         }
     } ;
     
-  
-    
     
     init(libelleSpecialite: String){
         guard let dao = Specialite.getNewSpecialiteDAO() else {
