@@ -83,7 +83,6 @@ class ResumeActiviteViewController: UIViewController {
         self.heureActivteTextField.text = heuresFinales
         self.jourActiviteTextField.text = joursFinales
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

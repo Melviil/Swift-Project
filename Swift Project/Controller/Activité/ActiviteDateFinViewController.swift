@@ -31,7 +31,9 @@ class ActiviteDateFinViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    
+    /**
+     met la date dans la variable date choisi la date prise dans le date picker
+     */
     @IBAction func changerValueDateQuandDateChange(_ sender: Any) {
         
        let dateFormatter = DateFormatter()

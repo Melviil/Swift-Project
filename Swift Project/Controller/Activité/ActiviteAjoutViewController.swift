@@ -32,7 +32,16 @@ class ActiviteAjoutViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    //TODO
+    /**
+     sauvegarde la vouvelle activité dans la bd à partir de tous les champs remplis précédemment
+     @param nom, correspond au typeActivite
+     @param heures les heures choisis pour l'activité
+     @param jours, les jours choisis pour pratiquer l'activité
+     @param datedebut la date ou il faudrait commencer l'activite
+      @param lz date ou il faudrait arreter de faire l'acitivte
+     
+
+     */
     func saveNewActivite( withNom nom: TypeActivite, withHours heures : [String], withJours jours : [Jour],withDateDebut dateDebut: String, withDateFin dateFin: String){
         let daoF = CoreDataDAOFactory.getInstance()
         let activiteDAO = daoF.getActiviteDAO()
@@ -107,6 +116,16 @@ class ActiviteAjoutViewController: UIViewController {
 
     @IBAction func enelverModally(_ sender: Any) {
             self.dismiss(animated:true, completion: nil)
+        
+        /**
+         permet d'ajouter une notification pour rappeler l'activité
+         @param h les heures choisis pour notifier l'activité
+         @param m les minutes choisis pour notifier l'activité
+         @param jours, les jours choisis pour notifier l'activité
+         @param datedebut la date ou il faudrait commencer à notifier l'activite
+         @param la date ou il faudrait arreter de notifier l'acitivte
+         
+         */
     }
     public func ajouterNotif(heure h: Int, minute m: Int, jour j : Int, dateDebut : Date, dateFin : Date){
         let content = UNMutableNotificationContent()

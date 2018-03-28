@@ -39,16 +39,22 @@ class ActiviteHeuresViewController: UIViewController, UITableViewDataSource {
     }
 
 
+    /**
+     executé au retour du modally, ajoute des string correspondant à l'heure choisie dans le pickerView à la table vue
+     */
     
-   // executé au retour du modally
     @IBAction func unwindToHourListAfterSavingHour(segue: UIStoryboardSegue){
         let newHeure = segue.source as! ActiviteHeureModallyViewController
-        print(newHeure.heureChoisie)
         hours.append(newHeure.heureChoisie)
         TableViewHours.reloadData()
         
     }
+    
+    
     let showJourActiviteSegue = "DateDebutActiviteSegue"
+    /**
+     permet d'envoyer des données au controlleur suivant
+     */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == showJourActiviteSegue {
@@ -60,6 +66,11 @@ class ActiviteHeuresViewController: UIViewController, UITableViewDataSource {
         }
         
     }
+    
+    /**
+     un pop up est affiché su aucune heure n'a été séléctionnée
+     */
+    
     override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
         if identifier == showJourActiviteSegue{
             if self.hours == [] {

@@ -34,6 +34,9 @@ class SuiviPatientViewController: UIViewController , UITableViewDelegate, UITabl
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
 
+    /**
+     permet de changer les valeurs dans la tablebue en fonction de l'index utilisé
+     */
     @IBAction func indexChanged(_ sender: Any) {
         
         switch segmentedControl.selectedSegmentIndex
@@ -74,7 +77,6 @@ class SuiviPatientViewController: UIViewController , UITableViewDelegate, UITabl
             dateAffichée.text = heureBienAffichee(withDate :date)
 
         }
-        print(dateSelected)
         tableJour.reloadData()
         
     }

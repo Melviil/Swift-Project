@@ -15,7 +15,7 @@ class ActiviteJoursViewController: UIViewController {
     let showJourActiviteSegue = "showJourActiviteSegue";
     
     var nomActivite = TypeActivite() ;
-    var joursActivite : [Jour] = [];
+    var joursActivite : [Jour] = []; // tableau qui va contenir tous les jours avce des switchs allumés
     var jour11 : String = "" ;
 
     
@@ -38,8 +38,12 @@ class ActiviteJoursViewController: UIViewController {
         labelActivite.text = nomActivite.libelleTypeActivite
     }
   
+    
+    /**
+     un pop up est affiché si aucun des switch de la page n'a été allumé
+     
+     */
     override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
-        print(self.joursActivite)
         valideHeureActivite(self)
 
         if self.joursActivite == [] {
@@ -50,23 +54,28 @@ class ActiviteJoursViewController: UIViewController {
         }
         return true
     }
+    
+    
+    /**
+     permet d'envoyer des données au controlleur suivant
+     */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       
-        
         if segue.identifier == showJourActiviteSegue {
             let heureAlarmActivite = segue.destination as! ActiviteHeuresViewController
             heureAlarmActivite.nomActivite = nomActivite
             heureAlarmActivite.listeJoursActivite = joursActivite
             valideHeureActivite(self)
-            
-
             heureAlarmActivite.listeJoursActivite = joursActivite
-
-            
+ 
         }
-        
     }
     
+    
+    
+    /**
+        en fonction des switch allumés, retourne le jour correspondant au libellé
+     
+     */
     @IBAction func valideHeureActivite(_ sender: Any) {
         let daoF = CoreDataDAOFactory.getInstance()
         let patientDAO = daoF.getJourDAO()
@@ -91,7 +100,6 @@ class ActiviteJoursViewController: UIViewController {
         }
         if dimSwitch.isOn {
             try? joursActivite.append(patientDAO.getByName(jourParametre: "Dimanche")![0])
-            print(joursActivite)
         }
 
 

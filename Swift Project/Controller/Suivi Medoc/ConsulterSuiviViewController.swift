@@ -28,7 +28,7 @@ class ConsulterSuiviViewController: UIViewController,  UITableViewDataSource, UI
             try self.suivis = suiviMedicamentDAO.getAll()!
         }catch{}
         
-               
+        
         
         for s in suivis!{
             
@@ -48,13 +48,7 @@ class ConsulterSuiviViewController: UIViewController,  UITableViewDataSource, UI
             else{
                 suiviString.append(" le " + dateSuivi + " le patient a oublié " + nbprise! + "prises" )
             }
-            
-            
-            
-            
         }
-        
-        
     }
 
     override func didReceiveMemoryWarning() {

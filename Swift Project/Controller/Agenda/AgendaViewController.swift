@@ -44,6 +44,10 @@ class AgendaViewController: UIViewController, UICollectionViewDataSource, UIColl
         return arrayAllString.count
     }
     
+    
+    /**
+     permet de formater les cellules et de les remplir en fonction de si c'est un rdv, un médicament ou une activité 
+     */
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         let cellMedoc = collectionView.dequeueReusableCell(withReuseIdentifier: "cellMed", for: indexPath) as! CellMedocCollectionViewCell
@@ -88,6 +92,8 @@ class AgendaViewController: UIViewController, UICollectionViewDataSource, UIColl
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm"
         
+        
+        
         arrayAllString = arrayAllString.sorted(by: { dateFormatter.date(from:$0[2])?.compare(dateFormatter.date(from:$1[2])!) == .orderedAscending })
 
     }
@@ -96,7 +102,9 @@ class AgendaViewController: UIViewController, UICollectionViewDataSource, UIColl
         super.didReceiveMemoryWarning()
     }
     
-    
+    /**
+     permet d'ajouter les médicaments du jour dans la matrice qui va afficher les 3 types de données
+     */
     func ajoutDesMedicamentsDansMatrice(){
         let dateFormatter = DateFormatter() // TODO : factoriser le dateFormatter
         dateFormatter.dateFormat = "HH:mm"
@@ -115,6 +123,9 @@ class AgendaViewController: UIViewController, UICollectionViewDataSource, UIColl
             }
         }
     }
+    /**
+     permet d'ajouter les activités dans la matrice qui va afficher les 3 types de données
+     */
     func ajoutDesActivitesDansMatrice(){
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm"
@@ -131,6 +142,10 @@ class AgendaViewController: UIViewController, UICollectionViewDataSource, UIColl
             }
         }
     }
+    
+    /**
+     permet d'ajouter les rendez vous dans la matrice qui va afficher les 3 types de données
+     */
     func ajoutRdvDansMatrice(){
         let heureFormatter = DateFormatter()
         heureFormatter.dateFormat = "HH:mm"
@@ -156,10 +171,11 @@ class AgendaViewController: UIViewController, UICollectionViewDataSource, UIColl
         }
     }
 
+    /**
+     permet d'avoir l'item que l'utilisateur à choisi dans la collection
+     */
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
-//        if arrayAllString[indexPath.row][0] == "medicament" {
-//        }
         
         if (  arrayAllString[indexPath.row][0] == "medicament"){
           
