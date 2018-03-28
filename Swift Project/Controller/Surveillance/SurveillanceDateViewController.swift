@@ -53,7 +53,6 @@ class SurveillanceDateViewController: UIViewController {
         let date = dateFormatter.string(from: myDatePicker.date)
         dateChoisi = dateFormatter.date(from : date)!
     }
-    /*
-    // MARK: - Navigation
+ 
 
 }
