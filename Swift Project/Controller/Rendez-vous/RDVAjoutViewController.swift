@@ -107,7 +107,7 @@ class RDVAjoutViewController: UIViewController {
      */
      func ajouterNotif(heure h: Int, minute m: Int, date : Date, message : String){
         let content = UNMutableNotificationContent()
-        content.title = "Rendez vous avec Dr " + (medecinSent?.nomMedecin)!
+        content.title = "Dans une 1h Rdv avec Dr " + (medecinSent?.nomMedecin)!
         content.body = message
         content.badge = 1
         let fmt = DateFormatter()
@@ -118,11 +118,10 @@ class RDVAjoutViewController: UIViewController {
             dateComponents.day = components.day!
             dateComponents.month = components.month!
             dateComponents.year = components.year!
-            dateComponents.hour = h
+            dateComponents.hour = h - 1
             dateComponents.minute = m
             let notificationTrigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
-            let nom = String(Int(arc4random_uniform(1000000)))
-            let request2 = UNNotificationRequest(identifier: nom , content: content, trigger: notificationTrigger)
+        let request2 = UNNotificationRequest(identifier: String(describing: date) + String (m ) + String (m ) + (medecinSent?.nomMedecin)! , content: content, trigger: notificationTrigger)
             // Schedule the request.
             let center = UNUserNotificationCenter.current()
             center.add(request2) { (error : Error?) in
@@ -132,7 +131,13 @@ class RDVAjoutViewController: UIViewController {
             }
     }
     
-    
+    /**
+     permet d'ajouter une notification pour rappeler lajout de symptome durant la semaine
+     @param date, la date choisis pour notifier le rdv
+     @param message, la message à afficher dans la notification
+     
+     
+     */
     func ajouterNotifSymptome(date : Date, message : String){
         let content = UNMutableNotificationContent()
         content.title = "Etat"
@@ -155,8 +160,7 @@ class RDVAjoutViewController: UIViewController {
                 dateComponents.minute = 00
                 print(dateComponents)
                 let notificationTrigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
-                let nom = String(Int(arc4random_uniform(1000000)))
-                let request2 = UNNotificationRequest(identifier: nom , content: content, trigger: notificationTrigger)
+                let request2 = UNNotificationRequest(identifier: "sympt" + String(describing: date) + String(heures) , content: content, trigger: notificationTrigger)
                 // Schedule the request.
                 let center = UNUserNotificationCenter.current()
                 center.add(request2) { (error : Error?) in
